@@ -218,16 +218,18 @@
 	<div class="kt-portlet__head">
 		<div class="kt-portlet__head-label">
 			<h3 class="kt-portlet__head-title">
-				Les Projets à venir
+				Les Projets 
 			</h3>
 		</div>
+
 		<div class="kt-portlet__head-toolbar">
-			<ul class="nav nav-pills nav-pills-sm nav-pills-label nav-pills-bold" role="tablist">
-				<li class="nav-item">
+			
+               <ul class="nav nav-pills nav-pills-sm nav-pills-label nav-pills-bold" role="tablist">
+				<!--<li class="nav-item">
 					<a class="nav-link active" data-toggle="tab" href="#kt_widget6_tab1_content" role="tab">
 						Semaine
 					</a>
-				</li>
+				</li>-->
 				<li class="nav-item">
 					<a class="nav-link" data-toggle="tab" href="#kt_widget6_tab2_content" role="tab">
 						Mois
@@ -263,7 +265,7 @@
                                 <?php echo $pw->titre; ?>
                             </div>
                             <div class="kt-notification__item-time">
-                                de <?php echo $pw->startDate ; ?> à   <?php echo $pw->endDate; ?>
+                                de <?php echo $pw->startDate ; ?> 
                             </div>
                         </div>
                     </a>
@@ -293,7 +295,7 @@
                                 <?php echo $pm->titre; ?>
                             </div>
                             <div class="kt-notification__item-time">
-                                de <?php echo $pm->startDate ; ?> à   <?php echo $pm->endDate; ?>
+                                de <?php echo $pm->startDate ; ?> 
                             </div>
                         </div>
                     </a>
@@ -325,7 +327,7 @@
                                 <?php echo $pp->titre; ?>
                             </div>
                             <div class="kt-notification__item-time">
-                                de <?php echo $pp->startDate ; ?> à   <?php echo $pp->endDate; ?>
+                                 <?php echo $pp->startDate ; ?> 
                             </div>
                         </div>
                     </a>
@@ -347,61 +349,7 @@
                 Finance
             </h3>
         </div>
-        <div class="kt-portlet__head-toolbar">
-            <a href="#" class="btn btn-label-brand btn-bold btn-sm dropdown-toggle" data-toggle="dropdown">
-                Export
-            </a>
-            <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right">
-                <!--begin::Nav-->
-<ul class="kt-nav">
-    <li class="kt-nav__head">
-        Export Options                                    
-        <span data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--brand kt-svg-icon--md1">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-        <circle id="Oval-5" fill="#000000" opacity="0.3" cx="12" cy="12" r="10"></circle>
-        <rect id="Rectangle-9" fill="#000000" x="11" y="10" width="2" height="7" rx="1"></rect>
-        <rect id="Rectangle-9-Copy" fill="#000000" x="11" y="7" width="2" height="2" rx="1"></rect>
-    </g>
-</svg>        </span>
-   </li>
-    <li class="kt-nav__separator"></li>
-    <li class="kt-nav__item">
-        <a href="#" class="kt-nav__link">
-            <i class="kt-nav__link-icon flaticon2-drop"></i>
-            <span class="kt-nav__link-text">Activity</span>
-        </a>
-    </li>
-    <li class="kt-nav__item">
-        <a href="#" class="kt-nav__link">
-            <i class="kt-nav__link-icon flaticon2-calendar-8"></i>
-            <span class="kt-nav__link-text">FAQ</span>
-        </a>
-    </li>
-    <li class="kt-nav__item">
-        <a href="#" class="kt-nav__link">
-            <i class="kt-nav__link-icon flaticon2-link"></i>
-            <span class="kt-nav__link-text">Settings</span>
-        </a>
-    </li>
-    <li class="kt-nav__item">
-        <a href="#" class="kt-nav__link">
-            <i class="kt-nav__link-icon flaticon2-new-email"></i>
-            <span class="kt-nav__link-text">Support</span>
-            <span class="kt-nav__link-badge">
-                <span class="kt-badge kt-badge--success kt-badge--rounded">5</span>
-            </span>
-        </a>
-    </li>
-    <li class="kt-nav__separator"></li>
-    <li class="kt-nav__foot">
-        <a class="btn btn-label-danger btn-bold btn-sm" href="#">Upgrade plan</a>                                    
-        <a class="btn btn-clean btn-bold btn-sm" href="#" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more...">Learn more</a>
-    </li>
-</ul>
-<!--end::Nav-->         </div>
-        </div>
+
     </div>
     <div class="kt-portlet__body kt-portlet__body--fluid">
         <div class="kt-widget12">
@@ -439,6 +387,7 @@
                     </div>                      
                 </div>
             </div>
+            <!--
             <div class="kt-widget12__chart" style="height:250px;">
                 <div class="chartjs-size-monitor">
                     <div class="chartjs-size-monitor-expand">
@@ -454,6 +403,7 @@
                 </div>
                 <canvas id="kt_chart_order_statistics" style="display: block; height: 250px; width: 540px;" width="485" height="224" class="chartjs-render-monitor"></canvas>
             </div>
+        -->
         </div>       
     </div>
 </div>

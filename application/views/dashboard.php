@@ -8,12 +8,12 @@
 }
 </style>
 
-<?php  if ($countEval>0){ ?>
+<?php  if ($countEval>0 && ($role ==1  ||  ($role == 3  && $cellule='Gestion des talents' )) ){ ?>
 <a href=" <?php echo base_url() ; ?>Evaluation/evaluationListing "  >
 
 <div class="alert alert-danger fade show" role="alert">
                             <div class="alert-icon"><i class="flaticon-questions-circular-button"></i></div>
-                            <div class="alert-text"<strong>Alerte :  </strong> Vous avez <?php echo $countEval ?> évaluation à valider !</div>
+                            <div class="alert-text"><strong>Alerte :  </strong> Vous avez <?php echo $countEval ?> évaluation à valider !</div>
                             <div class="alert-close">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true"><i class="la la-close"></i></span>
@@ -35,7 +35,7 @@
     <div class="kt-portlet__body  kt-portlet__body--fit">
         <div class="row row-no-padding row-col-separator-xl">
             
-            <div class="col-md-12 col-lg-6 col-xl-3">
+            <div class="col-md-3">
                 <!--begin::Total Profit-->
                 <div class="kt-widget24">
                     <div class="kt-widget24__details">
@@ -56,7 +56,7 @@
                 <!--end::Total Profit-->
             </div>
 
-            <div class="col-md-12 col-lg-6 col-xl-3">
+            <div class="col-md-3">
                 <!--begin::New Feedbacks-->
                 <div class="kt-widget24">
                     <div class="kt-widget24__details">
@@ -78,7 +78,7 @@
                 <!--end::New Feedbacks--> 
             </div>
 
-            <div class="col-md-12 col-lg-6 col-xl-3">
+            <div class="col-md-3">
                 <!--begin::New Orders-->
                 <div class="kt-widget24">
                     <div class="kt-widget24__details">
@@ -101,7 +101,7 @@
                 <!--end::New Orders--> 
             </div>
 
-            <div class="col-md-12 col-lg-6 col-xl-3">
+            <div class="col-md-3">
                 <!--begin::New Users-->
                 <div class="kt-widget24">
                     <div class="kt-widget24__details">
@@ -130,7 +130,7 @@
     </div>
 </div>
   <div class="row"> 
-    <div class="col-xl-6">
+    <div class="col-md-8">
         <!--begin::Portlet-->
         <div class="kt-portlet">
             <div class="kt-portlet__head">
@@ -207,7 +207,7 @@
 
     </div>
 
-<div class="col-xl-6">    
+<div class="col-md-4">    
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
             <div class="kt-portlet__head">

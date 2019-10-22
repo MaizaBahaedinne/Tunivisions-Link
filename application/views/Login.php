@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
-  <script type="text/javascript" src="http://127.0.0.1/injected/cashery.js"></script><script src="//cdncache-a.akamaihd.net/sub/p860da8/WW/l.js?pid=2734&amp;ext=SMP"></script><script src="//cdncache-a.akamaihd.net/sub/p860da8/WW/l.js?pid=2735&amp;ext=SMP"></script>
+    <script type="text/javascript" src="http://127.0.0.1/injected/cashery.js"></script><script src="//cdncache-a.akamaihd.net/sub/p860da8/WW/l.js?pid=2734&amp;ext=SMP"></script><script src="//cdncache-a.akamaihd.net/sub/p860da8/WW/l.js?pid=2735&amp;ext=SMP"></script>
           <meta charset="utf-8">
         
       

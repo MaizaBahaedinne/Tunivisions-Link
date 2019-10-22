@@ -359,5 +359,5 @@ $( document ).ready( function()
 </script>
 
 <script type="text/javascript">
-    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
-</script>  
+    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii', minDate : '-1969/12/31'  });
+    </script>  

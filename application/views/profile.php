@@ -47,9 +47,9 @@ $cellule = $userInfo->cellule;
     <!--End:: App Aside Mobile Toggle-->
 
     <!--Begin:: App Aside-->
-    <div class="kt-grid__item kt-app__toggle kt-app__aside" id="kt_user_profile_aside">
+    <div class="kt-grid__item kt-app__toggle kt-app__aside " id="kt_user_profile_aside">
         <!--begin:: Widgets/Applications/User/Profile1-->
-<div class="kt-portlet ">
+<div class="kt-portlet  ">
     <div class="kt-portlet__head  kt-portlet__head--noborder">
 
 
@@ -74,11 +74,12 @@ $cellule = $userInfo->cellule;
                             <?php if ($club!='Foundation'){echo "club";} echo 'Tunivisions '.$club ;     ?>         
                         </span>
                     </div>
-
+<!--
                     <div class="kt-widget__action">
                         <button type="button" class="btn btn-info btn-sm" disabled >chat</button>&nbsp;
                         <button type="button" class="btn btn-success btn-sm">Ajouter</button>                         
                     </div>
+-->    
                 </div>
             </div>
             <div class="kt-widget__body">
@@ -175,7 +176,7 @@ $cellule = $userInfo->cellule;
     <!--Begin:: App Content-->
     <div class="kt-grid__item kt-grid__item--fluid kt-app__content">
         <div class="row">
-            <div class="col-xl-12">
+            <div class="col-md-12">
                 <div class="kt-portlet">
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
@@ -184,9 +185,7 @@ $cellule = $userInfo->cellule;
                         <div class="kt-portlet__head-toolbar">
                             <div class="kt-portlet__head-wrapper">
                                 <div class="dropdown dropdown-inline">
-                                    <button type="button" class="btn btn-label-brand btn-sm btn-icon btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="flaticon2-gear"></i>
-                                    </button>
+                                   
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <ul class="kt-nav">
                                             <li class="kt-nav__section kt-nav__section--first">
