@@ -28,7 +28,7 @@
         </div>
         <div class="kt-subheader__toolbar">
             <div class="kt-subheader__wrapper">
-                                    <a href="<?php echo base_url(); ?>/Finance/addNew" class="btn kt-subheader__btn-primary">
+                                    <a href="<?php echo base_url(); ?>Finance/addNew" class="btn kt-subheader__btn-primary">
                         Ajouter un bilan &nbsp;
                         <!--<i class="flaticon2-calendar-1"></i>-->
                     </a>

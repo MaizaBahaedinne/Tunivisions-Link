@@ -82,7 +82,8 @@ class Tasks extends BaseController {
 		                 'affectedTo' => $affectedTo , 
 		                 'deadline' => $deadline ,
 		                 'Description' => $Description,
-		                 'projectId' => $projectID
+		                 'projectId' => $projectID , 
+		                 'createdDate' => date('Y-m-d H:i:s')
 		                     );
 
 			   		   $this->tasks_model->addNewTask($taskInfo);

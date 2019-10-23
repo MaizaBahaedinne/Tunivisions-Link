@@ -151,7 +151,7 @@
 			</li>
 			<?php if ($clubID ==0 && (($role ==1 || $role == 2 || $role == 3) && ($cellule =='Marketing' || $cellule =='') )) { ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "actu" ){echo("--active") ;} ?> " aria-haspopup="true" >
-				<a  href="<?php echo base_url() ; ?>/Actu/addNew" class="kt-menu__link ">
+				<a  href="<?php echo base_url() ; ?>Actu/addNew" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-users">
 					</i>
 					<span class="kt-menu__link-text">

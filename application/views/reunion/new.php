@@ -187,7 +187,7 @@ $( document ).ready( function()
     $('#delegation').select2();
 
     var d = $.ajax({
-    url: '<?php echo base_url(); ?>/assets/json/tunisia.json',
+    url: '<?php echo base_url(); ?>assets/json/tunisia.json',
     type: "GET",
     dataType: 'json',
     success: function (data) {
