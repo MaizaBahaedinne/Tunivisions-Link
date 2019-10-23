@@ -329,7 +329,7 @@
                                     {  echo '   <tr  bgcolor="#ADD8E6" > '; }
                                 else{  echo '   <tr   > '; }
                                    if ($c== 1){ 
-                                            echo  '<td> <img src='.base_url().'/uploads/avatar/'.$rc->avatar.  ' width="30px" alt="image" class="kt-radius-100"> '
+                                            echo  '<td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.  ' width="30px" alt="'.$rc->name.'" class="kt-radius-100"> '
                                             .
                                             '</span> </td><td> '
                                             .$rc->name.
@@ -338,7 +338,7 @@
                                               ;
                                             }
                                    if ($c== 2){ 
-                                   echo  ' <tr> <td> <img src='.base_url().'/uploads/avatar/'.$rc->avatar.  ' width="30px" alt="image" class="kt-radius-100"> '
+                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.  ' width="30px" alt="'.$rc->name.'" class="kt-radius-100"> '
                                             .
                                             '</span></td><td>   '
                                             .$rc->name.
@@ -347,7 +347,7 @@
                                               ;
                                             }
                                    if ($c== 3){ 
-                                   echo  ' <tr> <td> <img src='.base_url().'/uploads/avatar/'.$rc->avatar.  ' width="30px" alt="image" class="kt-radius-100"> '
+                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.  ' width="30px" alt="'.$rc->name.'" class="kt-radius-100"> '
                                             .
                                             '</span> </td><td>   '
                                             .$rc->name.
@@ -356,7 +356,7 @@
                                               ;
                                             }
                                    if($c> 3) { 
-                                   echo  ' <tr> <td> <img src='.base_url().'/uploads/avatar/'.$rc->avatar.  ' width="30px" alt="image" class="kt-radius-100"> '
+                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.  ' width="30px" alt="'.$rc->name.'" class="kt-radius-100"> '
                                             .
                                             '</td><td>   '
                                             .$rc->name.
