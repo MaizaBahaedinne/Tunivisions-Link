@@ -106,7 +106,8 @@ class Project extends BaseController {
                  'statut' => 'En Attend' ,  
                  'doDate' => $r ,  
                  'titre' => 'Fiche evaluation '.$Titre ,   
-                 'projectId'=>$result
+                 'projectId'=>$result , 
+                 'createdDate'=> date('Y-m-d H:i:s')
                      );
 
                 $this->load->model('evaluation_model');

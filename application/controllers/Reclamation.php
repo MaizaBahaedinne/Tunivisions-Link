@@ -58,7 +58,8 @@ class Reclamation extends BaseController {
 						                 'Sujet'=>$Sujet,
 						                 'Text'=>$Text,
 						                 'createdBy'=>$this->vendorId ,
-						                 'staut' => 'En Attend' 
+						                 'staut' => 'En Attend' , 
+						                 'createdDate' => date('Y-m-d H:i:s')
 						             	);
 
 		        $this->load->model('reclamation_model');

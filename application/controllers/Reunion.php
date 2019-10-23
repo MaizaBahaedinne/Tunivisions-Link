@@ -60,6 +60,7 @@ class Reunion extends BaseController {
                  'createdBy' => $this->vendorId , 
                  'cellule' => $cellule ,
                  'timeDo' => $timeDo ,
+                 'createdDate' =>  date('Y-m-d H:i:s')
 
                      );
                 

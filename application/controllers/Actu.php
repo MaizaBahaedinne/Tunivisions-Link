@@ -61,7 +61,8 @@ class Actu extends BaseController {
 		                 'description' => $Description ,
 		                 'image' => basename($_FILES["fileToUpload"]["name"])  , 
 		                 'lien' => $lien ,
-		                 'createdBy' => $this->vendorId
+		                 'createdBy' => $this->vendorId ,
+		                 'createdDate'=> date('Y-m-d H:i:s')
 		                     );
 
 			   		   $this->actualite_model->addNew($actuInfo);
