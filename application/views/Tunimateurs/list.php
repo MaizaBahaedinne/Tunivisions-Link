@@ -9,7 +9,7 @@
 }
 </style>
 
-<link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/jquery.paginate.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/jquery.paginate.css">
 
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
@@ -131,7 +131,7 @@
 
         <!--begin: Pagination-->
         <div id ="pagination-container" class="kt-pagination kt-pagination--brand">
-           <script src="<?php echo base_url() ?>/assets/js/jquery.paginate.js"></script>
+           <script src="<?php echo base_url() ?>assets/js/jquery.paginate.js"></script>
             <script >
                 
             $('#page').paginate({

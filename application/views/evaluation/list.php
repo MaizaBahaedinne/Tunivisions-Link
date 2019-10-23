@@ -113,7 +113,7 @@
                         <?php if ($record->statut == 'En Attend') {
                             # code...
                         ?>
-                        <a href="<?php echo base_url() ?>/Evaluation/doEvaluation/<?php echo $record->evaluationId ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                        <a href="<?php echo base_url() ?>Evaluation/doEvaluation/<?php echo $record->evaluationId ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
                           <i class="la la-edit"></i>
                         </a>
                         <?php 
