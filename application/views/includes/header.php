@@ -515,7 +515,7 @@
 
 
     <div class="kt-notification__custom kt-space-between">
-        <a href="<?php echo base_url() ?>logout" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Déconnecter</a>
+        <a href="<?php echo base_url() ?>logout" class="btn btn-label btn-label-brand btn-sm btn-bold">Déconnecter</a>
 
         
     </div>

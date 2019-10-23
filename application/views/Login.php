@@ -74,12 +74,9 @@
       <div class="kt-grid__item">
         <div class="kt-login__info">
           <div class="kt-login__copyright">
-            © 2019  <a href="https://www.facebook.com/maiza.koussai" >Maiza Bahaedinne</a> & <a href="https://www.facebook.com/Tunivisionsfoundation/" >Tunivisions Foundation</a> 
+            © 2019 by <a href="https://www.facebook.com/maiza.koussai" >Maiza Bahaedinne</a> & <a href="https://www.facebook.com/Tunivisionsfoundation/" >Tunivisions Foundation</a> 
            </div>
           <div class="kt-login__menu">
-            <a href="#" class="kt-link">Privacy</a>
-            <a href="#" class="kt-link">Legal</a>
-            <a href="#" class="kt-link">Contact</a>
           </div>
         </div>
       </div>
