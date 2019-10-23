@@ -46,11 +46,11 @@
 
     <!-- begin::Body -->
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading"  >
-    <!--
+   <?php if($isBlocked==1) { ?>
     		<script type="text/javascript"> let timerInterval
 	Swal.fire({
 	  title: 'alert!',
-	  html: 'Votre club est bloqué .',
+	  html: 'tu es bloqué . Contacter la Foundation',
 	  timer: 4000,
 	  onBeforeOpen: () => {
 	    Swal.showLoading()
@@ -71,7 +71,7 @@
 	    console.log('Votre club est bloqué')
 	  }
 	})</script>
-       -->
+       <?php } ?>
     	<!-- begin:: Page -->
 	
 <!-- begin:: Header Mobile -->

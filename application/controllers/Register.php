@@ -30,7 +30,7 @@ class Register extends CI_Controller
    
   function registerNewUser()
     {
-    
+                $birth = $this->input->post('birth');
                 $name = $this->input->post('fname');
                 $email = $this->input->post('email');
                 $password = $this->input->post('password');
@@ -48,9 +48,6 @@ class Register extends CI_Controller
                     $uploadOk = 1;
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
    
-   
-
-
 
                 $userInfo = array(
                  'avatar' => basename($_FILES["fileToUpload"]["name"]) ,  
@@ -66,8 +63,9 @@ class Register extends CI_Controller
                  'sexe'=>$sexe,
                  'gouvernorat'=>$gouvernorat,
                  'delegation'=>$delegation,
-                 'facebook'=>$facebook
-                 
+                 'facebook'=>$facebook, 
+                 'birthdaty' => $birth
+                 'isDeleted' = 1 
                      );
 
                
