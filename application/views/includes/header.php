@@ -28,19 +28,19 @@
         <!--end::Fonts -->
 
                     <!--begin::Page Vendors Styles(used by this page) -->
-                            <link href="<?php echo base_url() ?>/assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+                            <link href="<?php echo base_url() ?>assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
                         <!--end::Page Vendors Styles -->
         
         
         <!--begin::Global Theme Styles(used by all pages) -->
-                    <link href="<?php echo base_url() ?>/assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
-                    <link href="<?php echo base_url() ?>/assets/css/demo12/style.bundle.css" rel="stylesheet" type="text/css" />
+                    <link href="<?php echo base_url() ?>assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
+                    <link href="<?php echo base_url() ?>assets/css/demo12/style.bundle.css" rel="stylesheet" type="text/css" />
                 <!--end::Global Theme Styles -->
 
         <!--begin::Layout Skins(used by all pages) -->
                 <!--end::Layout Skins -->
 
-        <link rel="shortcut icon" href="<?php echo base_url() ?>/assets/media/logos/favicon.ico" />
+        <link rel="shortcut icon" href="<?php echo base_url() ?>assets/media/logos/favicon.ico" />
     </head>
     <!-- end::Head -->
 
@@ -78,7 +78,7 @@
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " >
 	<div class="kt-header-mobile__logo">
 		<a href="<?php echo base_url() ; ?>">
-			<img alt="Logo" width="80%" src="<?php echo base_url() ?>/assets/media/logos/logo-12.png"/>
+			<img alt="Logo" width="80%" src="<?php echo base_url() ?>assets/media/logos/logo-12.png"/>
 		</a>
 	</div>
 	<div class="kt-header-mobile__toolbar">
@@ -100,7 +100,7 @@
 <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
 	<div class="kt-aside__brand-logo">
 		<a href="<?php echo base_url() ; ?>">
-			<img alt="Logo" src="<?php echo base_url() ?>/assets/media/logos/logo-12.png">
+			<img alt="Logo" src="<?php echo base_url() ?>assets/media/logos/logo-12.png">
 		</a>
 	</div>
 
@@ -499,7 +499,7 @@
             </div>
         </div>
     </a>
-    <a href="<?php echo base_url() ?>/Tasks/myTasksListing " class="kt-notification__item">
+    <a href="<?php echo base_url() ?>Tasks/myTasksListing " class="kt-notification__item">
         <div class="kt-notification__item-icon">
             <i class="flaticon2-hourglass kt-font-brand"></i>
         </div>
