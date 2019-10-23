@@ -1,4 +1,4 @@
-<html lang="en"><!-- begin::Head -->
+<html lang="fr"><!-- begin::Head -->
 <head>
   <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
   <script type="text/javascript" src="https://keenthemes.com/metr/injected/Async.js"></script>
@@ -13,12 +13,12 @@
 
         
                     <!--begin::Page Custom Styles(used by this page) -->
-                             <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/pages/login/login-1.css" rel="stylesheet" type="text/css">
+  <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/pages/login/login-1.css" rel="stylesheet" type="text/css">
                         <!--end::Page Custom Styles -->
         
         <!--begin::Global Theme Styles(used by all pages) -->
-                    <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
-                    <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/style.bundle.css" rel="stylesheet" type="text/css">
+<link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
+ <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/style.bundle.css" rel="stylesheet" type="text/css">
                 <!--end::Global Theme Styles -->
 
         <!--begin::Layout Skins(used by all pages) -->
@@ -28,7 +28,7 @@
 <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/brand/dark.css" rel="stylesheet" type="text/css">
 <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css">        <!--end::Layout Skins -->
 
-        <link rel="shortcut icon" href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/media/logos/favicon.ico">
+         <link rel="shortcut icon" href="<?php echo base_url() ?>assets/media/logos/favicon.ico" />
 
         <!-- Hotjar Tracking Code for keenthemes.com -->
 <script>
@@ -74,8 +74,8 @@
       <div class="kt-grid__item">
         <div class="kt-login__info">
           <div class="kt-login__copyright">
-            © 2018 Maiza Bahaedinne
-          </div>
+            © 2019  <a href="https://www.facebook.com/maiza.koussai" >Maiza Bahaedinne</a> & <a href="https://www.facebook.com/Tunivisionsfoundation/" >Tunivisions Foundation</a> 
+           </div>
           <div class="kt-login__menu">
             <a href="#" class="kt-link">Privacy</a>
             <a href="#" class="kt-link">Legal</a>
@@ -90,8 +90,8 @@
     <div class="kt-grid__item kt-grid__item--fluid  kt-grid__item--order-tablet-and-mobile-1  kt-login__wrapper">
       <!--begin::Head-->
       <div class="kt-login__head">
-        <span class="kt-login__signup-label">Don't have an account yet?</span>&nbsp;&nbsp;
-        <a href="#" class="kt-link kt-login__signup-link">Sign Up!</a>
+        <span class="kt-login__signup-label"></span>&nbsp;&nbsp;
+        <a href="#" class="kt-link kt-login__signup-link"></a>
       </div>
       <!--end::Head-->
 
