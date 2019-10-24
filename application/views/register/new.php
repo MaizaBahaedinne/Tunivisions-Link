@@ -177,11 +177,12 @@
               
 
               <span>Avatar</span><input type="file" name="fileToUpload" id="fileToUpload" class="form-control" required>
+              <p id="error" style="display:none; color:#FF0000;">le format de fichier doit etre JPG ou JPEG avec une taile maximum de 2 MB </p>
               <p id="error1" style="display:none; color:#FF0000;">
-                  Invalid Image Format! Image Format Must Be JPG, JPEG.
+                  Format d'image invalide! Le format d'image doit être JPG, JPEG.
                   </p>
                   <p id="error2" style="display:none; color:#FF0000;">
-                  Maximum File Size Limit is 2 MB.
+                La taille maximale du fichier est de 2 Mo.
                   </p>
             </div>
 

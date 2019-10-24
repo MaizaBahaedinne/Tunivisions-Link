@@ -49,6 +49,7 @@ class BaseController extends CI_Controller {
 			$this->cellule = $this->session->userdata ( 'cellule' );
 			$this->isBlocked = $this->session->userdata ( 'isDeleted' );
 
+			$this->global ['uid'] = $this->vendorId;
 			$this->global ['name'] = $this->name;
 			$this->global ['clubID'] = $this->clubID;
 			$this->global ['cellule'] = $this->cellule;
@@ -89,7 +90,7 @@ class BaseController extends CI_Controller {
 	 */
 	function loadThis() {
 		$this->global ['pageTitle'] = 'CodeInsect : Access Denied';
-		
+
 		$this->load->view ( 'includes/header', $this->global );
 		$this->load->view ( 'access' );
 		$this->load->view ( 'includes/footer' );

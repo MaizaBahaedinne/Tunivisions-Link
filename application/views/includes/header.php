@@ -451,8 +451,20 @@
             <span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
         </div>
         <div class="kt-user-card__name">
-            <?php echo $name; ?>       </div>
-        
+            <?php echo $name; ?> 
+            <p style="display: none" id="p1"><?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID; ?></p>
+            
+            <button class="btn btn-label-primary" onclick="copyToClipboard('#p1')"  >Lien de parainage</button>       </div>
+        	<script type="text/javascript">
+        		function copyToClipboard(element) {
+				  var $temp = $("<input>");
+				  $("body").append($temp);
+				  $temp.val($(element).text()).select();
+				  document.execCommand("copy");
+				  $temp.remove();
+				}
+
+    		</script>
     </div>
 <!--end: Head -->
 
