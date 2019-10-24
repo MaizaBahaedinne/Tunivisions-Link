@@ -59,7 +59,7 @@ $cellule = $userInfo->cellule;
         <div class="kt-widget kt-widget--user-profile-1">
             <div class="kt-widget__head">
                 <div class="kt-widget__media">
-                    <img src="<?php echo base_url() ; ?>/uploads/avatar/<?php echo $avatar ?>" alt="image">
+                    <img src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $avatar ?>" alt="image">
                 </div>
                 <div class="kt-widget__content">
                     <div class="kt-widget__section">
@@ -241,7 +241,7 @@ $cellule = $userInfo->cellule;
                                         <label class="col-xl-3 col-lg-3 col-form-label">Avatar</label>
                                         <div class="col-lg-9 col-xl-6">
                                             <div class="kt-avatar kt-avatar--outline kt-avatar--circle" id="kt_apps_user_add_avatar">
-                                                <div class="kt-avatar__holder" style="background-image: url('<?php echo base_url() ; ?>/uploads/avatar/<?php echo $avatar ?>');"></div>
+                                                <div class="kt-avatar__holder" style="background-image: url('<?php echo base_url() ; ?>uploads/avatar/<?php echo $avatar ?>');"></div>
                                                 <label class="kt-avatar__upload" data-toggle="kt-tooltip" title="" data-original-title="Change avatar">
                                                     <i class="fa fa-pen"></i>
                                                     <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg">
