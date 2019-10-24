@@ -79,7 +79,8 @@ class Login extends CI_Controller
                                         'cellule' => $result->cellule,
                                         'lastLogin'=> $lastLogin->createdDtm,
                                         'isDeleted' => $result->isDeleted ,
-                                        'isLoggedIn' => TRUE
+                                        'SA' => $result->SA ,
+                                        'isLoggedIn' => TRUE 
                                 );
 
                 $this->session->set_userdata($sessionArray);

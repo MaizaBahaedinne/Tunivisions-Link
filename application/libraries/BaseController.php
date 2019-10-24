@@ -48,6 +48,7 @@ class BaseController extends CI_Controller {
 			$this->avatar = $this->session->userdata ( 'avatar' );
 			$this->cellule = $this->session->userdata ( 'cellule' );
 			$this->isBlocked = $this->session->userdata ( 'isDeleted' );
+			$this->SA = $this->session->userdata ( 'SA' );
 
 			$this->global ['uid'] = $this->vendorId;
 			$this->global ['name'] = $this->name;
@@ -58,6 +59,8 @@ class BaseController extends CI_Controller {
 			$this->global ['role_text'] = $this->roleText;
 			$this->global ['last_login'] = $this->lastLogin;
 			$this->global ['isBlocked'] = $this->isBlocked;
+			$this->global ['SA'] = $this->SA;
+
 
 
 		}

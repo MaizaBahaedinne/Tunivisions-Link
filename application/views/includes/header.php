@@ -154,7 +154,7 @@
 					</span>
 				</a>
 			</li>
-			<?php if ($clubID ==0 && (($role ==1 || $role == 2 || $role == 3) && ($cellule =='Marketing' || $cellule =='') )) { ?>
+			<?php if ($clubID ==0 && ($SA==1 || (($role ==1 || $role == 2 || $role == 3) && ($cellule =='Marketing' || $cellule =='') )) ) { ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "actu" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>Actu/addNew" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-users">
@@ -218,7 +218,7 @@
 					</span>
 				</a>
 			</li>
-			<?php if ($cellule =='' &&  ($role ==1 || $role == 2 )   ) { ?>
+			<?php if (  $SA==1 || ($cellule =='' &&  ($role ==1 || $role == 2 ))   ) { ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "postes" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>club/Postes" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-map">
@@ -229,7 +229,7 @@
 				</a>
 			</li>
 			<?php } ?>
-			<?php if ($role ==1  ||  ($role == 3  && $cellule='Gestion des talents' )) {  ?>
+			<?php if ( $SA==1 || ( $role ==1  ||  ($role == 3  && $cellule='Gestion des talents' )) ) {  ?>
  			<li class="kt-menu__item  kt-menu__item<?php if( $active == "RH" ){echo("--active") ;} ?>" aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>User/userByClubListing" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-network">
@@ -240,7 +240,7 @@
 				</a>
 			</li>
 			<?php } ?>
-			<?php if ($role ==1  ||  ($role == 3  && $cellule='Administration et finance' )) {  ?>
+			<?php if ( $SA==1 || ( $role ==1  ||  ($role == 3  && $cellule='Administration et finance' )) ) {  ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "finance" ){echo("--active") ;} ?>" aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>Finance/financeListing" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-folder-1">
@@ -251,7 +251,7 @@
 				</a>
 			</li>
 			<?php } ?>
-			<?php if ($role ==1  ||  ($role == 3  && $cellule='Evenementiel' )) {  ?>
+			<?php if ( $SA==1 || ( $role ==1  ||  ($role == 3  && $cellule='Evenementiel' )) ) {  ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "project" ){echo("--active") ;} ?>" aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>addNewProject" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon2-architecture-and-city">
@@ -262,7 +262,7 @@
 				</a>
 			</li>
 			<?php } ?>
-			<?php if ($role ==1  ||  $role ==2 ||  $role ==3 ) {  ?>
+			<?php if ( $SA==1 || ( $role ==1  ||  $role ==2 ||  $role ==3 ) ) {  ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "tasks" ){echo("--active") ;} ?>" aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>Tasks/tasksListing" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-list-1">
