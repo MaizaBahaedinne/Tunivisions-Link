@@ -27,7 +27,7 @@
 <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css">
 <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/brand/dark.css" rel="stylesheet" type="text/css">
 <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css">        <!--end::Layout Skins -->
-
+          <link rel="icon" href="<?php echo base_url() ?>assets/media/logos/favicon.ico" />
          <link rel="shortcut icon" href="<?php echo base_url() ?>assets/media/logos/favicon.ico" />
 
         <!-- Hotjar Tracking Code for keenthemes.com -->

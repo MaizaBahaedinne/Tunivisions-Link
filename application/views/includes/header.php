@@ -28,7 +28,7 @@
         <!--end::Fonts -->
 
                     <!--begin::Page Vendors Styles(used by this page) -->
-                            <link href="<?php echo base_url() ?>assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+       <link href="<?php echo base_url() ?>assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
                         <!--end::Page Vendors Styles -->
         
         
@@ -39,7 +39,7 @@
 
         <!--begin::Layout Skins(used by all pages) -->
                 <!--end::Layout Skins -->
-
+		<link rel="icon" href="<?php echo base_url() ?>assets/media/logos/favicon.ico" />
         <link rel="shortcut icon" href="<?php echo base_url() ?>assets/media/logos/favicon.ico" />
     </head>
     <!-- end::Head -->
