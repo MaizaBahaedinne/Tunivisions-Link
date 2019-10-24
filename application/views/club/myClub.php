@@ -48,23 +48,17 @@
                             ?>
                            
                             <div class="kt-widget__top">
-                
-                                <style type="text/css">
-                                    .crop {
-                                        width: 350px;
-                                        
-                                        overflow: hidden;
-                                    }
+                                 <style type="text/css">
+                                   .alligator-turtle {
+                              object-fit: cover;
+                              object-position: 50% 50%;
 
-                                    .crop img {
-                                        width: 500px;
-                                        
-                                        margin: -50px 0 0 -50px;
-                                    }
-
-                                </style>
+                              width: 150px;
+                              height: 100px;
+                            }
+                            </style>
                              
-                             <img src="<?php echo base_url()  ?>uploads/avatar/<?php echo $b->avatar; ?>"  alt="image"  class="kt-radius-100" >
+                             <img src="<?php echo base_url()  ?>uploads/avatar/<?php echo $b->avatar; ?>"  alt="image"  class="kt-radius-100 alligator-turtle " >
                     
                 
                 
