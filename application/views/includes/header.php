@@ -67,7 +67,7 @@
 	    /* Read more about handling dismissals below */
 	    result.dismiss === Swal.DismissReason.timer
 	  ) {
-	  	window.location.replace("<?php echo base_url() ;?>/logout");
+	  	window.location.replace("<?php echo base_url() ;?>logout");
 	    console.log('Votre club est bloqué')
 	  }
 	})</script>
