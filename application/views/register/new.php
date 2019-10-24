@@ -4,8 +4,8 @@
   <script type="text/javascript" src="https://keenthemes.com/metr/injected/Async.js"></script>
         <meta charset="utf-8">
 
-        <title>T-Link</title>
-        <meta name="description" content="Login page example">
+        <title>T-Link | S'inscrire</title>
+        <meta name="description" content="page d'inscription">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!--begin::Fonts -->
