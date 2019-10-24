@@ -473,6 +473,7 @@
     		</script>
     	<?php } ?>
     </div>
+    </div>
 <!--end: Head -->
 
 <!--begin: Navigation -->
