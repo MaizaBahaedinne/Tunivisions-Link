@@ -59,12 +59,7 @@ class User extends BaseController
      */
     function userListing()
     {
-        if($this->isAdmin() == TRUE)
-        {
-            $this->loadThis();
-        }
-        else
-        {        
+      
             $searchText = $this->security->xss_clean($this->input->post('searchText'));
             $data['searchText'] = $searchText;
             
@@ -78,7 +73,7 @@ class User extends BaseController
             $this->global['active'] = 'users';
 
             $this->loadViews("users", $this->global, $data, NULL);
-        }
+        
     }
 
 
