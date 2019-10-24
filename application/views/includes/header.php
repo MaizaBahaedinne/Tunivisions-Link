@@ -51,7 +51,7 @@
 	Swal.fire({
 	  title: 'alert!',
 	  html: 'tu es bloqué . Contacter la Foundation',
-	  timer: 4000,
+	  timer: 7000,
 	  onBeforeOpen: () => {
 	    Swal.showLoading()
 	    timerInterval = setInterval(() => {

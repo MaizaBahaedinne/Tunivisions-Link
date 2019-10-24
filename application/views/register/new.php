@@ -108,6 +108,9 @@
             ?>
           <!--begin::Form-->
     <form role="form" class="kt-form" runat="server" action="<?php echo base_url() ?>Register/registerNewUser?var1=<?php echo $var1 ?>&var2=<?php echo $var2 ?>"    method="post" enctype="multipart/form-data" >
+            <div  style="align-content: center;" id="fb-root"></div>
+              <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
+              <div class="fb-page" data-href="https://www.facebook.com/Tunivisionsfoundation" data-tabs="" data-width="450" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Tunivisionsfoundation" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Tunivisionsfoundation">Tunivisions Foundation</a></blockquote></div>
             
             <?php if ($var1!=Null || $var2!=Null ) { ?> 
             
@@ -154,10 +157,10 @@
               <input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
             </div>
             <div class="form-group">
-              <input class="form-control" type="password" placeholder="Password" name="password" required>
+              <input class="form-control" type="password" placeholder="Mot de passe" name="password" required>
             </div>
             <div class="form-group">
-              <input class="form-control" type="password" placeholder="Confirm Password" name="rpassword" required>
+              <input class="form-control" type="password" placeholder="Confirmation mot de passe" name="rpassword" required>
             </div>
             <div class="form-group">
               <input class="form-control" type="text" pattern="[2-9]{2}\d{6}" placeholder="mobile" name="mobile" required>
