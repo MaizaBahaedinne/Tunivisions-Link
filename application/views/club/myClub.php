@@ -64,7 +64,7 @@
 
                                 </style>
                              
-                             <img src="<?php echo base_url()  ?>uploads/avatar/<?php echo $b->avatar; ?>" width="45px" alt="image"  class="kt-radius-100" >
+                             <img src="<?php echo base_url()  ?>uploads/avatar/<?php echo $b->avatar; ?>"  alt="image"  class="kt-radius-100" >
                     
                 
                 
