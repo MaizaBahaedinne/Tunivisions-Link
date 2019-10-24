@@ -65,7 +65,7 @@ class Register extends CI_Controller
                  'delegation'=>$delegation,
                  'facebook'=>$facebook, 
                  'birthdaty' => $birth ,
-                 'isDeleted' = 1 
+                 'isDeleted' => 1 
                      );
 
                
