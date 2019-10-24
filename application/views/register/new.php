@@ -68,7 +68,7 @@
       <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver">
         <div class="kt-grid__item kt-grid__item--middle">
           <h3 class="kt-login__title">Bienvenu au T.LINK</h3>
-          <h4 class="kt-login__subtitle">Cette application est déstiné au club Tunivisions </h4>
+          <h4 class="kt-login__subtitle">Cette application est déstiné aux clubs Tunivisions.</h4>
         </div>
       </div>
       <div class="kt-grid__item">
@@ -157,32 +157,26 @@
               <input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
             </div>
             <div class="form-group">
-              <input class="form-control" type="password" placeholder="Mot de passe" name="password" required>
+              <input class="form-control" type="password" minlength="8" placeholder="Mot de passe" name="password" required>
             </div>
             <div class="form-group">
-              <input class="form-control" type="password" placeholder="Confirmation mot de passe" name="rpassword" required>
+              <input class="form-control" type="password" minlength="8" placeholder="Confirmation mot de passe" name="rpassword" required>
             </div>
             <div class="form-group">
               <input class="form-control" type="text" pattern="[2-9]{2}\d{6}" placeholder="mobile" name="mobile" required>
             </div>
             <div class="form-group">
             
-              <input class="form-control" type="text" placeholder="facebook" name="facebook" required>
+              <input class="form-control" pattern="http://www\.facebook\.com\/(.+)|https://www\.facebook\.com\/(.+)" type="url"  placeholder="facebook | Format : |https://www.facebook.com/UserName " name="facebook" required>
             </div>
             <div class="form-group">
-
-
-
-
-              
-
               <span>Avatar</span><input type="file" name="fileToUpload" id="fileToUpload" class="form-control" required>
-              <p id="error" style="display:none; color:#FF0000;">le format de fichier doit etre JPG ou JPEG avec une taile maximum de 2 MB </p>
+              <p >le format de fichier doit etre JPG ou JPEG avec une taile maximale de 2 MO </p>
               <p id="error1" style="display:none; color:#FF0000;">
                   Format d'image invalide! Le format d'image doit être JPG, JPEG.
                   </p>
                   <p id="error2" style="display:none; color:#FF0000;">
-                La taille maximale du fichier est de 2 Mo.
+                  La taille maximale du fichier est de 2 Mo.
                   </p>
             </div>
 

@@ -47,6 +47,8 @@
     <!-- begin::Body -->
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading"  >
 
+
+
 <!-- blockage ---------------->
 
    <?php if($isBlocked==1) { ?>
@@ -544,4 +546,13 @@
 <!-- end:: Header Topbar --></div>
 <!-- end:: Header -->
 
-
+<script type="text/javascript" src="<?php echo base_url() ;?>assets\js\push\Push.js"></script>
+<script type="text/javascript">Push.create("Hello world!", {
+    body: "How's it hangin'?",
+    icon: '/icon.png',
+    timeout: 4000,
+    onClick: function () {
+        window.focus();
+        this.close();
+    }
+});</script>
