@@ -269,7 +269,7 @@ $cellule = $userInfo->cellule;
                                         <label class="col-xl-3 col-lg-3 col-form-label">CIN</label>
                                         <div class="col-lg-9 col-xl-6">
                                             <input class="form-control" disabled  type="text" value="<?php echo $userInfo->cin ?>">
-                                            <span class="form-text text-muted">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
+                                            <span class="form-text text-muted">.</span>
                                         </div>
                                     </div>
 
@@ -286,11 +286,11 @@ $cellule = $userInfo->cellule;
                                                 <div class="input-group-prepend"><span class="input-group-text"><i class="la la-phone"></i></span></div>
                                                 <input type="text" name="mobile" class="form-control" value="<?php echo $mobile ?>" placeholder="mobile" aria-describedby="basic-addon1">
                                             </div>
-                                            <span class="form-text text-muted">We'll never share your email with anyone else.</span>
+                                            <span class="form-text text-muted">.</span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-lg-3 col-form-label">Email Address</label>
+                                        <label class="col-xl-3 col-lg-3 col-form-label">Email</label>
                                         <div class="col-lg-9 col-xl-6">
                                             <div class="input-group">
                                                 <div class="input-group-prepend"><span class="input-group-text"><i class="la la-at"></i></span></div>
