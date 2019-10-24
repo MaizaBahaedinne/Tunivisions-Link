@@ -46,6 +46,9 @@
 
     <!-- begin::Body -->
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading"  >
+
+<!-- blockage ---------------->
+
    <?php if($isBlocked==1) { ?>
     		<script type="text/javascript"> let timerInterval
 	Swal.fire({
@@ -452,6 +455,7 @@
         </div>
         <div class="kt-user-card__name">
             <?php echo $name; ?> 
+            <?php if  ($role ==1 ) { ?>
             <p style="display: none" id="p1"><?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID; ?></p>
             
             <button class="btn btn-label-primary" onclick="copyToClipboard('#p1')"  >Lien de parainage</button>       </div>
@@ -465,6 +469,7 @@
 				}
 
     		</script>
+    	<?php } ?>
     </div>
 <!--end: Head -->
 
