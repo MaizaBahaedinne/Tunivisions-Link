@@ -50,20 +50,13 @@
         </div>
         <div class="kt-sc__bottom">
             <h3 class="kt-sc__heading kt-heading kt-heading--center kt-heading--xxl kt-heading--medium">
-                <?php echo  $actuInfo->titre ; ?> 
+              
             </h3>
 
         </div>
     </div>
 </div>
 <!-- end:: Hero -->
-
-<!-- begin:: Section -->
-<div class="kt-container ">
-
-</div>
-<!-- end:: iconbox -->
-
 
 <!-- begin:: Section -->
 <div class="kt-container ">
@@ -74,12 +67,22 @@
                     <h2 class="kt-infobox__title"><?php echo  $actuInfo->titre ; ?> </h2>
                 </div>
                 <div class="kt-infobox__body">
-                    <div class="kt-infobox__section">
-                        <h3 class="kt-infobox__subtitle">Basic License</h3>
-                        <div class="kt-infobox__content">
-                            <?php echo  $actuInfo->description ; ?>  
+                    <div class="row">
+                        <div class="col-md-6">
+                                <div class="kt-infobox__section">
+                                    <div class="kt-infobox__content">
+                                        <?php echo  $actuInfo->description ; ?>  
+                                    </div>
+                                </div>
                         </div>
+                        <div class="col-md-6">
+                            <div id="fb-root"></div>
+                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
+                            <div class="fb-post" data-href="https://www.facebook.com/media/set/?set=a.872224636482564&amp;type=3" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/media/set/?set=a.872224636482564&amp;type=3" class="fb-xfbml-parse-ignore"><p></p>Publiée par <a href="https://www.facebook.com/Tunivisionsfoundation/">Tunivisions Foundation</a> sur&nbsp;<a href="<?php echo $actuInfo->lien ?>"></a></blockquote></div>
+                        </div>
+
                     </div>
+
                     
                 </div>
             </div>
@@ -89,4 +92,5 @@
 <!-- end:: Section -->
 
 
-<!-- end:: Section --><!-- end:: Content -->                </div>
+<!-- end:: Section --><!-- end:: Content -->                
+</div>

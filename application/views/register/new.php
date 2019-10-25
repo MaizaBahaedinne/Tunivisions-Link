@@ -122,7 +122,6 @@
               <input class="form-control" type="text" placeholder="Nom et prénom" name="fname" required>
             </div>
             <div class="form-group">
-             
               <input class="form-control form_date" type="text" placeholder="Date de naissance" name="birth" required>
             </div>
             <div class="form-group">

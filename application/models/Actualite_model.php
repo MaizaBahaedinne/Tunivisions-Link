@@ -70,7 +70,7 @@ class Actualite_model extends CI_Model
      */
     function actuById($actuId)
     {
-        $this->db->select('BaseTbl.actuId , BaseTbl.titre , BaseTbl.description , BaseTbl.image ' );
+        $this->db->select('BaseTbl.actuId , BaseTbl.titre , BaseTbl.description , BaseTbl.image , BaseTbl.lien' );
         $this->db->from('tbl_actu as BaseTbl');
         $this->db->where('BaseTbl.actuID', $actuId);
         $query = $this->db->get();
