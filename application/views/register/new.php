@@ -122,7 +122,8 @@
               <input class="form-control" type="text" placeholder="Nom et prénom" name="fname" required>
             </div>
             <div class="form-group">
-              <input class="form-control form_date" type="text" placeholder="Date de naissance" name="birth" required>
+              <div class="row" ><div class="col-md-4" ><br> <br>Date de naissance </div><div class="col-md-8"> <input class="form-control " type="date" placeholder="Date de naissance" name="birth" required></div></div>
+              
             </div>
             <div class="form-group">
             <SELECT class="form-control" type="text" placeholder="sexe" name="sexe" required>

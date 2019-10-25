@@ -123,19 +123,14 @@ class User extends BaseController
      */
     function addNew()
     {
-        if($this->isAdmin() == TRUE)
-        {
-            $this->loadThis();
-        }
-        else
-        {
+
             $this->load->model('user_model');
             $data['roles'] = $this->user_model->getUserRoles();
             $data['clubs'] = $this->user_model->getClubs();
             $this->global['pageTitle'] = 'CodeInsect : Add New User';
 
             $this->loadViews("addNew", $this->global, $data, NULL);
-        }
+       
     }
 
     /**
