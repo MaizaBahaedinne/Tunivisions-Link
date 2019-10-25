@@ -24,13 +24,14 @@ class Register extends CI_Controller
      */
     public function index()
     {
+
          $this->load->view('register/new');
     }
     
    
   function registerNewUser()
     {
-                $birth = $this->input->post('birth');
+                $birth = $this->security->xss_clean($this->input->post('birth'));
                 $name = $this->input->post('fname');
                 $email = $this->input->post('email');
                 $password = $this->input->post('password');

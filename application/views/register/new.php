@@ -104,7 +104,7 @@
           <?php
             $this->load->helper('form');
              $var1 = $this->input->get('var1');
-             $var2 = $this->input->get('var1');
+             $var2 = $this->input->get('var2');
             ?>
           <!--begin::Form-->
     <form role="form" class="kt-form" runat="server" action="<?php echo base_url() ?>Register/registerNewUser?var1=<?php echo $var1 ?>&var2=<?php echo $var2 ?>"    method="post" enctype="multipart/form-data" >
