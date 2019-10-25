@@ -78,7 +78,7 @@
                         <div class="col-md-6">
                             <div id="fb-root"></div>
                             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
-                            <div class="fb-post" data-href="<a href="<?php echo $actuInfo->lien ?>" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/media/set/?set=a.872224636482564&amp;type=3" class="fb-xfbml-parse-ignore"><p></p>Publiée par <a href="https://www.facebook.com/Tunivisionsfoundation/">Tunivisions Foundation</a> sur&nbsp;<a href="<?php echo $actuInfo->lien ?>"></a></blockquote></div>
+                            <div class="fb-post" data-href="<a href="<?php echo ''.$actuInfo->lien.'' ?>" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/media/set/?set=a.872224636482564&amp;type=3" class="fb-xfbml-parse-ignore"><p></p>Publiée par <a href="https://www.facebook.com/Tunivisionsfoundation/">Tunivisions Foundation</a> sur&nbsp;<a href="<?php echo $actuInfo->lien ?>"></a></blockquote></div>
                         </div>
 
                     </div>

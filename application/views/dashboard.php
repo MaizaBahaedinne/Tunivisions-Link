@@ -4,7 +4,7 @@
   object-position: 50% 50%;
 
   width: 150px;
-  height: 100px;
+  height: 75px;
 }
 </style>
 
@@ -155,12 +155,11 @@
                             </div>
                             <div class="kt-widget5__section">
                                 <a href="<?php echo base_url() ?>Actu/Show/<?php echo $record->actuID ?> " class="kt-widget5__title">
-                                    <?php echo $record->titre ;?>
-                                </a>
-                                <p class="kt-widget5__desc">
+                                    
+
                                     <?php
-                                    $string = strip_tags($record->description);
-                                    if (strlen($string) > 35) {
+                                    $string = strip_tags( $record->titre );
+                                    if (strlen($string) > 35){
 
                                         // truncate string
                                         $stringCut = substr($string, 0, 35);
@@ -168,7 +167,23 @@
 
                                         //if the string doesn't contain any space then it will cut without word basis.
                                         $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                                        $string .= '... <a href="/this/story">  Plus d\'information</a>';
+                                        $string .= '... <a href="'.base_url().'/Actu/Show/'.$record->actuID.'">  Plus d\'information</a>';
+}
+
+                                     echo $string ;?>
+                                </a>
+                                <p class="kt-widget5__desc">
+                                    <?php
+                                    $string = strip_tags($record->description);
+                                    if (strlen($string) > 100) {
+
+                                        // truncate string
+                                        $stringCut = substr($string, 0, 100);
+                                        $endPoint = strrpos($stringCut, ' ');
+
+                                        //if the string doesn't contain any space then it will cut without word basis.
+                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                        $string .= '... ' ;
 }
 
                                      echo $string ;?>
@@ -182,6 +197,7 @@
                             </div>
                         </div>                      
                         <div class="kt-widget5__content">
+                            <!--
                             <div class="kt-widget5__stats">
                                 <span class="kt-widget5__number"><span class="kt-widget5__number"><i class="kt-menu__link-icon 
                                 flaticon-like"></i></span></span>
@@ -192,6 +208,7 @@
                                 flaticon-comment"></i></span>
                                 <span class="kt-widget5__votes">20</span>
                             </div>
+                            -->
                         </div>  
                     </div>
     
