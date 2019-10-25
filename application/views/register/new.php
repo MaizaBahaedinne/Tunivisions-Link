@@ -163,7 +163,7 @@
               <input class="form-control" type="password" minlength="8" placeholder="Confirmation mot de passe" name="rpassword" required>
             </div>
             <div class="form-group">
-              <input class="form-control" type="text" pattern="[2-9]{2}\d{6}" placeholder="mobile" name="mobile" required>
+              <input class="form-control" type="text" pattern="[0-9]{2}\d{6}" placeholder="mobile" name="mobile" required>
             </div>
             <div class="form-group">
             
