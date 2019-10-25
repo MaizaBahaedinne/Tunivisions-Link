@@ -3,8 +3,8 @@
   object-fit: cover;
   object-position: 50% 50%;
 
-  width: 150px;
-  height: 75px;
+  width: auto;
+  height: 100px;
 }
 </style>
 
@@ -148,10 +148,11 @@
                 <div class="kt-widget5">
                     <?php foreach ($ActuRecords as $record ) {
                         ?>
+
                     <div class="kt-widget5__item">
                         <div class="kt-widget5__content">
-                            <div class="kt-widget5__pic">
-                                <img class="alligator-turtle" width="200px"   src="<?php echo base_url() ?>uploads/Actu/<?php echo $record->image ?>" alt="">
+                            <div class="kt-widget5__pic" style="background-image: ">
+                                <img class="alligator-turtle"    src="<?php echo base_url() ?>uploads/Actu/<?php echo $record->image ?>" alt="">
                             </div>
                             <div class="kt-widget5__section">
                                 <a href="<?php echo base_url() ?>Actu/Show/<?php echo $record->actuID ?> " class="kt-widget5__title">
