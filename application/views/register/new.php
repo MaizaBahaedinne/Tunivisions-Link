@@ -170,7 +170,7 @@
               <input class="form-control" pattern="http://www\.facebook\.com\/(.+)|https://www\.facebook\.com\/(.+)" type="url"  placeholder="facebook | Format : |https://www.facebook.com/UserName " name="facebook" required>
             </div>
             <div class="form-group">
-              <span>Avatar</span><input type="file" name="fileToUpload" id="fileToUpload" class="form-control" required>
+              <span>Photo de profile : </span><input type="file" name="fileToUpload" id="fileToUpload" class="form-control" required>
               <p >le format de fichier doit etre JPG ou JPEG avec une taile maximale de 2 MO </p>
               <p id="error1" style="display:none; color:#FF0000;">
                   Format d'image invalide! Le format d'image doit être JPG, JPEG.
