@@ -184,7 +184,7 @@
               <div class="col kt-align-left">
                 <br>
                 <label class="kt-checkbox">
-                  <input type="checkbox" name="agree" required>j'accepte <a href="#" class="kt-link kt-login__link kt-font-bold">le manuel de procedure de la foundation</a>.
+                  <input type="checkbox" name="agree" required>j'accepte <a href="<?php echo base_url(); ?>Register/reglement" class="kt-link kt-login__link kt-font-bold">le manuel de procedure de la foundation</a>.
                   <span></span>
                 </label>
                 <span class="form-text text-muted"></span>
