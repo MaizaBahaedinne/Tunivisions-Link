@@ -91,11 +91,8 @@
                     Back                </a>
             
                                                 <div class="btn-group">
-                        <button type="button" class="btn btn-brand btn-bold">
-                                                        
-                            Submit                        </button>
-                        <button type="button" class="btn btn-brand btn-bold dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        </button>
+             
+                        
                         <div class="dropdown-menu dropdown-menu-right">
                             <ul class="kt-nav">
                                 <li class="kt-nav__item">
@@ -163,7 +160,7 @@
                                 <div class="col-md-12">                                
                                             <div class="form-group">
                                                 <label for="fname">Lien album photo</label>
-                                               <input type="text" name="album" class="form-control" id="album" />
+                                               <input type="text" name="album" class="form-control" id="album" required />
                                     </div>   
                                 </div>
                                 <div class="col-md-12">                                
