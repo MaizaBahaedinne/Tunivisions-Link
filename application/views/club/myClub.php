@@ -53,8 +53,8 @@
                               object-fit: cover;
                               object-position: 50% 50%;
 
-                              width: 50px;
-                              height: 50px;
+                              width: 35px;
+                              height: 35px;
                             }
                             </style>
                              
