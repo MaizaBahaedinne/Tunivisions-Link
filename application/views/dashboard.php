@@ -68,7 +68,7 @@
                         </div>
 
                         <span class="kt-widget24__stats kt-font-warning">
-                           <?php echo $clubscount ; if($clubID==0) {echo ' <br><small>actif'$clubs.'<small>' ;}  ?>
+                           <?php echo $clubscount ; if($clubID==0) {echo ' <br><small>actif'.$clubs.'<small>' ;}  ?>
                         </span>  
                     </div> 
 
