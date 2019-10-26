@@ -81,7 +81,8 @@ class Club_model extends CI_Model
         $this->db->join('tbl_roles as Roles', 'Users.roleId = Roles.roleId', 'LEFT');
        
         $this->db->where('Users.roleId=1 or Users.roleId=2 or Users.roleId=3 or Users.roleId=6  ') ;
-       $this->db->where('Users.clubID=',$clubID) ;
+       $this->db->where('Users.clubId=',$clubID) ;
+       $this->db->group_by('Users.clubId') ;
         $this->db->order_by('Users.roleId', 'ASC') ;
         
          $query = $this->db->get();
