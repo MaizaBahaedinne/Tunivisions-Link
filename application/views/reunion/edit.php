@@ -110,7 +110,7 @@
                                 </div>
 
                                 <div class="col-md-12">
-                                <h3> Présence </h3>
+                                <h3> Absence </h3>
                                 </div>
                                 <hr>
 

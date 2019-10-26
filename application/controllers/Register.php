@@ -28,7 +28,17 @@ class Register extends CI_Controller
          $this->load->view('register/new');
     }
     
-   
+ 
+     /**
+     * Index Page for this controller.
+     */
+    public function reglement()
+    {
+
+         $this->load->view('reglement');
+    }
+
+
   function registerNewUser()
     {
                 $birth = $this->security->xss_clean($this->input->post('birth'));

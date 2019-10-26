@@ -78,13 +78,7 @@ class Reunion extends BaseController {
                                                              'userId' => $record->userId 
                                                              );             
                         $this->notification_model->addNewNotificaition($notifInfo) ;
-
-                                         $absenceInfo = array(        
-                                                             'reunionId' => $result ,
-                                                             'userID' =>  $record->userId  , 
-                                                             'DateAbsence' => $dateDo , 
-                                                             ); 
-                        $this->absence_model->addNew($absenceInfo) ;                 
+               
 
                      }
 
@@ -99,12 +93,6 @@ class Reunion extends BaseController {
                                                              );                                           
                           $this->notification_model->addNewNotificaition($notifInfo) ;
 
-                                         $absenceInfo = array(        
-                                                             'reunionId' => $result ,
-                                                             'userID' =>  $record->userId  , 
-                                                             'DateAbsence' => $dateDo , 
-                                                             ); 
-                        $this->absence_model->addNew($absenceInfo) ; 
                      }
 
                     $equipe = $this->user_model->getMembersByCellule($this->clubID,'Evenementiel');
@@ -118,12 +106,7 @@ class Reunion extends BaseController {
                                                              );       
                          $this->notification_model->addNewNotificaition($notifInfo) ;            
 
-                                         $absenceInfo = array(        
-                                                             'reunionId' => $result ,
-                                                             'userID' =>  $record->userId  , 
-                                                             'DateAbsence' => $dateDo , 
-                                                             ); 
-                        $this->absence_model->addNew($absenceInfo) ;
+
                      }
 
                     $equipe = $this->user_model->getMembersByCellule($this->clubID,'Gestion des talents');
@@ -137,12 +120,7 @@ class Reunion extends BaseController {
                                                              );                       
                            $this->notification_model->addNewNotificaition($notifInfo) ;
 
-                                         $absenceInfo = array(        
-                                                             'reunionId' => $result ,
-                                                             'userID' =>  $record->userId  , 
-                                                             'DateAbsence' => $dateDo , 
-                                                             ); 
-                        $this->absence_model->addNew($absenceInfo) ;
+
                      }
                 }
 
@@ -164,12 +142,7 @@ class Reunion extends BaseController {
                                                              );           
                         $this->notification_model->addNewNotificaition($notifInfo) ;
 
-                                         $absenceInfo = array(        
-                                                             'reunionId' => $result ,
-                                                             'userID' =>  $record->userId  , 
-                                                             'DateAbsence' => $dateDo , 
-                                                             ); 
-                        $this->absence_model->addNew($absenceInfo) ;
+
 
                      }                    
                 }
@@ -187,13 +160,7 @@ class Reunion extends BaseController {
                                                              'userId' => $record->userId 
                                                              );               
                           $this->notification_model->addNewNotificaition($notifInfo) ;
-
-                                         $absenceInfo = array(        
-                                                             'reunionId' => $result ,
-                                                             'userID' =>  $record->userId  , 
-                                                             'DateAbsence' => $dateDo , 
-                                                             ); 
-                        $this->absence_model->addNew($absenceInfo) ;                           
+                         
                      }
                 }
 
@@ -203,13 +170,7 @@ class Reunion extends BaseController {
                     $equipe = $this->user_model->getMembersByCellule($this->clubID,'Evenementiel');
                     foreach ($equipe as $record ) {     
                          $this->notification_model->addNewNotificaition($notifInfo) ;
-
-                                         $absenceInfo = array(        
-                                                             'reunionId' => $result ,
-                                                             'userID' =>  $record->userId  , 
-                                                             'DateAbsence' => $dateDo , 
-                                                             ); 
-                        $this->absence_model->addNew($absenceInfo) ;                                     
+                              
                        
                      }                    
                 }   
@@ -221,12 +182,7 @@ class Reunion extends BaseController {
                     foreach ($equipe as $record ) {                     
                            $this->notification_model->addNewNotificaition($notifInfo) ;
 
-                                         $absenceInfo = array(        
-                                                             'reunionId' => $result ,
-                                                             'userID' =>  $record->userId  , 
-                                                             'DateAbsence' => $dateDo , 
-                                                             ); 
-                        $this->absence_model->addNew($absenceInfo) ;
+
 
                      }                    
                 }  
@@ -260,13 +216,21 @@ class Reunion extends BaseController {
                 $PV = $this->input->post('PV');
                 
                 $reunionInfo = array(        
-                 'PV' => $PV ,
-
-                     );
+                 'PV' => $PV ,);
                 
                 $this->load->model('reunion_model');
                 $result = $this->reunion_model->editEvaluation($reunionInfo, $reunionId);
-               
+                        
+                foreach ( $this->input->post('ressource') as $r)
+                {
+                        $absenceInfo = array(        
+                                                             'reunionId' => $reunionId ,
+                                                             'userID' =>  $r  , 
+                                                             'DateAbsence' => $dateDo , 
+                                                             ); 
+                        $this->absence_model->addNew($absenceInfo) ;
+                }
+
                redirect('Reunion/ReunionListing') ; 
                 }
 

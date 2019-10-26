@@ -86,7 +86,8 @@
                             <div class="kt-widget__head">
                                 <a href="#" class="kt-widget__username">
                                     <?php echo $record->name ?>    
-                                    <i class="flaticon2-correct kt-font-success"></i>                       
+                                    <?php if($record->isDeleted == 0 ){?><i class="flaticon2-correct kt-font-success"></i> 
+                                <?php } ?>                      
                                 </a>                         
                                
                                 <div class="kt-widget__action">
