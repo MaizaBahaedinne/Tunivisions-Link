@@ -87,122 +87,37 @@
                             
                                 <div class="col-md-12">                                
                                     <div class="form-group">
-                                        <label for="fname">Procé verbal</label>
+                                        <h6>procès-verbal</h6>
+                                        <br>
                                        <?php echo $reunionRecord->PV; ?>   
 
                                     </div>
                                 </div>
 
                                 <div class="col-md-12">
-                                <h3> Présence </h3>
+                                <h3> Absence </h3>
                                 </div>
                                 <hr>
+                                <style type="text/css">
+                                                           .alligator-turtle {
+                                                      object-fit: cover;
+                                                      object-position: 50% 0;
 
-                                <?php if ($reunionRecord->cellule=='Marketing'){ ?>
-                                <div class="col-md-6">                                
-                                    <div class="form-group">
-                                        <h5 >Cellule Marketing</h5>
-                                            <?php   foreach($members as $record)
-                                                    {
-                                                        if($record->cellule == 'Marketing')
-                                                        {
-                                            ?>            
-                                                    <br>
-                                                    <div class="row">
-                                                    <div class="col-md-10">
-                                                     <span><?php echo  $record->name ?></span>  
-                                                    </div >
-                                                    <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>" />
-                                                    </div>
-                                            <?php
-
-
-                                                     
+                                                      width: 25px;
+                                                      height: 25px;
                                                     }
-                                                }
-                                            ?> 
-
-
+                                                    </style>
+                                     <div class="row">                       
+                                    <?php foreach ($Absences as $a ) {
+                                    ?>
+                                    <div class="col-md-6">
+                                    <img class="kt-radius-100 alligator-turtle" src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $a->avatar?>"> &nbsp; <span><?php echo  $a->name ?></span>  
                                     </div>
+                                    <?php
+                                    }
+                                    ?>                                
                                 </div>
-                            <?php } ?>
-                                <?php if ($reunionRecord->cellule=='Evenementiel'){ ?>
-                                <div class="col-md-6">                                
-                                    <div class="form-group">
-                                        <h5 >Cellule Evenementiel</h5>
-                                            <?php   foreach($members as $record)
-                                                    {
-                                                        if($record->cellule == 'Evenementiel')
-                                                        {
-                                            ?>            
-                                                    <div class="row">
-                                                    <div class="col-md-10">
-                                                     <span><?php echo  $record->name ?></span>  
-                                                    </div >
-                                                    <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>" />
-                                                    </div>
-                                            <?php
-                                                  
-                                                    }
-                                                }
-                                            ?>
-
-                                    </div>
                                 </div>
-                                <?php } ?>
-                                 <?php if ($reunionRecord->cellule=='Administration et Finance'){ ?>
-                                <div class="col-md-6">                                
-                                    <div class="form-group">
-                                        <h5 >Cellule Administration & Finance</h5>
-                                               
-                                            <?php   foreach($members as $record)
-                                                    {
-                                                        if($record->cellule == 'Administration et Finance')
-                                                        {
-                                            ?>            
-                                                    <div class="row">
-                                                    <div class="col-md-10">
-                                                     <span><?php echo  $record->name ?></span>  
-                                                    </div >
-                                                    <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>" />
-                                                    </div>
-                                            <?php
-                                                    
-                                                    }
-                                                }
-                                            ?>
-
-                                    </div>
-                                </div>
-                                                                <?php } ?>
-                                 <?php if ($reunionRecord->cellule=='Administration et Finance'){ ?>
-                         
-                            <div class="col-md-6">                                
-                                    <div>
-                                        <h5 for="fname">Cellule Gestion des talents</h5>
-                                               
-                                            <?php   foreach($members as $record)
-                                                    {
-                                                        if($record->cellule == 'Gestion des talens')
-                                                        {
-                                            ?>            
-                                                    <div class="row">
-                                                    <div class="col-md-10">
-                                                     <span><?php echo  $record->name ?></span>  
-                                                    </div >
-                                                    <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>" />
-                                                    </div>
-                                            <?php
-                                                     
-                                                    }
-                                                }
-                                            ?>
-
-                                    </div>
-                                </div>
-                            <?php } ?>
-                                   </div>
-                     
                             
                                
 

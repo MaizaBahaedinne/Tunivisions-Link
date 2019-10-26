@@ -457,11 +457,10 @@
         </div>
         <div class="kt-user-card__name">
             <?php echo $name; ?> 
-
             <?php if  ($SA ==1 ) { ?>
             <p style="display: none" id="p1"><?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID; ?></p>
             
-            <button class="btn btn-label-primary" onclick="copyToClipboard('#p1')"  >Lien de parainage</button>       </div>
+            <button class="btn btn-label-primary" onclick="copyToClipboard('#p1')"  >Lien de parainage</button>       
         	<script type="text/javascript">
         		function copyToClipboard(element) {
 				  var $temp = $("<input>");
@@ -469,6 +468,7 @@
 				  $temp.val($(element).text()).select();
 				  document.execCommand("copy");
 				  $temp.remove();
+				  alet("une copie du lien de parrainage a été effectué");
 				}
 
     		</script>

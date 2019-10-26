@@ -111,8 +111,43 @@
 
                                 <div class="col-md-12">
                                 <h3> Absence </h3>
+                                <p>Marquer seulement les absents </p>
                                 </div>
                                 <hr>
+                                <?php if ($reunionRecord->cellule=='Generale'){ ?>
+                                <div class="col-md-6">                                
+                                    <div class="form-group">
+                                        <style type="text/css">
+                                                           .alligator-turtle {
+                                                      object-fit: cover;
+                                                      object-position: 50% 0;
+
+                                                      width: 25px;
+                                                      height: 25px;
+                                                    }
+                                                    </style>
+                                            <?php   foreach($members as $record)
+                                                    {
+                                            ?>            
+                                                    <br>
+                                                    <div class="row">
+                                                    <div class="col-md-6">
+                                                     <img class="kt-radius-100 alligator-turtle" src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $record->avatar?>"> &nbsp; <span><?php echo  $record->name ?></span>  
+                                                    </div >
+                                                    <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>" />
+                                                    </div>
+                                            <?php
+
+
+                                                     
+                                                   
+                                                }
+                                            ?> 
+
+
+                                    </div>
+                                </div>
+                            <?php } ?>
 
                                 <?php if ($reunionRecord->cellule=='Marketing'){ ?>
                                 <div class="col-md-6">                                

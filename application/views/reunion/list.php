@@ -83,10 +83,11 @@
                             <a href="../../../.html" class="">
                     
                                     </a>
-            
+            <?php if($role==1 || $role==2 || $role==3 ) { ?>
                                                 <a href="<?php echo base_url() ?>Reunion/addNew" class="btn btn-label-brand btn-bold">
                         
                         Ajouter une réunion                    </a>
+                    <?php }?>
                                         
                             <div class="kt-subheader__wrapper">
                     <div class="dropdown dropdown-inline" data-toggle="kt-tooltip-" title="Quick actions" data-placement="left">
@@ -174,10 +175,12 @@
                             </div>
                             <div class="kt-widget__info">
                                 <a href="#" class="kt-widget__title">
-                                    <?php echo $record->Sujet ?>                                                 
+                                    <?php echo $record->Sujet ?><br>
+                                                                                    
                                 </a>
                                 <span class="kt-widget__desc">
-                               
+                               <small>Cellule : <?php echo $record->cellule ?></small>
+
                                 </span>
                             </div>
                         </div>
@@ -191,26 +194,25 @@
                                     Date
                                 </span>
                                 <div class="kt-widget__label">
-                                    <span class="btn btn-label-brand btn-sm btn-bold btn-upper"><?php echo $record->dateDo ?> </span>
+                                    <span class="btn btn-label-brand btn-sm btn-bold btn-upper"><?php echo $record->dateDo ?> <?php echo $record->timeDo ?> </span>
                                 </div>
                             </div>
+
+                            
 
                             <div class="kt-widget__item">
                                 <span class="kt-widget__date">
-                                    Heure
+                                    Local
                                 </span>
                                 <div class="kt-widget__label">
-                                    <span class="btn btn-label-danger btn-sm btn-bold btn-upper"><?php echo $record->timeDo ?></span>
+                                    <span class="btn btn-label-danger btn-sm btn-bold btn-upper"></i> <?php echo $record->local ?></span>
                                 </div>
                             </div>
-
 
                         </div>
 
                         
-                        <span class="kt-widget__text">
-                            <i class="fas fa-map-marker-alt"></i> <?php echo $record->local ?>                            
-                        </span>
+         
 
                         
                     </div>

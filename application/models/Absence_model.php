@@ -15,10 +15,11 @@ class Absence_model extends CI_Model
      * @param number $segment : This is pagination limit
      * @return array $result : This is result
      */
-    function actuListing($reunionID)
+    function absenceListing($reunionID)
     {
-        $this->db->select('BaseTbl.absenceId , BaseTbl.reunionId , BaseTbl.userID , BaseTbl.image , BaseTbl.DateAbsence , BaseTbl.etat ');
+        $this->db->select('BaseTbl.absenceId , BaseTbl.reunionId , BaseTbl.userID , Users.name , Users.avatar , BaseTbl.DateAbsence , BaseTbl.etat ');
         $this->db->from('tbl_absence as BaseTbl');
+        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userID', 'LEFT');
         $this->db->where('BaseTbl.reunionId =',$reunionID)  ; 
         $query = $this->db->get();
         

@@ -75,7 +75,8 @@ class Reunion extends BaseController {
                                                              'dateNotif' => date('Y-m-d H:i:s') , 
                                                              'seen' => 'no' , 
                                                              'type' => 'Notification',
-                                                             'userId' => $record->userId 
+                                                             'userId' => $record->userId,
+                                                             'url' => '/Reunion/ReunionListing' 
                                                              );             
                         $this->notification_model->addNewNotificaition($notifInfo) ;
                
@@ -89,7 +90,8 @@ class Reunion extends BaseController {
                                                              'dateNotif' => date('Y-m-d H:i:s') , 
                                                              'seen' => 'no' , 
                                                              'type' => 'Notification',
-                                                             'userId' => $record->userId 
+                                                             'userId' => $record->userId,
+                                                             'url' => '/Reunion/ReunionListing' 
                                                              );                                           
                           $this->notification_model->addNewNotificaition($notifInfo) ;
 
@@ -102,7 +104,8 @@ class Reunion extends BaseController {
                                                              'dateNotif' => date('Y-m-d H:i:s') , 
                                                              'seen' => 'no' , 
                                                              'type' => 'Notification',
-                                                             'userId' => $record->userId 
+                                                             'userId' => $record->userId,
+                                                             'url' => '/Reunion/ReunionListing' 
                                                              );       
                          $this->notification_model->addNewNotificaition($notifInfo) ;            
 
@@ -116,7 +119,8 @@ class Reunion extends BaseController {
                                                              'dateNotif' => date('Y-m-d H:i:s') , 
                                                              'seen' => 'no' , 
                                                              'type' => 'Notification',
-                                                             'userId' => $record->userId 
+                                                             'userId' => $record->userId,
+                                                             'url' => '/Reunion/ReunionListing' 
                                                              );                       
                            $this->notification_model->addNewNotificaition($notifInfo) ;
 
@@ -138,7 +142,9 @@ class Reunion extends BaseController {
                                                              'dateNotif' => date('Y-m-d H:i:s') , 
                                                              'seen' => 'no' , 
                                                              'type' => 'Notification',
-                                                             'userId' => $record->userId 
+                                                             'userId' => $record->userId,
+                                                             'url' => '/Reunion/ReunionListing'
+                                                              
                                                              );           
                         $this->notification_model->addNewNotificaition($notifInfo) ;
 
@@ -157,7 +163,8 @@ class Reunion extends BaseController {
                                                              'dateNotif' => date('Y-m-d H:i:s') , 
                                                              'seen' => 'no' , 
                                                              'type' => 'Notification',
-                                                             'userId' => $record->userId 
+                                                             'userId' => $record->userId,
+                                                             'url' => '/Reunion/ReunionListing'
                                                              );               
                           $this->notification_model->addNewNotificaition($notifInfo) ;
                          
@@ -226,7 +233,7 @@ class Reunion extends BaseController {
                         $absenceInfo = array(        
                                                              'reunionId' => $reunionId ,
                                                              'userID' =>  $r  , 
-                                                             'DateAbsence' => $dateDo , 
+                                                             'etat'=>'Absent'
                                                              ); 
                         $this->absence_model->addNew($absenceInfo) ;
                 }
@@ -241,7 +248,8 @@ class Reunion extends BaseController {
                         $this->load->model('user_model');
                         $data['members'] = $this->user_model->userListingByclub($this->vendorId,$this->clubID);
                         $data['reunionRecord'] = $this->reunion_model->getReunionInfoById($reunionId);
-                        $data['user'] = $this->vendorId  ;                       
+                        $data['user'] = $this->vendorId  ;
+                        $data['Absences'] = $this->absence_model->absenceListing($reunionId)  ;                      
                         $this->global['pageTitle'] = 'CodeInsect : club  Listing';
                         $this->global['active'] = 'meeting';
                         $this->loadViews("reunion/view", $this->global, $data, NULL);   
