@@ -95,8 +95,8 @@
                     <thead>
                     <tr>
                        
-                        <th>Avatar</th>
-                        <th>Name</th>
+                        <th></th>
+                        <th>Nom et prénom</th>
                         <th>Club</th>
                         <th>Origine</th>
                         <th>Contact</th>
@@ -122,7 +122,7 @@
                                 </div>     
                         </td>
                         <td>
-                            <span style="width: 145px;">
+                            <span style="width: auto;">
                                                      
                                 <div class="kt-user-card-v2__details">                              
                                         <a class="kt-user-card-v2__name" href="#">
@@ -142,9 +142,7 @@
                             <span style="width: 145px;">
                                 <div class="kt-user-card-v2">
                                     <div class="kt-user-card-v2__pic">
-                                        <div class="kt-badge kt-badge--xl kt-badge--warning">
-                                        <?php echo substr ( $record->ClubName , 0, 1)    ?>
-                                        </div>
+                                        
                                     </div>                          
                                     <div class="kt-user-card-v2__details">                              
                                         <a class="kt-user-card-v2__name" href="#">
@@ -160,7 +158,7 @@
 
                         </td>
                         
-                        <td><?php echo $record->gouvernorat ?> <br> <?php echo $record->delegation ?> </td>
+                        <td><?php echo $record->gouvernorat ?>  </td>
                         <td><?php echo $record->email ?><br>
                         <?php echo $record->mobile ?> </td>
                         <td>  points </td>
@@ -185,13 +183,11 @@
                               <i class="la la-ellipsis-h"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="<?php echo base_url().'editOld/'.$record->userId; ?>"><i class="la la-edit"></i> Modifier</a>
-                                <a class="dropdown-item" href="<?= base_url().'login-history/'.$record->userId; ?>"><i class="la la-print"></i> Historique</a>
+                                <a class="dropdown-item" href="<?php echo base_url().'deleteUser/'.$record->userId; ?>"><i class="la la-stop"></i> Bloquer</a>
+                                
                             </div>
                         </span>
-                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                          <i class="la la-edit"></i>
-                        </a>
+    
 
 
                         </td>

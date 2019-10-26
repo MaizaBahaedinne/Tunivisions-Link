@@ -10,15 +10,14 @@ class Club_model extends CI_Model
      * @param string $searchText : This is optional search text
      * @return number $count : This is row count
      */
-    function clubListingCount($searchText = '')
+    function clubListingCount()
     {
         $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif ');
         $this->db->from('tbl_club as BaseTbl');
-        if(!empty($searchText)) {
-            $likeCriteria = "(BaseTbl.name  LIKE '%".$searchText."%'
-                            OR  BaseTbl.city  LIKE '%".$searchText."%')";
+        $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
+  
             $this->db->where($likeCriteria);
-        }
+        
         
         
         $query = $this->db->get();
@@ -35,15 +34,10 @@ class Club_model extends CI_Model
      */
     function clubListing()
     {
-        $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif ');
+        $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif , Users.name P , Users.avatar ');
         $this->db->from('tbl_club as BaseTbl');
-       
-        if(!empty($searchText)) {
-            $likeCriteria = "(BaseTbl.name  LIKE '%".$searchText."%'
-                            OR  BaseTbl.city  LIKE '%".$searchText."%')";
-            $this->db->where($likeCriteria);
-        }
-        ;
+       $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
+        $this->db->where('Users.roleId=',1);
 
       
         $query = $this->db->get();

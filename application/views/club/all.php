@@ -44,7 +44,7 @@
                         
                         <th>Faculté</th>
                         <th>Secteur</th>
-                        <th>Fondé le</th>
+                        <th>Président</th>
                         <th>Contact</th>
                         <th>Actif</th>
 
@@ -67,7 +67,7 @@
                             <?php echo $record->city ?>
                         </td>
                         <td>
-                            <?php echo $record->birthday ?>
+                            <?php echo $record->P ?>
                         </td>
                         <td>
                             <?php echo $record->email ?>
