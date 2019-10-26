@@ -14,9 +14,9 @@ class Club_model extends CI_Model
     {
         $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif ');
         $this->db->from('tbl_club as BaseTbl');
-        $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
+       
   
-            $this->db->where($likeCriteria);
+
         
         
         
