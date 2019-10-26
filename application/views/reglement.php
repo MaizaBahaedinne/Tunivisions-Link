@@ -96,6 +96,7 @@
       <br><br>
       <ul>
         <h4>Partie 1 : Introduction</h4>
+        
         <br>
         <h5>Section 1 : Préambule</h5>
         <li>Article 1 : Présentation</li>
@@ -103,9 +104,11 @@
         <li>Article 3 : Nos valeurs</li>
         <li>Article 4 : Nos missions</li>
         <li>Article 5 : Notre Slogan</li>
+        
         <br>
         <h4>Partie 2 : Administration</h4>
         <br>
+        
         <h5>Section 1 : Structure du club</h5>
         <li>Article 1 : composition du club (Alumni / Membres adhérents)</li>
         <li>Article 2 : Structure du Bureau exécutif</li>
@@ -119,6 +122,45 @@
         <li>Article 4 : Assemblée générale</li>
         <li>Article 1 : Financement</li>
         <li>Article 2 : Matériel</li>
+        
+        <br>
+        <h4>Partie 3 : Ressource humaine</h4>
+        <br>
+        
+        <h5>Section 1 : Procédure de recrutement</h5>
+        <li>Article 1 : L’adhésion au club</li>
+        <li>Article 2 : Entretien</li>
+        <h5>Section 2 : Discipline</h5>
+        <li>Article 1 : Le respect</li>
+        <li>Article 2 : Les retards</li>
+        <li>Article 3 : Les absences</li>
+        <li>Article 4 : Les dates limites</li>
+        <li>Article 5 : Image de marque</li>
+        <h5>Section 3 : Conseil administrative</h5>
+        <li>Article 1 : hiérarchie</li>
+        <li>Article 2 : engagement</li>
+        <li>Article 3 : Sanction</li>
+        <li>Article 4 : Composition du conseil disciplinaire</li>
+        
+        <br>
+        <h4>Partie 4 : Gestion Projet</h4>
+        <br>
+        
+        <h5>Section 1 : Type des actions</h5>
+        <li>Article 1 : Formation</li>
+        <li>Article 2 : Team-Building</li>
+        <li>Article 3 : événement culturel</li>
+        <li>Article 4 : événement divertissement</li>
+        <h5>Section 1 : Type des actions</h5>
+        <li>Article 1 : événement permis</li>
+        <li>Article 2 : Rapport final d'événement</li>
+
+        <br>
+        <h4>Partie 5 : T.LINK</h4>
+        <br>
+
+        <h5>Section 1: Gestion T.LINK</h5>
+        <li>Article 1: La plateforme</li>
       </ul>
 
       <br><br><br>
@@ -329,7 +371,7 @@
         <h3>Article 4 : Composition du conseil disciplinaire</h3>
         Le conseil disciplinaire est composé du tous les membres du bureau exécutif.
       </section>
-      
+
 <br><br>
       <section>
         <h1>Gestion Projet</h1>
@@ -363,6 +405,38 @@
         <li> Des Forums</li>
         <li> Des évènements de coaching</li>
 
+
+        <h2>Section 2 : Évaluation des actions</h2>
+        
+        <br>
+        <h3>Article 1 : Evénement permis</h3>
+        Les événements permis sont :
+        <li> Les événements culturels</li>
+        <li> Les soirées à thème</li>
+        <li> Les forums</li>
+        <li> Les événements liés au Média, économie, marketing …</li>
+
+        <br>
+        <h3>Article 2 : Rapport final d'événement</h3>
+        Chaque événement doit contenir un rapport final qui contient :
+        <li> Les éléments stratégiques</li>
+        <li> Les éléments qualitatifs</li>
+        <li> Les données financières</li>
+
+      </section>
+
+
+      <br><br>
+
+      <section>
+        <h1>T.link</h1>
+        <h2>Section 1 : Gestion T.LINK</h2>        
+
+        <br>
+        <h3>Article 1 : La plateforme</h3>
+        Tout tunimateur doit utiliser obligatoirement la plateforme T.LINK avec un identifiant unique fournis par le président du club et joindre ses cordonnés officiels.<br>
+        Tout abus d’utilisation ou acte non professionnel peut engendrer des sanctions envers le membre.<br>
+        Toute personne non enregistrée sur le T.LINK n’est pas prise en compte sur nos bases de données.<br>
       </section>
 
 
