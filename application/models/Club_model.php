@@ -76,10 +76,9 @@ class Club_model extends CI_Model
     function BureauListing($clubID)
     {
         $this->db->select('BaseTbl.clubID , Users.userId , Users.name as Tname , Users.roleId , Users.cellule , Users.avatar , Roles.role');
-        $this->db->from('tbl_club as BaseTbl');
-        $this->db->join('tbl_roles as Roles', 'Users.roleId = Roles.roleId', 'LEFT');
+        $this->db->from('tbl_club as BaseTbl'); 
         $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
-        
+        $this->db->join('tbl_roles as Roles', 'Users.roleId = Roles.roleId', 'LEFT');
        
         $this->db->where('Users.roleId=1 or Users.roleId=2 or Users.roleId=3 , Users.roleId=6  ') ;
        $this->db->where('BaseTbl.clubID=',$clubID) ;
