@@ -134,7 +134,7 @@
                                                     <div class="col-md-6">
                                                      <img class="kt-radius-100 alligator-turtle" src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $record->avatar?>"> &nbsp; <span><?php echo  $record->name ?></span>  
                                                     </div >
-                                                    <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>" />
+                                                    <input type="checkbox"  value="<?php echo   $record->userId ; ?>" />
                                                     </div>
                                             <?php
 

@@ -91,6 +91,7 @@
     <div class="col-sm-12">
     <div class="kt-portlet__body">
         <!--begin: Datatable -->
+
         <table id="example" class="display" style="width:100%" >
                     <thead>
                     <tr>
@@ -100,12 +101,23 @@
                         <th>Club</th>
                         <th>Origine</th>
                         <th>Contact</th>
-                        <th>Score</th>
+                        
                         <th>Actif</th>
-                        <th class="text-center">Actions</th>
+                        
                     </tr>
                     </thead>
+
                     <tbody>
+                        <style type="text/css">
+                       .alligator-turtle {
+                  object-fit: cover;
+                  object-position: 50% 0;
+
+                  width: 35px;
+                  height: 35px;
+                                }
+                </style>
+                    
                     <?php
                     if(!empty($userRecords))
                     {
@@ -117,7 +129,7 @@
                         <td>
                             <div class="kt-user-card-v2">
                                     <div class="kt-user-card-v2__pic">
-                                        <img alt="Pic" class="kt-radius-100" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" />
+                                        <img alt="Pic" class="kt-radius-100 alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" />
                                     </div>
                                 </div>     
                         </td>
@@ -161,43 +173,31 @@
                         <td><?php echo $record->gouvernorat ?>  </td>
                         <td><?php echo $record->email ?><br>
                         <?php echo $record->mobile ?> </td>
-                        <td>  points </td>
+                        
                         <td> 
                         <?php  
                             if($record->isDeleted != 1) 
-                         echo'<span class="kt-badge kt-badge--brand kt-badge--inline">Actif</span>' ;
+                         echo'<a href="'.base_url().'User/deleteUser/'.$record->userId.'"> <button class="btn btn-primary">Actif</button></a>' ;
                         
                         ?>
                         <?php  
                             if($record->isDeleted == 1) 
-                         echo'<span class="kt-badge kt-badge--danger kt-badge--inline">Inactif</span>' ;
+                         echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-danger">Inactif</button></a >' ;
                         
                         ?>
                         </td>
-                        <td class="text-center">
+                       
 
-
-
-                        <span class="dropdown">
-                            <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="dropdown" aria-expanded="true">
-                              <i class="la la-ellipsis-h"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="<?php echo base_url().'deleteUser/'.$record->userId; ?>"><i class="la la-stop"></i> Bloquer</a>
-                                
-                            </div>
-                        </span>
-    
-
-
-                        </td>
                     </tr>
                     <?php
                         }
                     }
                     ?>
+                    
                     </tbody>
+
                   </table>
+
     </div>
     </div>
                 

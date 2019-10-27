@@ -95,7 +95,7 @@ class Login extends CI_Controller
             }
             else
             {
-                $this->session->set_flashdata('error', 'CIN et mot de passe erroné ');
+                $this->session->set_flashdata('error', 'Email et mot de passe erroné ');
                 
                 $this->index();
             }

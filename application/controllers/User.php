@@ -394,14 +394,71 @@ class User extends BaseController
      */
     function deleteUser($userId)
     {
-
-            
             $userInfo = array('isDeleted'=>1,'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
             
-            $result = $this->user_model->deleteUser($userId, $userInfo);
-             
+            if( $this->user_model->deleteUser($userId, $userInfo) ) { $this->send_mail() ; }  
+            
     }
-    
+
+    /**
+     * This function is used to delete the user using userId
+     * @return boolean $result : TRUE / FALSE
+     */
+    function actifUser($userId)
+    {
+            $userInfo = array('isDeleted'=>0,'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
+            
+            if( $this->user_model->deleteUser($userId, $userInfo) ) { $this->send_mail() ; }  
+            
+    }
+
+
+
+        public function send_mail()
+            {
+
+                // The mail sending protocol.
+                $config['protocol'] = 'smtp';
+                // SMTP Server Address for Gmail.
+                $config['smtp_host'] = 'smtp.gmail.com' ;
+                // SMTP Port - the port that you is required
+                $config['smtp_port'] = 465;
+                // SMTP Username like. (abc@gmail.com)
+                $config['smtp_user'] = 'tunivisions.link@gmail.com';
+                // SMTP Password like (abc***##)
+                $config['smtp_pass'] = '99723620Ow';
+                // Load email library and passing configured values to email library
+                $this->load->library('email', $config);
+                // Sender email address
+                $this->email->from('tunivisions.link@gmail.com', 'T-Link');
+                // Receiver email address.for single email
+                $this->email->to('maizabahaedinne@gmail.com');
+                //send multiple email
+                $this->email->to('abc@gmail.com','xyz@gmail.com','jkl@gmail.com');
+                // Subject of email
+                $this->email->subject('test mail');
+                // Message in email
+                $this->email->message('Welcome mail ');
+                // It returns boolean TRUE or FALSE based on success or failure
+        
+
+                
+                  if($this->email->send())
+                 {
+                  echo 'Email sent.';
+                 }
+                 else
+                {
+                 show_error($this->email->print_debugger());
+                }
+
+
+          
+             
+                
+            }
+
+            
     /**
      * Page not found : error 404
      */

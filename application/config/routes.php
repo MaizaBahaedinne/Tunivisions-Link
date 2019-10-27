@@ -88,7 +88,7 @@ $route['addNewUser'] = "user/addNewUser";
 $route['editOld'] = "user/editOld";
 $route['editOld/(:num)'] = "user/editOld/$1";
 $route['editUser'] = "user/editUser";
-$route['deleteUser'] = "user/deleteUser";
+
 $route['profile'] = "user/profile";
 $route['profile/(:any)'] = "user/profile/$1";
 $route['profileUpdate'] = "user/profileUpdate";

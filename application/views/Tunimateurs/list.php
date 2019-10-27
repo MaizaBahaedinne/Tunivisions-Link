@@ -92,7 +92,7 @@
                                
                                 <div class="kt-widget__action">
                                                                 
-                                    <button type="button" class="btn btn-brand btn-sm btn-upper">Ajouter</button>                     
+                                    <!-- <button type="button" class="btn btn-brand btn-sm btn-upper">Ajouter</button>        -->             
                                 </div>                        
                             </div>
 

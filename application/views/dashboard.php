@@ -139,7 +139,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="font-size:14px;font-weight:bold;padding:8px 8px 0px 8px;text-align:center;">Only Tunimateurs Mandat 2019-2020</td></tr><tr><td style="color:#90949c;font-size:12px;font-weight:normal;text-align:center;">Groupe Privé · 3 membres</td></tr><tr><td style="padding:8px 12px 12px 12px;">
+                            <td style="font-size:14px;font-weight:bold;padding:8px 8px 0px 8px;text-align:center;">Only Tunimateurs Mandat 2019-2020</td></tr><tr><td style="color:#90949c;font-size:12px;font-weight:normal;text-align:center;">Groupe Privé </td></tr><tr><td style="padding:8px 12px 12px 12px;">
                                 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%;">
                                     <tr>
                                         <td style="background-color:#4267b2;border-radius:3px;text-align:center;"><a style="color:#3b5998;text-decoration:none;cursor:pointer;width:100%;" href="https://www.facebook.com/plugins/group/join/popup/?group_id=403356133691439&amp;source=email_campaign_plugin" target="_blank" rel="noopener">
