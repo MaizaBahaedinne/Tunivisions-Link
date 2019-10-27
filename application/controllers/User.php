@@ -419,24 +419,20 @@ class User extends BaseController
 
 
 
-                 $to = "maizabahaedinne@gmail.com";
-                 $subject = "This is subject";
-                 
-                 $message = "<b>This is HTML message.</b>";
-                 $message .= "<h1>This is headline.</h1>";
-                 
-                 $header = "From:no-reply@tunivisions.link \r\n";
-                 $header .= "Cc:maizabahaedinne@gmail.com \r\n";
-                 $header .= "MIME-Version: 1.0\r\n";
-                 $header .= "Content-type: text/html\r\n";
-                 
-                 $retval = mail ($to,$subject,$message,$header);
-                 
-                 if( $retval == true ) {
-                    echo "Message sent successfully...";
-                 }else {
-                    echo "Message could not be sent...";
-                 }
+            $to = "maizabahaedinne@gmail.com"; // this is your Email address
+            $from = 'no-reply@tunivisions.link'; // this is the sender's Email address
+            $first_name = 'Maiza Bahaedinne';
+
+            $subject = "Form submission";
+            $subject2 = "Copy of your form submission";
+            $message = $first_name . " wrote the following:" . "\n\n" ;
+            $message2 = "Here is a copy of your message " . $first_name . "\n\n" ;
+
+            $headers = "From:" . $from;
+            $headers2 = "From:" . $to;
+            mail($to,$subject,$message,$headers);
+            mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+            echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
                 
 
 
