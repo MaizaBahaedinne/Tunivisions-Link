@@ -419,44 +419,25 @@ class User extends BaseController
 
 
 
-                $config = array(
-                    'protocol' => 'smtp', // 'mail', 'sendmail', or 'smtp'
-                    'smtp_host' => 'tunivisions.link',
-                    'smtp_port' => 465,
-                    'smtp_user' => 'no-reply',
-                    'smtp_pass' => 'Tunivisions-Link-2019',
-                    'smtp_crypto' => 'tls', //can be 'ssl' or 'tls' for example
-                    'mailtype' => 'html', //plaintext 'text' mails or 'html'
-                    'smtp_timeout' => '4', //in seconds
-                    'charset' => 'iso-8859-1',
-                    'wordwrap' => TRUE,
-                    'newline' => '\r\n' ,
-                    'crlf' => '\r\n'
-                );
-               
-
-                $this->load->library('email');
-                // Sender email address
-                $this->email->initialize($config);
-                $this->email->from('no-reply@tunivisions.link', 'T-Link');
-                // Receiver email address.for single email
-                $this->email->to('maizabahaedinne@gmail.com');                
-                // Subject of email
-                $this->email->subject('test mail');
-                // Message in email
-                $this->email->message('Welcome mail ');
-                // It returns boolean TRUE or FALSE based on success or failure
-        
-
-                
-                  if($this->email->send())
-                 {
-                  echo 'Email sent.';
+                 $to = "maizabahaedinne@gmail.com";
+                 $subject = "This is subject";
+                 
+                 $message = "<b>This is HTML message.</b>";
+                 $message .= "<h1>This is headline.</h1>";
+                 
+                 $header = "From:abc@somedomain.com \r\n";
+                 $header .= "Cc:afgh@somedomain.com \r\n";
+                 $header .= "MIME-Version: 1.0\r\n";
+                 $header .= "Content-type: text/html\r\n";
+                 
+                 $retval = mail ($to,$subject,$message,$header);
+                 
+                 if( $retval == true ) {
+                    echo "Message sent successfully...";
+                 }else {
+                    echo "Message could not be sent...";
                  }
-                 else
-                {
-                 show_error($this->email->print_debugger());
-                }
+                
 
 
           
