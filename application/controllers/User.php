@@ -416,25 +416,47 @@ class User extends BaseController
 
         public function send_mail()
             {
-
-
-
-            $to = "maizabahaedinne@gmail.com"; // this is your Email address
-            $from = 'no-reply@tunivisions.link'; // this is the sender's Email address
-            $first_name = 'Maiza Bahaedinne';
-
-            $subject = "Form submission";
-            $subject2 = "Copy of your form submission";
-            $message = $first_name . " wrote the following:" . "\n\n" ;
-            $message2 = "Here is a copy of your message " . $first_name . "\n\n" ;
-
-            $headers = "From:" . $from;
-            $headers2 = "From:" . $to;
-            mail($to,$subject,$message,$headers);
-            mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-            echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-                
-
+                // Load PHPMailer library
+                    $this->load->library('phpmailer_lib');
+                    
+                    // PHPMailer object
+                    $mail = $this->phpmailer_lib->load();
+                    
+                    // SMTP configuration
+                    $mail->isSMTP();
+                    $mail->Host     = 'tunivisions.link';
+                    $mail->SMTPAuth = true;
+                    $mail->Username = 'no-reply@tunivisions.link';
+                    $mail->Password = 'Tunivisions-Link-2019';
+                    $mail->SMTPSecure = 'tls';
+                    $mail->Port     = 465;
+                    
+                    $mail->setFrom('no-reply@tunivisions.link', 'Tunivisions Link');
+                    $mail->addReplyTo('no-reply@tunivisions.link', 'Tunivisions Link');
+                    
+                    // Add a recipient
+                    $mail->addAddress('maizabahaedinne@gmail.com');
+                    
+                    
+                    
+                    // Email subject
+                    $mail->Subject = 'Send Email via SMTP using PHPMailer in CodeIgniter';
+                    
+                    // Set email format to HTML
+                    $mail->isHTML(true);
+                    
+                    // Email body content
+                    $mailContent = "<h1>Send HTML Email using SMTP in CodeIgniter</h1>
+                        <p>This is a test email sending using SMTP mail server with PHPMailer.</p>";
+                    $mail->Body = $mailContent;
+                    
+                    // Send email
+                    if(!$mail->send()){
+                        echo 'Message could not be sent.';
+                        echo 'Mailer Error: ' . $mail->ErrorInfo;
+                    }else{
+                        echo 'Message has been sent';
+                    }
 
           
              
