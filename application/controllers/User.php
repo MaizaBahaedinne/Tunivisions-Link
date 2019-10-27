@@ -417,24 +417,30 @@ class User extends BaseController
         public function send_mail()
             {
 
-                // The mail sending protocol.
-                $config['protocol'] = 'smtp';
-                // SMTP Server Address for Gmail.
-                $config['smtp_host'] = 'smtp.gmail.com' ;
-                // SMTP Port - the port that you is required
-                $config['smtp_port'] = 465;
-                // SMTP Username like. (abc@gmail.com)
-                $config['smtp_user'] = 'tunivisions.link@gmail.com';
-                // SMTP Password like (abc***##)
-                $config['smtp_pass'] = '99723620Ow';
-                // Load email library and passing configured values to email library
-                $this->load->library('email', $config);
+
+
+                $config = array(
+                    'protocol' => 'smtp', // 'mail', 'sendmail', or 'smtp'
+                    'smtp_host' => 'tunivisions.link',
+                    'smtp_port' => 25,
+                    'smtp_user' => 'no-reply',
+                    'smtp_pass' => 'Tunivisions-Link-2019',
+                    'smtp_crypto' => 'ssl', //can be 'ssl' or 'tls' for example
+                    'mailtype' => 'html', //plaintext 'text' mails or 'html'
+                    'smtp_timeout' => '4', //in seconds
+                    'charset' => 'iso-8859-1',
+                    'wordwrap' => TRUE,
+                    'newline' => '\r\n' ,
+                    'crlf' => '\r\n'
+                );
+               
+
+                $this->load->library('email');
                 // Sender email address
-                $this->email->from('tunivisions.link@gmail.com', 'T-Link');
+                $this->email->initialize($config);
+                $this->email->from('no-reply@tunivisions.link', 'T-Link');
                 // Receiver email address.for single email
-                $this->email->to('maizabahaedinne@gmail.com');
-                //send multiple email
-                $this->email->to('abc@gmail.com','xyz@gmail.com','jkl@gmail.com');
+                $this->email->to('maizabahaedinne@gmail.com');                
                 // Subject of email
                 $this->email->subject('test mail');
                 // Message in email
