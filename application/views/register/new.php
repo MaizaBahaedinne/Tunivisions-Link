@@ -67,7 +67,7 @@
       </div>
       <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver">
         <div class="kt-grid__item kt-grid__item--middle">
-          <h3 class="kt-login__title">Bienvenu au T.LINK</h3>
+          <h3 class="kt-login__title">Bienvenue au T.LINK</h3>
           <h4 class="kt-login__subtitle">Cette application est déstiné aux clubs Tunivisions.</h4>
         </div>
       </div>

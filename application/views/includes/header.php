@@ -220,7 +220,7 @@
 					<span class="kt-menu__link-text">
 						Réunion 
 					</span>
-					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> lancement<br> ce dimanche </small></span></span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> disponible <br> ce dimanche </small></span></span>
 					
 				</a> 
 			</li>
@@ -233,7 +233,7 @@
 					<span class="kt-menu__link-text">
 						Gestion des postes
 					</span>
-					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> lancement<br> ce dimanche </small></span></span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> disponible <br> ce dimanche </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
@@ -257,7 +257,7 @@
 					<span class="kt-menu__link-text">
 						Ressource Financier
 					</span>
-					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red">lancement <br> ce dimanche </small></span></span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red">disponible <br> ce dimanche </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
@@ -270,7 +270,7 @@
 					<span class="kt-menu__link-text">
 						Gestion des projets
 					</span>
-					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> lancement <br>ce dimanche </small></span></span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> disponible <br>ce dimanche </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
@@ -283,7 +283,7 @@
 					<span class="kt-menu__link-text">
 						Gestion des taches
 					</span>
-					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> lancement <br>ce dimanche </small></span></span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> disponible <br>ce dimanche </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
