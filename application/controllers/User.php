@@ -397,7 +397,7 @@ class User extends BaseController
             $userInfo = array('isDeleted'=>1,'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
             
             if( $this->user_model->deleteUser($userId, $userInfo) ) {  }  
-            
+            redirect('/userListing');            
     }
 
     /**
@@ -411,7 +411,7 @@ class User extends BaseController
 
             if( $this->user_model->deleteUser($userId, $userInfo) ) { $this->send_mail('bienvenue au T.link','',$user->email,$user->name) ; }  
 
-            print_r($user->email.' '.$user->name) ;
+          redirect('/userListing');
             
     }
 

@@ -73,16 +73,12 @@
                             <?php echo $record->email ?>
                         <td> 
                             
-                           <?php  
-                                if($record->is_Actif == 'Actif') 
-                             echo'<span class="kt-badge kt-badge--brand kt-badge--inline">Actif</span>' ;
-                            
-                            ?>
-                            <?php  
-                                if($record->is_Actif == 'Inactif') 
-                             echo'<span class="kt-badge kt-badge--danger kt-badge--inline">Inactif</span>' ;
-                            
-                            ?>
+
+                        <?php  
+                            if($record->isDeleted == 1) 
+                         echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-primary">Send</button></a >' ;
+                        
+                        ?> 
                         </td>
                         <td >
 

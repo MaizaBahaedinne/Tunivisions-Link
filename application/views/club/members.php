@@ -58,7 +58,7 @@
                         <th>Poste</th>
                         <th>Cellule</th>
                         <th>contact</th>
-                        <th>Blocker</th>
+                        <th></th>
                         
                     </tr>
                     </thead>
@@ -114,6 +114,7 @@
                         <?php echo $record->mobile ?> </td>
                         
                         <td> 
+                            <!--
                         <?php  
                             if($record->isDeleted != 1) 
                          echo'<a href="'.base_url().'User/deleteUser/'.$record->userId.'"> <button class="btn btn-primary">Actif</button></a>' ;
@@ -123,7 +124,7 @@
                             if($record->isDeleted == 1) 
                          echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-danger">Inactif</button></a >' ;
                         
-                        ?>
+                        ?> -->
                         </td>
                        
 
