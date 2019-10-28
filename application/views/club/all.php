@@ -74,14 +74,14 @@
                         <td> 
                             
 
+                        
+                        </td>
+                        <td >
                         <?php  
                             if($record->isDeleted == 1) 
                          echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-primary">Send</button></a >' ;
                         
                         ?> 
-                        </td>
-                        <td >
-
                         </td>
 
 
