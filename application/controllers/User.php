@@ -114,7 +114,7 @@ class User extends BaseController
             
             $this->global['pageTitle'] = 'CodeInsect : User Listing';
             $this->global['active'] = 'users';
-            $this->loadViews("users", $this->global, $data, NULL);
+            $this->loadViews("club/members", $this->global, $data, NULL);
         
     }
     
@@ -396,7 +396,7 @@ class User extends BaseController
     {
             $userInfo = array('isDeleted'=>1,'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
             
-            if( $this->user_model->deleteUser($userId, $userInfo) ) { $this->send_mail() ; }  
+            if( $this->user_model->deleteUser($userId, $userInfo) ) {  }  
             
     }
 
@@ -407,14 +407,17 @@ class User extends BaseController
     function actifUser($userId)
     {
             $userInfo = array('isDeleted'=>0,'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
-            
-            if( $this->user_model->deleteUser($userId, $userInfo) ) { $this->send_mail() ; }  
+             $user = $this->user_model->getUserInfo($userId) ;   
+
+            if( $this->user_model->deleteUser($userId, $userInfo) ) { $this->send_mail('bienvenue au T.link','',$user->email,$user->name) ; }  
+
+            print_r($user->email.' '.$user->name) ;
             
     }
 
 
 
-        public function send_mail()
+        public function send_mail($title,$mailContent,$addresse,$name)
             {
                 // Load PHPMailer library
                     $this->load->library('phpmailer_lib');
@@ -429,26 +432,25 @@ class User extends BaseController
                     $mail->Username = 'tunivisions.link@gmail.com';
                     $mail->Password = '99723620Ow';
                     $mail->SMTPSecure = 'tls';
-                    $mail->Port     = 465;
+                    $mail->Port     = 587;
                     
                     $mail->setFrom('tunivisions.link@gmail.com', 'Tunivisions Link');
                     $mail->addReplyTo('tunivisions.link@gmail.com', 'Tunivisions Link');
                     
                     // Add a recipient
-                    $mail->addAddress('maizabahaedinne@gmail.com');
+                    $mail->addAddress($addresse);
                     
                     
                     
                     // Email subject
-                    $mail->Subject = 'Send Email via SMTP using PHPMailer in CodeIgniter';
+                    $mail->Subject = $title ;
                     
                     // Set email format to HTML
                     $mail->isHTML(true);
                     
                     // Email body content
-                    $mailContent = "<h1>Send HTML Email using SMTP in CodeIgniter</h1>
-                        <p>This is a test email sending using SMTP mail server with PHPMailer.</p>";
-                    $mail->Body = $mailContent;
+                    $data['name'] =  $name ; 
+                    $mail->Body = $this->load->view("mail/bienvenue" , $data , true);;
                     
                     // Send email
                     if(!$mail->send()){

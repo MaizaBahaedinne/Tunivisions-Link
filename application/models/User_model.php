@@ -135,24 +135,24 @@ class User_model extends CI_Model
 
 
 
+
+
+
     /**
      * This function is used to check whether email id is already exist or not
      * @param {string} $email : This is email id
      * @param {number} $userId : This is user id
      * @return {mixed} $result : This is searched result
      */
-    function checkEmailExists($email, $userId = 0)
+    function checkEmailExists($email)
     {
-        $this->db->select("email");
+        $this->db->select("name");
         $this->db->from("tbl_users");
         $this->db->where("email", $email);   
-        $this->db->where("isDeleted", 0);
-        if($userId != 0){
-            $this->db->where("userId !=", $userId);
-        }
+      
         $query = $this->db->get();
 
-        return $query->result();
+         return $query->row();
     }
     
         /**
@@ -181,8 +181,7 @@ class User_model extends CI_Model
     {
         $this->db->select('userId, name, email, mobile, roleId , avatar');
         $this->db->from('tbl_users');
-        $this->db->where('isDeleted', 0);
-		$this->db->where('roleId !=', 1);
+
         $this->db->where('userId', $userId);
         $query = $this->db->get();
         

@@ -154,7 +154,7 @@
                   </div>
             </div>
             <div class="form-group">
-              <input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
+              <input class="form-control" type="text" placeholder="Email" name="email"  required>
             </div>
             <div class="form-group">
               <input class="form-control" type="password" minlength="8" placeholder="Mot de passe" name="password" required>

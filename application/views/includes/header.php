@@ -52,7 +52,7 @@
 <!-- blockage ---------------->
 
    <?php if($isBlocked==1) { ?>
-    		<script type="text/javascript"> let timerInterval
+   <script type="text/javascript"> let timerInterval
 	Swal.fire({
 	  title: 'alert!',
 	  html: 'tu es bloqué . Contacter la Foundation',
@@ -77,6 +77,8 @@
 	  }
 	})</script>
        <?php } ?>
+
+
     	<!-- begin:: Page -->
 	
 <!-- begin:: Header Mobile -->
@@ -209,15 +211,20 @@
 					</span>
 				</a>
 			</li>
+			
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "meeting" ){echo("--active") ;} ?> " aria-haspopup="true" >
-				<a  href="<?php echo base_url() ; ?>Reunion/ReunionListing" class="kt-menu__link ">
+			<!--	<a  href="<?php echo base_url() ; ?>Reunion/ReunionListing" class="kt-menu__link "> -->
+				<a  href="" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-exclamation">
 					</i>
 					<span class="kt-menu__link-text">
-						Réunion
+						Réunion 
 					</span>
-				</a>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> lancement<br> ce dimanche </small></span></span>
+					
+				</a> 
 			</li>
+			
 			<?php if (  $SA==1 || ($cellule =='' &&  ($role ==1 || $role == 2 ))   ) { ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "postes" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>club/Postes" class="kt-menu__link ">
@@ -226,6 +233,7 @@
 					<span class="kt-menu__link-text">
 						Gestion des postes
 					</span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> lancement<br> ce dimanche </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
@@ -242,34 +250,40 @@
 			<?php } ?>
 			<?php if ( $SA==1 || ( $role ==1  ||  ($role == 3  && $cellule='Administration et finance' )) ) {  ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "finance" ){echo("--active") ;} ?>" aria-haspopup="true" >
-				<a  href="<?php echo base_url() ; ?>Finance/financeListing" class="kt-menu__link ">
+				<!--<a  href="<?php echo base_url() ; ?>Finance/financeListing" class="kt-menu__link ">-->
+					<a  href="" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-folder-1">
 					</i>
 					<span class="kt-menu__link-text">
 						Ressource Financier
 					</span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red">lancement <br> ce dimanche </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
 			<?php if ( $SA==1 || ( $role ==1  ||  ($role == 3  && $cellule='Evenementiel' )) ) {  ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "project" ){echo("--active") ;} ?>" aria-haspopup="true" >
-				<a  href="<?php echo base_url() ; ?>addNewProject" class="kt-menu__link ">
+				<!--<a  href="<?php echo base_url() ; ?>addNewProject" class="kt-menu__link ">-->
+					<a  href="" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon2-architecture-and-city">
 					</i>
 					<span class="kt-menu__link-text">
 						Gestion des projets
 					</span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> lancement <br>ce dimanche </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
 			<?php if ( $SA==1 || ( $role ==1  ||  $role ==2 ||  $role ==3 ) ) {  ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "tasks" ){echo("--active") ;} ?>" aria-haspopup="true" >
-				<a  href="<?php echo base_url() ; ?>Tasks/tasksListing" class="kt-menu__link ">
+				<!--<a  href="<?php echo base_url() ; ?>Tasks/tasksListing" class="kt-menu__link ">-->
+					<a  href="" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-list-1">
 					</i>
 					<span class="kt-menu__link-text">
 						Gestion des taches
 					</span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> lancement <br>ce dimanche </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
@@ -317,7 +331,7 @@
 			    <div class="tab-pane active show" id="topbar_notifications_notifications" role="tabpanel">
 			        <div class="kt-notification kt-margin-t-10 kt-margin-b-10 kt-scroll" data-scroll="true" data-height="300" data-mobile-height="200">
 			        	
-			            <a href="#" class="kt-notification__item">
+			            <a href="" class="kt-notification__item">
 			                <div class="kt-notification__item-icon">
 			                    <i class="flaticon2-line-chart kt-font-success"></i>
 			                </div>
@@ -468,7 +482,11 @@
 				  $temp.val($(element).text()).select();
 				  document.execCommand("copy");
 				  $temp.remove();
-				  alet("une copie du lien de parrainage a été effectué");
+				  Swal.fire(
+							  'Bravo !',
+							  'votre lien a été copiés avec succès',
+							  'success'
+							)
 				}
 
     		</script>
@@ -494,26 +512,26 @@
         </div>
 		
     </a>
-    <a href="#" class="kt-notification__item">
+    <a href="" class="kt-notification__item">
         <div class="kt-notification__item-icon">
             <i class="flaticon2-mail kt-font-warning"></i>
         </div>
         <div class="kt-notification__item-details">
             <div class="kt-notification__item-title kt-font-bold">
-                Mes Messages
+                Mes Messages <small> Comming soon ! </small>
             </div>
             <div class="kt-notification__item-time">
                
             </div>
         </div>
     </a>
-    <a href="#" class="kt-notification__item">
+    <a href="" class="kt-notification__item">
         <div class="kt-notification__item-icon">
             <i class="flaticon2-rocket-1 kt-font-danger"></i>
         </div>
         <div class="kt-notification__item-details">
             <div class="kt-notification__item-title kt-font-bold">
-                Mes Activities
+                Mes Compétences  <small> Comming soon ! </small>
             </div>
             <div class="kt-notification__item-time">
                 

@@ -100,7 +100,7 @@
               foreach($projectRecords as $record)
             {
             ?>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <!--begin:: Portlet-->
         <div class="kt-portlet kt-portlet--height-fluid">
         <div>
@@ -145,15 +145,15 @@
 
                                 </span>
                                 <span class="kt-widget__desc">
-                                    
+                                <span class="btn btn-danger "> 
+                                        <?php $date = new DateTime($record->startDate) ; 
+                                        echo $date->format('d').'/'.$date->format('m').'/20'.$date->format('y').' '.$date->format('H').':'.$date->format('M') ; ?>    
+                                </span>
                                      
                                 </span>
                             </div>
                         </div>
-                        <span class="btn btn-danger "> 
-                                        <?php $date = new DateTime($record->startDate) ; 
-                                        echo $date->format('d').'/'.$date->format('m').'<br>20'.$date->format('y') ; ?>    
-                                </span>
+                        
 
                     </div>
 

@@ -53,7 +53,7 @@
                    
                     <!-- form start -->
                     <?php $this->load->helper("form"); ?>
-                    <form role="form" id="addproject" action="<?php echo base_url() ?>Project/addNewP" method="post" role="form"  enctype="multipart/form-data">
+                    <form role="form"  id="addproject" action="<?php echo base_url() ?>Project/addNewP" method="post" role="form"  enctype="multipart/form-data">
                         <div class="box-body">
 
                             <h4>Projet</h4>
@@ -69,12 +69,54 @@
                                     <div class="form-group">
                                         <label for="fname">Banner</label>
                                         <br>
-                                        <img id="preview-img" width="360px"  />  
+                                        <div class="dropzone dropzone-default dropzone-brand dz-clickable" >
+                                            <input type="file" name="file" id="file" required/>
+                                          </div>
+                                         
                                         <br>  
-                                       <input type="file" name="file" id="file" required/>
+                                       
+                                       <p >le format de fichier doit etre JPG ou JPEG avec une taile maximale de 2 MO </p>
+                                      <p id="error1" style="display:none; color:#FF0000;">
+                                          Format d'image invalide! Le format d'image doit être JPG, JPEG.
+                                          </p>
+                                          <p id="error2" style="display:none; color:#FF0000;">
+                                          La taille maximale du fichier est de 2 Mo.
+                                          </p>
                                     </div>
+
+                                    <script type="text/javascript">
+                                          $('#submitt').prop("disabled", true);
+                                            var a=0;
+                                            //binds to onchange event of your input field
+                                            $('#file').bind('change', function() {
+                                              if ($('input:submit').attr('disabled',false)){
+                                                 $('input:submit').attr('disabled',true);
+                                                 }
+                                                var ext = $('#file').val().split('.').pop().toLowerCase();
+                                                if ($.inArray(ext, ['jpg','jpeg']) == -1){
+                                                   $('#error1').slideDown("slow");
+                                                   $('#error2').slideUp("slow");
+                                                   a=0;
+                                                 }else{
+                                                   var picsize = (this.files[0].size);
+                                                   if (picsize > 2000000){
+                                                   $('#error2').slideDown("slow");
+                                                 a=0;
+                                                 }else{
+                                                 a=1;
+                                                    $('#error2').slideUp("slow");
+                                                 }
+                                                    $('#error1').slideUp("slow");
+                                                 if (a==1){
+                                                 $('input:submit').attr('disabled',false);
+                                               }
+                                            }
+                                        });
+                                    </script>
                                     
                                 </div>
+                            </div>
+                            <div class="row"> 
                                 <div class="col-md-2">                                
                                     <div class="form-group">
                                         <label for="fname">Type</label>
@@ -82,9 +124,8 @@
                                             <option value="Evenement">Evenement</option>
                                             <option value="Formation">Formation</option>
                                             <option value="Conférence">Conférence</option>
+                                            <option value="Couverture Mediatique">Action</option>
                                             <option value="Couverture Mediatique">Couverture Mediatique</option>
-                                            
-
                                         </select>
                                     </div>
                                     

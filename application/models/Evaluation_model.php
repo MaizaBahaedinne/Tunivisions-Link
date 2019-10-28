@@ -58,8 +58,10 @@ class Evaluation_model extends CI_Model
         $this->db->from('tbl_evaluation as BaseTbl');
         $this->db->join('tbl_project as Projects', 'Projects.projectId = BaseTbl.projectId', 'LEFT');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.doBy', 'LEFT');
+         $this->db->where('Projects.endDate < NOW()  ') ; 
          $this->db->where('Projects.clubID = ', $clubId);
-         $this->db->where('BaseTbl.statut = ','En Attend') ; 
+         $this->db->where('BaseTbl.statut = ','En Attend') ;
+
         $query = $this->db->get();
         
         $result = $query->result();        
