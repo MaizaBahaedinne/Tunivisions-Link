@@ -230,7 +230,8 @@
 			
 			<?php if (  $SA==1 || ($cellule =='' &&  ($role ==1 || $role == 2 ))   ) { ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "postes" ){echo("--active") ;} ?> " aria-haspopup="true" >
-				<a  href="<?php echo base_url() ; ?>club/Postes" class="kt-menu__link ">
+			<!--	<a  href="<?php echo base_url() ; ?>club/Postes" class="kt-menu__link ">-->
+				<a  href="" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-map">
 					</i>
 					<span class="kt-menu__link-text">
