@@ -73,7 +73,7 @@
                             <?php echo $record->email ?>
                         <td> 
                          <?php    
-                        if($record->is_Actif == 1) 
+                        if($record->is_Actif == 'Actif') 
                          echo '<button class="btn btn-primary">Actif</button></a >' ;
                         ?> 
 
