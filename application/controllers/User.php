@@ -50,6 +50,7 @@ class User extends BaseController
         $data['ActuRecords'] = $this->actualite_model->actuListing();
         $data['MyclubID'] = $this->clubID;
         $data['MyuserId'] = $this->vendorId;
+        $data["membersCount"] = count($this->user_model->userListingByclub($this->vendorId,$this->clubID)) ;
         $this->global['active'] = 'dash';
       
         $this->loadViews("dashboard", $this->global, $data , NULL);

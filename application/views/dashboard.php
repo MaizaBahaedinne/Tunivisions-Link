@@ -8,6 +8,21 @@
 }
 </style>
 
+  <?php        if ($membersCount < 2 && $role ==1 ){
+        ?>
+        <script type="text/javascript">
+        Swal.fire(
+                              'Parainage !',
+                              '<h4>Partager ce lien seulement avec vos membres</h4> <br>  <?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID; ?><br><br>  Date limite des inscriptions pour les membres le <b>01/11/2019<b> ',
+                              'success'
+                            )
+        </script>
+       <?php 
+                }
+       ?>
+
+
+
 <?php  if ($countEval>0 && ($role ==1  ||  ($role == 3  && $cellule='Gestion des talents' )) ){ ?>
 <a href=" <?php echo base_url() ; ?>Evaluation/evaluationListing "  >
 
