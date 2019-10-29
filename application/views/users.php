@@ -128,7 +128,7 @@
                        
                         <td>
                       
-                                        <img alt="Pic" class="alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" />
+                                        <img alt="Pic" class="alligator-turtle" width="20px" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" />
                    
                         <td>
                             <span style="width: auto;">
