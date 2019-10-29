@@ -146,7 +146,7 @@
 </div>
   <div class="row"> 
     <div class="col-md-8">
-        
+        <!--
                     <table  style="border-collapse:separate;background-color:#ffffff;border:1px solid #dddfe2;border-radius:3px;font-family:Helvetica, Arial, sans-serif;margin:0px auto; width: auto;">
                         <tr>
                             <td style="">
@@ -169,7 +169,7 @@
                     </td>
                 </tr>
             </table>
- 
+            -->
 
         <!--begin::Portlet-->
         <div class="kt-portlet">
