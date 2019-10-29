@@ -116,7 +116,7 @@ $cellule = $userInfo->cellule;
         <div class="kt-widget kt-widget--user-profile-1">
             <div class="kt-widget__head">
                 <div class="kt-widget__media">
-                    <img src="<?php echo base_url() ; ?>/uploads/avatar/<?php echo $avatar ?>" alt="image">
+                    <img src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $avatar ?>" alt="image">
                 </div>
                 <div class="kt-widget__content">
                     <div class="kt-widget__section">

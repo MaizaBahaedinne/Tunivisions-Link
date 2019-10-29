@@ -559,9 +559,10 @@
 
     <div class="kt-notification__custom kt-space-between">
         <a href="<?php echo base_url() ?>logout" class="btn btn-label btn-label-brand btn-sm btn-bold">Déconnecter</a>
-
+<a href="<?php echo base_url() ?>PasswordMaj" class="btn btn-label btn-label-brand btn-sm btn-bold">Changer le mot de passe</a>
         
     </div>
+       
 </div>
 <!--end: Navigation -->	    </div>
 	</div>
