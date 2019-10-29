@@ -18,6 +18,8 @@ class Scores_club_model extends CI_Model
     {
         $this->db->select('BaseTbl.score_clubID , BaseTbl.clubID , BaseTbl.titre , BaseTbl.score ,BaseTbl.affectedBy ');
         $this->db->from('tbl_score_club as BaseTbl');
+        $this->db->where('BaseTbl.clubID =' , = $clubID);
+        $this->db->order_by('BaseTbl.createdDate ASC');
         $query = $this->db->get();       
         $result = $query->result();        
         return $result;
