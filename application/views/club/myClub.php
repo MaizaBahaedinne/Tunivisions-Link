@@ -32,7 +32,7 @@
                     </div>
 
 
-
+<!--
                     <div class="kt-widget__info">
                         <div class="kt-widget__desc">
                         <b>Bureau executif</b>
@@ -94,6 +94,8 @@
            
                         </div>
                     </div>
+
+                -->
                 </div>
             </div>
             <div class="kt-widget__bottom">
