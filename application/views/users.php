@@ -127,12 +127,9 @@
                     <tr>
                        
                         <td>
-                            <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic">
+                      
                                         <img alt="Pic" class="alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" />
-                                    </div>
-                                </div>     
-                        </td>
+                   
                         <td>
                             <span style="width: auto;">
                                                      
