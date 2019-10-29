@@ -111,7 +111,7 @@
                         <style type="text/css">
                        .alligator-turtle {
                   object-fit: cover;
-                  object-position: 50% 0;
+                  object-position: 50% 50%;
 
                   width: 35px;
                   height: 35px;
