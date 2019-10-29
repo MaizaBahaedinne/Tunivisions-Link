@@ -87,7 +87,7 @@ class Register extends CI_Controller
                 
                 if($result > 0 && move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file) )
                 {
-                    $this->session->set_flashdata('success', 'nous activons votre compte ce samedi à 23h00 ');
+                    $this->session->set_flashdata('success', 'votre dossier est en cours de traitement');
                 }
                 else
                 {
