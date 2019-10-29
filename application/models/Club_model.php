@@ -76,6 +76,7 @@ class Club_model extends CI_Model
         $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
          $this->db->join('tbl_roles as Roles', 'Users.roleId = Roles.roleId', 'LEFT');
         $this->db->where('Users.clubId=',$clubID) ;
+        $this->db->where('Users.clubId !=',0) ;
        $this->db->where('Users.roleId=1 or Users.roleId=2 or Users.roleId=3 or Users.roleId=6  ') ;
        
 
