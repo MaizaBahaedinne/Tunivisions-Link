@@ -54,8 +54,8 @@
    <?php if($isBlocked==1) { ?>
    <script type="text/javascript"> let timerInterval
 	Swal.fire({
-	  title: 'alert!',
-	  html: 'nous ',
+	  title: 'alert !',
+	  html: 'votre dossier est en cours de traitement ,  ',
 	  timer: 7000,
 	  onBeforeOpen: () => {
 	    Swal.showLoading()
