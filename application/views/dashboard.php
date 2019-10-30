@@ -169,7 +169,7 @@
                     </td>
                 </tr>
             </table>
-            -->
+        -->
 
         <!--begin::Portlet-->
         <div class="kt-portlet">

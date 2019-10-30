@@ -45,6 +45,7 @@
                         <th>Faculté</th>
                         <th>Secteur</th>
                         <th>Président</th>
+                        <th></th>
                         <th>Contact</th>
                         <th>Actif</th>
 
@@ -68,6 +69,9 @@
                         </td>
                         <td>
                             <?php echo $record->P ?>
+                        </td>
+                        <td>
+                            <?php echo $record->members ;?> Membres
                         </td>
                         <td>
                             <?php echo $record->email ?>

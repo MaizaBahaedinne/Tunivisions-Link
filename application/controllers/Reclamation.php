@@ -40,6 +40,7 @@ class Reclamation extends BaseController {
 			                $this->loadViews("reclamation/new", $this->global, $data, NULL);   
 			        }
 
+
 		public function addNewReclamation()
 		        {
 		        	
@@ -82,7 +83,7 @@ class Reclamation extends BaseController {
                        			 $this->notification_model->addNewNotificaition($notifInfo) ;
 								}
 
-                    $this->session->set_flashdata('success', 'nous activons votre compte aprés le paiement de votre cotisation annuel');
+                    
 
                 }
 
@@ -90,6 +91,47 @@ class Reclamation extends BaseController {
 			             redirect ('Reclamation/addNew') ;
 		        }
 
+
+		         public function editreclam($reclamID)
+			        {
+			                $this->load->model('club_model');
+			                
+			                $data['reclamRecords'] = $this->reclamation_model->reclamInfo($reclamID);
+
+			                $this->global['pageTitle'] = '';
+			           		$this->global['active'] = 'claims';
+			                $this->loadViews("reclamation/edit", $this->global, $data, NULL);   
+			        }
+
+
+
+
+		         public function editreclamtion($reclamID)
+			        {
+
+ 							$reclamInfo = array(
+						                 'staut' => 'Cloturé' ,  
+						                 'responsedBy'=>$this->vendorId ,
+						                 'responsedDate'=> date('Y-m-d H:i:s'),
+						                 'responsedText'=>   $this->input->post('response') 		                
+						             	);
+
+ 							$this->reclamation_model->editReclamation($reclamInfo, $reclamID) ;
+							
+							$reclamRecords = $this->reclamation_model->reclamInfo($reclamID);
+
+ 							$notifInfo = array(        
+                                 'text' => 'votre reclamation de <b> '.''.' </b> a été cloturé ' ,
+                                 'dateNotif' => date('Y-m-d H:i:s') , 
+                                 'seen' => 'no' , 
+                                 'type' => 'Reclamation',
+                                 'userId' => $reclamRecords->createdBy ,
+                                 'url' => '/Reclamation/reclamationListing' 
+                                 );             
+                       		$this->notification_model->addNewNotificaition($notifInfo) ;
+
+			               redirect('/reclamation/reclamationListing') ; 
+			        }
 
 			
 }

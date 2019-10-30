@@ -106,16 +106,7 @@
 
 
 
-                        <span class="dropdown">
-                            <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="dropdown" aria-expanded="true">
-                              <i class="la la-ellipsis-h"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="<?php echo base_url().'editOld/'.$record->reclamId; ?>"><i class="la la-edit"></i> Modifier</a>
-                                
-                            </div>
-                        </span>
-                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                        <a href="<?php echo base_url() ;?>Reclamation/editreclam/<?php echo $record->reclamId ; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
                           <i class="la la-edit"></i>
                         </a>
 
