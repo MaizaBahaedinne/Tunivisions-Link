@@ -64,7 +64,7 @@
                         </div>
 
                         <span class="kt-widget24__stats kt-font-brand">
-                             1001
+                             <?php echo $tunimateurs ; ?>
                         </span>  
                     </div>       
                 </div>
