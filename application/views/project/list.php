@@ -65,15 +65,13 @@
                     </div>        
         <div class="kt-subheader__toolbar">
 
-                            <a href="../../../.html" class="">
-                    
-                                    </a>
+           <!--         
             <?php if ($role ==1 || $role == 2 || $role == 3  ) {  ?>
                                                 <a href="<?php echo base_url() ?>addNewProject" class="btn btn-label-brand btn-bold">
                         
                         Ajouter un projet                    </a>
              <?php } ?>                           
-
+            -->
                     </div>
     </div>
 </div>

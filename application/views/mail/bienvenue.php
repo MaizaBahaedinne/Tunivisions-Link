@@ -214,7 +214,7 @@
 <!--[if mso]></td></tr></table><![endif]-->
 <div align="center" class="button-container" style="padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:30.75pt; width:151.5pt; v-text-anchor:middle;" arcsize="122%" stroke="false" fillcolor="#0068A5"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px"><![endif]-->
-<a href="www.tunivisions.link" >
+<a href="https://www.tunivisions.link/" >
 <div style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#0068A5;border-radius:50px;-webkit-border-radius:50px;-moz-border-radius:50px;width:auto; width:auto;;border-top:1px solid #0068A5;border-right:1px solid #0068A5;border-bottom:1px solid #0068A5;border-left:1px solid #0068A5;padding-top:5px;padding-bottom:5px;font-family:'Open Sans', Helvetica, Arial, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;"><span style="padding-left:50px;padding-right:50px;font-size:16px;display:inline-block;">
 <span style="font-size: 16px; line-height: 2; mso-line-height-alt: 32px;"><strong>Se connecter</strong></span>
 </span></div></a>
