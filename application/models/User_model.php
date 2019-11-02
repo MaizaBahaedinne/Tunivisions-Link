@@ -30,6 +30,28 @@ class User_model extends CI_Model
     }
 
 
+    /**
+     * This function is used to get the user listing count
+     * @return array $result : This is result
+     */
+    function userListingApprouve($userID)
+    {
+         $this->db->select('BaseTbl.userId, BaseTbl.gouvernorat , BaseTbl.delegation , BaseTbl.CLubID as club , BaseTbl.cin, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, BaseTbl.createdDtm, Role.role , Clubs.name as ClubName , Clubs.city as ClubCity ,BaseTbl.sexe ,BaseTbl.isDeleted , BaseTbl.avatar , BaseTbl.cellule  ');
+        $this->db->from('tbl_users as BaseTbl');
+        $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
+       
+        $this->db->where('BaseTbl.userId !=', $userID );
+        $this->db->where('BaseTbl.isDeleted !=', 0 );
+        $this->db->order_by('BaseTbl.userId', 'DESC');
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
+
 /**
      * This function is used to get the user listing count
      * @return array $result : This is result
@@ -380,7 +402,7 @@ function bonus (){
         
         $this->db->select('BaseTbl.userId , BaseTbl.roleId');
         $this->db->from('tbl_users as BaseTbl');
-        $this->db->where('BaseTbl.createdDtm < ','Day(2019-11-01)' );
+        $this->db->where('BaseTbl.createdDtm < ','2019-11-01' );
                 
         $query = $this->db->get();
         

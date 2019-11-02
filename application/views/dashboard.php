@@ -78,7 +78,12 @@
                         </div>
 
                         <span class="kt-widget24__stats kt-font-brand">
+                             <?php if($clubID == 0){ echo $tunimateursApp.'/' ;
+    ?>
+<?php
+} ?>
                              <?php echo $tunimateurs ; ?>
+
                         </span>  
                     </div>       
                 </div>
@@ -158,6 +163,7 @@
         </div>
     </div>
 </div>
+
   <div class="row"> 
     <div class="col-md-8">
         
