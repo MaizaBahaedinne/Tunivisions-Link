@@ -450,7 +450,7 @@ class User extends BaseController
       
 
         foreach ($actifs as $a ) {
-            if($a != Null){
+            if($a != Null &&  $a != ''){
             $userInfo = array('isDeleted'=>0,
                               'updatedBy'=>$this->vendorId,
                                'updatedDtm'=>date('Y-m-d H:i:s'),
