@@ -380,7 +380,7 @@ function bonus (){
         
         $this->db->select('BaseTbl.userId , BaseTbl.roleId');
         $this->db->from('tbl_users as BaseTbl');
-        $this->db->where('BaseTbl.createdDtm < ','2019-11-01' );
+        $this->db->where('BaseTbl.createdDtm < ','Day(2019-11-01)' );
                 
         $query = $this->db->get();
         
