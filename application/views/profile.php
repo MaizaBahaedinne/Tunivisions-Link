@@ -228,7 +228,7 @@ $cellule = $userInfo->cellule;
                         </div>
                     </div>
 
-                    <form class="kt-form kt-form--label-right" method="post" action="<?php echo base_url() ?>User/MAJUser" >
+                    <form class="kt-form kt-form--label-right" method="post" action="<?php echo base_url() ?>User/MAJUser"  enctype="multipart/form-data"  >
                         <div class="kt-portlet__body">
                             <div class="kt-section kt-section--first">
                                 <div class="kt-section__body">
@@ -239,7 +239,7 @@ $cellule = $userInfo->cellule;
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-xl-3 col-lg-3 col-form-label">Avatar</label>
-                                        <input type="file" name="fileToUpload">
+                                        <input type="file" name="fileToUpload" >
                                     </div>
 
                                    <div class="form-group row">

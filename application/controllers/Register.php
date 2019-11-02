@@ -55,13 +55,13 @@ class Register extends CI_Controller
                 $linkedin = $this->security->xss_clean($this->input->post('linkedin'));
                
                     $target_dir = "uploads/avatar/";
-                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]).$mobile;
                     $uploadOk = 1;
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
    
 
                 $userInfo = array(
-                 'avatar' => basename($_FILES["fileToUpload"]["name"]) ,  
+                 'avatar' => basename($_FILES["fileToUpload"]["name"]).$mobile ,  
                  'email'=>$email,
                  'password'=>getHashedPassword($password),
                  'roleId'=>'5',
