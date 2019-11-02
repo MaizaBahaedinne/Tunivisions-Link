@@ -379,7 +379,7 @@ class User extends BaseController
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
                     $userInfo = array(
-                                      'avatar' => basename($_FILES["fileToUpload"]["name"]) ,
+                                      'avatar' => basename($_FILES["fileToUpload"]["name"]).$mobile ,
                                       'email'=>$email,
                                       'name'=>$name,
                                       'email'=>$email,
