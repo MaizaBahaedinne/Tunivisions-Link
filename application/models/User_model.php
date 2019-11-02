@@ -90,6 +90,7 @@ class User_model extends CI_Model
         $this->db->where('BaseTbl.roleId !=', 1);
         $this->db->where('BaseTbl.userId !=', $userID );
         $this->db->where('BaseTbl.CLubID =', $clubID);
+        $this->db->where('BaseTbl.isDeleted =', 0);
         $query = $this->db->get();
         
         $result = $query->result();        
