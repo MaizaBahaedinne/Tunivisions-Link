@@ -8,7 +8,7 @@
 }
 </style>
 
-  <?php        if ($membersCount < 20 && $role ==1 ){
+  <?php        if ($membersCount < 10 && $role ==1 ){
         ?>
         <script type="text/javascript">
         Swal.fire(
