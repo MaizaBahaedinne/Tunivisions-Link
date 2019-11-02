@@ -373,7 +373,14 @@ class User extends BaseController
                 $linkedin = $this->security->xss_clean($this->input->post('linkedin'));
                 $birthday = $this->security->xss_clean($this->input->post('birthday'));
  
-                    $userInfo = array('email'=>$email,
+                 $target_dir = "uploads/avatar/";
+                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]).$mobile;
+                    $uploadOk = 1;
+                    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+                    $userInfo = array(
+                                      'avatar' => basename($_FILES["fileToUpload"]["name"]) ,
+                                      'email'=>$email,
                                       'name'=>$name,
                                       'email'=>$email,
                                       'birthday'=>$birthday,
@@ -389,7 +396,7 @@ class User extends BaseController
                 
                 $result = $this->user_model->editUser($userInfo, $this->vendorId);
                 
-                if($result == true)
+                if($result == true && move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file) )
                 {
                     $this->session->set_flashdata('success', 'Votre profile a été mise à jour');
                 }
