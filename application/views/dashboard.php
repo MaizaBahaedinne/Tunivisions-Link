@@ -8,7 +8,7 @@
 }
 </style>
 
-  <?php        if ($membersCount < 2 && $role ==1 ){
+  <?php        if ($membersCount < 20 && $role ==1 ){
         ?>
         <script type="text/javascript">
         Swal.fire(
@@ -17,8 +17,22 @@
                               'success'
                             )
         </script>
+
        <?php 
                 }
+        else if ($membersCount >= 10 && $role ==1){
+                  ?>
+
+        <script type="text/javascript">
+        Swal.fire(
+                              'Approuver les membres !',
+                              '<h4>Vous pouvez approuver</h4> <br> <a  href="<?php echo base_url() ; ?>User/userByClubListingToApprove" > <button value="Approuvez"> </a> ',
+                              'success'
+                            )
+        </script> 
+
+        <?php  
+        }
        ?>
 
 
