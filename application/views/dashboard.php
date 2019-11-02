@@ -8,20 +8,8 @@
 }
 </style>
 
-  <?php        if ($membersCount < 10 && $role ==1 ){
+  <?php        if ($membersCount >= 10 && $role ==1){
         ?>
-        <script type="text/javascript">
-        Swal.fire(
-                              'Parainage !',
-                              '<h4>Partager ce lien seulement avec vos membres</h4> <br>  <?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID; ?><br><br>  Date limite des inscriptions pour les membres le <b>01/11/2019<b> ',
-                              'success'
-                            )
-        </script>
-
-       <?php 
-                }
-        else if ($membersCount >= 10 && $role ==1){
-                  ?>
 
         <script type="text/javascript">
         Swal.fire(
