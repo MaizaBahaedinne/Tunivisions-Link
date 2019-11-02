@@ -465,7 +465,7 @@ class User extends BaseController
 
 
 
-  /*  public function send_mail($title,$mailContent,$addresse,$name)
+    public function send_mail($title,$mailContent,$addresse,$name)
             {
                 // Load PHPMailer library
                     $this->load->library('phpmailer_lib');
@@ -475,22 +475,19 @@ class User extends BaseController
                     
                     // SMTP configuration
                     $mail->isSMTP();
-                    $mail->Host     = 'smtp.gmail.com';
+                    $mail->Host     = 'smtp.tunivisions.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'tunivisions.link@gmail.com';
-                    $mail->Password = '99723620Ow';
+                    $mail->Username = 'no-reply@tunivisions.link';
+                    $mail->Password = 'Tunivisions-Link-2019';
                     $mail->SMTPSecure = 'tls';
-                    $mail->Port     = 587;
+                    $mail->Port     = 465;
                     
-                    $mail->setFrom('tunivisions.link@gmail.com', 'Tunivisions Link');
-                    $mail->addReplyTo('tunivisions.link@gmail.com', 'Tunivisions Link');
+                    $mail->setFrom('no-reply@tunivisions.link', 'Tunivisions Link');
+                    $mail->addReplyTo('no-reply@tunivisions.link', 'Tunivisions Link');
                     
                     // Add a recipient
                 
-                        $mail->addAddress($to);
-                    
-                    
-                    
+                    $mail->addAddress($to);
                     
                     
                     // Email subject
@@ -515,7 +512,7 @@ class User extends BaseController
              
                 
             }
-*/
+
             
     /**
      * Page not found : error 404

@@ -69,8 +69,8 @@
                   object-fit: cover;
                   object-position: 50% 0;
 
-                  width: 35px;
-                  height: 35px;
+                  width: 45px;
+                  height: 45px;
                                 }
                 </style>
                     
@@ -85,7 +85,7 @@
                         <td>
                             <div class="kt-user-card-v2">
                                     <div class="kt-user-card-v2__pic">
-                                        <img alt="Pic" class="kt-radius-100 alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" />
+                                        <img alt="<?php echo $record->name ?>" class="kt-radius-100 alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" />
                                     </div>
                                 </div>     
                         </td>
