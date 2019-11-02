@@ -42,7 +42,7 @@ class User_model extends CI_Model
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
        
         $this->db->where('BaseTbl.userId !=', $userID );
-        $this->db->where('BaseTbl.isDeleted !=', 0 );
+        $this->db->where('BaseTbl.isDeleted !=', 1 );
         $this->db->order_by('BaseTbl.userId', 'DESC');
         $query = $this->db->get();
         
