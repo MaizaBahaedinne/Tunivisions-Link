@@ -128,7 +128,7 @@
             </div>
 
             <div class="form-group">
-              <input class="form-control" type="email" placeholder="E-Mail" name="mail" autocomplete="off">
+              <input class="form-control" type="email" placeholder="E-Mail" name="mail" >
             </div>
             <div class="form-group">
               <input class="form-control" type="password" placeholder="Mot de passe" name="password" autocomplete="off">
