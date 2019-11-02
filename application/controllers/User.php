@@ -91,9 +91,9 @@ class User extends BaseController
             
             $this->load->library('pagination');
             
-            $count = $this->user_model->userListing2($searchText);
+            $count = $this->user_model->userListingApprouve($searchText);
             $data['count'] = count($count)  ; 
-            $data['userRecords'] = $this->user_model->userListing2($searchText);
+            $data['userRecords'] = $this->user_model->userListingApprouve($searchText);
             $this->global['active'] = 'members';
             $this->global['pageTitle'] = 'CodeInsect : User Listing';
             
