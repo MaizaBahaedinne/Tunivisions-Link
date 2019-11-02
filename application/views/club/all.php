@@ -68,7 +68,7 @@
                             <?php echo $record->city ?>
                         </td>
                         <td>
-                            <?php echo $record->P ?>
+                            <?php echo $record->avatar ?><?php echo $record->P ?>
                         </td>
                         <td>
                             <?php echo $record->members ; ?> 

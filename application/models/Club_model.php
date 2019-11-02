@@ -39,7 +39,7 @@ class Club_model extends CI_Model
    
 
        $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
-        
+        $this->db->where('BaseTbl.is_Actif=Actif') ;
         $this->db->group_by('BaseTbl.clubID') ;
       
         $query = $this->db->get();
