@@ -118,6 +118,21 @@ class User extends BaseController
             $this->loadViews("club/members", $this->global, $data, NULL);
         
     }
+
+
+
+    function userByClubListingToApprove()
+    {
+            $searchText = $this->security->xss_clean($this->input->post('searchText'));
+            $data['searchText'] = $searchText;
+            $this->load->library('pagination');
+            $count = $this->user_model->userListingByclubToApprouve($this->vendorId,$this->clubID);
+            $data['count'] = count($count)  ; 
+            $data['userRecords'] = $this->user_model->userListingByclubToApprouve($this->vendorId,$this->clubID);
+            $this->global['pageTitle'] = 'CodeInsect : User Listing';
+            $this->global['active'] = 'users';
+            $this->loadViews("club/approuve", $this->global, $data, NULL);
+    }
     
 
     /**
@@ -416,9 +431,41 @@ class User extends BaseController
             
     }
 
+    /**
+     * This function is used to delete the user using userId
+     * @return boolean $result : TRUE / FALSE
+     */
+    function actifMember()
+    {
+
+        $actifs = $this->input->post('actifs');
+      
+
+        foreach ($actifs as $a ) {
+            if($a != Null){
+            $userInfo = array('isDeleted'=>0,
+                              'updatedBy'=>$this->vendorId,
+                               'updatedDtm'=>date('Y-m-d H:i:s'),
+                               'cellule'=>  $this->input->post('Cellule_'.$a)
+                             );
+             $user = $this->user_model->getUserInfo($a) ;   
+             }
+             
+        if( $this->user_model->deleteUser($user->userId, $userInfo) ) { $this->send_mail('bienvenue au T.link','',$user->email,$user->name) ; } 
+                  
+          }
+           
+     
+           
+            
+
+     redirect('/User/userByClubListingToApprove');
+            
+    }
 
 
-        public function send_mail($title,$mailContent,$addresse,$name)
+
+    public function send_mail($title,$mailContent,$addresse,$name)
             {
                 // Load PHPMailer library
                     $this->load->library('phpmailer_lib');
@@ -439,7 +486,10 @@ class User extends BaseController
                     $mail->addReplyTo('tunivisions.link@gmail.com', 'Tunivisions Link');
                     
                     // Add a recipient
-                    $mail->addAddress($addresse);
+                
+                        $mail->addAddress($to);
+                    
+                    
                     
                     
                     

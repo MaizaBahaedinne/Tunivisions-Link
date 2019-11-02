@@ -73,7 +73,7 @@ class Actu extends BaseController {
                                                              'seen' => 'no' , 
                                                              'type' => 'Actualite',
                                                              'userId' => $record->userId ,
-                                                             'url' => '/Actu/Show/2'. $resultat
+                                                             'url' => '/Actu/Show/'. $resultat
                                                              );                                           
                           $this->notification_model->addNewNotificaition($notifInfo) ;
 						}

@@ -116,21 +116,35 @@ class Reclamation extends BaseController {
 						                 'responsedText'=>   $this->input->post('response') 		                
 						             	);
 
- 							$this->reclamation_model->editReclamation($reclamInfo, $reclamID) ;
+ 					
 							
-							$reclamRecords = $this->reclamation_model->reclamInfo($reclamID);
+							
+						if ($this->reclamation_model->editReclamation($reclamInfo, $reclamID) ){
 
+							$reclamRecords = $this->reclamation_model->reclamInfo($reclamID) ;
  							$notifInfo = array(        
                                  'text' => 'votre reclamation de <b> '.''.' </b> a été cloturé ' ,
                                  'dateNotif' => date('Y-m-d H:i:s') , 
                                  'seen' => 'no' , 
                                  'type' => 'Reclamation',
                                  'userId' => $reclamRecords->createdBy ,
-                                 'url' => '/Reclamation/reclamationListing' 
+                                 'url' => '/Reclamation/reclamInfo/'.$reclamID 
                                  );             
                        		$this->notification_model->addNewNotificaition($notifInfo) ;
-
+							} 
 			               redirect('/reclamation/reclamationListing') ; 
+			        }
+
+
+		         public function reclamInfo($reclamID)
+			        {
+			                $this->load->model('club_model');
+			                
+			                $data['reclamRecords'] = $this->reclamation_model->reclamInfo($reclamID);
+
+			                $this->global['pageTitle'] = '';
+			           		$this->global['active'] = 'claims';
+			                $this->loadViews("reclamation/view", $this->global, $data, NULL);   
 			        }
 
 			

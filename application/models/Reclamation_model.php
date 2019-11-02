@@ -67,10 +67,12 @@ class Reclamation_model extends CI_Model
      */
     function reclamInfo($reclamationId)
     {
-        $this->db->select('BaseTbl.reclamId , BaseTbl.Sujet , BaseTbl.Text ,BaseTbl.createdDate , BaseTbl.createdBy , BaseTbl.staut , Users.name as faitpar , Users.avatar , Clubs.name as clubName ');
+        $this->db->select('BaseTbl.reclamId , BaseTbl.Sujet , BaseTbl.Text ,BaseTbl.createdDate , BaseTbl.createdBy , BaseTbl.staut , BaseTbl.responsedText , BaseTbl.responsedBy , BaseTbl.responsedDate  , Users.name as faitpar , Users.avatar , Clubs.name as clubName , Users2.name as rep , Users2.avatar avatarrep , Clubs2.name as clubNamerep   ');
         $this->db->from('tbl_reclamation as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.createdBy','left');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.clubId','left');  
+        $this->db->join('tbl_users as Users2', 'Users2.userId = BaseTbl.responsedBy','left');
+        $this->db->join('tbl_club as Clubs2', 'Clubs2.clubID = Users2.clubId','left');  
         $this->db->where('BaseTbl.reclamId =', $reclamationId) ; 
         $query = $this->db->get();
 
