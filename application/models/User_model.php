@@ -377,10 +377,11 @@ class User_model extends CI_Model
     }
 
 function bonus (){
-            $this->db->select('BaseTbl.userId , BaseTbl.roleId');
+        
+        $this->db->select('BaseTbl.userId , BaseTbl.roleId');
         $this->db->from('tbl_users as BaseTbl');
-        $this->db->where('createdDtm < ','2019-11-01' );
-        $this->db->where('roleId != 1 and roleId != 2 and roleId != 3 and roleId != 6 ');
+        $this->db->where('BaseTbl.createdDtm < ','2019-11-01' );
+        $this->db->where('BaseTbl.roleId != 1 and BaseTbl.roleId != 2 and BaseTbl.roleId != 3 and BaseTbl.roleId != 6 ');
         
         $query = $this->db->get();
         
