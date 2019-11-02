@@ -32,7 +32,15 @@
     </div>
 
     <div class="kt-portlet__body">
-            
+                                    <style type="text/css">
+                       .alligator-turtle {
+                  object-fit: cover;
+                  object-position: 50% 0%;
+
+                  width: 45px;
+                  height: 45px;
+                                }
+                </style>
 
         <div class="row">
     <div class="col-sm-12">
