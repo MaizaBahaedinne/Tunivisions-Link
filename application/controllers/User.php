@@ -374,12 +374,12 @@ class User extends BaseController
                 $birthday = $this->security->xss_clean($this->input->post('birthday'));
  
                  $target_dir = "uploads/avatar/";
-                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]).$mobile;
+                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                     $uploadOk = 1;
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
                     $userInfo = array(
-                                      'avatar' => basename($_FILES["fileToUpload"]["name"]).$mobile ,
+                                      'avatar' => basename($_FILES["fileToUpload"]["name"]),
                                       'email'=>$email,
                                       'name'=>$name,
                                       'email'=>$email,
