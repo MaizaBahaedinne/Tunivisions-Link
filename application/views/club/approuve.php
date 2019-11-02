@@ -44,7 +44,16 @@
     <div class="kt-portlet__body">
             
 
-   
+ <style type="text/css">
+                       .alligator-turtle {
+                  object-fit: cover;
+                  object-position: 50% 0;
+
+                  width: 35px;
+                  height: 35px;
+                                }
+                </style>   
+
 
         <!--begin: Datatable -->
 
@@ -62,7 +71,7 @@
              
                        
                             <div class="col-md-4">
-                            <img class="kt-radius-100" width="45 px" src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $record->avatar ; ?>" alt="image" />
+                            <img class="kt-radius-100 alligator-turtle" width="45 px" src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $record->avatar ; ?>" alt="image" />
                  
                            <b>&nbsp; &nbsp; <?php echo $record->name ?></b>
                            
