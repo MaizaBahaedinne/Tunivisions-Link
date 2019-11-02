@@ -465,7 +465,7 @@ class User extends BaseController
 
 
 
-    public function send_mail($title,$mailContent,$addresse,$name)
+  /*  public function send_mail($title,$mailContent,$addresse,$name)
             {
                 // Load PHPMailer library
                     $this->load->library('phpmailer_lib');
@@ -515,7 +515,7 @@ class User extends BaseController
              
                 
             }
-
+*/
             
     /**
      * Page not found : error 404
