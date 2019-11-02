@@ -376,6 +376,17 @@ class User_model extends CI_Model
         return $query->row();
     }
 
+function bonus (){
+            $this->db->select('BaseTbl.userId');
+        $this->db->from('tbl_users as BaseTbl');
+        $this->db->where('roleId != 1 and roleId != 2 and roleId != 3 and roleId != 6 and ClubID !=0');
+        $this->db->where('createdDtm < ','2019-11-01 18:00:00' );
+        $query = $this->db->get();
+        
+        return $query->row();
+}
+
+
 }
 
   

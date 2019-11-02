@@ -450,7 +450,7 @@ class User extends BaseController
                              );
              $user = $this->user_model->getUserInfo($a) ;   
              }
-             
+
         if( $this->user_model->deleteUser($user->userId, $userInfo) ) { $this->send_mail('bienvenue au T.link','',$user->email,$user->name) ; } 
                   
           }
@@ -700,6 +700,13 @@ class User extends BaseController
 
         return $return;
     }
+
+
+    function bonus() {
+  
+        print_r($this->user_model->bonus() ) ;
+    }
+
 }
 
 ?>
