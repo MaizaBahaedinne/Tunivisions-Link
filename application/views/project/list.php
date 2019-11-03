@@ -143,13 +143,28 @@
 
                                 </span>
                                 <span class="kt-widget__desc">
-                                    <?php echo $record->descP ; ?>
+                                    <?php 
+                                    $string = strip_tags( $record->descP  );
+                                    if (strlen($string) > 35){
+
+                                        // truncate string
+                                        $stringCut = substr($string, 0, 35);
+                                        $endPoint = strrpos($stringCut, ' ');
+
+                                        //if the string doesn't contain any space then it will cut without word basis.
+                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                        $string .= '... ';
+                                        }
+
+                                     echo $string ;
+                                     ?>
+                                </span>
                                 <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo $date->format('d').'/'.$date->format('M').'/20'.$date->format('y').' '.$date->format('H') ; ?>    
                                 </span>
                                      
-                                </span>
+                                
                             </div>
                         </div>
                         
