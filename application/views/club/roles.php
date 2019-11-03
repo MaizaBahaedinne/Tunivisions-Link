@@ -102,7 +102,7 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="row">
-                                            <img alt="Pic" class="kt-radius-100" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" width="40px" /> 
+                                            <img alt="Pic" class="kt-radius-100  alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" width="40px" /> 
                                             &nbsp; &nbsp;  <span> <h6> <?php echo $record->name ?> </h6> <?php if ($record->role =='Vice Président') { echo 'VP' ; } else { echo $record->role ;}  ?>   </span>
                                             </div>
                                         </div>
@@ -122,7 +122,7 @@
                                 <div class="row">
                                         <div class="col-md-8">
                                             <div class="row">
-                                            <img alt="Pic" class="kt-radius-100" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" width="40px" /> 
+                                            <img alt="Pic" class="kt-radius-100  alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" width="40px" /> 
                                             &nbsp; &nbsp;  <span> <h6> <?php echo $record->name ?> </h6> <?php if ($record->role =='Vice Président') { echo 'VP' ; } else { echo $record->role ;}  ?>   </span>
                                             </div>
                                         </div>
@@ -142,7 +142,7 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="row">
-                                            <img alt="Pic" class="kt-radius-100" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" width="40px" /> 
+                                            <img alt="Pic" class="kt-radius-100  alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" width="40px" /> 
                                             &nbsp; &nbsp;  <span> <h6> <?php echo $record->name ?> </h6> <?php if ($record->role =='Vice Président') { echo 'VP' ; } else { echo $record->role ;}  ?>   </span>
                                             </div>
                                         </div>
