@@ -266,13 +266,12 @@
 			<?php if ( $SA==1 || ( $role ==1  ||  ($role == 3  && $cellule='Evenementiel' )) ) {  ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "project" ){echo("--active") ;} ?>" aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>addNewProject" class="kt-menu__link ">
-				
 					<i class="kt-menu__link-icon flaticon2-architecture-and-city">
 					</i>
 					<span class="kt-menu__link-text">
 						Gestion des projets
 					</span>
-					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> disponible <br>ce dimanche </small></span></span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"></small></span></span>
 				</a>
 			</li>
 			<?php } ?>
