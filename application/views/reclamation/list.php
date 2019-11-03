@@ -90,7 +90,7 @@
                                     <div class="kt-user-card-v2__pic">
                                         <img alt="Pic" class="kt-radius-100" src="<?php echo base_url() ?>uploads/avatar/<?php echo $record->avatar ?>">
                                     </div>
-                                </div>  <?php echo $record->faitpar ?> <br><small> Club Tunivisions <?php echo $record->clubName ?> </small></td>
+                                </div>  <?php echo $record->faitpar ?> <small><br> Club Tunivisions <?php echo $record->clubName ?> </small></td>
                                
                          <td><?php  
                             if($record->staut == 'Cloturé') 
@@ -105,10 +105,17 @@
                         <td class="text-center">
 
 
-
-                        <a href="<?php echo base_url() ;?>Reclamation/editreclam/<?php echo $record->reclamId ; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                        <?php if($record->staut == 'En Attend') { ?>    
+                        <a href="<?php echo base_url() ;?>Reclamation/editreclam/<?php echo $record->reclamId ; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="edit">
                           <i class="la la-edit"></i>
                         </a>
+                    <?php } else  {
+                        ?>
+                         <a href="<?php echo base_url() ;?>Reclamation/reclamInfo/<?php echo $record->reclamId ; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                          <i class="flaticon-eye"></i>
+                        
+                        <?php
+                    } ?>
 
 
                         </td>
