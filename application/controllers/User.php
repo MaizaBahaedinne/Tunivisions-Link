@@ -459,15 +459,9 @@ class User extends BaseController
              $user = $this->user_model->getUserInfo($a) ;   
              }
 
-        if( $this->user_model->deleteUser($user->userId, $userInfo) ) { $this->send_mail('bienvenue au T.link','',$user->email,$user->name) ; } 
+        if( $this->user_model->deleteUser($user->userId, $userInfo) ) {  redirect('/User/userByClubListingToApprove') ; } 
                   
           }
-           
-     
-           
-            
-
-     redirect('/User/userByClubListingToApprove');
             
     }
 
