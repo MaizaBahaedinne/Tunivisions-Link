@@ -123,7 +123,7 @@ class Reclamation extends BaseController {
 
 							$reclamRecords = $this->reclamation_model->reclamInfo($reclamID) ;
  							$notifInfo = array(        
-                                 'text' => 'votre reclamation de <b> '.''.' </b> a été cloturé ' ,
+                                 'text' => 'votre reclamation de <b> #'.$reclamID.' </b> a été cloturé ' ,
                                  'dateNotif' => date('Y-m-d H:i:s') , 
                                  'seen' => 'no' , 
                                  'type' => 'Reclamation',
