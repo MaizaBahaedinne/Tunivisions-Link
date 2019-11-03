@@ -182,7 +182,7 @@
                             
                             <div class="kt-widget__details">
                                 <span class="kt-widget__subtitle"></span>
-                                <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp; <span><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix;} ?> DT </span><span></span>
+                                <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp; <span><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?>  </span><span></span>
                             </div>
                         </div>
 
