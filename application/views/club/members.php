@@ -22,12 +22,13 @@
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
+            <a href="<?php echo base_url() ; ?>User/userByClubListingToApprove" class="btn btn-primary" >Approuver les membres</a>
             <div class="kt-portlet__head-wrapper">
     <div class="kt-portlet__head-actions">
         <div class="dropdown dropdown-inline">
             
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="<?php echo base_url() ; ?>User/userByClubListingToApprove" class="btn kt-subheader__btn-primary" >Approuver les membres</a>
+
             </div>
         </div>
         &nbsp;
