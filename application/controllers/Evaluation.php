@@ -16,6 +16,19 @@ class Evaluation extends BaseController {
     }
     
 
+    public function evaluationListingF()           
+     {
+            $this->load->library('pagination');
+                    $searchText='' ;
+                    $data['evaluationRecords'] = $this->evaluation_model->evaluationListingF();
+                    $count = $this->evaluation_model->evaluationListingF();
+                    $data['count'] = count($count)  ; 
+
+                    $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+                 $this->global['active'] = 'projects';
+                    $this->loadViews("evaluation/list", $this->global, $data, NULL);   
+            }
+
 	public function evaluationListing()
 		        {
 						$this->load->library('pagination');

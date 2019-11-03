@@ -199,6 +199,17 @@
 					</span>
 				</a>
 			</li>
+			<?php if ($SA == 1 ) { ?>
+			<li class="kt-menu__item  kt-menu__item<?php if( $active == "Evaluation" ){echo("--active") ;} ?> " aria-haspopup="true" >
+				<a  href="<?php echo base_url() ; ?>Evaluation/evaluationListingF" class="kt-menu__link ">
+					<i class="kt-menu__link-icon flaticon-exclamation">
+					</i>
+					<span class="kt-menu__link-text">
+						Evaluations des clubs
+					</span>
+				</a>
+			</li>
+			<?php } ?>
 
 
 			<li class="kt-menu__section ">

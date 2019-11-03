@@ -43,6 +43,26 @@ class Evaluation_model extends CI_Model
         return $result;
     }
 
+    /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function evaluationListingF()
+    {
+        $this->db->select('BaseTbl.evaluationId , BaseTbl.projectId , BaseTbl.titre , BaseTbl.statut , BaseTbl.doDate , Users.name   ');
+        $this->db->from('tbl_evaluation as BaseTbl');
+        $this->db->join('tbl_project as Projects', 'Projects.projectId = BaseTbl.projectId', 'LEFT');
+        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.doBy', 'LEFT');
+     
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
 
 
     /**
