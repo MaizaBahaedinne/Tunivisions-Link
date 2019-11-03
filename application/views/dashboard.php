@@ -307,7 +307,7 @@
                                    if ($c== 1){ 
                                    echo  '  <td> <span class="kt-badge kt-badge--inline kt-badge--success"> '
                                             .$c.
-                                            '</span> </td><td> Club Tunivisions '
+                                            '</span> </td><td>Club Tunivisions '
                                             .$rc->name.
                                             '</td><td>'. 
                                             $rc->scores
@@ -316,7 +316,7 @@
                                    if ($c== 2){ 
                                    echo  ' <tr> <td> <span class="kt-badge kt-badge--inline kt-badge--info">  '
                                             .$c.
-                                            '</span></td><td><small>  Club Tunivisions '
+                                            '</span></td><td><small>Club Tunivisions '
                                             .$rc->name.
                                             '</small> </td><td>'. 
                                             $rc->scores
@@ -325,18 +325,18 @@
                                    if ($c== 3){ 
                                    echo  ' <tr> <td><span class="kt-badge kt-badge--inline kt-badge--warning"> '
                                             .$c.
-                                            '</span> </td><td> Club Tunivisions '
+                                            '</span> </td><td><small>Club Tunivisions '
                                             .$rc->name.
-                                            '</td><td>'. 
+                                            '</small></td><td>'. 
                                             $rc->scores
                                               ;
                                             }
                                    if($c> 3) { 
                                    echo  ' <tr> <td>'
                                             .$c.
-                                            '</td><td> Club Tunivisions '
+                                            '</td><td><small>Club Tunivisions '
                                             .$rc->name.
-                                            '</td><td>'. 
+                                            '</small></td><td>'. 
                                             $rc->scores
                                               ;
                                             }
