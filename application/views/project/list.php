@@ -145,10 +145,10 @@
                                 <span class="kt-widget__desc">
                                     <?php 
                                     $string = strip_tags( $record->descP  );
-                                    if (strlen($string) > 35){
+                                    if (strlen($string) > 150){
 
                                         // truncate string
-                                        $stringCut = substr($string, 0, 35);
+                                        $stringCut = substr($string, 0, 150);
                                         $endPoint = strrpos($stringCut, ' ');
 
                                         //if the string doesn't contain any space then it will cut without word basis.
