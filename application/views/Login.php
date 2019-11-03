@@ -135,9 +135,11 @@
             </div>
             <!--begin::Action-->
             <div class="kt-login__actions">
+              <!--
               <a href="#" class="kt-link kt-login__link-forgot">
                 Mot de passe oublier ?
               </a>
+            -->
               <input type="submit"  class="btn btn-primary btn-elevate kt-login__btn-primary" value="Se connecter">
 
             </div>

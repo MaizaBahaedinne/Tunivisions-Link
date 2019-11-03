@@ -143,7 +143,7 @@
 
                                 </span>
                                 <span class="kt-widget__desc">
-                                    <?php echo $description ; ?>
+                                    <?php echo $record->descP ; ?>
                                 <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo $date->format('d').'/'.$date->format('M').'/20'.$date->format('y').' '.$date->format('H') ; ?>    
