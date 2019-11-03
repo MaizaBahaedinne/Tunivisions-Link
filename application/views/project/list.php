@@ -143,9 +143,10 @@
 
                                 </span>
                                 <span class="kt-widget__desc">
+                                    <?php echo $description ; ?>
                                 <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->startDate) ; 
-                                        echo $date->format('d').'/'.$date->format('m').'/20'.$date->format('y').' '.$date->format('H').':'.$date->format('M') ; ?>    
+                                        echo $date->format('d').'/'.$date->format('M').'/20'.$date->format('y').' '.$date->format('H') ; ?>    
                                 </span>
                                      
                                 </span>
