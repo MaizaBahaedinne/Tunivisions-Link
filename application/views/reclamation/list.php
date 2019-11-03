@@ -90,11 +90,11 @@
                                     <div class="kt-user-card-v2__pic">
                                         <img alt="Pic" class="kt-radius-100" src="<?php echo base_url() ?>uploads/avatar/<?php echo $record->avatar ?>">
                                     </div>
-                                </div>  <?php echo $record->faitpar ?> <br> Club Tunivisions <?php echo $record->clubName ?> </td>
+                                </div>  <?php echo $record->faitpar ?> <br><small> Club Tunivisions <?php echo $record->clubName ?> </small></td>
                                
                          <td><?php  
-                            if($record->staut == 'Traité') 
-                         echo'<span class="kt-badge kt-badge--brand kt-badge--inline">Traité</span>' ;
+                            if($record->staut == 'Cloturé') 
+                         echo'<span class="kt-badge kt-badge--brand kt-badge--inline">Cloturé</span>' ;
                         
                         ?>
                         <?php  
