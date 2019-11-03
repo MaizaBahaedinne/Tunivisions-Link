@@ -483,7 +483,7 @@ class User extends BaseController
                     
                     // SMTP configuration
                     $mail->isSMTP();
-                    $mail->Host     = 'smtp.tunivisions.com';
+                    $mail->Host     = 'tunivisions.link';
                     $mail->SMTPAuth = true;
                     $mail->Username = 'no-reply@tunivisions.link';
                     $mail->Password = 'Tunivisions-Link-2019';
