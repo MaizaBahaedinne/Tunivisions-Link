@@ -230,14 +230,13 @@
 			
 			<?php if (  $SA==1 || ($cellule =='' &&  ($role ==1 || $role == 2 ))   ) { ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "postes" ){echo("--active") ;} ?> " aria-haspopup="true" >
-			<!--	<a  href="<?php echo base_url() ; ?>club/Postes" class="kt-menu__link ">-->
-				<a  href="" class="kt-menu__link ">
+			<a  href="<?php echo base_url() ; ?>club/Postes" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-map">
 					</i>
 					<span class="kt-menu__link-text">
 						Gestion des postes
 					</span>
-					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"> disponible <br> ce dimanche </small></span></span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red">  </small></span></span>
 				</a>
 			</li>
 			<?php } ?>
@@ -254,14 +253,13 @@
 			<?php } ?>
 			<?php if ( $SA==1 || ( $role ==1  ||  ($role == 3  && $cellule='Administration et finance' )) ) {  ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "finance" ){echo("--active") ;} ?>" aria-haspopup="true" >
-				<!--<a  href="<?php echo base_url() ; ?>Finance/financeListing" class="kt-menu__link ">-->
-					<a  href="" class="kt-menu__link ">
+				<a  href="<?php echo base_url() ; ?>Finance/financeListing" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-folder-1">
 					</i>
 					<span class="kt-menu__link-text">
 						Ressource Financier
 					</span>
-					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red">disponible <br> ce dimanche </small></span></span>
+					<span class="kt-menu__link-badge"><span class=" kt-badge--rounded kt-badge--brand"><small style="color: red"></small></span></span>
 				</a>
 			</li>
 			<?php } ?>
