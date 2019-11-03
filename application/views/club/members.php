@@ -27,7 +27,7 @@
         <div class="dropdown dropdown-inline">
             
             <div class="dropdown-menu dropdown-menu-right">
-
+                <a href="<?php echo base_url() ; ?>User/userByClubListingToApprove" class="btn kt-subheader__btn-primary" >Approuver les membres</a>
             </div>
         </div>
         &nbsp;
