@@ -34,7 +34,7 @@ class Finance extends BaseController {
 		                 'titre' => $titre ,  
 		                 'createdDate'=>date('Y-m-d H:i:s'),
 		                 'description_Produit'=>$description_produits,
-		                 'description_Charge'=$description_Charge,
+		                 'description_Charge'=>$description_Charge,
 		                 'produit'=>$produits,
 		                 'description_Charge'=>$this->vendorId,
 		                 'charge'=>$charges,
