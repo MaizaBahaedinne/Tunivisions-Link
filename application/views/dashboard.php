@@ -30,7 +30,7 @@
         /* Read more about handling dismissals below */
         result.dismiss === Swal.DismissReason.timer
       ) {
-        <?php if($user->roleId == 1 || ($user->roleId == 3 &&  $user->cellule == '' ) || $SA == 1  ) {?> 
+        <?php if($user->roleId == 1 || ($user->roleId == 3 &&  $user->cellule == '' ) || $user->SA == 1  ) {?> 
         
          window.location.replace("<?php echo base_url() ;?>Finance/addNew");
         <? } else { ?>
