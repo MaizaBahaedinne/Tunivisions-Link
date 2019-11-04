@@ -40,6 +40,8 @@ class Scores_model extends CI_Model
         $this->db->select('BaseTbl.ressourceID , Users.name , Users.avatar , Users.clubID ,   BaseTbl.userID , sum(score) as scores ');
         $this->db->from('tbl_ressource as  BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userID','left');
+        $this->db->join('tbl_evaluation as Evals ', 'Evals.projectId = BaseTbl.projectID','left');
+        $this->db->where('Evals.valider = ', 'Valider');
         $this->db->order_by('scores', 'DESC');
         $this->db->group_by('Users.userId');  
         $this->db->limit(10);  
