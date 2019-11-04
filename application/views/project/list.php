@@ -98,7 +98,7 @@
               foreach($projectRecords as $record)
             {
             ?>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <!--begin:: Portlet-->
         <div class="kt-portlet kt-portlet--height-fluid">
         <div>
@@ -119,9 +119,24 @@
                                 
                             </div>
 
-                                <a href="<?php echo base_url().'Project/projectDetails/'.$record->projectId; ?>" class="kt-widget__title">
-                                    <?php echo $record->titre ?>  
+                                <a href="" class="kt-widget__title">
+                                  
 
+                                    <?php 
+                                    $string = strip_tags( $record->titre );
+                                    if (strlen($string) > 20){
+
+                                        // truncate string
+                                        $stringCut = substr($string, 0, 20);
+                                        $endPoint = strrpos($stringCut, ' ');
+
+                                        //if the string doesn't contain any space then it will cut without word basis.
+                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                        $string .= '... ';
+                                        }
+
+                                     echo $string ;
+                                     ?>
                                 </a>
                                 <small>
                                 <?php if ($record->cible=='Publique' )
