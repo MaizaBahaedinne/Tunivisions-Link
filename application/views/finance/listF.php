@@ -137,11 +137,11 @@
                        
                         <th>Club </th>
                         <th>Derniere mise à jour</th>
-                        <th>charges</th>
                         <th>produits</th>
+                        <th>charges</th>
                         <th>solde</th>
 
-                        <th class="text-center">Actions</th>
+                        <th class="text-center">Faite par </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -163,19 +163,8 @@
                         <td class="text-center">
 
 
-
-                        <span class="dropdown">
-                            <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="dropdown" aria-expanded="true">
-                              <i class="la la-ellipsis-h"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="<?php echo base_url().'editOld/'.$record->financeid; ?>"><i class="la la-edit"></i> Modifier</a>
-                                <a class="dropdown-item" href="<?= base_url().'login-history/'.$record->financeid; ?>"><i class="la la-print"></i> Historique</a>
-                            </div>
-                        </span>
-                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                          <i class="la la-edit"></i>
-                        </a>
+                                        <?php echo $record->name ?>
+                        
 
 
                         </td>
