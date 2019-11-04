@@ -46,7 +46,7 @@ class User_model extends CI_Model
         }
         
         $this->db->where('BaseTbl.isDeleted !=', 1 );
-        $this->db->order_by('BaseTbl.userId', 'ASC');
+        $this->db->order_by('BaseTbl.ClubID', 'ASC');
         $this->db->limit(500);
         $query = $this->db->get();
         

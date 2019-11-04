@@ -72,7 +72,7 @@ public function financeListing()
 		                $this->load->model('finance_model');
 		                $searchText='' ;
 		                $data['financeRecords'] = $this->finance_model->financeListingF();
- 						$count = $this->finance_model->financeListing();
+ 						$count = $this->finance_model->financeListingF();
             			$data['count'] = count($count)  ; 
 
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
