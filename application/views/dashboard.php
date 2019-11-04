@@ -153,7 +153,7 @@
 </div>
 
   <div class="row"> 
-    <div class="col-md-8">
+    <div class="col-md-7">
         
                     <table  style="border-collapse:separate;background-color:#ffffff;border:1px solid #dddfe2;border-radius:3px;font-family:Helvetica, Arial, sans-serif;margin:0px auto; width: auto;">
                         <tr>
@@ -272,7 +272,7 @@
 
     </div>
 
-<div class="col-md-4">    
+<div class="col-md-5">    
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
             <div class="kt-portlet__head">
