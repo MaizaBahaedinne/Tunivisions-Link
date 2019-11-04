@@ -7,14 +7,14 @@
         <div class="kt-subheader__main">
             
             <h3 class="kt-subheader__title">
-                                    Reclamation +                           
+                                    Bilan +                           
             </h3>
 
             <span class="kt-subheader__separator kt-subheader__separator--v"></span>
             
             <div class="kt-subheader__group" id="kt_subheader_search">
                 <span class="kt-subheader__desc" id="kt_subheader_total">
-                                         Entrer les détails du reclamation
+                                         Entrer les détails du bulan
                                                              </span>
                 
                             </div>
