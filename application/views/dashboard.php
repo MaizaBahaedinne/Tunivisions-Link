@@ -381,7 +381,8 @@
                   object-position: 50% 50%;
 
                   width: auto;
-                  height: 100px;
+                  height: 45px;
+                  width: 45px ;
                 }
                 </style>
                 <!--begin::Section-->
