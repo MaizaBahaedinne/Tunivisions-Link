@@ -77,7 +77,7 @@ class Finance_model extends CI_Model
      */
     function financeListingF()
     {
-         $this->db->select('BaseTbl.financeid,BaseTbl.titre ,BaseTbl.createdDate, sum(BaseTbl.produit) , sum(BaseTbl.charge) , Users.name , Clubs.name  as clubName  ');
+         $this->db->select('BaseTbl.financeid,BaseTbl.titre ,BaseTbl.createdDate, sum(BaseTbl.produit) as produits , sum(BaseTbl.charge) as charges , Users.name , Clubs.name  as clubName  ');
         $this->db->from('tbl_finance as BaseTbl');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.clubID','left');
         $this->db->join('tbl_users as Users', 'Users.userID = BaseTbl.createdBy','left'); 
