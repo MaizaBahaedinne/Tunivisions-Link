@@ -477,7 +477,7 @@ class User extends BaseController
                     
                     // SMTP configuration
                     $mail->isSMTP();
-                    $mail->Host     = 'tunivisions.link';
+                    $mail->Host     = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
                     $mail->Username = 'tunivisions.link@gmail.com';
                     $mail->Password = '99723620Ow';
