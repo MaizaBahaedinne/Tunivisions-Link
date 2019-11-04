@@ -24,6 +24,20 @@ class Project_model extends CI_Model
         return $result;
     }
 
+        function projectListingT()
+    {
+         $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description descP ,  BaseTbl.local ,BaseTbl.banner ');
+        $this->db->from('tbl_project as BaseTbl');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
+        $this->db->order_by('BaseTbl.startDate','ASC');
+
+
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
     function projectListingByClubThisWeek($clubID)
     {
          $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description ,  BaseTbl.local ,BaseTbl.banner ');

@@ -44,7 +44,7 @@ class User extends BaseController
         $data["tunimateursApp"] = count($this->user_model->userListingApprouve($this->vendorId));
         $data["clubs"] = count($this->club_model->clubListing() ) ; 
         $data["clubscount"] = $this->club_model->clubListingCount() ;
-        $data["projets"] = count($this->project_model->projectListing() ) ;
+        $data["projets"] = count($this->project_model->projectListingT() ) ;
         $data["RateClub"] = $this->scores_model->RaitingClub()   ;
         $data["RateMember"] = $this->scores_model->RaitingUsers()   ;
         $data["countEval"] = count($this->evaluation_model->evaluation_A_ValidListing($this->clubID))   ;
