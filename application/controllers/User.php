@@ -52,6 +52,10 @@ class User extends BaseController
         $data['MyclubID'] = $this->clubID;
         $data['MyuserId'] = $this->vendorId;
         $data["membersCount"] = count($this->user_model->userListingByclub($this->vendorId,$this->clubID)) ;
+        $data["user"] = $this->user_model->getUserInfoWithRole($this->vendorId) ;
+        $count = $this->finance_model->financeListing($this->clubID);
+        $data['bilancount'] = count($count)  ; 
+        
         $this->global['active'] = 'dash';
       
         $this->loadViews("dashboard", $this->global, $data , NULL);

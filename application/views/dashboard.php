@@ -8,6 +8,41 @@
 }
 </style>
 
+
+<?php if($bilancount < 1 ) { ?>
+   <script type="text/javascript"> let timerInterval
+    Swal.fire({
+      title: 'alert !',
+      html: 'votre club est suspendu pour le moment  ',
+      timer: 7000,
+      onBeforeOpen: () => {
+        Swal.showLoading()
+        timerInterval = setInterval(() => {
+          Swal.getContent().querySelector('strong')
+            .textContent = Swal.getTimerLeft()
+        }, 100)
+      },
+      onClose: () => {
+        clearInterval(timerInterval)
+      }
+    }).then((result) => {
+      if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.timer
+      ) {
+        <?php if($user->roleId == 1 || ($user->roleId == 3 &&  $user->cellule == '' )  ) {?> 
+        
+         window.location.replace("<?php echo base_url() ;?>Finance/addNew");
+        <? } else { ?>
+        window.location.replace("<?php echo base_url() ;?>logout");
+        <?php } ?>
+        console.log('Votre club est bloqué')
+      }
+    })</script>
+       <?php } ?>
+
+
+
   <?php        if ($membersCount < 10 && $role ==1){
         ?>
 
