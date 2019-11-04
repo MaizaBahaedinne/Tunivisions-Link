@@ -375,6 +375,15 @@
                 </div>
             </div>
             <div class="kt-portlet__body">
+                <style type="text/css">
+                       .alligator-turtle2 {
+                  object-fit: cover;
+                  object-position: 50% 50%;
+
+                  width: auto;
+                  height: 100px;
+                }
+                </style>
                 <!--begin::Section-->
                 <div class="kt-section">
                    <div class="kt-invoice__container">
@@ -394,7 +403,7 @@
                                     {  echo '   <tr  bgcolor="#ADD8E6" > '; }
                                 else{  echo '   <tr   > '; }
                                    if ($c== 1){ 
-                                            echo  '<td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100"> '
+                                            echo  '<td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
                                             .
                                             '</span> </td><td> '
                                             .$rc->name.
@@ -403,7 +412,7 @@
                                               ;
                                             }
                                    if ($c== 2){ 
-                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100"> '
+                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2"> '
                                             .
                                             '</span></td><td>   '
                                             .$rc->name.
@@ -412,7 +421,7 @@
                                               ;
                                             }
                                    if ($c== 3){ 
-                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100"> '
+                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2"> '
                                             .
                                             '</span> </td><td>   '
                                             .$rc->name.
@@ -421,7 +430,7 @@
                                               ;
                                             }
                                    if($c> 3) { 
-                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100"> '
+                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2 "> '
                                             .
                                             '</td><td>   '
                                             .$rc->name.
