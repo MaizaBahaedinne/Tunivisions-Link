@@ -459,7 +459,7 @@ class User extends BaseController
              $user = $this->user_model->getUserInfo($a) ;   
              }
 
-        if( $this->user_model->deleteUser($user->userId, $userInfo) ) {  redirect('/User/userByClubListingToApprove') ; } 
+        if( $this->user_model->deleteUser($user->userId, $userInfo) ) {  redirect('/User/userByClubListing') ; } 
                   
           }
             
@@ -479,13 +479,13 @@ class User extends BaseController
                     $mail->isSMTP();
                     $mail->Host     = 'tunivisions.link';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'no-reply@tunivisions.link';
-                    $mail->Password = 'Tunivisions-Link-2019';
+                    $mail->Username = 'tunivisions.link@gmail.com';
+                    $mail->Password = '99723620Ow';
                     $mail->SMTPSecure = 'tls';
-                    $mail->Port     = 465;
+                    $mail->Port     = 587;
                     
-                    $mail->setFrom('no-reply@tunivisions.link', 'Tunivisions Link');
-                    $mail->addReplyTo('no-reply@tunivisions.link', 'Tunivisions Link');
+                    $mail->setFrom('tunivisions.link@gmail.com', 'Tunivisions Link');
+                    $mail->addReplyTo('tunivisions.link@gmail.com', 'Tunivisions Link');
                     
                     // Add a recipient
                 
