@@ -176,7 +176,7 @@
                   Format d'image invalide! Le format d'image doit être JPG, JPEG.
                   </p>
                   <p id="error2" style="display:none; color:#FF0000;">
-                  La taille maximale du fichier est de 2 Mo.
+                  La taille maximale du fichier est de 1 Mo.
                   </p>
             </div>
 
@@ -288,7 +288,7 @@
                a=0;
              }else{
                var picsize = (this.files[0].size);
-               if (picsize > 2000000){
+               if (picsize > 1000000){
                $('#error2').slideDown("slow");
              a=0;
              }else{
