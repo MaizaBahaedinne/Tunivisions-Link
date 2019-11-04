@@ -108,7 +108,7 @@
                     </thead>
 
                     <tbody>
-                              }
+                              
                 </style>
                     
                     <?php
@@ -119,10 +119,11 @@
                     ?>
                     <tr>
                        
-                       
-                            <span style="width: auto;">
-                                                     
-                                <div class="kt-user-card-v2__details">                              
+                        
+                      
+                        <td>
+                           
+                                                             
                                         <a class="kt-user-card-v2__name" href="#">
                                          <?php echo $record->name ?>
                                         </a>
@@ -131,10 +132,10 @@
                                         <?php echo $record->role ?> <?php echo $record->cellule ?>  
                                         </span>                            
                                     </div>                      
-                                </div>
-                            </span>
+                                
+                          
 
-                           </td>
+                        </td>
                         <td>
 
                             <span style="width: 145px;">
