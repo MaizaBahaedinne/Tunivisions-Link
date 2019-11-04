@@ -378,11 +378,11 @@
                 <style type="text/css">
                        .alligator-turtle2 {
                   object-fit: cover;
-                  object-position: 50% 50%;
+                  object-position: 50% 0%;
 
                   width: auto;
-                  height: 45px;
-                  width: 45px ;
+                  height: 40px;
+                  width: 40px ;
                 }
                 </style>
                 <!--begin::Section-->
