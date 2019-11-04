@@ -77,7 +77,7 @@ public function financeListing()
 
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             $this->global['active'] = 'finances';
-		                $this->loadViews("finance/list", $this->global, $data, NULL);   
+		                $this->loadViews("finance/listF", $this->global, $data, NULL);   
 		        }
 
 

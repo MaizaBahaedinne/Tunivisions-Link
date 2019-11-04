@@ -138,6 +138,9 @@
                         <th>Club </th>
                         <th>Derniere mise à jour</th>
                         <th>Solde</th>
+                        <th>charges</th>
+                        <th>produits</th>
+                        <th>solde</th>
 
                         <th class="text-center">Actions</th>
                     </tr>
@@ -153,8 +156,9 @@
 
                         <td>  <?php echo $record->clubName ?> </td>                   
                         <td>  <?php echo $record->createdDate ?> </td>
-                        <td>  <?php echo $record->createdDate ?> </td>
-
+                        <td>  <?php echo $record->charges ?> </td>
+                        <td>  <?php echo $record->produits ?> </td>
+                        <td>  <?php echo $record->charges ?> </td>    
                         
                         
                         <td class="text-center">
