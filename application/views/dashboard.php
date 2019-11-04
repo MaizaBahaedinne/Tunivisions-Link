@@ -13,7 +13,7 @@
    <script type="text/javascript"> let timerInterval
     Swal.fire({
       title: 'alert !',
-      html: 'votre club est suspendu pour le moment  ',
+      html: 'votre club est suspendu pour le moment <br> if faut que le président ou le VP Administration et finance faire la déclaration du bilan financier ',
       timer: 10000,
       onBeforeOpen: () => {
         Swal.showLoading()
