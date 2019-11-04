@@ -25,6 +25,7 @@ class User extends BaseController
         $this->load->model('Image_upload_model');
         $this->load->model('actualite_model');
         $this->load->model('notification_model');
+         $this->load->model('finance_model');
         
         $this->isLoggedIn();   
     }
@@ -55,7 +56,7 @@ class User extends BaseController
         $data["user"] = $this->user_model->getUserInfoWithRole($this->vendorId) ;
         $count = $this->finance_model->financeListing($this->clubID);
         $data['bilancount'] = count($count)  ; 
-        
+
         $this->global['active'] = 'dash';
       
         $this->loadViews("dashboard", $this->global, $data , NULL);
