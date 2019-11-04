@@ -10,7 +10,7 @@
         <div class="kt-subheader__main">
             
             <h3 class="kt-subheader__title">
-                <?php echo $count ;  ?>  Tunimateurs                            </h3>
+                  Bilan | <?php echo $count ;  ?>                            </h3>
             
                             <span class="kt-subheader__separator kt-hidden"></span>
                 <div class="kt-subheader__breadcrumbs">
@@ -28,8 +28,8 @@
         </div>
         <div class="kt-subheader__toolbar">
             <div class="kt-subheader__wrapper">
-                                    <a href="<?php echo base_url(); ?>addNew" class="btn kt-subheader__btn-primary">
-                        Actions &nbsp;
+                                    <a href="<?php echo base_url(); ?>Finance/addNew" class="btn kt-subheader__btn-primary">
+                        Ajouter un bilan &nbsp;
                         <!--<i class="flaticon2-calendar-1"></i>-->
                     </a>
                                 
@@ -61,7 +61,7 @@
                 <i class="kt-font-brand flaticon2-line-chart"></i>
             </span>
             <h3 class="kt-portlet__head-title">
-                Tunimateurs
+                Bilan
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
@@ -70,16 +70,56 @@
         <div class="dropdown dropdown-inline">
             
             <div class="dropdown-menu dropdown-menu-right">
-
+                <ul class="kt-nav">
+                    <li class="kt-nav__section kt-nav__section--first">
+                        <span class="kt-nav__section-text">Choose an option</span>
+                    </li>
+                    <li class="kt-nav__item">
+                        <a href="#" class="kt-nav__link">
+                            <i class="kt-nav__link-icon la la-print"></i>
+                            <span class="kt-nav__link-text">Print</span>
+                        </a>
+                    </li>
+                    <li class="kt-nav__item">
+                        <a href="#" class="kt-nav__link">
+                            <i class="kt-nav__link-icon la la-copy"></i>
+                            <span class="kt-nav__link-text">Copy</span>
+                        </a>
+                    </li>
+                    <li class="kt-nav__item">
+                        <a href="#" class="kt-nav__link">
+                            <i class="kt-nav__link-icon la la-file-excel-o"></i>
+                            <span class="kt-nav__link-text">Excel</span>
+                        </a>
+                    </li>
+                    <li class="kt-nav__item">
+                        <a href="#" class="kt-nav__link">
+                            <i class="kt-nav__link-icon la la-file-text-o"></i>
+                            <span class="kt-nav__link-text">CSV</span>
+                        </a>
+                    </li>
+                    <li class="kt-nav__item">
+                        <a href="#" class="kt-nav__link">
+                            <i class="kt-nav__link-icon la la-file-pdf-o"></i>
+                            <span class="kt-nav__link-text">PDF</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        &nbsp;
         
     </div>
     &nbsp;  &nbsp;
 </div>
                     <div class="box-tools">
-                       
+                        <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
+                            <div class="input-group">
+                              
+                              <div class="input-group-btn">
+                               
+                              </div>
+                            </div>
+                        </form>
                     </div>
       </div>
     </div>
@@ -91,99 +131,58 @@
     <div class="col-sm-12">
     <div class="kt-portlet__body">
         <!--begin: Datatable -->
-
         <table id="example" class="display" style="width:100%" >
                     <thead>
                     <tr>
                        
-                        
-                        <th>Nom et prénom</th>
-                        <th>Club</th>
-                        <th>Origine</th>
-                        <th>Contact</th>
-                        
-                        <th>Actif</th>
-                        
+                        <th>Club </th>
+                        <th>Derniere mise à jour</th>
+                        <th>Solde</th>
+
+                        <th class="text-center">Actions</th>
                     </tr>
                     </thead>
-
                     <tbody>
-                              }
-                </style>
-                    
                     <?php
-                    if(!empty($userRecords))
+                    if(!empty($financeRecords))
                     {
-                        foreach($userRecords as $record)
+                        foreach($financeRecords as $record)
                         {
                     ?>
                     <tr>
-                       
-                       
-                            <span style="width: auto;">
-                                                     
-                                <div class="kt-user-card-v2__details">                              
-                                        <a class="kt-user-card-v2__name" href="#">
-                                         <?php echo $record->name ?>
-                                        </a>
-                                        <br>                              
-                                        <span class="kt-user-card-v2__desc">
-                                        <?php echo $record->role ?> <?php echo $record->cellule ?>  
-                                        </span>                            
-                                    </div>                      
-                                </div>
-                            </span>
 
-                           </td>
-                        <td>
+                        <td>  <?php echo $record->clubName ?> </td>                   
+                        <td>  <?php echo $record->createdDate ?> </td>
+                        <td>  <?php echo $record->createdDate ?> </td>
 
-                            <span style="width: 145px;">
-                                <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic">
-                                        
-                                    </div>                          
-                                    <div class="kt-user-card-v2__details">                              
-                                        <a class="kt-user-card-v2__name" href="#">
-                                         <?php
-                                            if ($record->ClubName != "Foundation")
-                                            echo "club ";
-                                            ?>   Tunivisions  <?php echo $record->ClubName ?></td>
-                                        </a>                              
-                                    </div>                      
-                                </div>
-                            </span>
+                        
+                        
+                        <td class="text-center">
+
+
+
+                        <span class="dropdown">
+                            <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="dropdown" aria-expanded="true">
+                              <i class="la la-ellipsis-h"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="<?php echo base_url().'editOld/'.$record->financeid; ?>"><i class="la la-edit"></i> Modifier</a>
+                                <a class="dropdown-item" href="<?= base_url().'login-history/'.$record->financeid; ?>"><i class="la la-print"></i> Historique</a>
+                            </div>
+                        </span>
+                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                          <i class="la la-edit"></i>
+                        </a>
 
 
                         </td>
-                        
-                        <td><?php echo $record->gouvernorat ?>  </td>
-                        <td><?php echo $record->email ?><br>
-                        <?php echo $record->mobile ?> </td>
-                        
-                        <td> 
-                        <?php  
-                            if($record->isDeleted != 1) 
-                         echo'<a href="'.base_url().'User/deleteUser/'.$record->userId.'"> <button class="btn btn-primary">Actif</button></a>' ;
-                        
-                        ?>
-                        <?php  
-                            if($record->isDeleted == 1) 
-                         echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-danger">Inactif</button></a >' ;
-                        
-                        ?>
-                        </td>
-                       
-
                     </tr>
                     <?php
                         }
                     }
                     ?>
-                    
                     </tbody>
-
                   </table>
-
     </div>
     </div>
                 

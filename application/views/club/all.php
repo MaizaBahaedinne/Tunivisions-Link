@@ -76,7 +76,7 @@
                             <?php echo $record->city ?>
                         </td>
                         <td>
-                           <img class="kt-radius-100  alligator-turtle" src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $record->avatar ; ?>"> <?php echo $record->P ?>
+                           <?php echo $record->P ?>
                         </td>
                         <td>
                             <?php echo $record->members ; ?> 

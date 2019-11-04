@@ -39,6 +39,7 @@ class Finance extends BaseController {
 		                 'description_Charge'=>$this->vendorId,
 		                 'charge'=>$charges,
 		                 'clubID'=>$this->clubID,
+		                 'createdBy'=>$this->vendorId
 		   
                      );
 
@@ -64,6 +65,20 @@ public function financeListing()
 		                $this->loadViews("finance/list", $this->global, $data, NULL);   
 		        }
 
+
+		public function financeListingF()
+		        {
+						$this->load->library('pagination');
+		                $this->load->model('finance_model');
+		                $searchText='' ;
+		                $data['financeRecords'] = $this->finance_model->financeListingF();
+ 						$count = $this->finance_model->financeListing();
+            			$data['count'] = count($count)  ; 
+
+		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		             $this->global['active'] = 'finances';
+		                $this->loadViews("finance/list", $this->global, $data, NULL);   
+		        }
 
 
 

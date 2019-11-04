@@ -67,6 +67,26 @@ class Finance_model extends CI_Model
     }
 
 
+
+ /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function financeListingF()
+    {
+         $this->db->select('BaseTbl.financeid,BaseTbl.titre ,BaseTbl.createdDate, BaseTbl.description_Produit , BaseTbl.produit , BaseTbl.charge , BaseTbl.description_Charge , Users.name , Clubs.name  as clubName ');
+        $this->db->from('tbl_finance as BaseTbl');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.clubID','left');
+        $this->db->join('tbl_users as Users', 'Users.userID = BaseTbl.createdBy','left');   
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
     /**
      * This function is used to add new user to system
      * @return number $insert_id : This is last inserted id
