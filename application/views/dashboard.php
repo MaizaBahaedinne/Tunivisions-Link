@@ -33,7 +33,7 @@
         <?php if($user->roleId == 1 || ($user->roleId == 3 &&  $user->cellule == '' ) || $user->SA == 1  ) {?> 
         
          window.location.replace("<?php echo base_url() ;?>Finance/addNew");
-        <? } else { ?>
+        <?php } else { ?>
         window.location.replace("<?php echo base_url() ;?>logout");
         <?php } ?>
         console.log('Votre club est bloqué')
