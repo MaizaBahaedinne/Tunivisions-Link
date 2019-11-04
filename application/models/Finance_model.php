@@ -81,7 +81,7 @@ class Finance_model extends CI_Model
         $this->db->from('tbl_finance as BaseTbl');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.clubID','left');
         $this->db->join('tbl_users as Users', 'Users.userID = BaseTbl.createdBy','left'); 
-        $this->db->oder_by('BaseTbl.createdDate','DESC'); 
+        $this->db->order_by('BaseTbl.createdDate','DESC'); 
         $this->db->group_by('BaseTbl.clubID'); 
           
         $query = $this->db->get();
