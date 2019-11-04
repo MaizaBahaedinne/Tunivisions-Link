@@ -14,7 +14,7 @@
     Swal.fire({
       title: 'alert !',
       html: 'votre club est suspendu pour le moment  ',
-      timer: 7000,
+      timer: 10000,
       onBeforeOpen: () => {
         Swal.showLoading()
         timerInterval = setInterval(() => {
@@ -30,7 +30,7 @@
         /* Read more about handling dismissals below */
         result.dismiss === Swal.DismissReason.timer
       ) {
-        <?php if($user->roleId == 1 || ($user->roleId == 3 &&  $user->cellule == '' )  ) {?> 
+        <?php if($user->roleId == 1 || ($user->roleId == 3 &&  $user->cellule == '' ) || $SA == 1  ) {?> 
         
          window.location.replace("<?php echo base_url() ;?>Finance/addNew");
         <? } else { ?>
