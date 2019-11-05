@@ -28,7 +28,7 @@
                         <th>ID</th>
                         <th>Titre</th>
                         <th>faite </th>
-                        <th>statut</th>
+                        
                         
 
                         <th class="text-center">Actions</th>
@@ -48,20 +48,8 @@
 
                         <td><?php echo $record->evaluationId ?></td>
                         <td>  <?php echo $record->titre ?> </td>
-                        <td> Le <b> <?php echo $record->doDate ?> </b> par <b> <?php echo $record->name ?></b> </td>
+                        <td> <?php if($record->name !=''){ ?> Le <b> <?php echo $record->doDate ?> </b> par <b> <?php echo $record->name ?></b><?php } ?> </td>
 
-                        <td> 
-                        <?php  
-                            if($record->statut == 'fini') 
-                         echo'<span class="kt-badge kt-badge--brand kt-badge--inline">Fini</span>' ;
-                        
-                        ?>
-                        <?php  
-                            if($record->statut == 'En Attend') 
-                         echo'<span class="kt-badge kt-badge--warning kt-badge--inline">En Attend</span>' ;
-                        
-                        ?>
-                        </td>
                  
                         <td class="text-center">
 
@@ -74,7 +62,14 @@
                           <i class="la la-edit"></i>
                         </a>
                         <?php 
+                        }else if($clubID == 0 ){
+                          ?>
+                            <a href="<?php echo base_url() ?>Evaluation/doEvaluationF/<?php echo $record->evaluationId ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                          <i class="la la-edit"></i>
+                        </a>
+                          <?php  
                         }
+
                         ?>
 
                         </td>
