@@ -36,7 +36,6 @@ class Finance extends BaseController {
 		                 'description_Produit'=>$description_produits,
 		                 'description_Charge'=>$description_Charge,
 		                 'produit'=>$produits,
-		                 'description_Charge'=>$this->vendorId,
 		                 'charge'=>$charges,
 		                 'clubID'=>$this->clubID,
 		                 'createdBy'=>$this->vendorId
