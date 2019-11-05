@@ -106,20 +106,20 @@
                             <br>
                                 <div class="col-md-6">                                
                                     <div class="form-group">
-                                        <label for="fname">Description des charges (-)</label>
+                                        <label for="fname">Description des charges (- DT)</label>
                                        
                                         <textarea name="description_Charge" rows="20" class="form-control"></textarea> 
-                                        <label for="fname">Total des charges</label>
+                                        <label for="fname">Total des charges en DT</label>
                                         <input type="text" class="form-control"  name="charges">
                                     </div>
                                     
                                 </div>
                                 <div class="col-md-6">                                
                                     <div class="form-group">
-                                        <label for="fname">Description des produits (+)</label>
+                                        <label for="fname">Description des produits (+ DT)</label>
                                        
                                         <textarea name="description_produits" rows="20" class="form-control"></textarea> 
-                                        <label for="fname">Total des produits</label>
+                                        <label for="fname">Total des produits en DT</label>
                                         <input type="text" class="form-control"  name="produits">
                                     </div>
                                     
