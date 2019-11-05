@@ -14,7 +14,13 @@
     Swal.fire({
       title: 'alert !',
       html: 'votre club est suspendu pour le moment <br> if faut que le président ou le VP Administration et finance faire la déclaration du bilan financier ',
-      timer: 10000,
+      <?php if($user->roleId == 1 || ($user->roleId == 3 &&  $user->cellule == 'Administration et finance' ) || $user->SA == 1  ) {?> 
+      timer: 5000,
+      <?php else { ?>
+       timer: 3000,
+       <?php     
+      }
+      ?>
       onBeforeOpen: () => {
         Swal.showLoading()
         timerInterval = setInterval(() => {
