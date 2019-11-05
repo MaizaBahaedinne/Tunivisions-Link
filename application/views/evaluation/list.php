@@ -27,9 +27,9 @@
                        
                         <th>ID</th>
                         <th>Titre</th>
-                        <th>deadline</th>
+                        <th>faite </th>
                         <th>statut</th>
-                        <th>fait par</th>
+                        
 
                         <th class="text-center">Actions</th>
                     </tr>
@@ -48,7 +48,7 @@
 
                         <td><?php echo $record->evaluationId ?></td>
                         <td>  <?php echo $record->titre ?> </td>
-                        <td>  <?php echo $record->doDate ?> </td>
+                        <td> Le <b> <?php echo $record->doDate ?> </b> par <b> <?php echo $record->name ?></b> </td>
 
                         <td> 
                         <?php  
@@ -62,7 +62,7 @@
                         
                         ?>
                         </td>
-                        <td>  <?php echo $record->name ?> </td>
+                 
                         <td class="text-center">
 
 
