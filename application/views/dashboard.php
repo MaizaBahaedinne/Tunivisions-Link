@@ -1,10 +1,10 @@
 <style type="text/css">
        .alligator-turtle {
   object-fit: cover;
-  object-position: 50% 50%;
+  object-position: 50% 0%;
 
   width: auto;
-  height: 100px;
+  height: 50px;
 }
 </style>
 
