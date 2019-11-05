@@ -137,8 +137,8 @@
                 
             $('#page').paginate({
                 paginatePosition:['bottom'],
-                perPage: 100,
-                autoScroll:true,
+                perPage: 1000,
+                autoScroll:false,
             }
             );
 

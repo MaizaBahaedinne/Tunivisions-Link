@@ -34,7 +34,7 @@ class User_model extends CI_Model
      * This function is used to get the user listing count
      * @return array $result : This is result
      */
-    function userListingApprouve($searchText)
+    function userListingApprouve($searchText = '')
     {
          $this->db->select('BaseTbl.userId, BaseTbl.gouvernorat , BaseTbl.delegation , BaseTbl.CLubID as club , BaseTbl.cin, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, BaseTbl.createdDtm, Role.role , Clubs.name as ClubName , Clubs.city as ClubCity ,BaseTbl.sexe ,BaseTbl.isDeleted , BaseTbl.avatar , BaseTbl.cellule  ');
         $this->db->from('tbl_users as BaseTbl');
@@ -47,7 +47,7 @@ class User_model extends CI_Model
         
         $this->db->where('BaseTbl.isDeleted !=', 1 );
         $this->db->order_by('BaseTbl.ClubID', 'ASC');
-        $this->db->limit(500);
+        $this->db->limit(150);
         $query = $this->db->get();
         
         $result = $query->result();        
