@@ -26,25 +26,39 @@ class Evaluation extends BaseController {
 
                     $this->global['pageTitle'] = 'CodeInsect : club  Listing';
                  $this->global['active'] = 'projects';
-                    $this->loadViews("evaluation/list", $this->global, $data, NULL);   
+                    $this->loadViews("evaluation/listF", $this->global, $data, NULL);   
             }
 
 	public function evaluationListing()
 		        {
-						$this->load->library('pagination');
-		                $searchText='' ;
-  		              $data['evaluationRecords'] = $this->evaluation_model->evaluationListing($this->clubID);
-   						      $count = $this->evaluation_model->evaluationListing($this->clubID);
-              			$data['count'] = count($count)  ; 
 
-		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
-		             $this->global['active'] = 'projects';
-		                $this->loadViews("evaluation/list", $this->global, $data, NULL);   
-		        }
+              if( $this->role == 1 || ($this->role == 3 && $this->role == 'Gestion des talents') ) 
+              
+              {
+      						$this->load->library('pagination');
+      		                $searchText='' ;
+        		              $data['evaluationRecords'] = $this->evaluation_model->evaluationListing($this->clubID);
+         						      $count = $this->evaluation_model->evaluationListing($this->clubID);
+                    			$data['count'] = count($count)  ; 
+
+      		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+      		             $this->global['active'] = 'projects';
+      		                $this->loadViews("evaluation/list", $this->global, $data, NULL);   
+      		        }
+                  else 
+                  {
+                  redirect('/') ;
+              }
+
+        }
 
 
 	public function doEvaluation($EvalId) 
 		        {
+
+            if( $this->role == 1 || ($this->role == 3 && $this->role == 'Gestion des talents') ) 
+              
+              {
 						$this->load->library('pagination');
 		                $this->load->model('evaluation_model');
 		                $eval = $this->evaluation_model->evaluationInfo($EvalId) ;
@@ -56,6 +70,10 @@ class Evaluation extends BaseController {
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             $this->global['active'] = 'projects';
 		                $this->loadViews("evaluation/edit", $this->global, $data, NULL);   
+                                      else 
+                  {
+                  redirect('/') ;
+              }
 		        }
 
 	public function evalutionupdate($EvalId)  {

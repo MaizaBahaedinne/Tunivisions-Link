@@ -52,9 +52,11 @@ class Evaluation_model extends CI_Model
      */
     function evaluationListingF()
     {
-        $this->db->select('BaseTbl.evaluationId , BaseTbl.projectId , BaseTbl.titre , BaseTbl.statut , BaseTbl.doDate , Users.name   ');
+        $this->db->select('BaseTbl.evaluationId , BaseTbl.projectId , BaseTbl.titre , BaseTbl.statut , BaseTbl.doDate , Users.name  ,   ');
         $this->db->from('tbl_evaluation as BaseTbl');
         $this->db->join('tbl_project as Projects', 'Projects.projectId = BaseTbl.projectId', 'LEFT');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubId = Projects.clubID', 'LEFT');
+        
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.doBy', 'LEFT');
      
         $query = $this->db->get();

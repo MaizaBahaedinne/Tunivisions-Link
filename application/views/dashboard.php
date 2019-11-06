@@ -66,7 +66,7 @@
 
 
 
-<?php  if ($countEval>0 && ($role ==1  ||  ($role == 3  && $cellule='Gestion des talents' )) ){ ?>
+<?php  if ($countEval>0 && ($role ==1  ||  ($role == 3  && $cellule=='Gestion des talents' )) ){ ?>
 <a href=" <?php echo base_url() ; ?>Evaluation/evaluationListing "  >
 
 <div class="alert alert-danger fade show" role="alert">
