@@ -155,8 +155,8 @@
 
                         <td>  <?php echo $record->clubName ?> </td>                   
                         <td>  <?php echo $record->createdDate ?> </td>
-                        <td>  <?php echo $record->charges ?> </td>
                         <td>  <?php echo $record->produits ?> </td>
+                        <td>  <?php echo $record->charges ?> </td>
                         <td>  <?php echo  $record->produits - $record->charges ?> </td>    
                         
                         
