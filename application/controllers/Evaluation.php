@@ -70,7 +70,7 @@ class Evaluation extends BaseController {
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             $this->global['active'] = 'projects';
 		                $this->loadViews("evaluation/edit", $this->global, $data, NULL);   
-                                      else 
+                  }else 
                   {
                   redirect('/') ;
               }
