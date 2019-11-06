@@ -9,6 +9,7 @@
         <meta charset="utf-8"/>
         
         <title>T-link</title>
+        <meta name="google-site-verification" content="ujGbXZFK3_xPWfSkZgqJ67ooNuGYWyBhaQMAFZ1iFQY" />
         <meta name="description" content="Latest updates and statistic charts"> 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
