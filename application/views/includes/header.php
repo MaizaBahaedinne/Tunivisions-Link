@@ -157,6 +157,17 @@
 				</a>
 			</li>
 			<?php } ?>
+			<?php if ($SA ==1 ) { ?>
+            <li class="kt-menu__item  kt-menu__item<?php if( $active == "membres" ){echo("--active") ;} ?> " aria-haspopup="true" >
+				<a  href="<?php echo base_url() ; ?>userListing" class="kt-menu__link ">
+					<i class="kt-menu__link-icon flaticon-user">
+					</i>
+					<span class="kt-menu__link-text">
+						Utilisateurs
+					</span>
+				</a>
+			</li>
+			<?php } ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "members" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>users" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-notes">
@@ -196,7 +207,7 @@
 					</span>
 				</a>
 			</li>
-			-->
+				-->
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "claims" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>Reclamation/addNew" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-exclamation">
