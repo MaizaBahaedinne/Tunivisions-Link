@@ -1,7 +1,7 @@
 <html lang="fr"><!-- begin::Head -->
 <head>
   <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-  <script type="text/javascript" src="https://keenthemes.com/metr/injected/Async.js"></script>
+  
         <meta charset="utf-8">
 
         <title>T-Link | Se connecter</title>

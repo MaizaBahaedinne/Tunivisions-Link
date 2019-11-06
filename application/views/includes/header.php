@@ -5,7 +5,7 @@
     
 <!-- Mirrored from keenthemes.com/metronic/preview/demo12/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Aug 2019 19:45:59 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head><script type="text/javascript" src="https://keenthemes.com/injected/Async.js"></script>
+<head>
         <meta charset="utf-8"/>
         
         <title>T-link</title>
