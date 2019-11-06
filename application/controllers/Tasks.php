@@ -55,7 +55,7 @@ class Tasks extends BaseController {
 		public function addNew()
 		        {
 		                
-		                	$this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		                 $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		           		 $data['members'] = $this->user_model->userListingByclub($this->vendorId,$this->clubID);
 		        		 $data['projectsRecords'] = $this->project_model-> projectListingByClubPast($this->clubID);
 		        		 $this->global['active'] = 'tasks';

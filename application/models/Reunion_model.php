@@ -15,6 +15,7 @@ class Reunion_model extends CI_Model
         $this->db->from('tbl_reunion as BaseTbl');
         $this->db->where('BaseTbl.clubID=',$clubID) ;
         $this->db->where('YEAR(BaseTbl.dateDo) = YEAR(curdate()) AND Month(BaseTbl.dateDo) = Month(curdate()) ') ;
+        $this->db->order_by('BaseTbl.dateDo','DESC') ;
 
          $query = $this->db->get();
         
