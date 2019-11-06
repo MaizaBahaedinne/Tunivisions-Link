@@ -42,7 +42,7 @@ class User extends BaseController
         $this->global['pageTitle'] = 'CodeInsect : Dashboard';
               
         $data["tunimateurs"] = count($this->user_model->userListing($this->vendorId))  ; 
-        $data["tunimateursApp"] = count($this->user_model->userListingApprouve($this->vendorId));
+        $data["tunimateursApp"] = count($this->user_model->userListingApprouve();
         $data["clubs"] = count($this->club_model->clubListing() ) ; 
         $data["clubscount"] = $this->club_model->clubListingCount() ;
         $data["projets"] = count($this->project_model->projectListingT() ) ;
