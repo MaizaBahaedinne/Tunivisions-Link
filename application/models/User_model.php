@@ -54,6 +54,30 @@ class User_model extends CI_Model
         return $result;
     }
 
+    /**
+     * This function is used to get the user listing count
+     * @return array $result : This is result
+     */
+    function userListingApprouveF($searchText = '')
+    {
+         $this->db->select('BaseTbl.userId, BaseTbl.gouvernorat , BaseTbl.delegation , BaseTbl.CLubID as club , BaseTbl.cin, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, BaseTbl.createdDtm, Role.role , Clubs.name as ClubName , Clubs.city as ClubCity ,BaseTbl.sexe ,BaseTbl.isDeleted , BaseTbl.avatar , BaseTbl.cellule  ');
+        $this->db->from('tbl_users as BaseTbl');
+        $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
+            if(!empty($searchText)) {
+            $likeCriteria = "(BaseTbl.name  LIKE '%".$searchText."%')";
+            $this->db->where($likeCriteria);
+        }
+        
+        $this->db->where('BaseTbl.isDeleted !=', 1 );
+        $this->db->order_by('BaseTbl.ClubID', 'ASC');
+       
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
 
 
 
