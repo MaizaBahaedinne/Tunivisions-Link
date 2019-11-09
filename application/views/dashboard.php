@@ -349,27 +349,27 @@
                                    if ($c== 1){ 
                                    echo  '  <td> <span class="kt-badge kt-badge--inline kt-badge--success"> '
                                             .$c.
-                                            '</span> </td><td>Club Tunivisions '
+                                            '</span> </td><td> <b>Club Tunivisions '
                                             .$rc->name.
-                                            '</td><td>'. 
+                                            '</b></td><td>'. 
                                             $rc->scores
                                               ;
                                             }
                                    if ($c== 2){ 
                                    echo  ' <tr> <td> <span class="kt-badge kt-badge--inline kt-badge--info">  '
                                             .$c.
-                                            '</span></td><td><small>Club Tunivisions '
+                                            '</span></td><td><small><b>Club Tunivisions '
                                             .$rc->name.
-                                            '</small> </td><td>'. 
+                                            '</b></small> </td><td>'. 
                                             $rc->scores
                                               ;
                                             }
                                    if ($c== 3){ 
                                    echo  ' <tr> <td><span class="kt-badge kt-badge--inline kt-badge--warning"> '
                                             .$c.
-                                            '</span> </td><td><small>Club Tunivisions '
+                                            '</span> </td><td><small><b><b>Club Tunivisions '
                                             .$rc->name.
-                                            '</small></td><td>'. 
+                                            '</b></small></td><td>'. 
                                             $rc->scores
                                               ;
                                             }
@@ -457,8 +457,8 @@
                                    if ($c== 2){ 
                                    echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2"> '
                                             .
-                                            '</span></td><td>   '
-                                            .$rc->name.'<br><small>Club Tunivisions '.$rc->clubName.'</small>'.
+                                            '</span></td><td> <b>  '
+                                            .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
                                             '</td><td>'. 
                                             $rc->scores
                                               ;
@@ -466,8 +466,8 @@
                                    if ($c== 3){ 
                                    echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2"> '
                                             .
-                                            '</span> </td><td>   '
-                                            .$rc->name.'<br><small>Club Tunivisions '.$rc->clubName.'</small>'.
+                                            '</span> </td><td> <b>  '
+                                            .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
                                             '</td><td>'. 
                                             $rc->scores
                                               ;
