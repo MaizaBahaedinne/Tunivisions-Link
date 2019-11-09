@@ -160,7 +160,7 @@
                               <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="fname">Date debut</label>
-                                        <input type="date" class="form-control "   id="debut" name="debut"  required >
+                                        <input type="date" class="form-control "  min="<?php echo date('Y-m-d') ?>"   id="debut" name="debut"  required >
                                     </div>
                                 </div>
 
