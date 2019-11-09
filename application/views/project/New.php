@@ -160,14 +160,14 @@
                               <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="fname">Date debut</label>
-                                        <input type="text" class="form-control form_datetime"   id="debut" name="debut"  required >
+                                        <input type="date" class="form-control "   id="debut" name="debut"  required >
                                     </div>
                                 </div>
 
                               <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="fname">Date fin</label>
-                                        <input type="text" class="form-control form_datetime"   id="fin" name="fin"  required >
+                                        <input type="date" class="form-control" min="<?php echo date('Y-m-d') ?>"   id="fin" name="fin"  required >
                                     </div>
                                 </div>
                             <div class="col-md-12">                                
