@@ -482,15 +482,15 @@ class User extends BaseController
                     
                     // SMTP configuration
                     $mail->isSMTP();
-                    $mail->Host     = 'smtp.gmail.com';
+                    $mail->Host     = 'tunivisions.link';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'tunivisions.link@gmail.com';
+                    $mail->Username = 'no-reply@tunivisions.link';
                     $mail->Password = '99723620Ow';
                     $mail->SMTPSecure = 'tls';
                     $mail->Port     = 587;
                     
-                    $mail->setFrom('tunivisions.link@gmail.com', 'Tunivisions Link');
-                    $mail->addReplyTo('tunivisions.link@gmail.com', 'Tunivisions Link');
+                    $mail->setFrom('no-reply@tunivisions.link', 'Tunivisions Link');
+                    $mail->addReplyTo('no-reply@tunivisions.link', 'Tunivisions Link');
                     
                     // Add a recipient
                 

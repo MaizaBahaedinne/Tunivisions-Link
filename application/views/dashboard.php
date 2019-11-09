@@ -92,14 +92,14 @@
     <div class="kt-portlet">
     <div class="kt-portlet__body  kt-portlet__body--fit">
         <div class="row row-no-padding row-col-separator-xl">
-            
+           
             <div class="col-md-3">
                 <!--begin::Total Profit-->
                 <div class="kt-widget24">
                     <div class="kt-widget24__details">
                         <div class="kt-widget24__info">
                             <h4 class="kt-widget24__title">
-                              <i class="flaticon2-user"> Tunimateurs</i>
+                              <i class="flaticon2-user">  <a href="<?php echo base_url() ; ?>users">Tunimateurs</a></i>
                             </h4>
                             <span class="kt-widget24__desc">
                                
@@ -118,6 +118,7 @@
                 </div>
                 <!--end::Total Profit-->
             </div>
+         
 
             <div class="col-md-3">
                 <!--begin::New Feedbacks-->
@@ -140,14 +141,14 @@
                 </div>              
                 <!--end::New Feedbacks--> 
             </div>
-
+            
             <div class="col-md-3">
                 <!--begin::New Orders-->
                 <div class="kt-widget24">
                     <div class="kt-widget24__details">
                         <div class="kt-widget24__info">
                             <h4 class="kt-widget24__title">
-                                <i class="flaticon2-pie-chart-2"> Projet</i>
+                                <i class="flaticon2-pie-chart-2"><a href="<?php echo base_url() ; ?>Project/projectListing"> Projet</a></i>
                             </h4>
 
                         </div>
@@ -163,7 +164,7 @@
                 </div>              
                 <!--end::New Orders--> 
             </div>
-
+            
             <div class="col-md-3">
                 <!--begin::New Users-->
                 <div class="kt-widget24">

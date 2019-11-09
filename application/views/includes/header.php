@@ -15,7 +15,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-	<script src="<?php echo base_url() ?>ajaxcom/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	    <script src="<?php echo base_url() ?>ajaxcom/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <!--begin::Fonts -->
         <script src="<?php echo base_url() ?>ajaxcom/ajax/libs/webfont/1.6.16/webfont.js"></script>
         <script>
@@ -34,8 +34,8 @@
         
         
         <!--begin::Global Theme Styles(used by all pages) -->
-                    <link href="<?php echo base_url() ?>assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
-                    <link href="<?php echo base_url() ?>assets/css/demo12/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url() ?>assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url() ?>assets/css/demo12/style.bundle.css" rel="stylesheet" type="text/css" />
                 <!--end::Global Theme Styles -->
 
         <!--begin::Layout Skins(used by all pages) -->
@@ -48,7 +48,13 @@
     <!-- begin::Body -->
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading"  >
 
-
+<style type="text/css">
+	.kt-header {
+   background-color: #ffffff ;}
+   .kt-aside-menu-wrapper{
+   	 background-color: #ffffff
+   }
+</style>
 
 <!-- blockage ---------------->
 

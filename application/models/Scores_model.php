@@ -37,13 +37,14 @@ class Scores_model extends CI_Model
      */
     function RaitingUsers()
     {
-        $this->db->select('BaseTbl.ressourceID , Users.name , Users.avatar , Users.clubID ,   BaseTbl.userID , sum(score) as scores ');
+        $this->db->select('BaseTbl.ressourceID , Users.name , Users.avatar , Clubs.name as clubName ,   BaseTbl.userID , sum(score) as scores ');
         $this->db->from('tbl_ressource as  BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userID','left');
+        $this->db->join('tbl_club as Clubs', 'Users.ClubID = Clubs.clubId','left');
         $this->db->join('tbl_evaluation as Evals ', 'Evals.projectId = BaseTbl.projectID','left');
         $this->db->where('Evals.valider = ', 'Valider');
         $this->db->order_by('scores', 'DESC');
-        $this->db->group_by('Users.userId');  
+        $this->db->group_by('BaseTbl.userID');  
         $this->db->limit(10);  
         $query = $this->db->get();
         
