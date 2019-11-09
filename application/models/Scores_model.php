@@ -43,7 +43,7 @@ class Scores_model extends CI_Model
         $this->db->join('tbl_club as Clubs', 'Users.ClubID = Clubs.clubId','left');
         $this->db->join('tbl_evaluation as Evals ', 'Evals.projectId = BaseTbl.projectID','left');
         $this->db->where('Evals.valider = ', 'Valider');
-        $this->db->where('clubName != ', '');
+ 
         $this->db->order_by('scores', 'DESC');
         $this->db->group_by('BaseTbl.userID');  
         $this->db->limit(10);  
