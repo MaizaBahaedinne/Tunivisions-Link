@@ -225,7 +225,7 @@
                                                         if($record->cellule == 'Marketing')
                                                         {
                                             ?>            
-                                                    <br><input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>" />
+                                                    <br><input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>" required />
                                             <?php
                                                      echo   $record->name ; 
                                                     }

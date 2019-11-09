@@ -69,7 +69,7 @@ class Reclamation extends BaseController {
 
                     if($result > 0 || move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file) )
                 {
-                	foreach ($this->club_model->BureauListing(0) as $record ) {
+                	
                 
                 
                  		$notifInfo = array(        
@@ -77,11 +77,11 @@ class Reclamation extends BaseController {
                                  'dateNotif' => date('Y-m-d H:i:s') , 
                                  'seen' => 'no' , 
                                  'type' => 'Reclamation',
-                                 'userId' => $record->userId ,
+                                 'userId' => 1 ,
                                  'url' => '/Reclamation/reclamationListing' 
                                  );             
                        			 $this->notification_model->addNewNotificaition($notifInfo) ;
-								}
+								
 
                     
 

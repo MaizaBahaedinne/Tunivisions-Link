@@ -461,9 +461,9 @@ class User extends BaseController
                                'updatedDtm'=>date('Y-m-d H:i:s'),
                                'cellule'=>  $this->input->post('Cellule_'.$a)
                              );
-             $user = $this->user_model->getUserInfo($a) ;   
+                
              }
-
+            $user = $this->user_model->getUserInfo($a) ;
         if( $this->user_model->deleteUser($user->userId, $userInfo) ) {  redirect('/User/userByClubListing') ; } 
                   
           }
