@@ -101,10 +101,80 @@ class Register extends CI_Controller
     
     
 
-    
+     /**
+     * Index Page for this controller.
+     */
+    public function MotDePasse()
+    {
+
+         $this->load->view('register/password');
+    }
     
 
+     function QuestionMotDePasse()
+    {
 
+
+                $email = $this->input->post('email');
+                $mobile = $this->input->post('mobile');
+                $cin = $this->input->post('cin');
+                $gouvernorat = $this->input->post('gouvernorat');
+                $delegation = $this->input->post('delegation');
+                $q1 = $this->input->post('fon');
+                $q2 = $this->input->post('clu');
+
+
+               
+                $this->load->model('user_model');
+                $result = $this->user_model->checkPasswordExists($email,$cin,$mobile,$delegation,$gouvernorat);
+            
+                
+                
+                if($result && $q1 == 'o' &&  $q2 == 'o' )
+                {
+                    redirect('Register/MotDePassechange?userId='.$result->userId) ;
+                }
+                else
+                {
+                    $this->session->set_flashdata('error', 'Problème veuillez contacter <a href="https://www.facebook.com/maiza.koussai">l\'administrateur</a> ');
+                }
+                
+              
+            redirect('/login') ;
+
+    }
+
+     /**
+     * Index Page for this controller.
+     */
+    public function MotDePassechange()
+    {
+
+         $this->load->view('register/changePassword');
+    }
+
+
+    /**
+     * Index Page for this controller.
+     */
+    public function MotDePassechangeF()
+    {           
+
+                $newPassword = $this->input->post('password');
+                $updatedBy = $this->input->get('userId');
+
+
+                print_r($newPassword ) ; 
+                print_r($updatedBy ) ; 
+
+                 $usersData = array('password'=>getHashedPassword($newPassword), 'updatedBy'=>$updatedBy,
+                                'updatedDtm'=>date('Y-m-d H:i:s'));
+                
+                 print_r($usersData ) ; 
+                $result = $this->user_model->changePassword($updatedBy, $usersData);
+                    print_r($result ) ;
+                
+    }
 
 
 

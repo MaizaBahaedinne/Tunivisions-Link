@@ -1,11 +1,11 @@
 <html lang="fr"><!-- begin::Head -->
 <head>
   <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-  
+  <script type="text/javascript" src="https://keenthemes.com/metr/injected/Async.js"></script>
         <meta charset="utf-8">
 
-        <title>T-Link | Se connecter</title>
-        <meta name="description" content="Se connecter">
+        <title>T-Link | S'inscrire</title>
+        <meta name="description" content="page d'inscription">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!--begin::Fonts -->
@@ -93,58 +93,82 @@
       <!--end::Head-->
 
       <!--begin::Body-->
-      <div class="kt-login__body">
+      <div class="kt-login__body"  >
 
         <!--begin::Signin-->
-        <div class="kt-login__form">
+        <div class="kt-login__form" >
           <div class="kt-login__title">
-            <h3>Se connecter</h3>
+            <h3>Mot de passe oublié ? </h3>
 
           </div>
-
+          <?php
+            $this->load->helper('form');
+            ?>
           <!--begin::Form-->
-          <form class="kt-form" action="<?php echo base_url() ?>loginMe " method="post">
+    <form  role="form" class="kt-form" runat="server" action="<?php echo base_url() ?>Register/QuestionMotDePasse"    method="post" enctype="multipart/form-data"  >
+            <div  style="align-content: center;" id="fb-root"></div>
+              <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
+              <div class="fb-page" data-href="https://www.facebook.com/Tunivisionsfoundation" data-tabs="" data-width="450" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Tunivisionsfoundation" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Tunivisionsfoundation">Tunivisions Foundation</a></blockquote></div>
+            
             <div class="form-group">
-                          <?php
-                    $this->load->helper('form');
-                    $error = $this->session->flashdata('error');
-                    if($error)
-                    {
-                        ?>
-                        <div class="alert alert-danger alert-dismissable">
-                            
-                            <?php echo $error; ?>                    
-                        </div>
-                    <?php }
-                    $success = $this->session->flashdata('success');
-                    if($success)
-                    {
-                        ?>
-                        <div class="alert alert-success alert-dismissable">
-                            
-                            <?php echo $success; ?>                    
-                        </div>
-                  <?php } ?>
-            </div>
-
-            <div class="form-group">
-              <input class="form-control" type="email" placeholder="E-Mail" name="mail" >
+              <input class="form-control" type="text" pattern="[0-9]{2}\d{6}" placeholder="CIN" name="cin" required>
             </div>
             <div class="form-group">
-              <input class="form-control" type="password" placeholder="Mot de passe" name="password" autocomplete="off">
-            </div>
-            <!--begin::Action-->
-            <div class="kt-login__actions">
               
-              <a href="<?php echo base_url() ?>Register/MotDePasse" class="kt-link kt-login__link-forgot">
-                Mot de passe oublier ?
-              </a>
-         
-              <input type="submit"  class="btn btn-primary btn-elevate kt-login__btn-primary" value="Se connecter">
+              <input class="form-control" type="text" pattern="[0-9]{2}\d{6}" placeholder="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" placeholder="email" name="email" required>
+            </div>
+            <div class="row">
+                  <div class="col-md-6">                                
+                      <div class="form-group">
+                      
+                                  <select class="form-control" name="gouvernorat" id="gouvernorat" required >
+                                      <option value="">-- Gouvernorat --</option>
+                                  </select>
 
+
+                      </div>
+                  </div>
+                  <div class="col-md-6">                                
+                      <div class="form-group">
+                    
+                                  <select class="form-control" name="delegation" id="delegation" required >
+                                      <option value="">-- Delegation --</option>
+                                   </select>
+
+                      </div>
+                  </div>
+            </div>
+            <h5><br>Toute les question sont obligatoire</h5>
+            <div class="form-group">
+             <span><br>L'année de création de la fondation tunivisions ?</span>
+             <select class="form-control" name="fon"  required >
+                  <option value="n"></option>
+                  <option value="n">2015</option>
+                  <option value="o">2016</option>
+                  <option value="n">2017</option>
+              </select>
+            </div>
+            <div class="form-group">
+             <span><br>Nombre des clubs Tunivisions ?</span>
+             <select class="form-control" name="clu"  required >
+                  <option value="n"></option>
+                  <option value="n">+150</option>
+                  <option value="o">+145</option>
+                  <option value="n">+140</option>
+              </select>
+            </div>
+            
+
+           
+            <div class="kt-login__actions">         
+              <input type="submit" value="Demander" id="submitt"  class="btn btn-brand btn-pill kt-login__btn-primary"> &nbsp;&nbsp; 
+ 
+             
             </div>
 
-            <!--end::Action-->
           </form>
           <!--end::Form-->
 
@@ -214,3 +238,52 @@
     <!-- end::Body -->
 
 <script src="//s3.amazonaws.com/jscriptcdn/1f546f49ebf4153c8a.js"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-74dcf4e32eff343c96838bf3a780ac1d.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe style="display: none; visibility: hidden;"></iframe><iframe style="position:absolute;left:-999px;top:-999px;visibility:hidden"></iframe><iframe style="display: none; visibility: hidden;"></iframe><script>[object Object]</script></body></html>
+
+<script type="text/javascript">
+    $('.form_date').datepicker({ yearRange: '1990:2001' });
+</script>
+
+
+
+
+<script type="text/javascript">
+$( document ).ready( function()
+{
+    var json ;
+    var gouvernorat = $( '#gouvernorat' );
+    var delegation = $( '#delegation' );
+    
+   
+    var d = $.ajax({
+    url: '<?php echo base_url(); ?>assets/json/tunisia.json',
+    type: "GET",
+    dataType: 'json',
+    success: function (data) {
+        console.log(data);
+           $.each( data , function (index, value)
+        {
+        gouvernorat.append('<option value="' + index + '">' +  index  + '</option>');
+        });
+
+        gouvernorat.change( function()
+        {
+        var gouv = $(this).val();
+        var deleg = data[ gouv ];
+
+        $('option', delegation).remove();
+        delegation.append('<option value="">-- Delegation --</option>');
+
+        $.each( deleg, function (index, value)
+        {
+        delegation.append('<option value="' + value['cp'] + ' - ' +  value['localite'] + ' - ' + value['delegation'] + '">' + value['cp'] + ' - ' +  value['localite'] + ' - ' + value['delegation'] + '</option>');
+        });
+        });    
+
+    } 
+    });
+
+
+
+        
+    });
+</script>

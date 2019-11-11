@@ -231,6 +231,28 @@ class User_model extends CI_Model
 
          return $query->row();
     }
+
+
+        /**
+     * This function is used to check whether email id is already exist or not
+     * @param {string} $email : This is email id
+     * @param {number} $userId : This is user id
+     * @return {mixed} $result : This is searched result
+     */
+    function checkPasswordExists($email,$cin,$mobile,$delegation,$gouvernorat)
+    {
+        $this->db->select("userId");
+        $this->db->from("tbl_users");
+        $this->db->where("email =", $email);
+        $this->db->where("cin =", $cin);
+        $this->db->where("mobile =", $mobile);
+        $this->db->where("delegation =", $delegation);  
+        $this->db->where("gouvernorat =", $gouvernorat);  
+      
+        $query = $this->db->get();
+
+         return $query->row();
+    }
     
         /**
      * This function is used to add new user to system
@@ -327,7 +349,6 @@ class User_model extends CI_Model
     function changePassword($userId, $userInfo)
     {
         $this->db->where('userId', $userId);
-        $this->db->where('isDeleted', 0);
         $this->db->update('tbl_users', $userInfo);
         
         return $this->db->affected_rows();

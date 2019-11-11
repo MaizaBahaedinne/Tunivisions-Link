@@ -107,11 +107,10 @@
                         </div>
 
                         <span class="kt-widget24__stats kt-font-brand">
-                             <?php if($clubID == 0){ echo $tunimateursApp.'/' ;
-    ?>
-<?php
-} ?>
-                             <?php echo $tunimateurs ; ?>
+                             <?php echo $tunimateursApp ;?>
+
+
+                             
 
                         </span>  
                     </div>       

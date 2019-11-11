@@ -129,6 +129,7 @@ class User extends BaseController
 
     function userByClubListingToApprove()
     {
+        if($this->SA == 1){
             $searchText = $this->security->xss_clean($this->input->post('searchText'));
             $data['searchText'] = $searchText;
             $this->load->library('pagination');
@@ -138,6 +139,8 @@ class User extends BaseController
             $this->global['pageTitle'] = 'CodeInsect : User Listing';
             $this->global['active'] = 'users';
             $this->loadViews("club/approuve", $this->global, $data, NULL);
+        }else{redirect ('User/userByClubListing');}
+
     }
     
 
@@ -383,6 +386,7 @@ class User extends BaseController
                     $uploadOk = 1;
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
+                    if(basename($_FILES["fileToUpload"]["name"]) != ''){
                     $userInfo = array(
                                       'avatar' => basename($_FILES["fileToUpload"]["name"]),
                                       'email'=>$email,
@@ -395,12 +399,8 @@ class User extends BaseController
                                       'linkedin'=>$linkedin,
                                       'updatedBy'=>$this->vendorId,
                                       'updatedDtm'=>date('Y-m-d H:i:s'));
-        
-                   
-              
-                
+
                 $result = $this->user_model->editUser($userInfo, $this->vendorId);
-                
                 if($result == true && move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file) )
                 {
                     $this->session->set_flashdata('success', 'Votre profile a été mise à jour');
@@ -409,6 +409,31 @@ class User extends BaseController
                 {
                     $this->session->set_flashdata('error', 'Erreur de mise à jour');
                 }
+                }
+                else {
+                                    $userInfo = array(                                      
+                                      'email'=>$email,
+                                      'name'=>$name,
+                                      'email'=>$email,
+                                      'birthday'=>$birthday,
+                                      'mobile'=>$mobile,
+                                      'facebook'=>$facebook,
+                                      'instagram'=>$instagram,
+                                      'linkedin'=>$linkedin,
+                                      'updatedBy'=>$this->vendorId,
+                                      'updatedDtm'=>date('Y-m-d H:i:s'));
+
+                $result = $this->user_model->editUser($userInfo, $this->vendorId);
+                if($result == true)
+                {
+                    $this->session->set_flashdata('success', 'Votre profile a été mise à jour');
+                }
+                else
+                {
+                    $this->session->set_flashdata('error', 'Erreur de mise à jour');
+                }
+                }
+
                 
                 redirect('profile');
             
@@ -485,7 +510,7 @@ class User extends BaseController
                     $mail->Host     = 'tunivisions.link';
                     $mail->SMTPAuth = true;
                     $mail->Username = 'no-reply@tunivisions.link';
-                    $mail->Password = '99723620Ow';
+                    $mail->Password = 'Tunivisions-Link-2019';
                     $mail->SMTPSecure = 'tls';
                     $mail->Port     = 587;
                     

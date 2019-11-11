@@ -22,9 +22,9 @@
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
-            <?php if ( $SA==1 || ( $role ==1  ||  ($role == 3  && $cellule='Gestion des talents' )) ) {?>
+            <!--
             <a href="<?php echo base_url() ; ?>User/userByClubListingToApprove" class="btn btn-primary" >Approuver les membres</a>
-            <?php } ?>
+            -->
             <div class="kt-portlet__head-wrapper">
     <div class="kt-portlet__head-actions">
         <div class="dropdown dropdown-inline">
