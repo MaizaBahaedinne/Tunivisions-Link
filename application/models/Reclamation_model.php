@@ -21,7 +21,7 @@ class Reclamation_model extends CI_Model
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.createdBy','left');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.clubId','left');
         $this->db->where('BaseTbl.staut !=','Cloturé') ; 
-        $this->db->order_by('BaseTbl.createdDate ','DESC')
+        $this->db->order_by('BaseTbl.createdDate ','DESC') ;
 
 
         $query = $this->db->get();
