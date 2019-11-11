@@ -49,20 +49,7 @@
 
 
 
-  <?php        if ($membersCount < 10 && $role ==1){
-        ?>
-
-        <script type="text/javascript">
-        Swal.fire(
-                              'Approuver les membres !',
-                              '<h4>Vous pouvez approuver</h4> <br> <a  href="<?php echo base_url() ; ?>User/userByClubListingToApprove" > <button class="btn btn-primary">Approuvez</button> </a> ',
-                              'success'
-                            )
-        </script> 
-
-        <?php  
-        }
-       ?>
+  
 
 
 
