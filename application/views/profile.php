@@ -245,19 +245,19 @@ $cellule = $userInfo->cellule;
                                    <div class="form-group row">
                                         <label class="col-xl-3 col-lg-3 col-form-label">Nom et Prénom</label>
                                         <div class="col-lg-9 col-xl-6">
-                                            <input class="form-control" name="fname" type="text" value="<?php echo $name ?>"> 
+                                            <input class="form-control" name="fname" type="text" value="<?php echo $name ?>" required > 
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-xl-3 col-lg-3 col-form-label">Date de naissance</label>
                                         <div class="col-lg-9 col-xl-6">
-                                            <input class="form-control" name="birthday" type="date" value="<?php echo $birth ?>"> 
+                                            <input class="form-control" name="birthday" type="date" value="<?php echo $birth ?>" required> 
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-xl-3 col-lg-3 col-form-label">CIN</label>
                                         <div class="col-lg-9 col-xl-6">
-                                            <input class="form-control" disabled  type="text" value="<?php echo $userInfo->cin ?>">
+                                            <input class="form-control" disabled  type="text" value="<?php echo $userInfo->cin ?>" required>
                                             <span class="form-text text-muted">.</span>
                                         </div>
                                     </div>
@@ -273,7 +273,7 @@ $cellule = $userInfo->cellule;
                                         <div class="col-lg-9 col-xl-6">
                                             <div class="input-group">
                                                 <div class="input-group-prepend"><span class="input-group-text"><i class="la la-phone"></i></span></div>
-                                                <input type="text" name="mobile" class="form-control" value="<?php echo $mobile ?>" placeholder="mobile" aria-describedby="basic-addon1">
+                                                <input type="text" name="mobile" class="form-control" value="<?php echo $mobile ?>" placeholder="mobile" aria-describedby="basic-addon1" required>
                                             </div>
                                             <span class="form-text text-muted">.</span>
                                         </div>
@@ -283,7 +283,7 @@ $cellule = $userInfo->cellule;
                                         <div class="col-lg-9 col-xl-6">
                                             <div class="input-group">
                                                 <div class="input-group-prepend"><span class="input-group-text"><i class="la la-at"></i></span></div>
-                                                <input type="email" name="email"  class="form-control" value="<?php echo $email ?>" placeholder="Email" aria-describedby="basic-addon1">
+                                                <input type="email" name="email"  class="form-control" value="<?php echo $email ?>" placeholder="Email" aria-describedby="basic-addon1" required>
                                             </div>
                                         </div>
                                     </div>
@@ -292,7 +292,7 @@ $cellule = $userInfo->cellule;
                                         <div class="col-lg-9 col-xl-6">
                                             <div class="input-group">
                                                 <div class="input-group-prepend"><span class="input-group-text"><i class="la la-facebook"></i></span></div>
-                                                <input type="url" name="facebook"  class="form-control" value="<?php echo $facebook ?>" placeholder="Facebook" aria-describedby="basic-addon1">
+                                                <input type="url" name="facebook"  class="form-control" value="<?php echo $facebook ?>" placeholder="Facebook" aria-describedby="basic-addon1" required>
                                             </div>
                                         </div>
                                     </div>
