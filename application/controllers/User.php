@@ -129,7 +129,7 @@ class User extends BaseController
 
     function userByClubListingToApprove()
     {
-        if($this->SA == 1){
+        
             $searchText = $this->security->xss_clean($this->input->post('searchText'));
             $data['searchText'] = $searchText;
             $this->load->library('pagination');
@@ -139,7 +139,7 @@ class User extends BaseController
             $this->global['pageTitle'] = 'CodeInsect : User Listing';
             $this->global['active'] = 'users';
             $this->loadViews("club/approuve", $this->global, $data, NULL);
-        }else{redirect ('User/userByClubListing');}
+        
 
     }
     
