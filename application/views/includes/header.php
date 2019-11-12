@@ -204,9 +204,9 @@
 					</span>
 				</a>
 			</li>
-			<!--
+			<?php if ($SA==1 || (($role ==1 || $role == 2 || ($clubID==0 && $role == 3) || $role == 6   )) ) { ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "reservations" ){echo("--active") ;} ?> " aria-haspopup="true" >
-				<a  href="<?php echo base_url() ; ?>" class="kt-menu__link ">
+				<a  href="<?php echo base_url() ; ?>Reservation/reservationListing" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-clock-2">
 					</i>
 					<span class="kt-menu__link-text">
@@ -214,7 +214,7 @@
 					</span>
 				</a>
 			</li>
-				-->
+				<?php } ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "claims" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>Reclamation/addNew" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-exclamation">

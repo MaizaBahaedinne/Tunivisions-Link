@@ -46,8 +46,8 @@ class User_model extends CI_Model
         }
         
         $this->db->where('BaseTbl.isDeleted !=', 1 );
-        $this->db->order_by('BaseTbl.ClubID', 'ASC');
-        $this->db->limit(10);
+        $this->db->order_by('BaseTbl.ClubID  ', 'ASC');
+        $this->db->limit(50);
         $query = $this->db->get();
         
         $result = $query->result();        
@@ -99,7 +99,7 @@ class User_model extends CI_Model
             $this->db->where($likeCriteria);
         }
         
-
+        $this->db->where('BaseTbl.isDeleted =', 0);
         $this->db->order_by('BaseTbl.userId', 'ASC');
         $query = $this->db->get();
         
