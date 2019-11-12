@@ -160,10 +160,10 @@
                                 <span class="kt-widget__desc">
                                     <?php 
                                     $string = strip_tags( $record->descP  );
-                                    if (strlen($string) > 150){
+                                    if (strlen($string) > 200){
 
                                         // truncate string
-                                        $stringCut = substr($string, 0, 150);
+                                        $stringCut = substr($string, 0, 200);
                                         $endPoint = strrpos($stringCut, ' ');
 
                                         //if the string doesn't contain any space then it will cut without word basis.
@@ -176,7 +176,7 @@
                                 </span>
                                 <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->startDate) ; 
-                                        echo $date->format('d').'/'.$date->format('M').'/20'.$date->format('y').' '.$date->format('H') ; ?>    
+                                        echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
                                 </span>
                                      
                                 
@@ -194,7 +194,7 @@
                                 <span class="kt-widget__subtitle"></span>
                                 <span class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><small><?php  echo $record->local; ?> </small> </span><span></span>
                             </div>
-                            
+                            <br>
                             <div class="kt-widget__details">
                                 <span class="kt-widget__subtitle"></span>
                                 <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp;<small> <span><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?> </small> </span><span></span>

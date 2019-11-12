@@ -77,7 +77,7 @@ class Project extends BaseController {
                  'Titre' => $Titre , 
                  'description' => $Description , 
                  'startDate' => $debut , 
-                 'endDate' => $fin , 
+                 'endDate' => $fin.' 23:59:00' , 
                  'cible' => $cible ,
                  'local' => $local ,
                  'prix' => $prix ,   
