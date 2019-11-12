@@ -33,7 +33,7 @@ class Reservation extends BaseController
                        
                        
                         $this->global['pageTitle'] = 'CodeInsect : club  Listing';
-                        $this->global['active'] = 'reservation';
+                        $this->global['active'] = 'reservations';
                         $this->loadViews("reservation/calander", $this->global, $data, NULL);    
                 }
 
@@ -44,7 +44,7 @@ class Reservation extends BaseController
                             $data['clubRecords'] = $this->club_model->clubListing();
 
                             $this->global['pageTitle'] = '';
-                        $this->global['active'] = 'reservation';
+                        $this->global['active'] = 'reservations';
                             $this->loadViews("reservation/new", $this->global, $data, NULL);   
                     }
 

@@ -192,12 +192,12 @@
                             
                             <div class="kt-widget__details">
                                 <span class="kt-widget__subtitle"></span>
-                                <span class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><?php  echo $record->local; ?>  </span><span></span>
+                                <span class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><small><?php  echo $record->local; ?> </small> </span><span></span>
                             </div>
                             
                             <div class="kt-widget__details">
                                 <span class="kt-widget__subtitle"></span>
-                                <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp; <span><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?>  </span><span></span>
+                                <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp;<small> <span><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?> </small> </span><span></span>
                             </div>
                         </div>
 
