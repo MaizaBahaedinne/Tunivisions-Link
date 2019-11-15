@@ -38,7 +38,7 @@ class Club_model extends CI_Model
         $this->db->from('tbl_club as BaseTbl');
    
        $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
-       $this->db->join('tbl_users as Users1', 'Users1.ClubID = BaseTbl.clubID', 'LEFT')
+       $this->db->join('tbl_users as Users1', 'Users1.ClubID = BaseTbl.clubID', 'LEFT') ; 
         $this->db->where('Users.roleId = ','1') ;
        $this->db->group_by('BaseTbl.clubId') ;
         $query = $this->db->get();
