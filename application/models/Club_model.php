@@ -34,15 +34,13 @@ class Club_model extends CI_Model
      */
     function clubListing()
     {
-        $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif , Users.name P , Users.avatar , Users.userId , Users.isDeleted , count(Users.userId) members ');
+        $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif , Users.name P , Users.avatar , Users.userId , Users.isDeleted  ,count(Users1.userId) members ');
         $this->db->from('tbl_club as BaseTbl');
    
-
        $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
-        $this->db->where('BaseTbl.is_Actif=','Actif') ;
-        $this->db->where('Users.isDeleted=',0) ;
-        $this->db->group_by('BaseTbl.clubID') ;
-      
+       $this->db->join('tbl_users as Users1', 'Users1.ClubID = BaseTbl.clubID', 'LEFT')
+        $this->db->where('Users.roleId = ','1') ;
+       $this->db->group_by('BaseTbl.clubId') 
         $query = $this->db->get();
         
         $result = $query->result();        
