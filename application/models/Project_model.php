@@ -10,6 +10,20 @@
 class Project_model extends CI_Model
 {
 
+    function projectOldListing()
+    {
+         $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description descP ,  BaseTbl.local ,BaseTbl.banner ');
+        $this->db->from('tbl_project as BaseTbl');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
+        $this->db->order_by('BaseTbl.startDate','ASC');
+        $this->db->where('NOW() > BaseTbl.endDate ') ;
+
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
     function projectListing()
     {
          $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description descP ,  BaseTbl.local ,BaseTbl.banner ');
@@ -24,7 +38,7 @@ class Project_model extends CI_Model
         return $result;
     }
 
-        function projectListingT()
+    function projectListingT()
     {
          $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description descP ,  BaseTbl.local ,BaseTbl.banner ');
         $this->db->from('tbl_project as BaseTbl');
