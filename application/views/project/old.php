@@ -148,16 +148,15 @@
 
                                 </span>
 
-
+                                <div  style="background-color: #F82565;  overflow: auto;">
+                                     <h4 style="color: #FFFFFF ">20 <small>points</small> </h4>
+                                </div>
                                      
                                 
                             </div>
-                            <div class="kt-widget__info">
-                                <div class="kt-portlet kt-portlet--height-fluid col-md-1" style="background-color: #F82565 ">
-                                       <label style="color: #FFFFFF ">Note :   </label>
-                                       <h2 style="color: #FFFFFF ">20 <small>points</small> </h2>
-                                </div>
-                            </div>
+                       
+
+                       
 
                         </div>
                         
