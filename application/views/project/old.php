@@ -111,7 +111,7 @@
                             <div class="kt-widget__media">
                                 <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->startDate) ; 
-                                        echo $date->format('M').'-20'.$date->format('y').'<br><b>'.$date->format('d').'</b>' ; ?>    
+                                        echo $date->format('M').'-20'.$date->format('y').'<br><h1><b>'.$date->format('d').'</b></h1>' ; ?>    
                                 </span>
                              </div>
                             <div class="kt-widget__info">
@@ -171,7 +171,7 @@
     </div>
     <div class="kt-portlet kt-portlet--height-fluid col-md-1" style="background-color: #F82565 ">
            <label style="color: #FFFFFF ">Note :   </label>
-           <h2 style="color: #FFFFFF ">20 points </h2>
+           <h2 style="color: #FFFFFF ">20 <small>points</small> </h2>
     </div>
     
     <?php
