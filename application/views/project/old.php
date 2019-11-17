@@ -114,12 +114,12 @@
                             <div class="kt-widget__info">
                                 <div class="kt-widget__media">
 
-                                
-                            </div>
-                                 <span class="btn btn-danger "> 
+                                <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
                                 </span>
+                            </div>
+
 
                                 <a href="" class="kt-widget__title">
                                   
