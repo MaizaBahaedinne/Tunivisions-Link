@@ -148,13 +148,13 @@
 
                                 </span>
 
-                                <div  style="background-color: #F82565;  overflow: auto;">
-                                     <h4 style="color: #FFFFFF ">20 <small>points</small> </h4>
-                                </div>
+                                
                                      
                                 
                             </div>
-                       
+                       <div  style="background-color: #F82565;  overflow: auto;">
+                                     <h4 style="color: #FFFFFF ">20 <small>points</small> </h4>
+                                </div>
 
                        
 
