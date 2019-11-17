@@ -109,15 +109,15 @@
                     <div class="kt-widget__head">
                         <div class="kt-widget__label">
                             <div class="kt-widget__media">
-                                
-                             </div>
-                            <div class="kt-widget__info">
-                                <div class="kt-widget__media">
-
                                 <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
                                 </span>
+                             </div>
+                            <div class="kt-widget__info">
+                                <div class="kt-widget__media">
+
+                                
                             </div>
 
 
