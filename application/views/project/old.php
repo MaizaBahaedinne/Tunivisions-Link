@@ -125,19 +125,7 @@
                                   
 
                                     <?php 
-                                    $string = strip_tags( $record->titre );
-                                    if (strlen($string) > 20){
-
-                                        // truncate string
-                                        $stringCut = substr($string, 0, 20);
-                                        $endPoint = strrpos($stringCut, ' ');
-
-                                        //if the string doesn't contain any space then it will cut without word basis.
-                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                                        $string .= '... ';
-                                        }
-
-                                     echo $string ;
+                                     echo $record->titre ;
                                      ?>
                                 </a>
                                 <small>
@@ -169,22 +157,7 @@
 
                     </div>
 
-                    <div class="kt-widget__body">
-
-                        <div class="kt-widget__content">
-                            
-                            <div class="kt-widget__details">
-                                <span class="kt-widget__subtitle"></span>
-                                <span class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><small><?php  echo $record->local; ?> </small> </span><span></span>
-                            </div>
-                            <br>
-                            <div class="kt-widget__details">
-                                <span class="kt-widget__subtitle"></span>
-                                <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp;<small> <span><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?> </small> </span><span></span>
-                            </div>
-                        </div>
-
-                    </div>
+                    
 
                     
                 </div>
