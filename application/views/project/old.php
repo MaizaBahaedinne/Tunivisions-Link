@@ -164,13 +164,14 @@
                 <!--end::Widget -->
             </div>
         </div>
-            <div class="col-md-1" style="background-color: #F82565 ">
+
+        <!--end:: Portlet-->
+    </div>
+     <div class="col-md-1" style="background-color: #F82565 ">
            <label style="color: #FFFFFF ">Note :   </label>
            <br>
            <h2 style="color: #FFFFFF ">20   </h2>
     </div>  
-        <!--end:: Portlet-->
-    </div>
     
     <?php
                         }
