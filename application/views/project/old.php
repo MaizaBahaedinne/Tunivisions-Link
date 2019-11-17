@@ -147,9 +147,9 @@
 
                                 <?php  echo $record->cible ?></small>
                                 <span class="kt-widget__desc">
-                                    par 
+                                 <small>  par 
                                 <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>  
-
+                                </small> 
                                 </span>
 
                                 
