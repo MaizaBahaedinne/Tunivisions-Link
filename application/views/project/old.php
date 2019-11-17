@@ -109,7 +109,7 @@
                     <div class="kt-widget__head">
                         <div class="kt-widget__label">
                             <div class="kt-widget__media">
-                                <span class="btn btn-danger "> 
+                                <span class="btn btn-danger " style="overflow: auto;"> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo $date->format('M').'-20'.$date->format('y').'<br><h1><b>'.$date->format('d').'</b></h1>' ; ?>    
                                 </span>
@@ -152,14 +152,14 @@
                                      
                                 
                             </div>
-                       <div  style="background-color: #F82565;  overflow: auto;">
-                                     <h4 style="color: #FFFFFF ">20 <small>points</small> </h4>
-                                </div>
+                      
 
                        
 
                         </div>
-                        
+                         <div  style="background-color: #F82565;  overflow: auto;">
+                                     <h4 style="color: #FFFFFF ">20 <small>points</small> </h4>
+                                </div>
 
                     </div>
 
