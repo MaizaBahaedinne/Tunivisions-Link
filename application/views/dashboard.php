@@ -300,7 +300,11 @@
 
     </div>
 
-<div class="col-md-5">    
+
+</div>
+<!-- end:: row -->
+<div class="row">
+    <div class="col-md-6">    
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
             <div class="kt-portlet__head">
@@ -389,7 +393,8 @@
             </div>
         </div>
         <!--end::Portlet-->
-
+        </div>
+        <div class="col-md-6">
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
             <div class="kt-portlet__head">
@@ -484,11 +489,10 @@
 
 
     </div>
-
+</div>
 <!-- end:: Content -->              
 </div>
-</div>
-<!-- end:: row -->
 
+</div>
 </div>
 </div>
