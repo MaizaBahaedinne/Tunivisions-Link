@@ -98,7 +98,7 @@
               foreach($projectRecords as $record)
             {
             ?>
-    <div class="col-md-12">
+    <div class="col-md-10">
         <!--begin:: Portlet-->
         <div class="kt-portlet kt-portlet--height-fluid">
         
@@ -170,6 +170,9 @@
                         }
                     }
                     ?>
+    <div class="col-md-2" style="background-color: red">
+            
+    </div>                
 </div>
 <!--End::Section-->
 
