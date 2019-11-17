@@ -98,7 +98,7 @@
               foreach($projectRecords as $record)
             {
             ?>
-    <div class="col-md-11">
+    <div class="col-md-12">
         <!--begin:: Portlet-->
         <div class="kt-portlet kt-portlet--height-fluid">
         
@@ -129,6 +129,7 @@
                                      ?>
                                 </a>
                                 <small>
+                                    <br>
                                 <?php if ($record->cible=='Publique' )
                                     { ?>
                                         <i class="flaticon-share"></i>
