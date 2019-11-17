@@ -111,7 +111,7 @@
                             <div class="kt-widget__media">
                                 <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->startDate) ; 
-                                        echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
+                                        echo $date->format('M').'-20'.$date->format('y').'<br><b>'.$date->format('d').'</b>' ; ?>    
                                 </span>
                              </div>
                             <div class="kt-widget__info">
@@ -147,11 +147,12 @@
                                 <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>  
 
                                 </span>
-                                
+
 
                                      
                                 
                             </div>
+
                         </div>
                         
 
@@ -162,17 +163,16 @@
                     
                 </div>
                 <!--end::Widget -->
-                 <div class="kt-portlet kt-portlet--height-fluid col-md-1" style="background-color: #F82565 ">
-           <label style="color: #FFFFFF ">Note :   </label>
-           <br>
-           <h2 style="color: #FFFFFF ">20   </h2>
-              </div>
+
             </div>
         </div>
 
         <!--end:: Portlet-->
     </div>
-      
+    <div class="kt-portlet kt-portlet--height-fluid col-md-1" style="background-color: #F82565 ">
+           <label style="color: #FFFFFF ">Note :   </label>
+           <h2 style="color: #FFFFFF ">20 points </h2>
+    </div>
     
     <?php
                         }
