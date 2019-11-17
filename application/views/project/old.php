@@ -162,16 +162,17 @@
                     
                 </div>
                 <!--end::Widget -->
+                 <div class="kt-portlet kt-portlet--height-fluid col-md-1" style="background-color: #F82565 ">
+           <label style="color: #FFFFFF ">Note :   </label>
+           <br>
+           <h2 style="color: #FFFFFF ">20   </h2>
+              </div>
             </div>
         </div>
 
         <!--end:: Portlet-->
     </div>
-     <div class="kt-portlet kt-portlet--height-fluid col-md-1" style="background-color: #F82565 ">
-           <label style="color: #FFFFFF ">Note :   </label>
-           <br>
-           <h2 style="color: #FFFFFF ">20   </h2>
-    </div>  
+      
     
     <?php
                         }
