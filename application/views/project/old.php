@@ -166,13 +166,14 @@
         </div>
         <!--end:: Portlet-->
     </div>
+    <div class="col-md-1" style="background-color: #F82565 ">
+           <label style="color: #FFFFFF ">Note :  </label>
+    </div>      
     <?php
                         }
                     }
                     ?>
-    <div class="col-md-1" style="background-color: red">
-            Note : 
-    </div>                
+              
 </div>
 <!--End::Section-->
 
