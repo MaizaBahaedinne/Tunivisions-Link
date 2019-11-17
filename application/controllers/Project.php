@@ -16,7 +16,6 @@ class Project extends BaseController {
 
 		public function projectListing()
 		        {
-
 		                $this->load->model('project_model');
 		                $searchText='' ;
 		                $data['projectRecords'] = $this->project_model->projectListing();

@@ -1,5 +1,5 @@
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-											<!-- begin:: Content Head -->
+                                            <!-- begin:: Content Head -->
 <div class="kt-subheader   kt-grid__item" id="kt_subheader">
     <div class="kt-container  kt-container--fluid ">
         <div class="kt-subheader__main">
@@ -75,7 +75,7 @@
                     </div>
     </div>
 </div>
-<!-- end:: Content Head -->					
+<!-- end:: Content Head -->                 
 
 <style type="text/css">
        .alligator-turtle {
@@ -88,25 +88,121 @@
 </style>
 
 
-					<!-- begin:: Content -->
-	<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-		<!--Begin::Section-->
- <?php
+                    <!-- begin:: Content -->
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <!--Begin::Section-->
+<div class="row">
+    <?php
         if(!empty($projectRecords))
             {
               foreach($projectRecords as $record)
             {
             ?>
-               <label><?php echo $record->titre ?></label>
-            <?php
-            }
-            }
-?>            
+    <div class="col-md-12">
+        <!--begin:: Portlet-->
+        <div class="kt-portlet kt-portlet--height-fluid">
+        
+
+            <div class="kt-portlet__body kt-portlet__body--fit">
+                <!--begin::Widget -->
+                <div class="kt-widget kt-widget--project-1">
+                    <div class="kt-widget__head">
+                        <div class="kt-widget__label">
+                            <div class="kt-widget__media">
+                                
+                             </div>
+                            <div class="kt-widget__info">
+                                <div class="kt-widget__media">
+
+                                
+                            </div>
+                                 <span class="btn btn-danger "> 
+                                        <?php $date = new DateTime($record->startDate) ; 
+                                        echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
+                                </span>
+
+                                <a href="" class="kt-widget__title">
+                                  
+
+                                    <?php 
+                                    $string = strip_tags( $record->titre );
+                                    if (strlen($string) > 20){
+
+                                        // truncate string
+                                        $stringCut = substr($string, 0, 20);
+                                        $endPoint = strrpos($stringCut, ' ');
+
+                                        //if the string doesn't contain any space then it will cut without word basis.
+                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                        $string .= '... ';
+                                        }
+
+                                     echo $string ;
+                                     ?>
+                                </a>
+                                <small>
+                                <?php if ($record->cible=='Publique' )
+                                    { ?>
+                                        <i class="flaticon-share"></i>
+                                <?php }
+                                    else if ( $record->cible=='Privé' ){ ?>
+                                        <i class="flaticon2-user-outline-symbol"></i>
+                                <?php } 
+                                 
+                                    else if ( $record->cible=='Only tunimateur' ){ ?>
+                                        <i class="flaticon-users"></i>
+                                <?php } ?>
+
+                                <?php  echo $record->cible ?></small>
+                                <span class="kt-widget__desc">
+                                    par 
+                                <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>  
+
+                                </span>
+                                
+
+                                     
+                                
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="kt-widget__body">
+
+                        <div class="kt-widget__content">
+                            
+                            <div class="kt-widget__details">
+                                <span class="kt-widget__subtitle"></span>
+                                <span class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><small><?php  echo $record->local; ?> </small> </span><span></span>
+                            </div>
+                            <br>
+                            <div class="kt-widget__details">
+                                <span class="kt-widget__subtitle"></span>
+                                <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp;<small> <span><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?> </small> </span><span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+                <!--end::Widget -->
+            </div>
+        </div>
+        <!--end:: Portlet-->
+    </div>
+    <?php
+                        }
+                    }
+                    ?>
+</div>
 <!--End::Section-->
 
 
 
 <!--Begin::Section-->
 
-<!--End::Section-->	</div>
-<!-- end:: Content -->				</div>
+<!--End::Section--> </div>
+<!-- end:: Content -->              </div>
