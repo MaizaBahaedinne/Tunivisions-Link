@@ -112,24 +112,16 @@
                                 <div class="btn btn-danger " style="overflow: auto;"> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo $date->format('M').'-20'.$date->format('y').'<br><h1><b>'.$date->format('d').'</b></h1>' ; ?>  
-                                        <h5 style="color: #FFFFFF ">20 <small>points</small> </h5>  
+                                        <h5 style="background-color: #FFFFFF ; color: red ">20 <small>points</small> </h5>  
                                 </div>
 
                              </div>
 
                             <div class="kt-widget__info">
                                 <div class="kt-widget__media">
-
-                                
                             </div>
-
-
-                                <a href="" class="kt-widget__title">
-                                  
-
-                                    <?php 
-                                     echo $record->titre ;
-                                     ?>
+                                <a href="" class="kt-widget__title">                                  
+                                  <?php echo $record->titre ;  ?>
                                 </a>
                                 <small>
                                     <br>
