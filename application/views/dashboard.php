@@ -182,8 +182,12 @@
 
   <div class="row"> 
     <div class="col-md-6"> 
-            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&show_text=1&width=560"  style="border:none;overflow:auto" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-         </div>
+            <div class="fb-video"
+              data-href="https://www.facebook.com/FacebookDevelopers/posts/10151471074398553"
+              data-width="500"
+              data-allowfullscreen="true"
+              data-autoplay="true"
+              data-show-captions="true"></div>
     
     <div class="col-md-6">     
                     <table  style="border-collapse:separate;background-color:#ffffff;border:1px solid #dddfe2;border-radius:3px;font-family:Helvetica, Arial, sans-serif;margin:0px auto; width: auto;">
