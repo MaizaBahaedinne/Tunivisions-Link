@@ -182,7 +182,7 @@
 
   <div class="row"> 
     <div class="col-md-6"> 
-            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&show_text=1&width=560" width="560" height="464" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&show_text=1&width=560"  style="border:none;overflow:auto" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
          </div>
     
     <div class="col-md-6">     
