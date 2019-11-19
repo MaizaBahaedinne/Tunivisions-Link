@@ -181,8 +181,11 @@
 </div>
 
   <div class="row"> 
-    <div class="col-md-12">
-        
+    <div class="col-md-6"> 
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&show_text=1&width=560" width="560" height="464" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+         </div>
+    
+    <div class="col-md-6">     
                     <table  style="border-collapse:separate;background-color:#ffffff;border:1px solid #dddfe2;border-radius:3px;font-family:Helvetica, Arial, sans-serif;margin:0px auto; width: auto;">
                         <tr>
                             <td style="">
@@ -205,7 +208,9 @@
                     </td>
                 </tr>
             </table>
-        
+        </div>
+
+<div class="col-md-12">        
         <!--begin::Portlet-->
         <div class="kt-portlet">
             <div class="kt-portlet__head">
