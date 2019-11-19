@@ -182,7 +182,10 @@
 
   <div class="row"> 
     <div class="col-md-6"> 
-            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&show_text=1&width=auto"  style="border:none;width:auto" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="false"></iframe>
+    <div class="fb-video" data-href="https://www.facebook.com/Tunivisionsfoundation/videos/572029873566635/" data-width="auto" data-autoplay="true" data-show-text="false"><blockquote cite="https://developers.facebook.com/Tunivisionsfoundation/videos/572029873566635/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/Tunivisionsfoundation/videos/572029873566635/">وقتاش TFM4.0</a><p>وقتاش TFM4.0 
+    #TunivisionsFoundation 
+    #NowOrNever 
+    #Staytuned</p>Publiée par <a href="https://www.facebook.com/Tunivisionsfoundation/">Tunivisions Foundation</a> sur Mardi 19 novembre 2019</blockquote></div>
          </div>
     
     <div class="col-md-6">     
