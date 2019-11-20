@@ -48,16 +48,7 @@
        <?php } ?>
 
 
-   <script type="text/javascript"> 
 
-Swal.fire({
-  title: '<strong>وقتاش TFM4.0 <u></u></strong>',
-  icon: '',
-  html:
-    '<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&show_text=1&width=auto" width="auto" height="464" style="border:none;overflow:hidden" scrolling="no" frameborder="5" allowTransparency="true" allow="encrypted-media" allowFullScreen="false"></iframe>'
-})
-
-    </script>
        
 
 
