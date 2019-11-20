@@ -48,6 +48,12 @@
        <?php } ?>
 
 
+   <script type="text/javascript"> 
+    Swal.fire('<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>')
+    </script>
+       
+
+
 
   
 
@@ -182,9 +188,7 @@
 
   <div class="row"> 
     <div class="col-md-12"> 
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0"></script>
-    <div class="fb-video" data-autoplay="true" data-href="https://www.facebook.com/Tunivisionsfoundation/videos/572029873566635/" data-width="auto" data-show-text="false"><blockquote cite="https://developers.facebook.com/Tunivisionsfoundation/videos/572029873566635/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/Tunivisionsfoundation/videos/572029873566635/"></p><a href="https://www.facebook.com/Tunivisionsfoundation/"></a> </blockquote></div>
+
          </div>
     
     <div class="col-md-12">     
