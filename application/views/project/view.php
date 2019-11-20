@@ -1387,7 +1387,7 @@
 				<a href="#" class="kt-widget4__title kt-widget4__title--light">
 					<?php echo $member->name ?><small>#<?php echo $member->userId ?></small>
 				</a> 		
-				<span class="kt-widget4__number kt-font-info">+500</span>
+				<span class="kt-widget4__number kt-font-info"><?php echo $member->score ?></span>
 			</div>
         <?php }     ?>
 			

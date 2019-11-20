@@ -48,7 +48,7 @@ class Ressource_model extends CI_Model
      */
     function ressourceListingByProject($projectID)
     {
-         $this->db->select('BaseTbl.ressourceID , BaseTbl.userID , Users.name  , BaseTbl.score ,  Users.avatar');
+         $this->db->select('BaseTbl.ressourceID , BaseTbl.userID , Users.name  , BaseTbl.score ,  Users.avatar ,  Users.userId');
         $this->db->from('tbl_ressource as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userID', 'LEFT');
         $this->db->where('BaseTbl.projectID =', $projectID );
