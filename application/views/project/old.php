@@ -120,7 +120,7 @@
                             <div class="kt-widget__info">
                                 <div class="kt-widget__media">
                             </div>
-                                <a href="" class="kt-widget__title">                                  
+                                <a href="<?php echo base_url()?>Project/projectDetails" class="kt-widget__title">                                  
                                   <?php echo $record->titre ;  ?>
                                 </a>
                                 <small>
