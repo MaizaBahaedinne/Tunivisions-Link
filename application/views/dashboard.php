@@ -66,10 +66,6 @@ Swal.fire({
   cancelButtonAriaLabel: 'Thumbs down'
 })
 
-
-
-
-    Swal.fire('')
     </script>
        
 
