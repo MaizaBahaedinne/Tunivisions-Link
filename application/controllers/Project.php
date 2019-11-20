@@ -11,14 +11,16 @@ class Project extends BaseController {
         parent::__construct();
         $this->load->model('user_model');
         $this->load->model('project_model');
+        $this->load->model('ressource_model');
         $this->isLoggedIn();   
     }
 
 		public function projectListing()
 		        {
-		                $this->load->model('project_model');
+		               
 		                $searchText='' ;
 		                $data['projectRecords'] = $this->project_model->projectListing();
+             
                         
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		            $this->global['active'] = 'projects';
@@ -46,7 +48,8 @@ class Project extends BaseController {
 		                $this->load->model('project_model');
 		                $searchText='' ;
 		                $data["projectInfo"] = $this->project_model->getProjectInfo($projectID);
-
+                        $data['resource'] = $this->ressource_model->ressourceListingByProject($projectID);
+                        
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             $this->global['active'] = 'projects';
 		                $this->loadViews("project/view", $this->global, $data, NULL);   

@@ -27,6 +27,23 @@ class Tasks_model extends CI_Model
         return $result;
     }
 
+
+        function tasksListingbyProject($projectID)
+    {
+        $this->db->select('BaseTbl.taskid , BaseTbl.Titre  , Users1.name as affectedTo1 , BaseTbl.statut , BaseTbl.deadline , Projects.titre as titreP ');
+        $this->db->from('tbl_tasks as BaseTbl');
+        $this->db->join('tbl_users as Users1', 'Users1.userId = BaseTbl.affectedTo','left');
+        $this->db->join('tbl_project as Projects', 'Projects.projectId = BaseTbl.projectId','left');
+        $this->db->where('BaseTbl.projectId = ' , $projectID);     
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
+
+
     /**
      * This function is used to get the user listing count
      * @param string $searchText : This is optional search text
