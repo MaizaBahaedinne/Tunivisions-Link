@@ -1366,6 +1366,15 @@
 <!--end::Nav-->			</div>
 		</div>
 	</div>
+    <style type="text/css">
+       .alligator-turtle {
+  object-fit: cover;
+  object-position: 50% 0%;
+
+  width: 35px;
+  height: 35px;
+}
+</style>
 	<div class="kt-portlet__body">
 		<!--begin::widget 12-->
 		<div class="kt-widget4">
@@ -1373,10 +1382,10 @@
                                 ?>
 			<div class="kt-widget4__item">
 				<span class="kt-widget4__icon">
-					<i class="flaticon-pie-chart-1 kt-font-info"></i>
+					<img src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $member->avatar ; ?>" class="kt-radius-100 alligator-turtle"  >
 				</span>	
 				<a href="#" class="kt-widget4__title kt-widget4__title--light">
-					Metronic v6 has been arrived!
+					<?php echo $member->name ?><small>#<?php echo $member->userId ?></small>
 				</a> 		
 				<span class="kt-widget4__number kt-font-info">+500</span>
 			</div>
