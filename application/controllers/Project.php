@@ -33,7 +33,7 @@ class Project extends BaseController {
 
                         $this->load->model('project_model');
                         $searchText='' ;
-                        $data['projectRecords'] = $this->project_model->projectListing();
+                        $data['projectRecords'] = $this->project_model->projectOldListing();
                         
                         $this->global['pageTitle'] = 'CodeInsect : club  Listing';
                     $this->global['active'] = 'projects';

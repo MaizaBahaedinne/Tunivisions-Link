@@ -1371,8 +1371,8 @@
   object-fit: cover;
   object-position: 50% 0%;
 
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
 </style>
 	<div class="kt-portlet__body">
