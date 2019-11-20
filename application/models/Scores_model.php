@@ -20,7 +20,7 @@ class Scores_model extends CI_Model
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.clubID','left');
         $this->db->order_by('scores', 'DESC');
         $this->db->group_by('Clubs.clubID'); 
-        $this->db->limit(10);    
+     
         $query = $this->db->get();
         
         $result = $query->result();        
