@@ -49,7 +49,7 @@
 
 
    <script type="text/javascript"> 
-    Swal.fire('<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&width=auto&show_text=false&height=411&appId" width="auto" height="auto" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>')
+    Swal.fire('<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FTunivisionsfoundation%2Fvideos%2F572029873566635%2F&width=auto&show_text=false&height=411&appId" data-width="auto"  style="border:none" scrolling="no" frameborder="0" allowTransparency="true" data-autoplay="true"  allow="encrypted-media" allowFullScreen="false"></iframe>')
     </script>
        
 
