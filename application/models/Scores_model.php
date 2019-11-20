@@ -37,7 +37,7 @@ class Scores_model extends CI_Model
      */
     function RaitingUsers()
     {
-        $this->db->select('BaseTbl.ressourceID , Users.name , Users.avatar , BaseTbl.userID , Clubs.name as clubName , sum(BaseTbl.score)/2 as scores ');
+        $this->db->select('BaseTbl.ressourceID , Users.name , Users.avatar , BaseTbl.userID , Clubs.name as clubName , sum(BaseTbl.score) as scores ');
         $this->db->from('tbl_ressource as  BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userID','left');
         $this->db->join('tbl_club as Clubs', 'Users.ClubID = Clubs.clubId','left');
