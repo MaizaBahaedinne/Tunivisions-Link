@@ -171,7 +171,7 @@
             </div>
             <div class="form-group">
               <span>Photo de profile : </span><input type="file" name="fileToUpload" id="fileToUpload" class="form-control" required>
-              <p >le format de fichier doit etre JPG ou JPEG avec une taile maximale de 2 MO </p>
+              <p >le format de fichier doit etre JPG ou JPEG avec une taile maximale de 1 MO </p>
               <p id="error1" style="display:none; color:#FF0000;">
                   Format d'image invalide! Le format d'image doit être JPG, JPEG.
                   </p>
