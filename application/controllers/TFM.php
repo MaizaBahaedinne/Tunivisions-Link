@@ -11,13 +11,14 @@ class TFM extends BaseController {
         parent::__construct();
         $this->load->model('user_model');
         $this->load->model('notification_model');
-         $this->load->model('tfm_model');
+        
         $this->isLoggedIn();   
     }
     
 
 		public function TFMListing()
 		        {
+		        	$this->load->model('tfm_model');
 		                $searchText='' ;
 		                $data['tfmRecords'] = $this->tfm_model->TFMListing();
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
