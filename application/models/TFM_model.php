@@ -4,10 +4,6 @@
 class Tfm_model extends CI_Model
 {
 
-
-
-
-    
     /**
      * This function is used to get the user listing count
      * @param string $searchText : This is optional search text
