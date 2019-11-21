@@ -12,7 +12,7 @@
     <div class="kt-portlet__body">
         <div class="kt-widget kt-widget--user-profile-3">
             <div class="kt-widget__media kt-hidden-">
-                    <img src="<?php echo base_url()?>uploads/projet/<?php echo $projectInfo->banner ?>" alt="image" width="150px" >
+                    <img src="<?php echo base_url()?>uploads/projet/<?php echo $projectInfo->banner ?>" alt="image" width="300px" >
                 </div>
             <div class="kt-widget__top">
                 
