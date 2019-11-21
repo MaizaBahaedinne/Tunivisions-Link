@@ -267,20 +267,21 @@
         <div class="tab-content">
             <div class="tab-pane active" id="kt_widget6_tab1_content" aria-expanded="true">
                 <div class="kt-notification">
-                    <?php echo $evaluations->album ; ?>
+                   <a href="<?php echo $evaluations->album ; ?>">Album Photo</a> 
                     <br>
                <iframe src="https://www.facebook.com/plugins/post.php?href=<?php echo $evaluations->album ; ?>&width=500" width="500" height="621" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                    
                </iframe>
                 </div>
-            </div>
-
-            <div class="tab-pane" id="kt_widget6_tab2_content" aria-expanded="false">
                 <div class="kt-notification">
-                <?php echo $evaluations->afterMovie ; ?>
+               <a href="<?php echo $evaluations->afterMovie ; ?>">  After Movie </a>
                 <br>
                <iframe src="https://www.facebook.com/plugins/post.php?href=<?php echo $evaluations->afterMovie ; ?>&width=500" width="500" height="621" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </div>
+            </div>
+
+            <div class="tab-pane" id="kt_widget6_tab2_content" aria-expanded="false">
+
             </div>
             
 
