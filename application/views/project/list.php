@@ -9,7 +9,7 @@
             </h3>
 
             <span class="kt-subheader__separator kt-subheader__separator--v"></span>
-            <a href="<?php echo base_url() ;?>Project/projectListing" >Evaluation des projets</a>
+            <a class="btn btn-primary" href="<?php echo base_url() ;?>Project/oldProjectListing" >Evaluation des projets</a>
             <div class="kt-subheader__group" id="kt_subheader_search">
                 <span class="kt-subheader__desc" id="kt_subheader_total">
                                                                                 </span>
