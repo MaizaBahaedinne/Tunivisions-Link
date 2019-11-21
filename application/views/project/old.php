@@ -109,10 +109,10 @@
                     <div class="kt-widget__head">
                         <div class="kt-widget__label">
                             <div class="kt-widget__media">
-                                <div <?php if($record->valider ='Valider'){ ?> class="btn btn-danger"<?php } else{ ?>class="btn btn-primary"  <?php } ?> style="overflow: auto;"> 
+                                <div <?php if($record->valider =='Valider'){ ?> class="btn btn-primary" <?php } else if ($record->valider ==''){ ?>class="btn btn-danger"  <?php } ?> style="overflow: auto;"> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo '<small>'.$date->format('M').'-20'.$date->format('y').'</small><br><h2><b>'.$date->format('d').'</b></h2>' ; ?>  
-                                        <h5 style="background-color: #FFFFFF ; color: red ">20 <small>points</small> </h5>  
+                                       
                                 </div>
 
                              </div>
@@ -121,10 +121,10 @@
                                 <div class="kt-widget__media">
                             </div>
                                 <a href="<?php echo base_url()?>Project/projectDetails/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
-                                  <?php echo $record->titre ;  ?>
+                                  <?php echo $record->titre ;  ?>  <p style="background-color: #FFFFFF ; color: red "><?php if($record->valider =='Valider'){ echo $record->score.' <small>points</small>' ; }?>  </p>  
                                 </a>
                                 <small>
-                                    <br>
+                                <?php echo $record->type  ?>
                                 <?php if ($record->cible=='Publique' )
                                     { ?>
                                         <i class="flaticon-share"></i>
