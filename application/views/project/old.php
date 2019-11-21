@@ -109,7 +109,7 @@
                     <div class="kt-widget__head">
                         <div class="kt-widget__label">
                             <div class="kt-widget__media">
-                                <div <?php if($record->valider ='valider'){ ?> class="btn btn-danger"<?php } else{ ?>class="btn btn-primary"  <?php } ?> style="overflow: auto;"> 
+                                <div <?php if($record->valider ='Valider'){ ?> class="btn btn-danger"<?php } else{ ?>class="btn btn-primary"  <?php } ?> style="overflow: auto;"> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo '<small>'.$date->format('M').'-20'.$date->format('y').'</small><br><h2><b>'.$date->format('d').'</b></h2>' ; ?>  
                                         <h5 style="background-color: #FFFFFF ; color: red ">20 <small>points</small> </h5>  
