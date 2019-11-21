@@ -121,7 +121,18 @@
                                 <div class="kt-widget__media">
                             </div>
                                 <a href="<?php echo base_url()?>Project/projectDetails/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
-                                  <?php echo $record->titre ;  ?>  <p style="background-color: #FFFFFF ; color: red "><?php if($record->valider =='Valider'){ echo $record->score.' <small>points</small>' ; }?>  </p>  
+                                  <?php echo $record->titre ;  ?>  
+                                  <?php if ($record->valider =='Valider ' && $record->!='En Attend') { ?>
+                                  <p style="color: green " >
+                                    <?php 
+                                        echo $record->score.' <small>points</small>' ; ?>  
+                                    </p>  
+                                   <?php  }else{ ?>
+                                     <p style="color: orange " >
+                                    <?php 
+                                        echo ' <small>Validation en cours</small>' ; ?>  
+                                    </p>  
+                                   <?php } ?>
                                 </a>
                                 <small>
                                 <?php echo $record->type  ?>
