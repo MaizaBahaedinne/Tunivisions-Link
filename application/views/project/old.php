@@ -127,7 +127,7 @@
                             </div>
                                 <a href="<?php echo base_url()?>Project/projectDetails/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
                                   <?php echo $record->titre ;  ?>  
-                                  <?php if ($record->valider =='Valider ' && $record->statut!='En Attend') { ?>
+                                  <?php if ($record->valider =='Valider ' && $record->statut=='fini') { ?>
                                   <p style="color: green " >
                                     <?php 
                                         echo $record->score.' <small>points</small>' ; ?>  
