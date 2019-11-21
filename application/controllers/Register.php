@@ -81,7 +81,7 @@ class Register extends CI_Controller
 
                
                 $this->load->model('user_model');
-                if($user_model->checkEmailExists($email) < 0 ) {
+                if($this->user_model->checkEmailExists($email) < 0 ) {
                 $result = $this->user_model->addNewUser($userInfo);
                 
                 
