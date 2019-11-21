@@ -111,7 +111,7 @@
                             <div class="kt-widget__media">
                                 <div 
                                 <?php if($record->valider =='Valider'){ ?> class="btn btn-primary" 
-                                <?php } else if ($record->valider =='' && $record->statut!='En Attend' ){ ?>class="btn btn-warning"  
+                                <?php } else if ($record->valider =='Valider ' && $record->statut!='En Attend' ){ ?>class="btn btn-warning"  
                                 <?php } else if($record->valider =='') { ?> class="btn btn-danger" 
                                 <?php } ?>
                                  style="overflow: auto;"> 
