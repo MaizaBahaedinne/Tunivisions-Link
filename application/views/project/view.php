@@ -269,14 +269,14 @@
                 <div class="kt-notification">
                    <a href="<?php echo $evaluations->album ; ?>">Album Photo</a> 
                     <br>
-               <iframe src="https://www.facebook.com/plugins/post.php?href=<?php echo $evaluations->album ; ?>&width=500" width="100%" height="621" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+               <iframe src="https://www.facebook.com/plugins/post.php?href=<?php echo $evaluations->album ; ?>&width=600" width="100%" height="621" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                    
                </iframe>
                 </div>
                 <div class="kt-notification">
                <a href="<?php echo $evaluations->afterMovie ; ?>">  After Movie </a>
                 <br>
-               <iframe src="https://www.facebook.com/plugins/post.php?href=<?php echo $evaluations->afterMovie ; ?>&width=500" width="100%" height="621" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+               <iframe src="https://www.facebook.com/plugins/post.php?href=<?php echo $evaluations->afterMovie ; ?>&width=600" width="100%" height="621" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </div>
             </div>
 
