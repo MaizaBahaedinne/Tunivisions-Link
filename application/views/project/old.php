@@ -8,8 +8,13 @@
                                     Projets                           
             </h3>
 
-            <span class="kt-subheader__separator kt-subheader__separator--v"></span>
-            
+            <span class="kt-subheader__separator kt-subheader__separator--v"> </span> 
+            <b>Validation : &nbsp; </b>
+            <div class="btn btn-danger">En cours (Club)</div>
+            <div class="btn btn-warning">En cours (Fondation)</div>
+            <div class="btn btn-primary">Validé</div>
+
+
             <div class="kt-subheader__group" id="kt_subheader_search">
                 <span class="kt-subheader__desc" id="kt_subheader_total">
                                                                                 </span>
