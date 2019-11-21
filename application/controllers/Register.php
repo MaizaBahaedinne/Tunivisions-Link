@@ -81,8 +81,9 @@ class Register extends CI_Controller
 
                
                 $this->load->model('user_model');
+                if($user_model->checkEmailExists($email) < 0 ) {
                 $result = $this->user_model->addNewUser($userInfo);
-            
+                
                 
                 
                 if($result > 0 && move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file) )
@@ -93,6 +94,9 @@ class Register extends CI_Controller
                 {
                     $this->session->set_flashdata('error', 'Problème veuillez contacter <a href="https://www.facebook.com/maiza.koussai">l\'administrateur</a> ');
                 }
+            }else{
+                $this->session->set_flashdata('error', 'utilisateur existe deja');
+            }
                 
               
             redirect('/login') ;
