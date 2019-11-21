@@ -10,9 +10,9 @@
 
             <span class="kt-subheader__separator kt-subheader__separator--v"> </span> 
             <b>Validation : &nbsp; </b>
-            <div class="btn btn-danger">En cours (Club)</div>
-            <div class="btn btn-warning">En cours (Fondation)</div>
-            <div class="btn btn-primary">Validé</div>
+            <div class="btn btn-sm btn-danger">En cours (Club)</div>
+            <div class="btn btn-sm btn-warning">En cours (Fondation)</div>
+            <div class="btn btn-sm btn-primary">Validé</div>
 
 
             <div class="kt-subheader__group" id="kt_subheader_search">
@@ -137,9 +137,9 @@
                         <div class="kt-widget__label">
                             <div class="kt-widget__media">
                                 <div 
-                                <?php if($record->valider =='Valider'){ ?> class="btn btn-primary" 
-                                <?php } else if ($record->valider =='' && $record->statut=='fini' ){ ?>class="btn btn-warning"  
-                                <?php } else if($record->valider =='') { ?> class="btn btn-danger" 
+                                <?php if($record->valider =='Valider'){ ?> class="btn btn-sm btn-primary" 
+                                <?php } else if ($record->valider =='' && $record->statut=='fini' ){ ?>class="btn btn-sm btn-warning"  
+                                <?php } else if($record->valider =='') { ?> class="btn btn-sm btn-danger" 
                                 <?php } ?>
                                  style="overflow: auto;"> 
                                         <?php $date = new DateTime($record->startDate) ; 
@@ -153,7 +153,7 @@
                                 <div class="kt-widget__media">
                             </div>
                                 <a href="<?php echo base_url()?>Project/projectDetails/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
-                                  <?php echo $record->titre ;  ?>  
+                                  <span><?php echo $record->titre ;  ?>  </span>
                                   <?php if ($record->valider =='Valider' && $record->statut=='fini') { ?>
                                   <p style="color: green " >
                                     <?php 
