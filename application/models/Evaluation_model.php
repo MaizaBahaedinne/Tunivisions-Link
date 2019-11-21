@@ -22,6 +22,23 @@ class Evaluation_model extends CI_Model
         
         return $query->row();
     }
+
+            /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function evaluationInfoprojectId($projectId)
+    {
+        $this->db->select('evaluationId, album , afterMovie , projectId, titre , doDate , doBy');
+        $this->db->from('tbl_evaluation');
+        $this->db->where('projectId', $projectId);
+        $query = $this->db->get();
+        
+        return $query->row();
+    }
     
     /**
      * This function is used to get the user listing count

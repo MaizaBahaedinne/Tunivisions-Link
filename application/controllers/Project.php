@@ -12,6 +12,7 @@ class Project extends BaseController {
         $this->load->model('user_model');
         $this->load->model('project_model');
         $this->load->model('ressource_model');
+        $this->load->model('evaluation_model');
         $this->isLoggedIn();   
     }
 
@@ -49,6 +50,8 @@ class Project extends BaseController {
 		                $this->load->model('project_model');
 		                $searchText='' ;
 		                $data["projectInfo"] = $this->project_model->getProjectInfo($projectID);
+                        $data["evaluations"] = $this->evaluation_model->evaluationInfoprojectId($projectID);
+
                         $data['resource'] = $this->ressource_model->ressourceListingByProject($projectID);
                         
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
