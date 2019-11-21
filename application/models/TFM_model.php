@@ -1,7 +1,7 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 
 
-class TFM_model extends CI_Model
+class Tfm_model extends CI_Model
 {
 
 
