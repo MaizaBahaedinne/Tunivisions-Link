@@ -10,15 +10,19 @@
 class Project_model extends CI_Model
 {
 
-    function projectOldListing()
+    function projectOldListing($serchText)
     {
          $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description descP ,  BaseTbl.local ,BaseTbl.banner , Evaluations.valider , Scores.score , Evaluations.statut ');
         $this->db->from('tbl_project as BaseTbl');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
         $this->db->join('tbl_evaluation as Evaluations', 'Evaluations.projectId = BaseTbl.projectId', 'LEFT');
         $this->db->join('tbl_score_club as Scores', 'Evaluations.score_clubID = Scores.score_clubID', 'LEFT');
-        $this->db->order_by('BaseTbl.startDate','ASC');
+
+        if($serchText !=''){
+        $this->db->where('BaseTbl.titre Like ','%'.$serchText.'%'); 
+        }
         $this->db->where('NOW() > BaseTbl.endDate ') ;
+        $this->db->order_by('BaseTbl.startDate','ASC');
 
         $query = $this->db->get();
         

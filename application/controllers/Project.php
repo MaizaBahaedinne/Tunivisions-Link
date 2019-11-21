@@ -20,23 +20,24 @@ class Project extends BaseController {
 		               
 		                $searchText='' ;
 		                $data['projectRecords'] = $this->project_model->projectListing();
-             
-                        
-		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
-		            $this->global['active'] = 'projects';
+                          $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		                  $this->global['active'] = 'projects';
 		                $this->loadViews("project/list", $this->global, $data, NULL);   
 		        }
 
 
         public function oldProjectListing()
                 {
-
+                        $titre='' ;
+                        $titre = $this->input->post('titre');
+                        $data['titre'] = $titre;
                         $this->load->model('project_model');
-                        $searchText='' ;
-                        $data['projectRecords'] = $this->project_model->projectOldListing();
+                        
+                        $data['projectRecords'] = $this->project_model->projectOldListing($titre);
                         
                         $this->global['pageTitle'] = 'CodeInsect : club  Listing';
-                    $this->global['active'] = 'projects';
+                        $this->global['active'] = 'projects';
+                        
                         $this->loadViews("project/old", $this->global, $data, NULL);   
                 }
 
