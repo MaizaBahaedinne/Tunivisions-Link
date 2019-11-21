@@ -109,7 +109,12 @@
                     <div class="kt-widget__head">
                         <div class="kt-widget__label">
                             <div class="kt-widget__media">
-                                <div <?php if($record->valider =='Valider'){ ?> class="btn btn-primary" <?php } else if ($record->valider ==''){ ?>class="btn btn-danger"  <?php } ?> style="overflow: auto;"> 
+                                <div 
+                                <?php if($record->valider =='Valider'){ ?> class="btn btn-primary" 
+                                <?php } else if ($record->valider =='' && $record->statut!='En Attend' ){ ?>class="btn btn-warning"  
+                                <?php } else if($record->valider =='') { ?> class="btn btn-danger" 
+                                <?php } ?>
+                                 style="overflow: auto;"> 
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo '<small>'.$date->format('M').'-20'.$date->format('y').'</small><br><h2><b>'.$date->format('d').'</b></h2>' ; ?>  
                                        
