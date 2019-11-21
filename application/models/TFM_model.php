@@ -24,14 +24,5 @@ class Tfm_model extends CI_Model
     }
 
 
-
-
-
-    
- 
-    
-
-    
-   
 }
 
