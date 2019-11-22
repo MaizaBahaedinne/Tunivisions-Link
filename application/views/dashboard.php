@@ -274,7 +274,7 @@ table {
 
     </div>
 
-<div class="col-md-4">    
+<div class="col-md-6">    
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
             <div class="kt-portlet__head">
@@ -364,7 +364,7 @@ table {
         </div>
         <!--end::Portlet-->
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
        
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
