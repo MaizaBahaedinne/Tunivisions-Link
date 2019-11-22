@@ -296,8 +296,8 @@ table {
                             <thead>
                                 <tr>
                                     <th width="10%"></th>
-                                    <th>Nom</th>
-                                    <th>Score</th>
+                                    <th align="left" >Nom</th>
+                                    <th align="left" >Score</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -396,9 +396,9 @@ table {
                         <table id="Members" class="display" style="width: 100%;overflow-y:hidden;" >
                             <thead>
                                 <tr>
-                                    <th width="5%"> </th>
-                                    <th>Nom</th>
-                                    <th>Score</th>
+                                    <th width="5%" > </th>
+                                    <th align="left" >Nom</th>
+                                    <th align="left" >Score</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -447,7 +447,7 @@ table {
                                               ;
                                             }
                                     if($c> 9) { 
-                               echo  '<td width="5%"> '.$c.                                            
+                                     echo  '<td width="5%"> '.$c.                                            
                                             '</td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
                                             '</td><td>'. 
