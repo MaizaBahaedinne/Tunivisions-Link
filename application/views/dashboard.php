@@ -282,7 +282,7 @@
                 <div class="kt-section">
                     <div class="kt-invoice__container">
                     <div class="table-responsive">
-                        <table class="display" style="width: 100%" >
+                        <table id="Clubs" class="display" style="width: 100%" >
                             <thead>
                                 <tr>
                                     <th width="10%"></th>
@@ -383,7 +383,7 @@
                 <div class="kt-section">
                    <div class="kt-invoice__container">
                     <div class="table-responsive">
-                        <table class="display" style="width: 100%;overflow-y:hidden;" >
+                        <table id="Members" class="display" style="width: 100%;overflow-y:hidden;" >
                             <thead>
                                 <tr>
                                     <th width="10%"></th>
@@ -460,7 +460,14 @@
 </div>
 
 <script>
-$('table').dataTable( {
+$('#Members').dataTable( {
+
+  paginate: true,
+  
+} );
+</script>
+<script>
+$('#Clubs').dataTable( {
 
   paginate: true,
   
