@@ -8,7 +8,26 @@
   object-position: 50% 0%;
 
   width: 100px;
-  height: 100px;
+  height: 500px;
+}
+table ,tr td{
+ 
+}
+tbody {
+    display:block;
+    height:50px;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+table {
+    width:400px;
 }
 </style>
 
@@ -197,7 +216,7 @@
     <div class="col-md-12">        
         
         
-                <div class="carousel">
+            <div class="carousel">
                     <div class="carousel-item">
                     <?php foreach ($ActuRecords as $record ) {
                         ?>
@@ -218,7 +237,7 @@
                                         $string .= '... ';
                                         }
 
-                                     echo $string ;?></p>
+                                     echo $string ;?>
                                  </a>
                          </h5>
                         <p> 
@@ -234,28 +253,19 @@
                                         $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                                         $string .= '... <a href="'.base_url().'/Actu/Show/'.$record->actuID.'">  Plus d\'information</a>';
                                     }
-
                                      echo $string ;?>
                                      <br>                                     
                                     <span>Par:</span>
                                     <span class="kt-font-info"><?php echo $record->name ;?></span>
                                     <span>Publié le:</span>
-                                    <span class="kt-font-info"><?php echo $record->createdDate ;?></span>
-                                         
+                                    <span class="kt-font-info"><?php echo $record->createdDate ;?></span>  
                         </p>
-
                       </div>
-                  
-
-
-
-                    
-    
                     <?php  # code...
                     }
                     ?>
                 </div>
-                </div>     
+        </div>     
 
         <!--end::Portlet-->
 <script type="text/javascript">
@@ -429,6 +439,15 @@
                                             }
                                    if($c> 3) { 
                                    echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2 "> '
+                                            .
+                                            '</td><td>   '
+                                            .$rc->name.'<br><small>Club Tunivisions '.$rc->clubName.'</small>'.
+                                            '</td><td>'. 
+                                            $rc->scores
+                                              ;
+                                            }
+                                    if($c> 9) { 
+                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$c.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2 "> '
                                             .
                                             '</td><td>   '
                                             .$rc->name.'<br><small>Club Tunivisions '.$rc->clubName.'</small>'.
