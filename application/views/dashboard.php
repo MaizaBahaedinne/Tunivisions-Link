@@ -411,37 +411,37 @@ table {
                                    if ($c== 1){ 
                                     
                                     
-                                            echo  '<td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
+                                            echo  '<td width="10%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
                                             .
-                                            '</span> </td><td><b> '
+                                            '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
                                             '</td><td>'. 
                                             $rc->scores
                                               ;
                                             }
                                    if ($c== 2){ 
-                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2"> '
+                                    echo  '<td width="10%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
                                             .
-                                            '</span></td><td> <b>  '
+                                            '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
                                             '</td><td>'. 
                                             $rc->scores
                                               ;
                                             }
                                    if ($c== 3){ 
-                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2"> '
+                                   echo   echo  '<td width="10%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
                                             .
-                                            '</span> </td><td> <b>  '
+                                            '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
                                             '</td><td>'. 
                                             $rc->scores
                                               ;
                                             }
                                    if($c> 3) { 
-                                   echo  ' <tr> <td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2 "> '
+                                    echo  '<td width="10%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
                                             .
-                                            '</td><td>   '
-                                            .$rc->name.'<br><small>Club Tunivisions '.$rc->clubName.'</small>'.
+                                            '</span> </td><td align="left" ><b> '
+                                            .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
                                             '</td><td>'. 
                                             $rc->scores
                                               ;
