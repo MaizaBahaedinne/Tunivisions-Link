@@ -447,7 +447,7 @@ table {
                                               ;
                                             }
                                     if($c> 9) { 
-                               echo  '<td width="5%"> '.$c.                                            .
+                               echo  '<td width="5%"> '.$c.                                            
                                             '</td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
                                             '</td><td>'. 
