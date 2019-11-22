@@ -288,6 +288,9 @@
                     }
                     ?>
                      </div>
+                     <script type="text/javascript">
+                         $('.carousel').carousel()
+                     </script>
                 </div>
             </div>
             </div>
