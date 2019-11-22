@@ -398,7 +398,9 @@
                                     {  echo '   <tr  bgcolor="#ADD8E6" > '; }
                                 else{  echo '   <tr   > '; }
                                    if ($c== 1){ 
-                                            echo  '<td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="30px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
+                                    if ($rc.avatar ==''){$rc.avatar ='usersDefault.jpg'}
+                                    
+                                            echo  '<td> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
                                             .
                                             '</span> </td><td><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
