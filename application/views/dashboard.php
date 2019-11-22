@@ -311,7 +311,7 @@ table {
                                             .$c.
                                             '</span> </td><td align="left" > <b>Club Tunivisions '
                                             .$rc->name.
-                                            '</b></td><td align="left"  >'. 
+                                            '</b></td><td align="right" >'. 
                                             $rc->scores
                                               ;
                                             }
@@ -320,7 +320,7 @@ table {
                                             .$c.
                                             '</span></td><td align="left"  ><small><b>Club Tunivisions '
                                             .$rc->name.
-                                            '</b></small> </td><td align="left" >'. 
+                                            '</b></small> </td><td align="right">'. 
                                             $rc->scores
                                               ;
                                             }
@@ -329,7 +329,7 @@ table {
                                             .$c.
                                             '</span> </td><td align="left"  ><small><b><b>Club Tunivisions '
                                             .$rc->name.
-                                            '</b></small></td><td align="left" >'. 
+                                            '</b></small></td><td align="right">'. 
                                             $rc->scores
                                               ;
                                             }
@@ -338,7 +338,7 @@ table {
                                             .$c.
                                             '</td><td align="left" ><small>Club Tunivisions '
                                             .$rc->name.
-                                            '</small></td><td align="left"  >'. 
+                                            '</small></td><td align="right" >'. 
                                             $rc->scores
                                               ;
                                             }
@@ -415,7 +415,7 @@ table {
                                             .
                                             '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
-                                            '</td><td>'. 
+                                            '</td><td align="right" >'. 
                                             $rc->scores
                                               ;
                                             }
@@ -424,7 +424,7 @@ table {
                                             .
                                             '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
-                                            '</td><td>'. 
+                                            '</td><td align="right" >'. 
                                             $rc->scores
                                               ;
                                             }
@@ -433,7 +433,7 @@ table {
                                             .
                                             '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
-                                            '</td><td>'. 
+                                            '</td><td align="right" >'. 
                                             $rc->scores
                                               ;
                                             }
@@ -442,7 +442,7 @@ table {
                                             .
                                             '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
-                                            '</td><td>'. 
+                                            '</td><td align="right">'. 
                                             $rc->scores
                                               ;
                                             }
@@ -450,7 +450,7 @@ table {
                                      echo  '<td width="5%"> '.$c.                                            
                                             '</td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
-                                            '</td><td>'. 
+                                            '</td><td align="right" >'. 
                                             $rc->scores
                                               ;
                                             }
