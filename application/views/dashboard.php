@@ -214,22 +214,9 @@
             </table>
         </div>
 
-<div class="col-md-12">        
-        <!--begin::Portlet-->
-        <div class="kt-portlet">
-            <div class="kt-portlet__head">
-                <div class="kt-portlet__head-label">
-                    <span class="kt-portlet__head-icon kt-hide">
-                        <i class="la la-gear"></i>
-                    </span>
-                    <h3 class="kt-portlet__head-title">
-                        Actualité 
-                    </h3>
-                </div>
-            </div>
-            <div class="kt-portlet__body">
-                <div class="tab-pane active" id="kt_widget5_tab1_content" aria-expanded="true">
-                <div class="kt-widget5">
+    <div class="col-md-12">        
+        
+        
 
                     <div class="carousel-item">
                     <?php foreach ($ActuRecords as $record ) {
@@ -249,7 +236,7 @@
                                         //if the string doesn't contain any space then it will cut without word basis.
                                         $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                                         $string .= '... ';
-}
+                                        }
 
                                      echo $string ;?></p>
                                  </a>
@@ -266,7 +253,7 @@
                                         //if the string doesn't contain any space then it will cut without word basis.
                                         $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                                         $string .= '... <a href="'.base_url().'/Actu/Show/'.$record->actuID.'">  Plus d\'information</a>';
-}
+                                    }
 
                                      echo $string ;?>
                                      <br>                                     
@@ -278,7 +265,7 @@
                         </p>
 
                       </div>
-                    </div>
+                  
 
 
 
@@ -287,15 +274,13 @@
                     <?php  # code...
                     }
                     ?>
-                     </div>
-                     <script type="text/javascript">
+                </div>
+                     
+
+        <!--end::Portlet-->
+<script type="text/javascript">
                          $('.carousel').carousel()
                      </script>
-                </div>
-            </div>
-            </div>
-        </div>
-        <!--end::Portlet-->
 
     </div>
 
