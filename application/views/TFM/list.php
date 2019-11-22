@@ -140,26 +140,18 @@
                                 <span class="kt-widget__value"> je veux participer </span><span></span>
                             </div>
                             </a>    
-                            </div>
-
-
-
-
-                        
-                                                            
+                            </div>                                                          
                                 <br>
                                 <i class="flaticon-users"></i> &nbsp;par  Tunivisions Foundation
-                                &nbsp;
+                                <br>
                                 <span class="btn btn-primary "> 
-                                        <?php $date = new DateTime($record->dateFin) ; 
-                                        echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
+                                        <?php $date = new DateTime($record->dateDebut) ; 
+                                        echo '<span>'.$date->format('d').'-'.$date->format('M').'-20'.$date->format('y').'</span>' ; ?>    
                                 </span>
                                 <span class="btn btn-danger "> 
                                         <?php $date = new DateTime($record->dateFin) ; 
-                                        echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
+                                        echo '<span>'.$date->format('d').'-'.$date->format('M').'-20'.$date->format('y').'</span>' ; ?>    
                                 </span>
-                                     
-                                
                             </div>
                         </div>
                         

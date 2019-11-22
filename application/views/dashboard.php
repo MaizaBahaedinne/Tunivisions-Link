@@ -503,3 +503,11 @@
 
 </div>
 </div>
+
+<script>
+$('table').dataTable( {
+
+  paginate: true,
+  
+} );
+</script>
