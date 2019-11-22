@@ -1,3 +1,7 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
 <style type="text/css">
        .alligator-turtle {
   object-fit: cover;
@@ -189,35 +193,11 @@
 
          </div>
     
-    <div class="col-md-12">     
-                    <table  style="border-collapse:separate;background-color:#ffffff;border:1px solid #dddfe2;border-radius:3px;font-family:Helvetica, Arial, sans-serif;margin:0px auto; width: auto;">
-                        <tr>
-                            <td style="">
-                                <img  src="https://scontent.ftun3-1.fna.fbcdn.net/v/t1.0-9/p960x960/73554703_10219860737658001_5161063467171446784_o.jpg?_nc_cat=106&_nc_oc=AQnmV79RHBFmxu5gbXgd6pgalzNZkNEXWKOKeP1SD22xmPlAvhcpBMN3BE3lZR6qpFQ&_nc_ht=scontent.ftun3-1.fna&oh=744c8a999e61f62694951e443b1fe2ee&oe=5E17ACAF" style="max-width: 100%; max-height: 100%;"  alt="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-size:14px;font-weight:bold;padding:8px 8px 0px 8px;text-align:center;">Only Tunimateurs Mandat 2019-2020</td></tr><tr><td style="color:#90949c;font-size:12px;font-weight:normal;text-align:center;">Groupe Privé </td></tr><tr><td style="padding:8px 12px 12px 12px;">
-                                <table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%;">
-                                    <tr>
-                                        <td style="background-color:#4267b2;border-radius:3px;text-align:center;"><a style="color:#3b5998;text-decoration:none;cursor:pointer;width:100%;" href="https://www.facebook.com/plugins/group/join/popup/?group_id=403356133691439&amp;source=email_campaign_plugin" target="_blank" rel="noopener">
-                                            <table border="0" cellspacing="0" cellpadding="3" align="center" style="border-collapse:collapse;"><tr>
-                                                <td style="border-bottom:3px solid #4267b2;border-top:3px solid #4267b2;color:#FFF;font-family:Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold;">Rejoindre ce groupe</td>
-                                            </tr>
-                                        </table>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>
 
     <div class="col-md-12">        
         
         
-
+                <div class="carousel">
                     <div class="carousel-item">
                     <?php foreach ($ActuRecords as $record ) {
                         ?>
@@ -275,7 +255,7 @@
                     }
                     ?>
                 </div>
-                     
+                </div>     
 
         <!--end::Portlet-->
 <script type="text/javascript">
