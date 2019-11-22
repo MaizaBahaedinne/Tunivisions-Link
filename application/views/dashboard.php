@@ -429,7 +429,7 @@ table {
                                               ;
                                             }
                                    if ($c== 3){ 
-                                   echo   echo  '<td width="5%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
+                                      echo  '<td width="5%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
                                             .
                                             '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
