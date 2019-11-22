@@ -8,26 +8,26 @@
   object-position: 50% 0%;
 
   width: 100px;
-  height: 500px;
+  height: 100px;
 }
 table ,tr td{
- 
+    
 }
 tbody {
     display:block;
-    height:50px;
+    height:600px;
     overflow:auto;
 }
 thead, tbody tr {
     display:table;
     width:100%;
-    table-layout:fixed;/* even columns width , fix width of table too*/
+    table-layout:auto;/* even columns width , fix width of table too*/
 }
 thead {
     width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
 }
 table {
-    width:400px;
+    width:100%;
 }
 </style>
 
