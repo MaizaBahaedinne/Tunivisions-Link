@@ -274,7 +274,7 @@ table {
 
     </div>
 
-<div class="col-md-6">    
+<div class="col-md-4">    
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
             <div class="kt-portlet__head">
@@ -292,7 +292,7 @@ table {
                 <div class="kt-section">
                     <div class="kt-invoice__container">
                     <div class="table-responsive">
-                        <table id="Clubs" class="display" style="width: 100%" >
+                        <table id="Members" class="display" style="width: 100%" >
                             <thead>
                                 <tr>
                                     <th width="10%"></th>
@@ -364,7 +364,7 @@ table {
         </div>
         <!--end::Portlet-->
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
        
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
@@ -393,7 +393,7 @@ table {
                 <div class="kt-section">
                    <div class="kt-invoice__container">
                     <div class="table-responsive">
-                        <table id="Members" class="display" style="width: 100%;overflow-y:hidden;" >
+                        <table id="Clubs" class="display" style="width: 100%;overflow-y:hidden;" >
                             <thead>
                                 <tr>
                                     <th width="5%" > </th>
@@ -483,14 +483,14 @@ table {
 <script>
 $('#Members').dataTable( {
 
-  paginate: true,
+  
   
 } );
 </script>
 <script>
 $('#Clubs').dataTable( {
 
-  paginate: true,
+
   
 } );
 </script>
