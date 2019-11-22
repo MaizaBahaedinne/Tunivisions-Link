@@ -230,19 +230,15 @@
             <div class="kt-portlet__body">
                 <div class="tab-pane active" id="kt_widget5_tab1_content" aria-expanded="true">
                 <div class="kt-widget5">
+
+                    <div class="carousel-item">
                     <?php foreach ($ActuRecords as $record ) {
                         ?>
-
-                    <div class="kt-widget5__item">
-                        <div class="kt-widget5__content">
-                            <div class="kt-widget5__pic" style="background-image: ">
-                                <img class="alligator-turtle"  width="50px"   src="<?php echo base_url() ?>uploads/Actu/<?php echo $record->image ?>" alt="">
-                            </div>
-                            <div class="kt-widget5__section">
-                                <a href="<?php echo base_url() ?>Actu/Show/<?php echo $record->actuID ?> " class="kt-widget5__title">
-                                    
-
-                                    <?php
+                      <img src="<?php echo base_url() ?>uploads/Actu/<?php echo $record->image ?>" alt="" >
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5> 
+                              <a href="<?php echo base_url() ?>Actu/Show/<?php echo $record->actuID ?> " class="kt-widget5__title">
+                               <?php
                                     $string = strip_tags( $record->titre );
                                     if (strlen($string) > 35){
 
@@ -255,10 +251,11 @@
                                         $string .= '... ';
 }
 
-                                     echo $string ;?>
-                                </a>
-                                <p class="kt-widget5__desc">
-                                    <?php
+                                     echo $string ;?></p>
+                                 </a>
+                         </h5>
+                        <p> 
+                            <?php
                                     $string = strip_tags($record->description);
                                     if (strlen($string) > 100) {
 
@@ -272,35 +269,25 @@
 }
 
                                      echo $string ;?>
-                                </p>
-                                <div class="kt-widget5__info">
+                                     <br>                                     
                                     <span>Par:</span>
                                     <span class="kt-font-info"><?php echo $record->name ;?></span>
                                     <span>Publié le:</span>
                                     <span class="kt-font-info"><?php echo $record->createdDate ;?></span>
-                                </div>
-                            </div>
-                        </div>                      
-                        <div class="kt-widget5__content">
-                            <!--
-                            <div class="kt-widget5__stats">
-                                <span class="kt-widget5__number"><span class="kt-widget5__number"><i class="kt-menu__link-icon 
-                                flaticon-like"></i></span></span>
-                                <span class="kt-widget5__sales">100</span>
-                            </div>
-                            <div class="kt-widget5__stats">
-                                <span class="kt-widget5__number"><i class="kt-menu__link-icon 
-                                flaticon-comment"></i></span>
-                                <span class="kt-widget5__votes">20</span>
-                            </div>
-                            -->
-                        </div>  
+                                         
+                        </p>
+
+                      </div>
                     </div>
+
+
+
+                    
     
                     <?php  # code...
                     }
                     ?>
-                     
+                     </div>
                 </div>
             </div>
             </div>
@@ -327,7 +314,7 @@
                 <div class="kt-section">
                     <div class="kt-invoice__container">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="display" style="width: 100%" >
                             <thead>
                                 <tr>
                                     <th width="10%"></th>
@@ -428,7 +415,7 @@
                 <div class="kt-section">
                    <div class="kt-invoice__container">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="display" style="width: 100%;overflow-y:hidden;" >
                             <thead>
                                 <tr>
                                     <th width="10%"></th>
