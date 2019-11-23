@@ -2,6 +2,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
+
+
 <style type="text/css">
        .alligator-turtle {
   object-fit: cover;
@@ -103,6 +105,22 @@ table {
 <!-- end:: Subheader -->                    
                     <!-- begin:: Content -->
     <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-item">
+              <img src="..." alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>...</h5>
+                    <p>...</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img src="..." alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>...</h5>
+                    <p>...</p>
+                </div>
+          </div>
+    </div>
     <div class="kt-portlet">
     <div class="kt-portlet__body  kt-portlet__body--fit">
         <div class="row row-no-padding row-col-separator-xl">
@@ -216,61 +234,9 @@ table {
     <div class="col-md-12">        
         
         
-            <div class="carousel">
-                    <div class="carousel-item">
-                    <?php foreach ($ActuRecords as $record ) {
-                        ?>
-                      <img src="<?php echo base_url() ?>uploads/Actu/<?php echo $record->image ?>" alt="" >
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5> 
-                              <a href="<?php echo base_url() ?>Actu/Show/<?php echo $record->actuID ?> " class="kt-widget5__title">
-                               <?php
-                                    $string = strip_tags( $record->titre );
-                                    if (strlen($string) > 35){
-
-                                        // truncate string
-                                        $stringCut = substr($string, 0, 35);
-                                        $endPoint = strrpos($stringCut, ' ');
-
-                                        //if the string doesn't contain any space then it will cut without word basis.
-                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                                        $string .= '... ';
-                                        }
-
-                                     echo $string ;?>
-                                 </a>
-                         </h5>
-                        <p> 
-                            <?php
-                                    $string = strip_tags($record->description);
-                                    if (strlen($string) > 100) {
-
-                                        // truncate string
-                                        $stringCut = substr($string, 0, 100);
-                                        $endPoint = strrpos($stringCut, ' ');
-
-                                        //if the string doesn't contain any space then it will cut without word basis.
-                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                                        $string .= '... <a href="'.base_url().'/Actu/Show/'.$record->actuID.'">  Plus d\'information</a>';
-                                    }
-                                     echo $string ;?>
-                                     <br>                                     
-                                    <span>Par:</span>
-                                    <span class="kt-font-info"><?php echo $record->name ;?></span>
-                                    <span>Publié le:</span>
-                                    <span class="kt-font-info"><?php echo $record->createdDate ;?></span>  
-                        </p>
-                      </div>
-                    <?php  # code...
-                    }
-                    ?>
-                </div>
-        </div>     
+        
 
         <!--end::Portlet-->
-<script type="text/javascript">
-                         $('.carousel').carousel()
-                     </script>
 
     </div>
 
@@ -292,7 +258,7 @@ table {
                 <div class="kt-section">
                     <div class="kt-invoice__container">
                     <div class="table-responsive">
-                        <table id="Members" class="display" style="width: 100%" >
+                        <table id="Clubs" class="table" style="width: 100%" >
                             <thead>
                                 <tr>
                                     <th width="10%"></th>
@@ -393,7 +359,7 @@ table {
                 <div class="kt-section">
                    <div class="kt-invoice__container">
                     <div class="table-responsive">
-                        <table id="Clubs" class="display" style="width: 100%;overflow-y:hidden;" >
+                        <table id="Members" class="table" style="width: 100%;overflow-y:hidden;" >
                             <thead>
                                 <tr>
                                     <th width="5%" > </th>
@@ -437,7 +403,7 @@ table {
                                             $rc->scores
                                               ;
                                             }
-                                   if($c> 3) { 
+                                   if($c> 3 ) { 
                                     echo  '<td width="5%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
                                             .
                                             '</span> </td><td align="left" ><b> '
@@ -446,14 +412,7 @@ table {
                                             $rc->scores
                                               ;
                                             }
-                                    if($c> 9) { 
-                                     echo  '<td width="5%"> '.$c.                                            
-                                            '</td><td align="left" ><b> '
-                                            .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
-                                            '</td><td align="right" >'. 
-                                            $rc->scores
-                                              ;
-                                            }
+                                    
 
                                     else{echo  '</td> ' ;}    
                               $c++ ; 
@@ -481,16 +440,6 @@ table {
 </div>
 
 <script>
-$('#Members').dataTable( {
 
-  
-  
-} );
 </script>
-<script>
-$('#Clubs').dataTable( {
 
-
-  
-} );
-</script>

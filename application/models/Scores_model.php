@@ -45,7 +45,7 @@ class Scores_model extends CI_Model
         $this->db->where('Evals.valider=','valider');
         $this->db->order_by('scores', 'DESC');
         $this->db->group_by('BaseTbl.userID');  
-        $this->db->limit(1000);  
+        $this->db->limit(10);  
         $query = $this->db->get();
         
         $result = $query->result();        

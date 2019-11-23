@@ -55,7 +55,7 @@
                         <th>Président</th>
                         <th>Membres</th>
                         <th>Contact</th>
-                        <th>Actif</th>
+                        <th>Charte</th>
 
                         <th class="text-center">Actions</th>
                     </tr>
@@ -85,20 +85,18 @@
                             <?php echo $record->email ?>
                         <td> 
                          <?php    
-                        if($record->is_Actif == 'Actif') 
-                         echo '<button class="btn btn-primary">Actif</button></a >' ;
-                        ?> 
+                        if($record->charte == 1 ) {?> 
+                         <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">Formé</span>
+                        <?php } ?> 
 
                         
+                          <?php   
+                        if($record->charte == 0 ) {?> 
+                         <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">non formé</span>
+                        <?php } ?> 
                         </td>
-                        <td >
-                        <?php  
-                            if($record->isDeleted == 1) 
-                         echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-primary">Send</button></a >' ;
-                        
-                        ?> 
+                        <td>
                         </td>
-
 
                     </tr>
                     <?php
