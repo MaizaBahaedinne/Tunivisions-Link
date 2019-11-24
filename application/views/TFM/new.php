@@ -347,7 +347,7 @@
     
                         <div class="box-footer">
                             <label class="kt-checkbox">
-                                        <input type="checkbox" required>  Je suis <b style="color: #d4af37"><?php echo $name ;?></b> Membre du club j'accepte le regelemnt de participation au TFM 5.0
+                                        <input type="checkbox" required>  Je suis <b style="color: #d4af37"><?php echo $name ;?></b> Membre du  <b style="color: #d4af37">club Tunivisions <?php echo $auto->name ;?></b> j'accepte le regelemnt de participation au TFM 5.0
                                         <span></span>
                                  </label><br>
                             <input type="submit" class="btn btn-primary" value="Envoyer" />
