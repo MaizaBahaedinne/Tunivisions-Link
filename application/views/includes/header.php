@@ -235,8 +235,8 @@
 				</a>
 			</li>
 			<?php } ?>
-			</li>
-			<?php if ($SA == 1 ) { ?>
+			</li> 
+			<?php if ($SA == 1 || $clubID == 0  ) { ?>
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "Evaluation" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>TFM/TFMListing" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-exclamation">

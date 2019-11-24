@@ -176,7 +176,17 @@ class Register extends CI_Controller
                 
                  print_r($usersData ) ; 
                 $result = $this->user_model->changePassword($updatedBy, $usersData);
-                    print_r($result ) ;
+
+                if($result)
+                {
+                    redirect('/login') ; 
+                }
+                else
+                {
+                    $this->session->set_flashdata('error', 'Problème veuillez contacter <a href="https://www.facebook.com/maiza.koussai">l\'administrateur</a> ');
+                }
+
+                    
                 
     }
 
