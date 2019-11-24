@@ -163,7 +163,7 @@
                                 else if( $tfmp->tfmId == $record->tfmId && $tfmp->statut == 2  ) {
                                    ?>
                             <span class="btn btn-warning "> 
-                                        En Attend    
+                                        En cours de traitement    
                             </span> 
                          <?php   
                                 }
