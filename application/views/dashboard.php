@@ -364,7 +364,7 @@ table {
                                 <tr>
                                     <th width="5%" > </th>
                                     <th align="left" >Nom</th>
-                                    <th align="left" >Score</th>
+                                    <th align="right" >Score</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -377,7 +377,7 @@ table {
                                    if ($c== 1){ 
                                     
                                     
-                                            echo  '<td width="5%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
+                                            echo  '<td width="5%">  '
                                             .
                                             '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
@@ -386,7 +386,7 @@ table {
                                               ;
                                             }
                                    if ($c== 2){ 
-                                    echo  '<td width="5%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
+                                    echo  '<td width="5%"> '
                                             .
                                             '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
@@ -395,7 +395,7 @@ table {
                                               ;
                                             }
                                    if ($c== 3){ 
-                                      echo  '<td width="5%"> <img src='.base_url().'uploads/avatar/'.$rc->avatar.' width="20px" alt="'.$rc->name.'" class="kt-radius-100 alligator-turtle2" > '
+                                      echo  '<td width="5%"> '
                                             .
                                             '</span> </td><td align="left" ><b> '
                                             .$rc->name.'</b><br><small>Club Tunivisions '.$rc->clubName.'</small>'.
