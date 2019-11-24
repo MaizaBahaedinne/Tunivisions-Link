@@ -24,5 +24,48 @@ class Tfm_model extends CI_Model
     }
 
 
+
+    /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function TFMPListing($userID)
+    {
+        $this->db->select('BaseTbl.tfmId , BaseTbl.dateInscrip , BaseTbl.statut ');
+        $this->db->from('tbl_tfm_part as BaseTbl');
+        $this->db->where('BaseTbl.userId =',$userID);
+       
+           
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
+
+
+    /**
+     * This function is used to add new user to system
+     * @return number $insert_id : This is last inserted id
+     */
+    function addNewPartTFM($TFMInfo)
+    {
+
+        $this->db->trans_start();
+        $this->db->insert('tbl_tfm_part', $TFMInfo);
+        
+        $insert_id = $this->db->insert_id();
+        
+        $this->db->trans_complete();
+        
+        return $insert_id;
+    }
+          
+    
+
 }
 

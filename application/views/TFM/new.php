@@ -32,8 +32,8 @@
                 <div class="box box-primary">
                    
                     <!-- form start -->
-                    <?php $this->load->helper("form"); ?>
-                    <form role="form" id="addproject" action="" method="post" role="form"  enctype="multipart/form-data">
+                    <?php $this->load->helper("form"); if ($auto->charte == 1 ){ ?>
+                    <form role="form" id="addproject" action="<?php echo base_url()?>TFM/partanTfm" method="post" role="form"  enctype="multipart/form-data">
                         <div class="box-body">
 
 
@@ -48,72 +48,74 @@
 <img src="<?php echo base_url() ?>uploads/projet/TFM50000.png" class="alligator-turtle" >
                             <hr>
                             <br>
+
+
                             <div class="row">
 
-                            <?php if($role == 1 ){ ?>
+                            <?php if($role == 1 || $SA == 1  ){ ?>
                             <div class="col-md-6">
-                                <h4>Club</h4>
+                                <h4 style="color: #d4af37">Club</h4>
                                 <div class="col-md-12">
                                     <label> Mon club est fondé le </label>
-                                    <input type="date" name="dateFonde" class="form-control">
+                                    <input type="date" name="dateFonde" class="form-control" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label> Email du club  </label>
-                                    <input type="email" name="email" class="form-control">
+                                    <input type="email" name="email" class="form-control" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label> Lien page facebook du club </label>
-                                    <input type="text" name="facebook" class="form-control">
+                                    <input type="text" name="facebook" class="form-control" required>
                                 </div>
                             </div>
                             <?php } ?>
 
                             <div class="col-md-12">
                             <div class="col-md-6">
-                                <h4><br>Tunimateur</h4>
+                                <h4 style="color: #d4af37" ><br>Tunimateur</h4>
                                 <label> Je suis un tunnimateur depuis </label>
                                 <select class="form-control" name="annee">
                                     <option value="2016" >2016</option>
-                                    <option value="2016" >2017</option>
-                                    <option value="2016" >2018</option>
-                                    <option value="2016" >2019</option>
+                                    <option value="2017" >2017</option>
+                                    <option value="2018" >2018</option>
+                                    <option value="2019" >2019</option>
                                 </select>
                             </div>
-                            </div>
+                            
 
-                            <div class="col-md-12">
+                            <div class="col-md-10">
 
                                 <label> J'ai participé au : </label>
-                                 <br>
-                                <?php foreach ($tfmRecords  as $record ) { if ($record->tfmId<6){?>
                                
+                                <?php foreach ($tfmRecords  as $record ) { if ($record->tfmId<6){?>
+                               <br>
                                 <label class="kt-checkbox">
-                                                                    <input type="checkbox" value="<?php echo $record->tfmId ?>" ><?php echo $record->nom ?>
-                                                                    <span></span>
+                                    <input type="checkbox" name="TFMS[]" value="<?php echo $record->tfmId ?>" ><?php echo $record->nom ?>
+                                    <span></span>
                                 </label>
 
                                 <?php }  } ?>
                             </div>
                             <div class="col-md-6">
                                 <label> J'utilise un smartphone  </label>
-                                <select class="form-control">
-                                    <option value="2016" >Android</option>
-                                    <option value="2016" >Apple</option>
-                                    <option value="2016" >Autre</option>
+                                <select class="form-control" name="sys">
+                                    <option value="Android" >Android</option>
+                                    <option value="Apple" >Apple</option>
+                                    <option value="Autre" >Autre</option>
                                 </select>
                             </div>
-
+                            </div>
 
                             <div class="col-md-12">
                                 <br><br>
-                               <h1> Formulaire d'inscription TFM 5.0 </h1>
+                               <h2 style="color: #d4af37" > Formulaire d'inscription TFM 5.0 </h2>
                                 <br><br>
                             </div>
                           <div class="col-md-6">
 
 
                                 <div class="col-md-12">
-                                     <h3 for="fname">Reglement Interieur TFM 5.0</h3>
+                                     <h3  style="color: #d4af37" for="fname">Reglement Interieur TFM 5.0</h3>
                                 </div>
                                 <hr>
 
@@ -275,65 +277,69 @@
                 </div>
                 <!--end::Accordion-->
             </div>
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                
-
-
-                                
-                                
-
-                            
-                           
-
                            
          </div>
          <div class="col-md-6">
             <div class="col-md-12">
-                <h2 class="label">Programme</h2>
+                <h2 class="label" style="color: #d4af37" >Programme</h2>
             </div>
             <hr>
-            <div class="col-md-12" ><h4>Jour 1</h4> </div>
-            <div class="col-md-12" ><h4>Jour 2</h4> </div>
-            <div class="col-md-12" ><h4>Jour 3</h4> </div>
+            <div class="col-md-12" style="border:1px solid #d4af37;padding-left:20px;margin:0 0 10px 0;">
+                <h4 style="color: #d4af37" >Jour 1 <small> | 15/12/2019</small>  :</h4>
+                <li><b>8h -> 16h :</b> <small>travel + Check in</small> </li>
+                <li><b>16h  -> 19h  :</b> <small>Ouverture </small></li>
+                <li><b>19h -> 21h :</b> <small>Diner </small> </li>
+                <li><b>20h -> 22h :</b> <small>Réunion des présidents </small></li>
+                <li><b>22h :</b> <small>Soirée  avec BAND KHRAFA </small> </li>
+             
+
+            </div>
+                         <div class="col-md-12" style="border:1px solid #d4af37 ;padding-left:20px;margin:0 0 10px 0;">
+                <h4 style="color: #d4af37">Jour 2 <small> | 16/12/2019 </small>  :</h4>
+                   <li><b>07h -> 09h :</b> Petit Déjeuner </li>
+                   <li><b>09h -> 12h :</b> Team Building </li>
+                   <li><b>12h -> 14h :</b> Déjeuner </li>
+                   <li><b>14h -> 15h45 :</b> Light up you carrier </li>
+                   <li><b>15h45 -> 16h15 :</b> Pause</li>
+                   <li><b>16h15 -> 18h:</b> All About Digital </li>
+                   <li><b>18h -> 19h :</b> show </li>
+                   <li><b>19h-> 21h:</b>   Diner</li>
+                   <li><b>20h30 -> 22h :</b> Réunion des présidents</li> 
+                   <li><b>22h :</b> Soirée avec BAND ALLIANZA  </li>  
+ 
+
+             
+
+            </div>
+              <div class="col-md-12" style="border:1px solid #d4af37 ;padding-left:20px;margin:0 0 10px 0;">
+                <h4 style="color: #d4af37">Jour 3</h4> 
+                      <li><b> 07h -> 09h :</b> Petit déjeuner 
+                       <li><b>09h -> 11h :</b> <br> 
+                        Formation des présidents :  <b>Leadership</b>  <br>
+                        Formation  offerte  par Evolve </li>
+                      <li><b> 11h.30 - > 12h.30:</b> Clôture       </li>
+                       <li><b>12h.30 :</b> Déjeuner + Check Out </li>
+
+
+              </div>
 
 
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="form-group">
                         <label>Comment vous allez au TFM 5.0 </label>
                         <div class="kt-radio-inline">
                             <label class="kt-radio">
-                                <input type="radio" name="bus" value="Bus"> En Bus
+                                <input type="radio" name="bus" value="1"> En Bus
                                 <span></span>
                             </label>
                             <label class="kt-radio">
-                                <input type="radio" name="bus" value="Voiture"> ma voiture
+                                <input type="radio" name="bus" value="0"> ma voiture personnelle
                                 <span></span>
                             </label>
                         </div>
-                        <span class="form-text text-muted">Le frais de participation est toujours fixe à 150 DT</span>
+                        <span class="form-text text-muted">Les frais de participation sont toujours fixées à 150 DT</span>
                     </div>
             
         </div>
@@ -341,7 +347,7 @@
     
                         <div class="box-footer">
                             <label class="kt-checkbox">
-                                        <input type="checkbox" required>  Je suis <b><?php echo $name ;?></b> Membre du club j'accepte le regelemnt de participation au TFM 5.0
+                                        <input type="checkbox" required>  Je suis <b style="color: #d4af37"><?php echo $name ;?></b> Membre du club j'accepte le regelemnt de participation au TFM 5.0
                                         <span></span>
                                  </label><br>
                             <input type="submit" class="btn btn-primary" value="Envoyer" />
@@ -350,6 +356,16 @@
                             <br>
                         </div>
                     </form>
+                <?php } else { ?>
+
+
+                        
+                       <h4 class=""> Votre club n'est pas autorisé pour participer au TFM 5.0</h4> 
+                        <li>Formation charte</li>
+                        <li>Declaration du  bilan financier </li>
+         
+
+                <?php }?>
                 </div>
             </div>
 

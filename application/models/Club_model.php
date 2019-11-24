@@ -14,12 +14,7 @@ class Club_model extends CI_Model
     {
         $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif ');
         $this->db->from('tbl_club as BaseTbl');
-       
-  
-
-        
-        
-        
+           
         $query = $this->db->get();
         
         return $query->num_rows();
@@ -56,7 +51,7 @@ class Club_model extends CI_Model
      */
     function getClubInfo($clubID)
     {
-        $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif ' );
+        $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif , BaseTbl.charte ' );
         $this->db->from('tbl_club as BaseTbl');
         $this->db->where('BaseTbl.clubID', $clubID);
         $query = $this->db->get();
@@ -89,6 +84,20 @@ class Club_model extends CI_Model
     }
 
 
+    /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+    */
+    function editClub($clubInfo, $clubID)
+    {
+        $this->db->where('ClubID', $clubID);
+        $this->db->update('tbl_club', $clubInfo);
+        
+        return TRUE;
+    }
 
    
 }
