@@ -226,20 +226,18 @@ table {
 </div>
 
   <div class="row"> 
-    <div class="col-md-12"> 
 
-         </div>
-    
 
     <div class="col-md-12">        
-        
-        
-        
-
-        <!--end::Portlet-->
-
-    </div>
-
+      <style type="text/css">
+        .alligator-turtle3 {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 300px;
+      </style>
+       <img src="<?php echo base_url() ?>uploads/projet/TFM50000.png"  class="alligator-turtle3" >
+     </div>
 <div class="col-md-6">    
         <!--begin::Portlet-->
         <div class="kt-portlet kt-portlet--tab">
