@@ -504,7 +504,7 @@
 	        <div class="kt-header__topbar-user">
 	            <span class="kt-hidden kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
 	            <span class="kt-hidden kt-header__topbar-username kt-hidden-mobile">$userInfo->name   </span>
-	            <!--<img alt="Pic" class="kt-radius-100" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $avatar; ?>" />-->
+	           <img alt="Pic" class="kt-radius-100" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $avatar; ?>" />
 	            <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 	            <span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
 	        </div>
@@ -513,7 +513,7 @@
 	        <!--begin: Head -->
     <div class="kt-user-card kt-user-card--skin-light kt-notification-item-padding-x">
         <div class="kt-user-card__avatar">
-            <img class="kt-hidden-" alt="Pic" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $avatar; ?>" />
+           <!-- <img class="kt-hidden-" alt="Pic" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $avatar; ?>" />-->
             <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
             <span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
         </div>
