@@ -57,7 +57,7 @@ class TFM extends BaseController {
 		                $this->loadViews("TFM/listpf", $this->global, $data, NULL);   
 		        }
 
-		    		 public function partantByClub()
+		 public function partantByClub()
 		        {	
 
 		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
@@ -71,6 +71,23 @@ class TFM extends BaseController {
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             	$this->global['active'] = 'TFMC';
 		                $this->loadViews("TFM/listpf", $this->global, $data, NULL);   
+		        }    
+
+
+		public function TFMCountByClubV()
+		   {	
+
+		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
+            $data['searchText'] = $searchText;
+            
+            $this->load->library('pagination');
+
+		        	$data['count'] = count($this->Tfm_part_model->TFMCountByClub());
+		                $searchText='' ;
+		                $data['userRecords'] = $this->Tfm_part_model->TFMCountByClub();
+		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		             	$this->global['active'] = 'TFMC';
+		                $this->loadViews("TFM/countByClub", $this->global, $data, NULL);   
 		        }    
 
 		        

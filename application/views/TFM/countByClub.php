@@ -10,7 +10,7 @@
         <div class="kt-subheader__main">
             
             <h3 class="kt-subheader__title">
-                <?php echo $count ;  ?>  Tunimateurs                            </h3>
+                <?php echo $count ;  ?>  Club                            </h3>
             
                             <span class="kt-subheader__separator kt-hidden"></span>
                 <div class="kt-subheader__breadcrumbs">
@@ -63,7 +63,7 @@
                 <i class="kt-font-brand flaticon2-line-chart"></i>
             </span>
             <h3 class="kt-portlet__head-title">
-                Tunimateurs
+                Clubs
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
@@ -99,12 +99,12 @@
                     <tr>
                        
                         
-                        <th>Nom et prénom</th>
                         <th>Club</th>
-                        <th>Origine</th>
-                        <th>Paiment</th>
+                        <th>Secteur</th>
+                        <th>Participant</th>
+                     
                         
-                        <th>statut</th>
+             
                         
                     </tr>
                     </thead>
@@ -124,56 +124,21 @@
                         
                       
                         <td>
-                           
-                                                             
+                                         
                                         <a class="kt-user-card-v2__name" href="#">
-                                         <?php echo $record->name ?>
-                                        </a>
-                                        <br>                              
-                                        <span class="kt-user-card-v2__desc">
-                                        <?php echo $record->role ?> <?php echo $record->cellule ?>  
-                                        </span>                            
-                                    </div>                      
-                                
-                          
-
+                                         <?php echo $record->ClubName ?>
+                                                                        
+                                                    </a>
                         </td>
                         <td>
-
-                            <span style="width: 145px;">
-                                <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic">
-                                        
-                                    </div>                          
-                                    <div class="kt-user-card-v2__details">                              
-                                        <a class="kt-user-card-v2__name" href="#">
-                                         <?php
-                                            if ($record->ClubName != "Foundation")
-                                            echo "club ";
-                                            ?>   Tunivisions  <?php echo $record->ClubName ?></td>
-                                        </a>                              
-                                    </div>                      
-                                </div>
-                            </span>
-
-
+                            <?php echo $record->city ?>
+                            
                         </td>
-                        
-                        <td><?php echo $record->gouvernorat ?>  </td>
-                    
-                        
-                    <td> 
-                          
-                        <span>Tranche 1 : </span> <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br>
-                        <span>Tranche 2 : </span> <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span>
-                         
+                        <td>
+                      <?php echo $record->members ?>
+                      </td>
 
-                        
-                    </td>
-
-                    <td> 
-                          
-                         <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">Non Validée</span><br>
+                            
                        
                          
 
