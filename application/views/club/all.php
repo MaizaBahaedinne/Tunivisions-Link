@@ -82,7 +82,8 @@
                             <?php echo $record->members ; ?> 
                         </td>
                         <td>
-                            <?php echo $record->email ?>
+                            <?php if($record->facebook != ''){ echo $record->facebook ?> <?php } if($record->email != ''){ ?> <br> <a href ="<?php echo $record->email ?>">Facebook</a><?php } ?>
+
                         <td> 
                          <?php    
                         if($record->charte == 1 ) {?> 

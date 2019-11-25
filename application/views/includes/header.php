@@ -526,7 +526,15 @@
 	        <div class="kt-header__topbar-user">
 	            <span class="kt-hidden kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
 	            <span class="kt-hidden kt-header__topbar-username kt-hidden-mobile">$userInfo->name   </span>
-	           <img alt="Pic" class="kt-radius-100" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $avatar; ?>" />
+	            <style type="text/css">
+       .alligator-turtle5 {
+  object-fit: cover;
+  object-position: 50% 0%;
+
+  width: auto;
+
+}</style>
+	           <img alt="Pic" class="kt-radius-100 alligator-turtle5"  src="<?php echo base_url()  ?>uploads/avatar/<?php echo $avatar; ?>" />
 	            <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 	            <span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
 	        </div>
