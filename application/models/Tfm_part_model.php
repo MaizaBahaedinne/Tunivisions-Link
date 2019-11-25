@@ -67,6 +67,7 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
         $this->db->where('BaseTbl.tfmId =',6);
         $this->db->where('Users.isDeleted =', 0);
+        $this->db->group_by('Users.clubID ');
         $this->db->order_by('BaseTbl.dateInscrip','DESC');  
         $query = $this->db->get();
         $result = $query->result();        
