@@ -522,7 +522,7 @@
             <?php if  ($SA ==1 || $role==1 || $role==2  ) { ?>
             <p style="display: none" id="p1"><?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID; ?></p>
             
-          <!-- <button class="btn btn-label-primary" onclick="copyToClipboard('#p1')"  >Lien de parainage</button>   -->    
+          <button class="btn btn-label-primary" onclick="copyToClipboard('#p1')"  >Lien de parainage</button>     
         	<script type="text/javascript">
         		function copyToClipboard(element) {
 				  var $temp = $("<input>");
