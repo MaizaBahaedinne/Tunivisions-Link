@@ -112,7 +112,7 @@
               <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
               <div class="fb-page" data-href="https://www.facebook.com/Tunivisionsfoundation" data-tabs="" data-width="450" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Tunivisionsfoundation" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Tunivisionsfoundation">Tunivisions Foundation</a></blockquote></div>
             
-            <?php if ($var1!=Null && ($var2 == 217 || $var2 == 172 ) ) { ?> 
+            <?php if ($var1!=Null && ($var2 == 217 || $var2 == 172 || $var2 == 168 ) ) { ?> 
             
             <div class="form-group">
               <input class="form-control" type="text" placeholder="CIN"  pattern="[0-9]{8}"  name="cin" required>

@@ -100,9 +100,9 @@
                         <th>Nom et prénom</th>
                         <th>Club</th>
                         <th>Origine</th>
-                        <th>Contact</th>
+                        <th>Paiment</th>
                         
-                        <th>Actif</th>
+                        <th>Valider</th>
                         
                     </tr>
                     </thead>
@@ -158,20 +158,10 @@
                         </td>
                         
                         <td><?php echo $record->gouvernorat ?>  </td>
-                        <td><?php echo $record->email ?><br>
-                        <?php echo $record->mobile ?> </td>
+                        <td>
                         
                         <td> 
-                        <?php  
-                            if($record->isDeleted != 1) 
-                         echo'<a href="'.base_url().'User/deleteUser/'.$record->userId.'"> <button class="btn btn-primary">Actif</button></a>' ;
                         
-                        ?>
-                        <?php  
-                            if($record->isDeleted == 1) 
-                         echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-danger">Inactif</button></a >' ;
-                        
-                        ?>
                         </td>
                        
 
