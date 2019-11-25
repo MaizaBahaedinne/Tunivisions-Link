@@ -53,7 +53,7 @@ class TFM extends BaseController {
 		                $searchText='' ;
 		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListing();
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
-		             	$this->global['active'] = 'TFM';
+		             	$this->global['active'] = 'TFMP';
 		                $this->loadViews("TFM/listpf", $this->global, $data, NULL);   
 		        }
 
@@ -69,7 +69,7 @@ class TFM extends BaseController {
 		                $searchText='' ;
 		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListinByclub($this->clubID);
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
-		             	$this->global['active'] = 'TFM';
+		             	$this->global['active'] = 'TFMC';
 		                $this->loadViews("TFM/listpf", $this->global, $data, NULL);   
 		        }    
 

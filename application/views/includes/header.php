@@ -237,7 +237,7 @@
 			<?php } ?>
 			</li> 
 
-			<li class="kt-menu__item  kt-menu__item<?php if( $active == "Evaluation" ){echo("--active") ;} ?> " aria-haspopup="true">
+			<li class="kt-menu__item  kt-menu__item<?php if( $active == "TFM" ){echo("--active") ;} ?> " aria-haspopup="true" style="color: #d4af37">
 				<a  href="<?php echo base_url() ; ?>TFM/TFMListing" class="kt-menu__link " >
 					<i class="kt-menu__link-icon flaticon-network" style="color: #d4af37" >
 					</i>
@@ -246,13 +246,35 @@
 					</span>
 				</a>
 			</li>
-		
-
+			<?php if ($clubID == 0 ) { ?>
+			<li class="kt-menu__item  kt-menu__item<?php if( $active == "TFMP" ){echo("--active") ;} ?> " aria-haspopup="true" style="color: #d4af37" >
+				<a  href="<?php echo base_url() ; ?>TFM/partantF" class="kt-menu__link " >
+					<i class="kt-menu__link-icon flaticon-exclamation" style="color: #d4af37" >
+					</i>
+					<span class="kt-menu__link-text" style="color: #d4af37">
+						Les participants
+					</span>
+				</a>
+			</li>
+			<?php } ?>
 
 			<li class="kt-menu__section ">
                 <h4 class="kt-menu__section-text">Club</h4>
                 <i class="kt-menu__section-icon flaticon-more-v2"></i>
             </li>
+
+            <?php if ($SA == 1 ||  $role == 1 || $role == 2 ||  $role == 3  ) { ?>
+			<li class="kt-menu__item  kt-menu__item<?php if( $active == "TFMC" ){echo("--active") ;} ?> " aria-haspopup="true" style="color: #d4af37" >
+				<a  href="<?php echo base_url() ; ?>TFM/partantByClub" class="kt-menu__link " >
+					<i class="kt-menu__link-icon flaticon-exclamation" style="color: #d4af37" >
+					</i>
+					<span class="kt-menu__link-text" style="color: #d4af37">
+						Team TFM 5.0 
+					</span>
+				</a>
+			</li>
+			<?php } ?>
+
 			<li class="kt-menu__item  kt-menu__item<?php if( $active == "myClub" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>club/clubInfo" class="kt-menu__link ">
 					<i class="kt-menu__link-icon flaticon-interface-3">
@@ -343,7 +365,7 @@
 <!-- end:: Aside -->			
 			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
 				<!-- begin:: Header -->
-<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed " >
+<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed "  >
 			<!-- begin: Header Menu -->
 <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
 <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
@@ -351,11 +373,11 @@
 
 </div>
 <!-- end: Header Menu -->		<!-- begin:: Header Topbar -->
-<div class="kt-header__topbar">
+<div class="kt-header__topbar" >
 	<!--begin: Search -->
 
 
-				    <div class="kt-header__topbar-item dropdown">
+				    <div class="kt-header__topbar-item dropdown" >
 				        <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="true">
 				            <span class="kt-header__topbar-icon"><i class="flaticon-chat-2"></i></span>
 				            <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span>
