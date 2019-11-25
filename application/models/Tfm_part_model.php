@@ -13,7 +13,7 @@ class Tfm_part_model extends CI_Model
      */
     function TFMPartListing()
     {
-        $this->db->select(' BaseTbl.id , Users.name , Clubs.name ClubName , Role.role , Users.cellule , Users.gouvernorat');
+        $this->db->select(' BaseTbl.id , Users.name , Clubs.name ClubName , Role.role , Users.cellule , Users.gouvernorat , BaseTbl.p_tranch1 , BaseTbl.p_tranch2 , BaseTbl.moto , BaseTbl.sysMobile , BaseTbl.statut');
         $this->db->from('tbl_tfm_part as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
@@ -37,7 +37,7 @@ class Tfm_part_model extends CI_Model
      */
     function TFMPartListinByclub($clubId)
     {
-        $this->db->select(' BaseTbl.id , Users.name , Clubs.name ClubName , Role.role , Users.cellule , Users.gouvernorat');
+        $this->db->select(' BaseTbl.id , Users.name , Clubs.name ClubName , Role.role , Users.cellule , Users.gouvernorat , BaseTbl.p_tranch1 , BaseTbl.p_tranch2 , BaseTbl.moto , BaseTbl.sysMobile , BaseTbl.statut');
         $this->db->from('tbl_tfm_part as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');

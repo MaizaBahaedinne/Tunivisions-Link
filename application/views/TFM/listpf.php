@@ -102,7 +102,7 @@
                         <th>Origine</th>
                         <th>Paiment</th>
                         
-                        <th>Valider</th>
+                        <th>statut</th>
                         
                     </tr>
                     </thead>
@@ -158,11 +158,25 @@
                         </td>
                         
                         <td><?php echo $record->gouvernorat ?>  </td>
-                        <td>
+                    
                         
-                        <td> 
+                    <td> 
+                          
+                        <span>Tranche 1 : </span> <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br>
+                        <span>Tranche 2 : </span> <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span>
+                         
+
                         
-                        </td>
+                    </td>
+
+                    <td> 
+                          
+                         <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">Non Validée</span><br>
+                       
+                         
+
+                        
+               
                        
 
                     </tr>
