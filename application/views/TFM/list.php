@@ -147,6 +147,8 @@
                                         <?php $date = new DateTime($record->dateFin) ; 
                                         echo '<span>'.$date->format('d').'-'.$date->format('M').'-20'.$date->format('y').'</span>' ; ?>    
                                 </span>
+                                <br>
+
                             </div>
                         </div>
                         <span>
@@ -163,7 +165,9 @@
                                 else if( $tfmp->tfmId == $record->tfmId && $tfmp->statut == 2  ) {
                                    ?>
                             <span class="btn btn-warning "> 
-                                        En cours de traitement    
+                                        <b>En cours de traitement</b> <br>
+                                        Premiére tranche <b>80 DT</b>  Avant le <b>01/12/2019</b><br>
+										Deuxiéme tranche <b>70 DT</b>  Avant le <b>08/12/2019</b>      
                             </span> 
                          <?php   
                                 }
@@ -181,6 +185,9 @@
                                     <span class="kt-widget__value"> je veux participer </span><span></span>
                                 </div>
                             <?php }  ?>
+
+                                	                             	
+                   
                                 
                             </a>
 
