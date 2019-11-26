@@ -120,27 +120,7 @@
             <div class="form-group">
               <input class="form-control" type="email" placeholder="email" name="email" required>
             </div>
-            <div class="row">
-                  <div class="col-md-6">                                
-                      <div class="form-group">
-                      
-                                  <select class="form-control" name="gouvernorat" id="gouvernorat" required >
-                                      <option value="">-- Gouvernorat --</option>
-                                  </select>
 
-
-                      </div>
-                  </div>
-                  <div class="col-md-6">                                
-                      <div class="form-group">
-                    
-                                  <select class="form-control" name="delegation" id="delegation" required >
-                                      <option value="">-- Delegation --</option>
-                                   </select>
-
-                      </div>
-                  </div>
-            </div>
             <h5><br>Toute les question sont obligatoire</h5>
             <div class="form-group">
              <span><br>L'année de création de la fondation tunivisions ?</span>

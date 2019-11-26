@@ -122,15 +122,14 @@ class Register extends CI_Controller
                 $email = $this->input->post('email');
                 $mobile = $this->input->post('mobile');
                 $cin = $this->input->post('cin');
-                $gouvernorat = $this->input->post('gouvernorat');
-                $delegation = $this->input->post('delegation');
+
                 $q1 = $this->input->post('fon');
                 $q2 = $this->input->post('clu');
 
 
                
                 $this->load->model('user_model');
-                $result = $this->user_model->checkPasswordExists($email,$cin,$mobile,$delegation,$gouvernorat);
+                $result = $this->user_model->checkPasswordExists($email,$cin,$mobile);
             
                 
                 
