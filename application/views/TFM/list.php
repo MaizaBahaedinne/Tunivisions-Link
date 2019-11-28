@@ -178,14 +178,14 @@
                             <a <?php foreach ($tfmpartRecords as $tfmp ) {
                             if ( $tfmp->tfmId == 6   ){ ?> style="display: none" <?php }} ?>
                             href="<?php echo base_url() ; ?>TFM/partant/<?php echo $record->tfmId ; ?>">  
-                        
+                        <!--
                             <?php if ($record->tfmId == 6 ){ ?>
                                 <div class="btn btn-danger">
                                     <span class="kt-widget__subtitle"></span>
                                     <span class="kt-widget__value"> je veux participer </span><span></span>
                                 </div>
                             <?php }  ?>
-
+                        -->
                                 	                             	
                    
                                 
