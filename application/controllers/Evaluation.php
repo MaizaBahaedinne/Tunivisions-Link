@@ -78,7 +78,7 @@ class Evaluation extends BaseController {
 
 	public function evalutionupdate($EvalId)  {
         $album = $this->input->post('album');
-        $afterMovie = $this->input->post('album');
+        $afterMovie = $this->input->post('afterMovie');
         $this->load->model('evaluation_model');
 		    $this->load->model('ressource_model');
 
