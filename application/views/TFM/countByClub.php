@@ -102,6 +102,7 @@
                         <th>Club</th>
                         <th>Secteur</th>
                         <th>Participant</th>
+                        <th>30 %</th>
                      
                         
              
@@ -136,6 +137,9 @@
                         </td>
                         <td>
                       <?php echo $record->members ?>
+                      </td>
+                      <td>
+                      <?php echo $record->autorise ?>
                       </td>
 
                             

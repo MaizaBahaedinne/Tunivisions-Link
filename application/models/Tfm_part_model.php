@@ -44,7 +44,7 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_roles as Role', 'Role.roleId = Users.roleId','left');
         $this->db->where('BaseTbl.tfmId =',6);
         $this->db->where('Users.isDeleted =', 0);
-        $this->db->where('Users.clubID =', $clubId);
+        $this->db->where('Users.clubID =', $clubId);    
         $this->db->order_by('BaseTbl.dateInscrip','DESC');  
         $query = $this->db->get();
         $result = $query->result();        
@@ -61,7 +61,7 @@ class Tfm_part_model extends CI_Model
      */
    function TFMCountByClub()
     {
-        $this->db->select('Clubs.name as ClubName ,  Clubs.city , count(Users.userId) as members  ');
+        $this->db->select('Clubs.name as ClubName ,  Clubs.city , count(Users.userId) as members ,  round(count(Users.userId)-( count(Users.userId)*30)/100) as autorise ');
         $this->db->from('tbl_tfm_part as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
