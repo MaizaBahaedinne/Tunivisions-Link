@@ -51,6 +51,7 @@ class TFM extends BaseController {
 
 		        	$data['count'] = count($this->Tfm_part_model->TFMPartListing());
 		                $searchText='' ;
+		                $data['userId'] = $this->vendorId ;
 		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListing();
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             	$this->global['active'] = 'TFMP';
@@ -70,6 +71,7 @@ class TFM extends BaseController {
 		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListinByclub($this->clubID);
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             	$this->global['active'] = 'TFMC';
+
 		                $this->loadViews("TFM/listpf", $this->global, $data, NULL);   
 		        }    
 
@@ -150,6 +152,17 @@ class TFM extends BaseController {
 		if ( $result){	
 		   			redirect('TFM/TFMListing') ; 		
 		   }
+		
+		}
+
+
+		public function partanTfmPaiement1 ($tfmpartId){
+					 $partanTfm = array(  	  'p_tranch1' => '80', 
+									          'dateP_tranch1'=>date('Y-m-d H:i:s'),
+									          'recepteurTranche1'=>$this->vendorId ,
+									     );
+					$result = $this->tfm_model->editTFMPart($partanTfm, $tfmpartId) ;
+
 		
 		}
 

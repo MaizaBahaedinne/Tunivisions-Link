@@ -56,7 +56,7 @@
                     <thead>
                     <tr>
                        
-                        <th></th>
+                        <th>TunimateurID</th>
                         <th>Nom et prénom</th>
                         <th>Poste</th>
                         <th>Cellule</th>
@@ -88,7 +88,7 @@
                         <td>
                             <div class="kt-user-card-v2">
                                     <div class="kt-user-card-v2__pic">
-                                        <img alt="<?php echo $record->name ?>" class="kt-radius-100 alligator-turtle" src="<?php echo base_url()  ?>uploads/avatar/<?php echo $record->avatar; ?>" />
+                                        <?php echo $record->userId ?>
                                     </div>
                                 </div>     
                         </td>

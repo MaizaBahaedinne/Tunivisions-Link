@@ -98,11 +98,12 @@
                     <thead>
                     <tr>
                        
-                        
+                        <th>ID</th>
                         <th>Nom et prénom</th>
                         <th>Club</th>
                         <th>Origine</th>
                         <th>Paiment</th>
+                  
                         
                         <th>statut</th>
                         
@@ -121,7 +122,7 @@
                     ?>
                     <tr>
                        
-                        
+                        <td><?php echo $record->id ?></td>
                       
                         <td>
                            
@@ -164,20 +165,48 @@
                         
                     <td> 
                         <?php if ($record->p_tranch1 <= 0 ) { ?> 
-                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
+                        <span>Tranche 1 :</span>  &nbsp;
+                        <?php if ($userId == 1 ||  $userId == 164 || $userId == 162) { ?>
+                        <a class="btn btn-warning"   alt="<?php echo $record->id ?>"   id="<?php echo $record->id ?>" >Paiement</a>
+                        <script type="text/javascript">
+                            $("#<?php echo $record->id ?>").click(function(){
+                                $.ajax({
+                                   url : '<?php echo base_url() ?>TFM/partanTfmPaiement1/<?php echo$record->id ?>' ,
+                                    type : 'GET',
+                                   dataType : 'html',
+                                   success : function(code_html, statut){ // success est toujours en place, bien sûr !
+                                       
+                                       $("#<?php echo $record->id ?>").text('Valider'); ; 
+                                        $("#<?php echo $record->id ?>").removeClass() ; 
+
+                                   },
+
+                                   error : function(resultat, statut, erreur){
+
+                                   }
+
+                                });
+                            });
+
+                        </script>
+                        <?php }else { ?>
+                            <?php if ($record->p_tranch2 <= 0 ) { ?> 
+                        <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
+                        <?php }?>
+                       <br><?php } ?>
                         <?php if ($record->p_tranch1 > 0 ) { ?> 
-                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">En Attente</span><br><?php } ?>
+                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Valider</span><br><?php } ?>
 
                         <?php if ($record->p_tranch2 <= 0 ) { ?> 
                         <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
                         <?php if ($record->p_tranch2 > 0 ) { ?> 
                         <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">En Attente</span><br><?php } ?>
 
-                       
-                         
+              
 
-                        
-                    </td>
+
+     
+                   
 
                     <td> 
                           

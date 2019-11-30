@@ -65,6 +65,19 @@ class Tfm_model extends CI_Model
         return $insert_id;
     }
           
+
+           /**
+     * This function is used to update the user information
+     * @param array $userInfo : This is users updated information
+     * @param number $userId : This is user id
+     */
+    function editTFMPart($tfmInfo, $tfmpartId)
+    {
+        $this->db->where('id', $tfmpartId);
+        $this->db->update('tbl_tfm_part', $tfmInfo);
+        
+        return TRUE;
+    }
     
 
 }
