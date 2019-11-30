@@ -174,9 +174,8 @@
                                    url : '<?php echo base_url() ?>TFM/partanTfmPaiement1/<?php echo$record->id ?>' ,
                                     type : 'POST',
                                    dataType : 'html',
-                                   success : function(code_html, statut){ // success est toujours en place, bien sûr !
-                                       
-                                       $("#<?php echo $record->id ?>").text('Valider');  
+                                   success : function(code_html, statut){ 
+                                        $("#<?php echo $record->id ?>").text('Validé');  
                                         $("#<?php echo $record->id ?>").removeClass() ; 
 
                                    },
@@ -191,16 +190,16 @@
                         </script>
                         <?php }else { ?>
                             <?php if ($record->p_tranch2 <= 0 ) { ?> 
-                        <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
+                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
                         <?php }?>
                        <br><?php } ?>
                         <?php if ($record->p_tranch1 > 0 ) { ?> 
-                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Valider</span><br><?php } ?>
+                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé</span><br><?php } ?>
 
                         <?php if ($record->p_tranch2 <= 0 ) { ?> 
                         <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
                         <?php if ($record->p_tranch2 > 0 ) { ?> 
-                        <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">En Attente</span><br><?php } ?>
+                        <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé</span><br><?php } ?>
 
               
 
