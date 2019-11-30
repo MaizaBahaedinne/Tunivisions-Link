@@ -176,7 +176,7 @@
                                    dataType : 'html',
                                    success : function(code_html, statut){ // success est toujours en place, bien sûr !
                                        
-                                       $("#<?php echo $record->id ?>").text('Valider'); ; 
+                                       $("#<?php echo $record->id ?>").text('Valider');  
                                         $("#<?php echo $record->id ?>").removeClass() ; 
 
                                    },
