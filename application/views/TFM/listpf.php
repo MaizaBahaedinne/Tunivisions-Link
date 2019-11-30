@@ -172,7 +172,7 @@
                             $("#<?php echo $record->id ?>").click(function(){
                                 $.ajax({
                                    url : '<?php echo base_url() ?>TFM/partanTfmPaiement1/<?php echo$record->id ?>' ,
-                                    type : 'GET',
+                                    type : 'POST',
                                    dataType : 'html',
                                    success : function(code_html, statut){ // success est toujours en place, bien sûr !
                                        
