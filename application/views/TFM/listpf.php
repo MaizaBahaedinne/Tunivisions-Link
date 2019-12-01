@@ -165,8 +165,9 @@
                         
                     <td> 
                         <?php if ($record->p_tranch1 <= 0 ) { ?> 
-                        <span>Tranche 1 :</span>  &nbsp;
+                        
                         <?php if ($userId == 1 ||  $userId == 164 || $userId == 162) { ?>
+                        <span>Tranche 1 :</span>  &nbsp;
                         <a class="btn btn-warning"   alt="<?php echo $record->id ?>"   id="<?php echo $record->id ?>" >Paiement</a>
                         <script type="text/javascript">
                             $("#<?php echo $record->id ?>").click(function(){
@@ -194,7 +195,7 @@
                         <?php }?>
                        <br><?php } ?>
                         <?php if ($record->p_tranch1 > 0 ) { ?> 
-                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé</span><br><?php } ?>
+                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé <small>par : <?php echo $record->recp1 ; ?> le  <?php echo $record->dateTranche1 ; ?> </small></span><br><?php } ?>
 
                         <?php if ($record->p_tranch2 <= 0 ) { ?> 
                         <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>

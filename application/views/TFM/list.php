@@ -166,7 +166,8 @@
                                    ?>
                             <span class="btn btn-warning "> 
                                         <b>En cours de traitement</b> <br>
-                                        Premiére tranche <b>80 DT</b>  Avant le <b>01/12/2019</b><br>
+
+                                        Premiére tranche <b>80 DT</b>  Avant le <b>01/12/2019</b> <br>
 										Deuxiéme tranche <b>70 DT</b>  Avant le <b>08/12/2019</b>      
                             </span> 
                          <?php   
