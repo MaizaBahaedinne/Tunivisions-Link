@@ -153,6 +153,15 @@
                 <h4 class="kt-menu__section-text">Foundation</h4>
                 <i class="kt-menu__section-icon flaticon-more-v2"></i>
             </li>
+            <li class="kt-menu__item  kt-menu__item<?php if( $active == "clubs" ){echo("--active") ;} ?> " aria-haspopup="true" >
+				<a  href="<?php echo base_url() ; ?>Register/reglement" class="kt-menu__link ">
+					<i class="kt-menu__link-icon flaticon-interface-3">
+					</i>
+					<span class="kt-menu__link-text">
+						Reglement
+					</span>
+				</a>
+			</li>
             <?php if ($clubID ==0 ) { ?>
             <li class="kt-menu__item  kt-menu__item<?php if( $active == "clubs" ){echo("--active") ;} ?> " aria-haspopup="true" >
 				<a  href="<?php echo base_url() ; ?>Club/clubListing" class="kt-menu__link ">

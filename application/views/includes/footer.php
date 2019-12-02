@@ -8,9 +8,10 @@
 			2019&nbsp;&copy;&nbsp;<a href="../../index.html" target="_blank" class="kt-link">Maiza Bahaedinne -- Tunivisions Foundation </a>
 		</div>
 		<div class="kt-footer__menu">
-			<a href="../../index.html" target="_blank" class="kt-footer__menu-link kt-link">About</a>
-			<a href="../../index.html" target="_blank" class="kt-footer__menu-link kt-link">Team</a>
-			<a href="../../index.html" target="_blank" class="kt-footer__menu-link kt-link">Contact</a>
+
+			
+			<a href="<?php echo base_url() ; ?>Register/reglement" target="_blank" class="kt-footer__menu-link kt-link">Reglement</a>
+			<a href="" target="_blank" class="kt-footer__menu-link kt-link">Contact</a>
 		</div>
 	</div>
 </div>
