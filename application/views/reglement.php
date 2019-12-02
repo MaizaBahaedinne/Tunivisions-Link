@@ -260,6 +260,7 @@
         <br>
         <h3>Article 1 : composition du club (Alumni / Membres adhérents)</h3>
         Le club Tunivisions est composé des membres suivants : <br><b>Alumni :</b> Membres de l’ancien bureau Tunivisions qui ont terminé au moins une mandat sans aucune sanction ou interruption. <br><b>Membres adhérents :</b> Le club est composé des étudiants acceptés par le bureau actuel après un processus de recrutement et pré déclare.
+        NB : Tout  membres ayant aquérit une responsabilitée actuelle dans l'un des clubs tunivisions ne peut pas avoir d'autre responsabilitée dans une autre association
         
         <br>
         <h2 id="S22">Section 2 : Réunion</h2>
