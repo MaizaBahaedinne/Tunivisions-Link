@@ -10,8 +10,8 @@
 }
 
 .chart {
-  width: 100%; 
-  min-height: 450px;
+  width: auto; 
+  
 }
 .row {
   margin:0 !important;
