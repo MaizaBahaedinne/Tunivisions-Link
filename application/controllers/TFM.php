@@ -174,6 +174,7 @@ class TFM extends BaseController {
             
             $this->load->library('pagination');
 						$data['partParReg'] = $this->Tfm_part_model->TFMPartConfirmedByCityListing();
+						$data['partParclub'] = $this->Tfm_part_model->TFMPartConfirmedByClubListing();
 						$data['countTotal'] = count($this->Tfm_part_model->TFMPartListing());
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             	$this->global['active'] = 'TFMC';

@@ -61,7 +61,7 @@
         <div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                   Nombre de participant par region 
+                   Nombre de participant par region :  <?php echo count($partParReg)?>
                 </h3>
             </div>
             <div class="kt-portlet__head-toolbar">
@@ -98,8 +98,8 @@
         </div>
     </div>
     </div>
-</div>
-    <div class="col-md-8">
+    </div>
+<div class="col-md-8">
     <div class="kt-portlet kt-portlet--height-fluid kt-portlet--mobile ">
         <div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
             <div class="kt-portlet__head-label">
@@ -156,6 +156,117 @@
 
 <!--End::Row-->
 <!--End::Dashboard 1-->	</div>
+
+
+<!--begin::Dashboard 2--> 
+
+<div class="row">
+    <div class="col-md-4">
+    <div class="kt-portlet kt-portlet--height-fluid kt-portlet--mobile ">
+        <div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                   Nombre de participant par Club :  <?php echo count($partParclub)?>
+                </h3>
+            </div>
+            <div class="kt-portlet__head-toolbar">
+                
+            </div>
+    </div>
+    <div class="kt-portlet__body kt-portlet__body--fit">
+        <div class="container">
+        <table class = "display">
+            <thead>
+                <th>
+                    Region
+                </th>
+                <th>
+                    nombre
+                </th>
+            </thead>
+            <tbody>
+                <?php foreach ($partParclub as $reg ) {
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $reg->name ?>
+                    </td>
+                    <td>
+                        <?php echo $reg->countPart ?>
+                    </td>
+                </tr>
+                <?php
+                }?>
+            </tbody>
+
+        </table>
+        </div>
+    </div>
+    </div>
+    </div>
+<div class="col-md-8">
+    <div class="kt-portlet kt-portlet--height-fluid kt-portlet--mobile ">
+        <div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                   Nombre de participant par region 
+                </h3>
+            </div>
+            <div class="kt-portlet__head-toolbar">
+                
+            </div>
+    </div>
+    <div class="kt-portlet__body kt-portlet__body--fit">
+        <div class="container">
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+              google.charts.load('current', {packages: ['corechart', 'bar']});
+                google.charts.setOnLoadCallback(drawBasic);
+
+                function drawBasic() {
+
+                      var data = new google.visualization.DataTable();
+                      data.addColumn('string', 'club');
+                      data.addColumn('number', 'Nombre de participant');
+
+                      data.addRows([
+                     <?php foreach ($partParclub as $reg ) {
+                                    ?>
+                        ['<?php echo $reg->name ?>' , <?php echo $reg->countPart ?>],
+                                        <?php
+                }?>
+                        ]);
+
+                      var options = {
+                        title: '',
+
+                       
+                      };
+
+                      var chart = new google.visualization.ColumnChart(
+                        document.getElementById('chart_div2'));
+
+                      chart.draw(data, options);
+    }
+    </script>
+    <div id="chart_div2" class="chart"></div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+   
+
+<!--End::Row-->
+<!--End::Dashboard 1--> </div>
+
+
+
+
+
+
 <!-- end:: Content -->				</div>
 </div>
 

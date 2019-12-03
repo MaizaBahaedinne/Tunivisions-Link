@@ -97,6 +97,34 @@ class Tfm_part_model extends CI_Model
         $this->db->where('BaseTbl.p_tranch1 =',80);
 
          $this->db->group_by('Clubs.city');
+          $this->db->order_by('countPart DESC');
+        $query = $this->db->get();
+        $result = $query->result();        
+        return $result;
+    }
+
+
+
+    /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function TFMPartConfirmedByClubListing()
+    {
+        $this->db->select('  Clubs.name , count(BaseTbl.id) as countPart');
+        $this->db->from('tbl_tfm_part as BaseTbl');
+        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
+
+        $this->db->where('BaseTbl.tfmId =',6);
+        $this->db->where('BaseTbl.p_tranch1 =',80);
+
+         $this->db->group_by('Clubs.name');
+         $this->db->order_by('countPart DESC');
+
         $query = $this->db->get();
         $result = $query->result();        
         return $result;
