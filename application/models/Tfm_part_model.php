@@ -64,7 +64,7 @@ class Tfm_part_model extends CI_Model
      */
    function TFMCountByClub()
     {
-        $this->db->select('Clubs.name as ClubName ,  Clubs.city , count(Users.userId) as members , (select count(*) from tbl_tfm_part as tb where tb.p_tranch1 = 80  ) as autorise ');
+        $this->db->select('Clubs.name as ClubName ,  Clubs.city , count(Users.userId) as members , (select count(*) form tbl_tfm_part where  ) as autorise ');
         $this->db->from('tbl_tfm_part as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
@@ -79,7 +79,28 @@ class Tfm_part_model extends CI_Model
         return $result;
     }
 
+ /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function TFMPartConfirmedByCityListing()
+    {
+        $this->db->select('  Clubs.city , count(BaseTbl.id) as countPart');
+        $this->db->from('tbl_tfm_part as BaseTbl');
+        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
 
+        $this->db->where('BaseTbl.tfmId =',6);
+        $this->db->where('BaseTbl.p_tranch1 =',80);
+
+         $this->db->group_by('Clubs.city');
+        $query = $this->db->get();
+        $result = $query->result();        
+        return $result;
+    }
  
 
 

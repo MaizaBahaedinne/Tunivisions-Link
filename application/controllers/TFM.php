@@ -166,6 +166,21 @@ class TFM extends BaseController {
 		
 		}
 
+
+		public function stats (){
+					 
+		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
+            $data['searchText'] = $searchText;
+            
+            $this->load->library('pagination');
+						$data['partParReg'] = $this->Tfm_part_model->TFMPartConfirmedByCityListing();
+						$data['countTotal'] = count($this->Tfm_part_model->TFMPartListing());
+		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		             	$this->global['active'] = 'TFMC';
+		                $this->loadViews("TFM/stat", $this->global, $data, NULL);   
+		
+		}
+
 		
 
 }
