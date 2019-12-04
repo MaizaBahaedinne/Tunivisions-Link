@@ -96,7 +96,7 @@
                     <thead>
                     <tr>
                        
-                        
+                        <th>id</th>
                         <th>Nom et prénom</th>
                         <th>Club</th>
                         <th>Origine</th>
@@ -119,7 +119,9 @@
                     ?>
                     <tr>
                        
-                        
+                        <td>
+                            <?php echo $record->userId ?>
+                        </td>
                       
                         <td>
                            
