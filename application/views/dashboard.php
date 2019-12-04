@@ -236,7 +236,7 @@ table {
     width: 100%;
     height: 300px;
       </style>
-       <img src="<?php echo base_url() ?>uploads/projet/TFM50000.png"  class="alligator-turtle3" >
+       <img src="https://scontent.ftun7-1.fna.fbcdn.net/v/t1.0-9/79385061_951733981864962_3787148526337654784_o.jpg?_nc_cat=107&_nc_ohc=Mt5N3DMSAmYAQlPwYmQvVrAHgYeLKemSNsrogyxR2evQsFXsRvih5q7JA&_nc_ht=scontent.ftun7-1.fna&oh=ee069c741a64e7bfb4c35e8f5844c824&oe=5E8955F4"  class="alligator-turtle3" >
      </div>
 <div class="col-md-6">    
         <!--begin::Portlet-->
