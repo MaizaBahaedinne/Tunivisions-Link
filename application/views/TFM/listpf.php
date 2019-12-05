@@ -199,11 +199,11 @@
                             });
 
                         </script>
-                        <?php }else { ?>
+                        <?php } else { ?>
                             <?php if ($record->p_tranch2 <= 0 ) { ?> 
-                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
+                        <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
                         <?php }?>
-                       <br><?php } ?>
+                       
                         <?php if ($record->p_tranch2 > 0 ) { ?> 
                         <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé</span><br><?php } ?>
 
