@@ -166,7 +166,7 @@
                     <td> 
                         <?php if ($record->p_tranch1 <= 0 ) { ?> 
                         
-                        <?php if ($userId == 1 ||  $userId == 164 || $userId == 162) { ?>
+                        <?php if (($userId == 1 ||  $userId == 164 || $userId == 162) && $record->statut == 3 ) { ?>
                         <span>Tranche 1 :</span>  &nbsp;
                         <a class="btn btn-warning"   alt="<?php echo $record->id ?>"   id="<?php echo $record->id ?>" >Paiement</a>
                         <script type="text/javascript">
@@ -210,7 +210,7 @@
 
                     <td> 
                           <?php if ($record->statut == 2 ) { ?> 
-                         <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">En attente</span><br>
+                         <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">Non validé</span><br>
                          <?php } if ($record->statut == 3 ) { ?> 
                            <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">pre-validé</span><br> 
                         <?php } if ($record->statut == 1 ) { ?> 
