@@ -17,7 +17,7 @@ class Tfm_part_model extends CI_Model
         $this->db->from('tbl_tfm_part as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
         $this->db->join('tbl_users as Usersr1', 'Usersr1.userId = BaseTbl.recepteurTranche1', 'LEFT');
-        $this->db->join('tbl_users as Usersr2', 'Usersr1.userId = BaseTbl.recepteurTranche2', 'LEFT');
+        $this->db->join('tbl_users as Usersr2', 'Usersr2.userId = BaseTbl.recepteurTranche2', 'LEFT');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
         $this->db->join('tbl_roles as Role', 'Role.roleId = Users.roleId','left');
         $this->db->where('BaseTbl.tfmId = 6 and (BaseTbl.statut = 3 or BaseTbl.statut = 1 )  ' );
@@ -44,7 +44,7 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
         $this->db->join('tbl_roles as Role', 'Role.roleId = Users.roleId','left');
         $this->db->join('tbl_users as Usersr1', 'Usersr1.userId = BaseTbl.recepteurTranche1', 'LEFT');
-        $this->db->join('tbl_users as Usersr2', 'Usersr1.userId = BaseTbl.recepteurTranche2', 'LEFT');
+        $this->db->join('tbl_users as Usersr2', 'Usersr2.userId = BaseTbl.recepteurTranche2', 'LEFT');
         $this->db->where('BaseTbl.tfmId = 6 and (BaseTbl.statut = 3 or BaseTbl.statut = 1 )  ' );
 
         $this->db->where('Users.clubID =', $clubId);    
