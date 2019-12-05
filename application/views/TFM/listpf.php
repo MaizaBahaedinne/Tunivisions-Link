@@ -209,11 +209,12 @@
                    
 
                     <td> 
-                          
-                         <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">Non Validée</span><br>
-                       
+                          <?php if ($record->statut == 2 ) { ?> 
+                         <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">En attente</span><br>
+                         <?php } if ($record->statut == 1 ) { ?> 
+                           <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">Validé</span><br>
                          
-
+                        <?php } ?> 
                         
                
                        
