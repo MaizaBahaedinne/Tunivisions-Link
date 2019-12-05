@@ -167,6 +167,16 @@ class TFM extends BaseController {
 		}
 
 
+				public function partanTfmPaiement2 ($tfmpartId){
+					 $partanTfm = array(  	  'p_tranch2' => '70', 
+									          'dateP_tranch2'=>date('Y-m-d H:i:s'),
+									          'recepteurTranche2'=>$this->vendorId ,
+									          'statut'=> 1 
+									     );
+					$result = $this->tfm_model->editTFMPart($partanTfm, $tfmpartId) ;
+		}
+
+
 		public function stats (){
 					 
 		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
