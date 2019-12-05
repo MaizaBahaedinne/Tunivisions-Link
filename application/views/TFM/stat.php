@@ -11,6 +11,7 @@
 
 .chart {
   width: auto; 
+  height:  auto;
   
 }
 .row {
