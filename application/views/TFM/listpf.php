@@ -215,6 +215,10 @@
                            <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">pre-validé</span><br>
                          
                         <?php } ?> 
+                    <?php } if ($record->statut == 1 ) { ?> 
+                           <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">pre-validé</span><br>
+                         
+                        <?php } ?> 
                         
                
                        
