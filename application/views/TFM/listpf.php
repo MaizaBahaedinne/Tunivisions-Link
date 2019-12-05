@@ -205,7 +205,7 @@
                  
                       
                         <?php if ($record->p_tranch2 > 0 ) { ?> 
-                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé <small>par : <?php echo $record->recp2 ; ?> le  <?php echo $record->dateTranche2; ?> </small></span><br><?php } ?>
+                        <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé <small>par : <?php echo $record->recp2 ; ?> le  <?php echo $record->dateTranche2; ?> </small></span><br><?php } ?>
 
 
               
