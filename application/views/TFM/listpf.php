@@ -214,7 +214,7 @@
                          <?php } if ($record->statut == 3 ) { ?> 
                            <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">pre-validé</span><br> 
                         <?php } if ($record->statut == 1 ) { ?> 
-                            <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">pre-validé</span><br> 
+                            <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">validé</span><br> 
                         <?php } ?>
                     </tr>
                     <?php
