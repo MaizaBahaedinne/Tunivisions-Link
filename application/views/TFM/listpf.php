@@ -29,8 +29,8 @@
         <?php if($clubID == 0 ){?>
         <div class="kt-subheader__toolbar">
             <div class="kt-subheader__wrapper">
-                                    <a href="<?php echo base_url(); ?>TFM/TFMCountByClubV" class="btn kt-subheader__btn-primary">
-                        Nombre de participant par Club &nbsp;
+                                    <a href="<?php echo base_url(); ?>TFM/stats" class="btn kt-subheader__btn-primary">
+                        statistiques &nbsp;
                         <!--<i class="flaticon2-calendar-1"></i>-->
                     </a>
                                 
