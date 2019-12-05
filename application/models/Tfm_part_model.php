@@ -20,8 +20,8 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
         $this->db->join('tbl_roles as Role', 'Role.roleId = Users.roleId','left');
 
-        $this->db->where('BaseTbl.tfmId =',6);
-        $this->db->where('(BaseTbl.p_tranch1 = 80 or BaseTbl.p_tranch1 = 40 ) or BaseTbl.statut = 1 ');
+        $this->db->where('BaseTbl.tfmId =', 6 );
+        
         
         $this->db->order_by('BaseTbl.dateInscrip','DESC');  
         $query = $this->db->get();
@@ -47,7 +47,7 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_roles as Role', 'Role.roleId = Users.roleId','left');
         $this->db->join('tbl_users as Usersr1', 'Usersr1.userId = BaseTbl.recepteurTranche1', 'LEFT');
         $this->db->where('BaseTbl.tfmId =',6);
-        $this->db->where('(BaseTbl.p_tranch1 = 80 or BaseTbl.p_tranch1 = 40 ) or BaseTbl.statut = 1 ');
+
         $this->db->where('Users.clubID =', $clubId);    
         $this->db->order_by('BaseTbl.dateInscrip','DESC');  
         $query = $this->db->get();
