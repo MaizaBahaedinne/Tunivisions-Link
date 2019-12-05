@@ -176,7 +176,7 @@
 
                         <?php if ($record->p_tranch2 <= 0 ) { ?> 
                         
-                        <?php if (($userId == 1 ||  $userId == 164 || $userId == 162) && $record->statut ==  ) { ?>
+                        <?php if (($userId == 1 ||  $userId == 164 || $userId == 162) && $record->statut == 3 ) { ?>
                         <span>Tranche 2 :</span>  &nbsp;
                         <a class="btn btn-warning"   alt="<?php echo $record->id ?>"   id="<?php echo $record->id ?>" >Paiement</a>
                         <script type="text/javascript">
@@ -199,14 +199,15 @@
                             });
 
                         </script>
-                        <?php } else { ?>
+                        <?php } ?>
+                        <?php  if ($record->p_tranch2 == 0)  { ?>
                             <?php if ($record->p_tranch2 <= 0 ) { ?> 
                         <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br><?php } ?>
                         <?php }?>
-                       <?php } ?>
+                      
                         <?php if ($record->p_tranch2 > 0 ) { ?> 
                         <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé</span><br><?php } ?>
-                        
+
 
               
 
@@ -215,13 +216,14 @@
                    
 
                     <td> 
+                          <?php } if ($record->statut == 1 ) { ?> 
+                            <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">validé</span><br> 
+                          <?php } ?>
                           <?php if ($record->statut == 2 ) { ?> 
                          <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">Non validé</span><br>
                          <?php } if ($record->statut == 3 ) { ?> 
                            <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">pre-validé</span><br> 
-                        <?php } if ($record->statut == 1 ) { ?> 
-                            <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">validé</span><br> 
-                        <?php } ?>
+
                     </tr>
                     <?php
                         }
