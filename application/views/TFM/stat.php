@@ -182,6 +182,12 @@
                     Region
                 </th>
                 <th>
+                    Homme
+                </th>
+                <th>
+                    Femme
+                </th>
+                <th>
                     nombre
                 </th>
             </thead>
@@ -191,6 +197,12 @@
                 <tr>
                     <td>
                         <?php echo $reg->name ?>
+                    </td>
+                    <td>
+                        <?php echo $reg->homme ?>
+                    </td>
+                   <td>
+                        <?php echo $reg->femme ?>
                     </td>
                     <td>
                         <?php echo $reg->countPart ?>
