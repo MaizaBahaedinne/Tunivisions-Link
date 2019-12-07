@@ -173,7 +173,7 @@
 
                         
 
-                        <?php if (($userId == 1 ||  $userId == 164 || $userId == 162) && $record->statut == 3 ) { ?>
+                        <?php if (($userId == 1 ||  $userId == 164 || $userId == 162 || $userId == 167) && $record->statut == 3 ) { ?>
                             
                             <span>Tranche 2 :</span>  &nbsp;
                             <a class="btn btn-warning"   alt="<?php echo $record->id ?>"   id="<?php echo $record->id ?>" >Paiement</a>
