@@ -56,7 +56,6 @@
                     <thead>
                     <tr>
                        
-                        <th>TunimateurID</th>
                         <th>Nom et prénom</th>
                         <th>Poste</th>
                         <th>Cellule</th>
@@ -85,13 +84,7 @@
                     ?>
                     <tr>
                        
-                        <td>
-                            <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic">
-                                        <?php echo $record->userId ?>
-                                    </div>
-                                </div>     
-                        </td>
+                        
                         <td>
                             <span style="width: auto;">
                                                      
