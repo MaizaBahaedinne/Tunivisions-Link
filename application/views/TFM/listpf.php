@@ -124,20 +124,23 @@
 
                        
                         <td>
+                           
                             <div style='text-align: center;'>
                               <!-- insert your custom barcode setting your data in the GET parameter "data" -->
+                               <!--
                               <img alt='Barcode Generator TEC-IT'
                                    src='https://barcode.tec-it.com/barcode.ashx?data=<?php echo $record->id ?>&code=Code128&multiplebarcodes=true&translate-esc=false&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&qunit=Mm&quiet=0'/>
+                                -->   
                             </div>
                             <div style='padding-top:8px; text-align:center; font-size:15px; font-family: Source Sans Pro, Arial, sans-serif;'>
                               <!-- back-linking to www.tec-it.com is required -->
                              
-                            
+                            <?php echo $record->id ?>
                                 <!-- logos are optional -->
                                 
                              
                             </div>
-
+                          
                           
                       
                         <td>
