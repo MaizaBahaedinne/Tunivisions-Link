@@ -132,13 +132,13 @@
                             <div style='padding-top:8px; text-align:center; font-size:15px; font-family: Source Sans Pro, Arial, sans-serif;'>
                               <!-- back-linking to www.tec-it.com is required -->
                              
-                                <?php echo $record->id ?><br/>
+                            
                                 <!-- logos are optional -->
                                 
                              
                             </div>
 
-                            <?php echo $record->id ?></td>
+                          
                       
                         <td>
                            
