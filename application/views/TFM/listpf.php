@@ -135,7 +135,7 @@
                             <div style='padding-top:8px; text-align:center; font-size:15px; font-family: Source Sans Pro, Arial, sans-serif;'>
                               <!-- back-linking to www.tec-it.com is required -->
                              
-                            <?php echo $record->id ?>
+                                <?php echo $record->id ?>
                                 <!-- logos are optional -->
                                 
                              
@@ -188,7 +188,7 @@
                        
                         <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">Non validé </span><br><?php } ?>
                         <?php if ($record->p_tranch1 > 0 ) { ?> 
-                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé <small>par : <?php echo $record->recp1 ; ?> le  <?php echo $record->dateTranche1 ; ?> </small></span><br><?php } ?>
+                        <span>Tranche 1 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">  <?php echo $record->p_tranch1 ; ?> Dt Validé <small>par : <?php echo $record->recp1 ; ?> le  <?php echo $record->dateTranche1 ; ?> </small></span><br><?php } ?>
 
                         
 
@@ -224,7 +224,7 @@
                  
                       
                         <?php if ($record->p_tranch2 > 0 ) { ?> 
-                        <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Validé <small>par : <?php echo $record->recp2 ; ?> le  <?php echo $record->dateTranche2; ?> </small></span><br><?php } ?>
+                        <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary"><?php echo $record->p_tranch1 ; ?> Dt Validé <small>par : <?php echo $record->recp2 ; ?> le  <?php echo $record->dateTranche2; ?> </small></span><br><?php } ?>
 
 
               
