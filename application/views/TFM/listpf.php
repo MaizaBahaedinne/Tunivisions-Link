@@ -101,7 +101,7 @@
                         <th>ID</th>
                         <th>Nom et prénom</th>
                         <th>Club</th>
-                        <th>Origine</th>
+                       
                         <th>Paiment</th>
                   
                         
@@ -179,7 +179,7 @@
 
                         </td>
                         
-                        <td><?php echo $record->gouvernorat ?>  </td>
+                     
                     
                         
                     <td> 
