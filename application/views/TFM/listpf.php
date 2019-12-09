@@ -192,7 +192,9 @@
 
                         
 
-                        <?php if (($userId == 1 ||  $userId == 164 || $userId == 162 || $userId == 167) && $record->statut == 3 ) { ?>
+                        <?php if (($userId == 1 ||  $userId == 164 || $userId == 162 || $userId == 167) && $record->statut == 3 ) { 
+                            if ($record->p_tranch2 ==0 ){
+                         ?>
                             
                             <span>Tranche 2 :</span>  &nbsp;
                             <a class="btn btn-warning"   alt="<?php echo $record->id ?>"   id="<?php echo $record->id ?>" >Paiement</a>
@@ -218,7 +220,7 @@
                             </script>
 
              
-                        <?php } if (($record->p_tranch2 <= 0 ) &&  !($userId == 1 ||  $userId == 164 || $userId == 162) ) { ?> 
+                        <?php } } if (($record->p_tranch2 <= 0 ) &&  !($userId == 1 ||  $userId == 164 || $userId == 162) ) { ?> 
                         <span>Tranche 2 :</span>  <span class="kt-badge kt-badge--warning kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-warning">En Attente</span><br>
                         <?php } ?>
                  
