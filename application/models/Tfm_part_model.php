@@ -124,7 +124,7 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
 
         $this->db->where('BaseTbl.tfmId =',6);
-        $this->db->where('BaseTbl.p_tranch1 =',80);
+        $this->db->where('BaseTbl.p_tranch1 = 80 or BaseTbl.p_tranch1 = 40 ');
 
          $this->db->group_by('Clubs.name');
          $this->db->order_by('countPart DESC');
