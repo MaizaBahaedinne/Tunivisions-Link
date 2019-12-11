@@ -187,7 +187,7 @@ class Tfm_part_model extends CI_Model
     { 
         $this->db->select('') ;
         $this->db->from('BusPart as BaseTbl');
-         $this->db->where('BusPart.busId=',$id ) ;
+         $this->db->where('BaseTbl.busId=',$id ) ;
 
 
         $query = $this->db->get();
