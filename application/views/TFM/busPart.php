@@ -99,6 +99,7 @@
                         <th>Nom</th>
                         <th>club</th>
                         <th>contact</th>
+                        <th>motorisé</th>
                
                     </tr>
                     </thead>
@@ -122,6 +123,9 @@
                         </td>
                        <td>
                            <?php echo $record->mobile ?>
+                       </td>
+                        <td>
+                           <?php if($record->moto == 0 ){echo 'oui' ;} ?>
                        </td>
 
 
