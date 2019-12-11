@@ -237,7 +237,8 @@
 
                     <td> 
                           <?php  if ($record->statut == 1 ) { ?> 
-                            <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">validé</span><br> 
+                            <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">validé 
+                                <?php if ($record->p_tranch1 == 40)?><small> <br> (sans logement) </small>  </span><br> 
                           <?php } ?>
 
                           <?php if ($record->statut == 2 ) { ?> 
