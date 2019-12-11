@@ -92,7 +92,7 @@
     <div class="kt-portlet__body">
         <!--begin: Datatable -->
 
-        <table id="example" class="display" style="width:100%" >
+        <table id="example" class="display" style="width:auto" >
                     <thead>
                     <tr>
                        
@@ -111,7 +111,7 @@
 
                     <tbody>
                               
-                </style>
+               
                     
                     <?php
                     if(!empty($userRecords))
