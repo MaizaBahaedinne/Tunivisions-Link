@@ -100,6 +100,7 @@
                         <th>Depart</th>
                         <th>Arrivée</th>
                         <th>responsable</th>
+                        <th>Mobile</th>
                         <th></th>
                   
                         
@@ -129,7 +130,10 @@
                            <?php echo $record->arrive ?>
                        </td>
                         <td>
-                            <?php echo $record->responsable ?> <b> <a href="tel:<?php echo $record->contact ?>" ><?php echo $record->contact ?></a></b>
+                            <?php echo $record->responsable ?> <b> </b>
+                        </td>
+                        <td>
+                            <a href="tel:<?php echo $record->contact ?>" ><?php echo $record->contact ?></a>
                         </td>
                         <td>
                             <a href="<?php echo base_url() ; ?>TFM/BusPartList/<?php echo $record->id ; ?> " >list</a>
