@@ -176,7 +176,28 @@ class Tfm_part_model extends CI_Model
 
   
           
-    
+     /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function BusPartList($id)
+    { 
+        $this->db->select('Users.name , Club.name ClubName , Users.mobile contact , TfmPart.tfmId') ;
+        $this->db->from('tbl_tfm_bus_part as BaseTbl');
+        $this->db->join('tbl_tfm_bus as Bus',' BaseTbl.busId = Bus.id and  BaseTbl.busId='.$id, 'LEFT');
+        $this->db->join('tbl_users as Users', 'BaseTbl.clubID  =  Users.ClubID ', 'LEFT');
+        $this->db->join('tbl_club as Club', 'Users.ClubID  =  Club.ClubID', 'LEFT');
+        $this->db->join('tbl_tfm_part as TfmPart', 'TfmPart.userId = Users.userId AND TfmPart.tfmId = 6 and TfmPart.statut = 1', 'LEFT');
+
+
+        $query = $this->db->get();
+        $result = $query->result();        
+        return $result ; 
+    }
+
 
 }
 

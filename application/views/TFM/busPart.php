@@ -96,15 +96,10 @@
                     <thead>
                     <tr>
                        
-                        <th>Bus</th>
-                        <th>Depart</th>
-                        <th>Arrivée</th>
-                        <th>responsable</th>
-                        <th></th>
-                  
-                        
-                       
-                        
+                        <th>Nom</th>
+                        <th>club</th>
+                        <th>contact</th>
+                        <th>tfmid</th>
                     </tr>
                     </thead>
 
@@ -120,16 +115,16 @@
                     ?>
                     <tr>
                         <td>
-                            <?php echo $record->region ?> <?php echo $record->num ?>
+                             <?php echo $record->name ?>
                         </td>
                         <td>
-                             <?php echo $record->depart ?>
+                             <?php echo $record->ClubName ?>
                         </td>
                        <td>
-                           <?php echo $record->arrive ?>
+                           <?php echo $record->contact ?>
                        </td>
                         <td>
-                            <?php echo $record->responsable ?> <b><?php echo $record->contact ?></b>
+                            <?php echo $record->tfmId ?> 
                         </td>
                         <td>
                             <a href="<?php echo base_url() ; ?>TFM/BusPartList " >
