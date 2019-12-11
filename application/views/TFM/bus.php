@@ -129,7 +129,7 @@
                            <?php echo $record->arrive ?>
                        </td>
                         <td>
-                            <?php echo $record->responsable ?> <b><?php echo $record->contact ?></b>
+                            <?php echo $record->responsable ?> <b> <a href="tel:<?php echo $record->contact ?>" ><?php echo $record->contact ?></a></b>
                         </td>
                         <td>
                             <a href="<?php echo base_url() ; ?>TFM/BusPartList/<?php echo $record->id ; ?> " >list</a>
