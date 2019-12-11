@@ -185,12 +185,9 @@ class Tfm_part_model extends CI_Model
      */
     function BusPartList($id)
     { 
-        $this->db->select('Users.name , Club.name ClubName , Users.mobile contact , TfmPart.tfmId') ;
-        $this->db->from('tbl_tfm_bus_part as BaseTbl');
-        $this->db->join('tbl_tfm_bus as Bus',' BaseTbl.busId = Bus.id and  BaseTbl.busId='.$id, 'LEFT');
-        $this->db->join('tbl_users as Users', 'BaseTbl.clubID  =  Users.ClubID ', 'LEFT');
-        $this->db->join('tbl_club as Club', 'Users.ClubID  =  Club.ClubID', 'LEFT');
-        $this->db->join('tbl_tfm_part as TfmPart', 'TfmPart.userId = Users.userId AND TfmPart.tfmId = 6 and TfmPart.statut = 1', 'LEFT');
+        $this->db->select('') ;
+        $this->db->from('BusPart as BaseTbl');
+         $this->db->where('BusPart.busId=',$id ) ;
 
 
         $query = $this->db->get();
