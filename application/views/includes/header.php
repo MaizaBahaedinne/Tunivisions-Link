@@ -258,6 +258,17 @@
 				</a>
 			</li>
 			<?php } ?>
+			<?php if ($clubID == 0 ) { ?>
+			<li class="kt-menu__item  kt-menu__item<?php if( $active == "Evaluation" ){echo("--active") ;} ?> " aria-haspopup="true" >
+				<a  href="<?php echo base_url() ; ?>TFM/TFMMyBuss" class="kt-menu__link ">
+					<i class="kt-menu__link-icon flaticon-exclamation">
+					</i>
+					<span class="kt-menu__link-text">
+						Bus
+					</span>
+				</a>
+			</li>
+			<?php } ?>
 
 			<li class="kt-menu__section ">
                 <h4 class="kt-menu__section-text">Club</h4>

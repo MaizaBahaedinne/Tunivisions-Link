@@ -26,6 +26,7 @@ class User extends BaseController
         $this->load->model('actualite_model');
         $this->load->model('notification_model');
          $this->load->model('finance_model');
+         $this->load->model('Tfm_part_model');
         
         $this->isLoggedIn();   
     }
@@ -40,6 +41,8 @@ class User extends BaseController
     public function index()
     {
         $this->global['pageTitle'] = 'CodeInsect : Dashboard';
+
+        $data['MyTFM'] = $this->Tfm_part_model->TFMMyBus($this->clubID);
               
         $data["tunimateurs"] = count($this->user_model->userListing($this->vendorId))  ; 
         $data["tunimateursApp"] = count($this->user_model->userListingApprouveF());
@@ -56,9 +59,9 @@ class User extends BaseController
         $data["user"] = $this->user_model->getUserInfoWithRole($this->vendorId) ;
         $count = $this->finance_model->financeListing($this->clubID);
         $data['bilancount'] = count($count)  ; 
-
+         
         $this->global['active'] = 'dash';
-      
+       
         $this->loadViews("dashboard", $this->global, $data , NULL);
     }
     

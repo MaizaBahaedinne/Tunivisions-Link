@@ -192,6 +192,22 @@ class TFM extends BaseController {
 		
 		}
 
+
+		public function TFMMyBuss (){
+					 
+		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
+            $data['searchText'] = $searchText;
+            
+            $this->load->library('pagination');
+						$data['userRecords'] = $this->Tfm_part_model->TFMMyBuss();
+		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		             	$this->global['active'] = 'TFMC';
+		                $this->loadViews("TFM/bus", $this->global, $data, NULL);   
+		
+		}
+
+
+
 		
 
 }

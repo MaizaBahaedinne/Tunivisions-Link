@@ -226,6 +226,60 @@ table {
 </div>
 
   <div class="row"> 
+    <div  class="col-md-12" >
+     
+        <?php  if (1){ ?>
+
+                    <div class="kt-portlet kt-portlet--tab">
+            <div class="kt-portlet__head">
+                <div class="kt-portlet__head-label">
+                    <span class="kt-portlet__head-icon kt-hide">
+                        <i class="la la-gear"></i>
+                    </span>
+                    <h3 class="kt-portlet__head-title">
+                       <i class="fa fa-star" > TFM 5.0 </i>
+                    </h3>
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+                <!--begin::Section-->
+                <div class="kt-section">
+                    <div class="kt-invoice__container">
+                    <div class="table-responsive">
+                        <div >
+
+
+   <!--
+                       
+                        
+                            <div><b> <?php echo $MyTFM->type ?> Bus N </b><?php echo $MyTFM->num ;?> de <?php echo $MyTFM->region ;?> </div>
+                            &nbsp;
+                            <div align="left" ><b>Depart : </b><?php echo $MyTFM->depart ;?> <b> de </b>   <?php echo $MyTFM->region ;?>  </div>&nbsp;
+                            <div align="left" ><b>Arrivé : </b><?php echo $MyTFM->arrive ;?> <b> à </b>  Sousse</div>
+                            &nbsp;
+                            <div align="left"><b>Responsable : </b> <?php echo $MyTFM->responsable ;?>  (Contact  :  <?php echo $MyTFM->contact ;?>)</div>
+                 
+   -->                     
+                          </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+
+                        
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <?php } ?>
+
+    </div>
 
 
     <div class="col-md-12">        
