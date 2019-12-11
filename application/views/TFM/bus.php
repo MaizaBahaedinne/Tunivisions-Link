@@ -132,7 +132,7 @@
                             <?php echo $record->responsable ?> <b><?php echo $record->contact ?></b>
                         </td>
                         <td>
-                            <a href="<?php echo base_url() ; ?>TFM/BusPartList " >
+                            <a href="<?php echo base_url() ; ?>TFM/BusPartList/<?php echo $record->id ; ?> " >list</a>
                         </td>
                     </tr>
                     <?php

@@ -99,7 +99,7 @@
                         <th>Nom</th>
                         <th>club</th>
                         <th>contact</th>
-                        <th>tfmid</th>
+               
                     </tr>
                     </thead>
 
@@ -123,12 +123,8 @@
                        <td>
                            <?php echo $record->mobile ?>
                        </td>
-                        <td>
-                            <?php echo $record->tfmId ?> 
-                        </td>
-                        <td>
-                            <a href="<?php echo base_url() ; ?>TFM/BusPartList " >
-                        </td>
+
+
                     </tr>
                     <?php
                     }

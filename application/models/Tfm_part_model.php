@@ -164,7 +164,7 @@ class Tfm_part_model extends CI_Model
      */
     function TFMMyBuss()
     { 
-        $this->db->select(' BaseTbl.region , BaseTbl.num , BaseTbl.type , BaseTbl.depart  , BaseTbl.arrive , BaseTbl.capacite , Users.name responsable , Users.mobile contact  ');
+        $this->db->select(' BaseTbl.id , BaseTbl.region , BaseTbl.num , BaseTbl.type , BaseTbl.depart  , BaseTbl.arrive , BaseTbl.capacite , Users.name responsable , Users.mobile contact  ');
         $this->db->from('tbl_tfm_bus as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.responsable ', 'LEFT');
         $this->db->join('tbl_tfm_bus_part as Buspart', 'Buspart.busId = BaseTbl.id ', 'LEFT');
