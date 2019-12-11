@@ -118,10 +118,10 @@
                              <?php echo $record->name ?>
                         </td>
                         <td>
-                             <?php echo $record->ClubName ?>
+                             <?php echo $record->clubName ?>
                         </td>
                        <td>
-                           <?php echo $record->contact ?>
+                           <?php echo $record->mobile ?>
                        </td>
                         <td>
                             <?php echo $record->tfmId ?> 
