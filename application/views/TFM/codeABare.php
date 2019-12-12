@@ -50,7 +50,16 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         <div id="barcode<?php echo $id ?>"><?php echo $id ; ?></div>
                          <span ><b>TFM ID:  <?php echo $record->id ; ?></b><span></p>
                          <span ><b>Tunimateur ID: <?php echo $rate; ?> </b><span></p>                       
-                         <script type="text/javascript">
+                         
+                            
+
+                        </div>
+
+                        <?php
+                        }
+                    }
+                    ?>
+                <script type="text/javascript">
 
                           function get_object(id) {
                                        var object = null;
@@ -64,19 +73,10 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                                        return object;
                                       }
 
-                                    get_object("barcode<?php echo $id ?>").innerHTML=ConnectCode_Encode_Code128A(get_object("barcode<?php echo $id ?>").innerHTML);
+                                    get_object("barcode14").innerHTML=ConnectCode_Encode_Code128A(get_object("barcode14").innerHTML);
                                     get_object("barcode_text").innerHTML=Get_HRText();
 
                         </script>   
-                            
-
-                        </div>
-
-                        <?php
-                        }
-                    }
-                    ?>
-
 
 
 
