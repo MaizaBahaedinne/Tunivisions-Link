@@ -54,14 +54,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                             </div>  
                        
 
-                                        <script type="text/javascript">
-
-                   
-                                o = document.getElementById("barcode<?php echo $id ?>") ; 
-                                o.innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode<?php echo $id ?>").innerHTML);
-                                    
-
-                        </script>          
+                                
                          
                             
 
@@ -78,7 +71,27 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
 
 
   </body>
+   <?php 
 
+
+                    
+                    if(!empty($userRecords))
+                    {
+                        foreach($userRecords as $record)
+                        {
+                    ?>
+
+<script type="text/javascript">
+                 
+                                o = document.getElementById("barcode<?php echo $id ?>") ; 
+                                o.innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode<?php echo $id ?>").innerHTML);
+                                    
+
+                        </script>   
+                                            <?php
+                        }
+                    }
+                    ?>       
 
 
 </html>
