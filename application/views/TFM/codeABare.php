@@ -83,8 +83,8 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
 
 <script type="text/javascript">
                  
-                                o = document.getElementById("barcode14") ; 
-                                o.innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode14").innerHTML);
+                                o = document.getElementById("barcode<?php echo $id ?>") ; 
+                                o.innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode<?php echo $id ?>").innerHTML);
                                     
 
                         </script>   
