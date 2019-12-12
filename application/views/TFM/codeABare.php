@@ -48,7 +48,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         echo "<p class='inline'><span ><b>Nom:".$product."</b> <br> Club : ".$record->ClubName."  </span>"
                         ?>
                         <center>
-                            <div id="barcode14"><?php echo $id ?></div>
+                            <div id="barcode"><?php echo $id ?></div>
                             <div id="barcode_text"> TFM ID : <?php echo $id ?></div>
                             </center>
                             </div>  
@@ -64,19 +64,21 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         }
                     }
                     ?>
-                <script type="text/javascript">
-
-                   
-
-                    document.getElementById("barcode").innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode").innerHTML);
-                                    
-
-                        </script>   
-
+     
 
 
 
 
 
   </body>
+
+             <script type="text/javascript">
+
+                   
+                    o = document.getElementById("barcode") ; 
+                    o.innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode").innerHTML);
+                                    
+
+                        </script>   
+
 </html>
