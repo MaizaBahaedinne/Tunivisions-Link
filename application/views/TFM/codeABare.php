@@ -45,13 +45,31 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         $rate =  $record->userId;
 
              
-                        echo "<p class='inline'><span ><b>Nom:".$product."</b></span>"
+                        echo "<p class='inline'><span ><b>Nom:".$product."</b> <br> Club : ".$record->ClubName."  </span>"
                         ?>
                         <div id="barcode"><?php echo $id ; ?></div>
                         <?php echo "<span ><b>TunimateurID: ".$rate." </b><span></p>&nbsp&nbsp&nbsp&nbsp";
                     
 
                             ?>
+                            <script type="text/javascript">
+
+                          function get_object(id) {
+                                       var object = null;
+                                       if (document.layers) {
+                                        object = document.layers[id];
+                                       } else if (document.all) {
+                                        object = document.all[id];
+                                       } else if (document.getElementById) {
+                                        object = document.getElementById(id);
+                                       }
+                                       return object;
+                                      }
+
+                                    get_object("barcode").innerHTML=ConnectCode_Encode_Code128A(get_object("barcode<?php echo $id ?>").innerHTML);
+                                    get_object("barcode_text").innerHTML=Get_HRText();
+
+                        </script>
 
                         </div>
 
@@ -61,31 +79,10 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                     ?>
 
 
-<div id="barcode_text"></div>
-</center>
-</div>  
-<br>
-<i>Note : The trial font will add a few horizontal lines to the barcode.</i>
 
 
-<script type="text/javascript">
 
-  function get_object(id) {
-   var object = null;
-   if (document.layers) {
-    object = document.layers[id];
-   } else if (document.all) {
-    object = document.all[id];
-   } else if (document.getElementById) {
-    object = document.getElementById(id);
-   }
-   return object;
-  }
 
-get_object("barcode").innerHTML=ConnectCode_Encode_Code128A(get_object("barcode").innerHTML);
-get_object("barcode_text").innerHTML=Get_HRText();
-
-</script>
 
   </body>
 </html>
