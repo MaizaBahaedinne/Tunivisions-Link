@@ -48,7 +48,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         echo "<p class='inline'><span ><b>Nom:".$product."</b> <br> Club : ".$record->ClubName."  </span>"
                         ?>
                         <center>
-                            <div id="barcode14">96</div>
+                            <div id="barcode">96</div>
                             <div id="barcode_text"></div>
                             </center>
                             </div>  
@@ -78,7 +78,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                                        return object;
                                       }
 
-                                    get_object("barcode14").innerHTML=ConnectCode_Encode_Code128A(get_object("barcode14").innerHTML);
+                                    get_object("barcode").innerHTML=ConnectCode_Encode_Code128A(get_object("barcode").innerHTML);
                                     get_object("barcode_text").innerHTML=Get_HRText();
 
                         </script>   
