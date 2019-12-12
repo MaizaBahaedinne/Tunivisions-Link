@@ -48,7 +48,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         echo "<p class='inline'><span ><b>Nom:".$product."</b> <br> Club : ".$record->ClubName."  </span>"
                         ?>
                         <center>
-                            <div id="barcode">96</div>
+                            <div id="barcode14">96</div>
                             <div id="barcode_text"></div>
                             </center>
                             </div>  
@@ -66,20 +66,10 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                     ?>
                 <script type="text/javascript">
 
-                          function get_object(id) {
-                                       var object = null;
-                                       if (document.layers) {
-                                        object = document.layers[id];
-                                       } else if (document.all) {
-                                        object = document.all[id];
-                                       } else if (document.getElementById) {
-                                        object = document.getElementById(id);
-                                       }
-                                       return object;
-                                      }
+                   
 
-                                    get_object("barcode").innerHTML=ConnectCode_Encode_Code128A(get_object("barcode").innerHTML);
-                                    get_object("barcode_text").innerHTML=Get_HRText();
+                    document.getElementById("barcode").innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode").innerHTML);
+                                    
 
                         </script>   
 
