@@ -48,11 +48,17 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         echo "<p class='inline'><span ><b>Nom:".$product."</b> <br> Club : ".$record->ClubName."  </span>"
                         ?>
                         <center>
-                            <div id="barcode<?php echo $id ?>"><?php echo $id ?></div>
+                            <div id="barcode<?php echo $id ; ?>"><?php echo $id ?></div>
                             <div id="barcode_text"> TFM ID : <?php echo $id ?></div>
                             </center>
                             </div>  
-                       
+                            <script type="text/javascript">
+                 
+                                o = document.getElementById("barcode<?php echo $id ; ?>") ; 
+                                o.innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode<?php echo $id ; ?>").innerHTML);
+                                    
+
+                             </script>   
 
                                 
                          
@@ -71,27 +77,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
 
 
   </body>
-   <?php 
-
-
-                    
-                    if(!empty($userRecords))
-                    {
-                        foreach($userRecords as $record)
-                        {
-                    ?>
-
-                        <script type="text/javascript">
-                 
-                                o = document.getElementById("barcode<?php echo $id ?>") ; 
-                                o.innerHTML = ConnectCode_Encode_Code128A(document.getElementById("barcode<?php echo $id ?>").innerHTML);
-                                    
-
-                        </script>   
-                                            <?php
-                        }
-                    }
-                    ?>       
+   
 
 
 </html>
