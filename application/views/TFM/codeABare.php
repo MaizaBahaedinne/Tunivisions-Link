@@ -48,7 +48,8 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         echo "<p class='inline'><span ><b>Nom:".$product."</b> <br> Club : ".$record->ClubName."  </span>"
                         ?>
                         <div id="barcode<?php echo $id ?>"><?php echo $id ; ?></div>
-                         <?php echo "<span ><b>TFM ID: ".$record->id." </b><span></p><span ><b>Tunimateur ID: ".$rate." </b><span></p>&nbsp&nbsp&nbsp&nbsp";                         ?>
+                         <span ><b>TFM ID:  <?php echo $record->id ; ?></b><span></p>
+                         <span ><b>Tunimateur ID: <?php echo $rate; ?> </b><span></p>                       
          
                             <script type="text/javascript">
 
