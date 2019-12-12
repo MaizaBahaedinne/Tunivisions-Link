@@ -48,7 +48,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                         echo "<p class='inline'><span ><b>Nom:".$product."</b> <br> Club : ".$record->ClubName."  </span>"
                         ?>
                         <center>
-                            <div id="barcode<?php echo $id ; ?>"><p style="font-family:ConnectCode128_S3_Trial;"><?php echo $id ?></p>></div>
+                            <div id="barcode<?php echo $id ; ?>"><p style="font-family:ConnectCode128_S3;"><?php echo $id ?></p>></div>
                             <div id="barcode_text"> TFM ID : <?php echo $id ?></div>
                             </center>
                             </div>  

@@ -248,7 +248,7 @@ table {
                     <div class="table-responsive">
                         <div >
 
-
+<?php if ($TFMVALID) { ?>
    <!--
                        
                         
@@ -259,7 +259,10 @@ table {
                             &nbsp;
                             <div align="left"><b>Responsable : </b> <?php echo $MyTFM->responsable ;?>  (Contact  :  <?php echo $MyTFM->contact ;?>)</div>
                  
-   -->                     
+   -->       
+   <?php } else{ ?>
+                          A la prochaine ... 
+   <?php } ?>              
                           </div>
 
 

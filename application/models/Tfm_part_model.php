@@ -4,6 +4,31 @@
 class Tfm_part_model extends CI_Model
 {
 
+
+
+
+        /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function TFMValid($userId)
+    { 
+        $this->db->select('');
+        $this->db->from('tbl_tfm_part as BaseTbl');
+        $this->db->where('userId=',$userId);
+        $this->db->where('tfmId=',6);
+        $this->db->where('statut=',1);
+        
+        $query = $this->db->get();
+        $result = $query->result();        
+        return $query->row();
+    }
+
+
+
     /**
      * This function is used to get the user listing count
      * @param string $searchText : This is optional search text

@@ -59,6 +59,7 @@ class User extends BaseController
         $data["user"] = $this->user_model->getUserInfoWithRole($this->vendorId) ;
         $count = $this->finance_model->financeListing($this->clubID);
         $data['bilancount'] = count($count)  ; 
+         $data["TFMVALID"] = $this->Tfm_part_model->TFMValid($this->vendorId) ;
          
         $this->global['active'] = 'dash';
        
