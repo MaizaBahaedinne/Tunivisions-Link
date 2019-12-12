@@ -52,7 +52,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
                             <div id="barcode_text"></div>
                             </center>
                             </div>  
-                        </div>  
+                       
 
                                             
                          
