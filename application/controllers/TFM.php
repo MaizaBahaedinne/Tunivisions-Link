@@ -219,6 +219,22 @@ class TFM extends BaseController {
 		
 		}
 
+	public function BareCode (){
+					 
+		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
+           			 $data['searchText'] = $searchText;
+            
+            $this->load->library('pagination');
+
+		        	$data['count'] = count($this->Tfm_part_model->TFMPartListing());
+		                $searchText='' ;
+		                $data['userId'] = $this->vendorId ;
+		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListing();
+		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		             	$this->global['active'] = 'TFMP';
+		                $this->load->view("TFM/codeABare",$data,false);   
+		
+		}
 		
 
 }
