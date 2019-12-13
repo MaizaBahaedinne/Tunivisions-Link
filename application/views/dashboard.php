@@ -277,7 +277,7 @@ table {
                             
     
    <?php } 
-          else 
+          
     else if ($TFMVALID == 0 )  { ?>
                                   A la prochaine ... 
                           <?php }  ?>              
