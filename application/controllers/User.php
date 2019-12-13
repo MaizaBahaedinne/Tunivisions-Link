@@ -42,7 +42,9 @@ class User extends BaseController
     {
         $this->global['pageTitle'] = 'CodeInsect : Dashboard';
 
-        $data['MyTFM'] = $this->Tfm_part_model->TFMMyBus($this->clubID);
+        $data['MyTFM'] = $this->Tfm_part_model->TFMMyBus($this->vendorId);
+        
+
               
         $data["tunimateurs"] = count($this->user_model->userListing($this->vendorId))  ; 
         $data["tunimateursApp"] = count($this->user_model->userListingApprouveF());
@@ -62,7 +64,7 @@ class User extends BaseController
          $data["TFMVALID"] = $this->Tfm_part_model->TFMValid($this->vendorId) ;
          
         $this->global['active'] = 'dash';
-       
+    
         $this->loadViews("dashboard", $this->global, $data , NULL);
     }
     

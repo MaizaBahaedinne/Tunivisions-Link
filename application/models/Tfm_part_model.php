@@ -167,16 +167,21 @@ class Tfm_part_model extends CI_Model
      * @param number $segment : This is pagination limit
      * @return array $result : This is result
      */
-    function TFMMyBus($clubID)
+    function TFMMyBus($userId)
     { 
-        $this->db->select(' BaseTbl.region , BaseTbl.num , BaseTbl.type , BaseTbl.depart  , BaseTbl.arrive , BaseTbl.capacite , Users.name responsable , Users.mobile contact  ');
-        $this->db->from('tbl_tfm_bus as BaseTbl');
-        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.responsable ', 'LEFT');
-        $this->db->join('tbl_tfm_bus_part as Buspart', 'Buspart.busId = BaseTbl.id and Buspart.clubID='.$clubID, 'LEFT');
+        $this->db->select('Buspart.id  , Buspart.region , Buspart.num , Buspart.depart , Buspart.type  , Buspart.arrive , Users.userId , Users.name responsable ,  Users.mobile cont   ');
+        $this->db->from('BusPart as BaseTbl');
+        $this->db->join('tbl_tfm_bus as Buspart', 'Buspart.id = BaseTbl.busId' , 'LEFT');
+        $this->db->join('tbl_users as Users', 'Users.userId = Buspart.responsable ', 'LEFT');
+        $this->db->where('BaseTbl.userId =' , $userId);
         $query = $this->db->get();
         $result = $query->result();        
         return $query->row();
     }
+
+
+
+    
  
 
 

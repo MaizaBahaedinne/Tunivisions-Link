@@ -248,7 +248,7 @@ table {
                     <div class="table-responsive">
                         <div >
 
-<?php if ($TFMVALID) { ?>
+                    <?php if ($TFMVALID ) { ?>
  
                        
                         
@@ -275,16 +275,20 @@ table {
 
                  
     
-   <?php } else{ ?>
-                          A la prochaine ... 
-   <?php } ?>              
+   <?php } 
+          elseif ($TFMVALID   && $MyTFM == 0 ) {
+                  echo "<b>Contacter votre  président pour avoir plus d'informations sur le transport </b>";
+                }
+    else if ($TFMVALID == 0 )  { ?>
+                                  A la prochaine ... 
+                          <?php }  ?>              
                           </div>
                   </div>
                  </div>
                   
                 </div>
             </div>
-        </div>
+     
 
         <?php } ?>
 
