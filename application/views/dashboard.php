@@ -276,7 +276,7 @@ table {
                  
     
    <?php } 
-          elseif ($TFMVALID   && $MyTFM <0 ) {
+          elseif ($TFMVALID   && count($MyTFM) == 0  ) {
                   echo "<b>Contacter votre  président pour avoir plus d'informations sur le transport </b>";
                 }
     else if ($TFMVALID == 0 )  { ?>
