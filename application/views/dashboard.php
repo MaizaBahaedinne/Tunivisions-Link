@@ -249,33 +249,24 @@ table {
                         <div >
 
 <?php if ($TFMVALID) { ?>
-   <!--
+ 
                        
                         
                             <div><b> <?php echo $MyTFM->type ?> Bus N </b><?php echo $MyTFM->num ;?> de <?php echo $MyTFM->region ;?> </div>
                             &nbsp;
-                            <div align="left" ><b>Depart : </b><?php echo $MyTFM->depart ;?> <b> de </b>   <?php echo $MyTFM->region ;?>  </div>&nbsp;
-                            <div align="left" ><b>Arrivé : </b><?php echo $MyTFM->arrive ;?> <b> à </b>  Sousse</div>
+                            <li align="left" ><b>Depart : </b><?php echo $MyTFM->depart ;?> <b> de </b>   <?php echo $MyTFM->region ;?>  </li>&nbsp;
+                            <li align="left" ><b>Arrivé : </b><?php echo $MyTFM->arrive ;?> <b> à </b>  Sousse</li>
                             &nbsp;
-                            <div align="left"><b>Responsable : </b> <?php echo $MyTFM->responsable ;?>  (Contact  :  <?php echo $MyTFM->contact ;?>)</div>
+                            <div align="left"><b>Responsable : </b> <?php if($MyTFM->responsable == $name){} ;?>  (<a href="tel:<?php echo $MyTFM->contact ;?>" ><b>Appeler</b></a>)</div>
                  
-   -->       
+    
    <?php } else{ ?>
                           A la prochaine ... 
    <?php } ?>              
                           </div>
-
-
-
-                    </div>
-                </div>
-
-
-
-
-                        
-
-                    
+                  </div>
+                 </div>
+                  
                 </div>
             </div>
         </div>
