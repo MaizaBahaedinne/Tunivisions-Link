@@ -249,11 +249,11 @@ table {
                         <div >
 
                     <?php 
-                    if ($TFMVALID   && count($MyTFM) == 0  ) {
+                    if ($TFMVALID   && $MyTFM == null  ) {
                   echo "<b>Contacter votre  président pour avoir plus d'informations sur le transport </b>";
                 }
 
-                else if ($TFMVALID && count($MyTFM) == 1 ) { ?>
+                else if ($TFMVALID && $MyTFM != null ) { ?>
  
                        
                         
