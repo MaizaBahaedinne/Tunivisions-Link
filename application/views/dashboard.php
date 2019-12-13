@@ -257,7 +257,22 @@ table {
                             <li align="left" ><b>Depart : </b><?php echo $MyTFM->depart ;?> <b> de </b>   <?php echo $MyTFM->region ;?>  </li>&nbsp;
                             <li align="left" ><b>Arrivé : </b><?php echo $MyTFM->arrive ;?> <b> à </b>  Sousse</li>
                             &nbsp;
-                            <div align="left"><b>Responsable : </b> <?php if($MyTFM->responsable == $name){} ;?>  (<a href="tel:<?php echo $MyTFM->contact ;?>" ><b>Appeler</b></a>)</div>
+                            <div align="left"><b>Responsable : </b> 
+                              <?php 
+                              if($MyTFM->responsable != $name)
+                                { echo  $MyTFM->responsable.'(<a href="tel:<?php echo $MyTFM->contact ;?>" ><b>Appeler</b></a>)' ;
+                                }
+
+                              else {
+                                ?> 
+                                <a href="<?php echo base_url(); ?>TFM/BusPartList/<?php echo  $MyTFM->id   ?>">   
+                                <?php }
+                               ;?> 
+                             </div>
+                              
+
+
+
                  
     
    <?php } else{ ?>
