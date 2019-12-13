@@ -270,7 +270,7 @@ table {
 
                               else {
                                 ?> 
-                                <a href="<?php echo base_url(); ?>TFM/BusPartList/<?php echo  $MyTFM->id   ?>">   
+                                <a href="<?php echo base_url(); ?>TFM/BusPartList/<?php echo  $MyTFM->id   ?>">List</a>   
                                 <?php }
                                ;?> 
                              </div>
