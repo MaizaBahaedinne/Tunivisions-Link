@@ -265,16 +265,108 @@ table {
                             <div align="left"><b>Responsable : </b> 
                               <?php 
                               if($MyTFM->responsable != $name)
-                                { echo  $MyTFM->responsable.'(<a href="tel:'.$MyTFM->contact.'" ><b>Appeler</b></a>)' ;
+                                { echo  $MyTFM->responsable.'(<a href=tel:'.$MyTFM->contact.' >Appeler</a>)' ;
                                 }
 
                               else {
                                 ?> 
-                                <a href="<?php echo base_url(); ?>TFM/BusPartList/<?php echo  $MyTFM->id   ?>">List</a>   
+                                 Vous étes le responsable de cette bus <b>  <a class="btn btn-primary" href="<?php echo base_url(); ?>TFM/BusPartList/<?php echo  $MyTFM->id   ?>">la Liste des personnes</a> </b>  
                                 <?php }
                                ;?> 
                              </div>
-                            
+                              <br>
+                          
+                              <h3 class="alert alert-danger fade show">Dispatching du restaurant  </h3>
+                              <div class="row">
+                               
+
+                               <div class="col-md-4">
+                               
+                                <h4>Du 12h00 à 12h40</h4>
+                                <li>  ENIS  </li>
+                                <li>  ISG </li>
+                                <li>  IIT </li>
+                                <li>  ISSAT KAS </li>
+                                <li>  FSM </li>
+                                <li>  IPEIM </li>
+                                <li>  ISSAT SOUSSE  </li>
+                                <li>  APAC  </li>
+                                <li>  ENICARTHAGE </li>
+                                <li>  FSG </li>
+                                <li>  ISEGT </li>
+                                <li>  ISIGK </li>
+                                <li>  ISSIG </li>
+                                <li>  CCU-GABES </li>
+                                <li>  EPS </li>
+                                <li>  ISEAH SBITLA  </li>
+                                <li>  ISSBAT  </li>
+                                <li>  FSEG MAHDIA </li>
+                                <li>  ISAMS </li>
+                                <li>  ISET JANDOUBA </li>
+                                <li>  ISI KEF </li>
+                                <li>  ISET COM  </li>
+                                <li>  ISET GABES  </li>
+                                <li>  ISI </li>
+                                <li>  ISTEUB  </li>
+                                <li>  ESSTST  </li>
+                                <li>  FSEG SFAX </li>
+                                <li>  ISFFSO  </li>
+                                <li>  IMSET GABES </li>
+                                <li>  ISLG  </li>
+                                <li>  ENAU  </li>
+                                <li>  ISLT  </li>
+                                <li>  ISTMT </li>
+                                <li>  ESIAT </li>
+                                <li>  IHEC CARTHAGE </li>
+                                <li>  ISBAT </li>
+                                <li>  ISET SFAX </li>
+                                <li>  ISGS  </li>
+                                <li>  FSJEG JANDOUBA  </li>
+                                <li>  ISET KAS  </li>
+                                <li>  ISG GABES </li>
+                                <li>  IHEC SFAX </li>
+                                <li>  ISET KEF  </li>
+                                <li>  ISSAT GABES </li>
+                                </div>
+                                <div class="col-md-4">
+                                <h4>Du 12h40 à 13h00</h4>
+
+                                <li>  sesame  </li>
+                                <li>  ESSECT  </li>
+                                <li>  IMSET </li>
+                                <li>  ISET BEJA </li>
+                                <li>  FST </li>
+                                <li>  FSEG NABEUL </li>
+                                <li>  ISG BIZERTE </li>
+                                <li>  ISAAS </li>
+                                <li>  ISET MAHDIA </li>
+                                <li>  CENTRALE  </li>
+                                <li>  IHEC SOUSSE </li>
+                                <li>  ISET BIZERTE  </li>
+                                <li>  ISSTE </li>
+                                <li>  ISTL SOUSSE </li>
+                                <li>  ISSIT </li>
+                                <li>  ISGIS </li>
+                                <li>  ISTIC </li>
+                                <li>  IHET SIDI DHRIF </li>
+                                  </div>
+                                  <div class="col-md-4">
+                                 <h4>Du 13h00 à 13h40</h4>
+
+                                  <li> CSFMT Gammarh </li>
+                                  <li>  ESC sfax  </li>
+                                  <li>  ISET RADES  </li>
+                                  <li>  ESPRIT GCEM </li>
+                                  <li>  COLLEGE LA SALLE  </li>
+                                  <li>  ESPRIT TIC  </li>
+                                  <li>  ISBST </li>
+                                  <li>  ISETN </li>
+                                  </div>      
+
+
+                             </div>
+
+                          
     
    <?php } 
           
