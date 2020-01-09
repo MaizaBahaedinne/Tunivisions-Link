@@ -45,11 +45,11 @@
 
                   </div>
                 </div>
-                <div class="col-md-8 pl-md-0">
-                  <div class="auth-form-wrapper px-4 py-5">
+                <div class="col-md-8 pl-md-0" >
+                  <div class="auth-form-wrapper px-4 py-5" >
                     <a href="#" class="noble-ui-logo d-block mb-2 text-center"><img src="<?php echo base_url()?>assets\media\logos\logo rouge.svg " width ="250px"></a>
                     <h5 class="text-muted font-weight-normal mb-4">Cette application est déstiné aux clubs Tunivisions.</h5>
-                    <form class="kt-form" action="<?php echo base_url() ?>loginMe " method="post">
+                    <form class="kt-form" action="<?php echo base_url() ?>loginMe " method="post" >
                                 <div class="form-group">
                                               <?php
                                         $this->load->helper('form');

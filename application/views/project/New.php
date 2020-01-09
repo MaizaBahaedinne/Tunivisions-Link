@@ -17,12 +17,13 @@
                         <span class="title text-muted font-weight-bold">Projet</span>
                         <p class="text-muted"></p>
                       </div>
-                      <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Reclamation/addNew">Nouveau projet</a></div>
+                      <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Project/addNew">Nouveau projet</a></div>
                       <div class="aside-nav collapse">
                         <ul class="nav">
                           <li><a href="<?php echo base_url() ; ?>Project/projectListingbyClub"><span class="icon"><i data-feather="inbox"></i></span>Nos projets<span class="badge badge-danger-muted text-white font-weight-bold float-right">2</span></a></li>
-                          <li class=""><a href="#"><span class="icon"><i data-feather="mail"></i></span>Evaluations</a></li>
-
+                           <?php  if  ($role ==1  ||  ($role == 3  && $cellule=='Gestion des talents' )) { ?>
+                          <li class=""><a href="<?php echo base_url() ; ?>Evaluation/evaluationListing"><span class="icon"><i data-feather="mail"></i></span>Evaluations</a></li>
+                          <?php } ?>
                         </ul>
                         
                         
@@ -199,9 +200,16 @@
                                                         if($record->cellule == 'Marketing')
                                                         {
                                             ?>            
-                                                    <br><input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>"  />
+
+                                                    <div class="form-check form-check-flat form-check-primary">
+                                                      <label class="form-check-label">
+                                                        <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>  class="form-check-input">
+                                                      <?php  echo   $record->name ; ?> 
+                                                      </label>
+                                                    </div>
+                                                    
                                             <?php
-                                                     echo   $record->name ; 
+                                                     
                                                     }
                                                 }
                                             ?> 
@@ -216,11 +224,18 @@
                                             <?php   foreach($members as $record)
                                                     {
                                                         if($record->cellule == 'Evenementiel')
-                                                        {
+                                                         {
                                             ?>            
-                                                    <br><input type="checkbox" name="ressource[]"  value="<?php echo   $record->userId ; ?>" />
+
+                                                    <div class="form-check form-check-flat form-check-primary">
+                                                      <label class="form-check-label">
+                                                        <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>  class="form-check-input">
+                                                      <?php  echo   $record->name ; ?> 
+                                                      </label>
+                                                    </div>
+                                                    
                                             <?php
-                                                     echo   $record->name ; 
+                                                     
                                                     }
                                                 }
                                             ?>
@@ -234,11 +249,18 @@
                                             <?php   foreach($members as $record)
                                                     {
                                                         if($record->cellule == 'Administration et finance')
-                                                        {
+                                                         {
                                             ?>            
-                                                    <br><input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>"  />
+
+                                                    <div class="form-check form-check-flat form-check-primary">
+                                                      <label class="form-check-label">
+                                                        <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>  class="form-check-input">
+                                                      <?php  echo   $record->name ; ?> 
+                                                      </label>
+                                                    </div>
+                                                    
                                             <?php
-                                                     echo   $record->name ; 
+                                                     
                                                     }
                                                 }
                                             ?>
@@ -254,9 +276,16 @@
                                                         if($record->cellule == 'Gestion des talents')
                                                         {
                                             ?>            
-                                                    <br><input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>"  />
+
+                                                    <div class="form-check form-check-flat form-check-primary">
+                                                      <label class="form-check-label">
+                                                        <input type="checkbox" name="ressource[]" value="<?php echo   $record->userId ; ?>  class="form-check-input">
+                                                      <?php  echo   $record->name ; ?> 
+                                                      </label>
+                                                    </div>
+                                                    
                                             <?php
-                                                     echo   $record->name ; 
+                                                     
                                                     }
                                                 }
                                             ?>

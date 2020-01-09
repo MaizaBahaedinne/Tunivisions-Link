@@ -17,7 +17,7 @@
                         <span class="title text-muted font-weight-bold">Projet</span>
                         <p class="text-muted"></p>
                       </div>
-                      <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Reclamation/addNew">Nouveau projet</a></div>
+                      <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Project/addNew">Nouveau projet</a></div>
                       <div class="aside-nav collapse">
                         <ul class="nav">
                           <li><a href="<?php echo base_url() ; ?>Project/projectListingbyClub"><span class="icon"><i data-feather="inbox"></i></span>Nos projets<span class="badge badge-danger-muted text-white font-weight-bold float-right">2</span></a></li>

@@ -517,6 +517,35 @@ class User extends BaseController
 
 
 
+        /**
+     * This function is used to delete the user using userId
+     * @return boolean $result : TRUE / FALSE
+     */
+    function blockMember()
+    {
+
+        $userId = $this->input->post('userId');
+      
+
+            
+            $userInfo = array('isDeleted'=>2,
+                              'updatedBy'=>$this->vendorId,
+                               'updatedDtm'=>date('Y-m-d H:i:s'),
+                               'cellule'=>  '' ,
+                               'blockText'=>  $this->input->post('why') ,
+                               'roleId'=> 5 ,
+
+                             );
+            
+            $this->user_model->deleteUser($userId, $userInfo);
+             
+                  
+          
+          redirect('/User/userByClubListing')  ;
+    }
+
+
+
     public function send_mail($title,$mailContent,$addresse,$name)
             {
                 // Load PHPMailer library

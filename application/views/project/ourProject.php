@@ -17,12 +17,13 @@
                         <span class="title text-muted font-weight-bold">Projet</span>
                         <p class="text-muted"></p>
                       </div>
-                      <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Reclamation/addNew">Nouveau projet</a></div>
+                      <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Project/addNew">Nouveau projet</a></div>
                       <div class="aside-nav collapse">
                         <ul class="nav">
                           <li class="active"><a href="<?php echo base_url() ; ?>Project/projectListingbyClub"><span class="icon"><i data-feather="inbox"></i></span>Nos projets<span class="badge badge-danger-muted text-white font-weight-bold float-right">2</span></a></li>
+                           <?php  if ($countEval>0 && ($role ==1  ||  ($role == 3  && $cellule=='Gestion des talents' )) ){ ?>
                           <li class=""><a href="<?php echo base_url() ; ?>Evaluation/evaluationListing"><span class="icon"><i data-feather="mail"></i></span>Evaluations</a></li>
-
+                          <?php  } ?>
                         </ul>
                         
                         
@@ -46,14 +47,14 @@
                           ?>
                         
                      <div class="media d-block d-sm-flex">
-                          <img src="<?php echo base_url()  ?>uploads/projet/<?php echo $record->banner; ?>" class="wd-100p wd-sm-200 mb-3 mb-sm-0 mr-3" alt="...">
+                          <img src="https://www.tunivisions.link/uploads/projet/<?php echo $record->banner; ?>" class="wd-100p wd-sm-200 mb-3 mb-sm-0 mr-3" alt="...">
                           <div class="media-body">
                             <h5 class="mt-0"><?php 
                                     $string = strip_tags( $record->titre );
-                                    if (strlen($string) > 20){
+                                    if (strlen($string) > 30){
 
                                         // truncate string
-                                        $stringCut = substr($string, 0, 20);
+                                        $stringCut = substr($string, 0, 30);
                                         $endPoint = strrpos($stringCut, ' ');
 
                                         //if the string doesn't contain any space then it will cut without word basis.

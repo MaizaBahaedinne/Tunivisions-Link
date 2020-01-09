@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="<?php echo base_url() ; ?>assets/vendors/select2/select2.min.css">
             <!-- partial -->
 
             
@@ -16,6 +16,8 @@
                 <h6 class="card-title">Gestion des membres</h6>
 
                 <div class="table-responsive">
+                  <div>
+</div>
                           <table id="example" class="table dataTable no-footer"  >
                     <thead>
                     <tr>
@@ -97,6 +99,7 @@
                     </tbody>
 
                   </table>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Bloquer un membre</button>
                 </div>
               </div>
             </div>
@@ -122,3 +125,57 @@
     $('table').DataTable();
 } );
   </script>
+
+
+  <!-- Extra large modal -->
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Blocage d'un membre</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form  action="<?php echo base_url() ?>User/blockMember" method="post">
+        
+      <label> Nom et prénome de membre :  </label>
+      <select class="form-control" name="userId">
+        <?php
+                    if(!empty($userRecords))
+                    {
+                        foreach($userRecords as $record)
+                        {
+                    ?>
+                    <option value="<?php echo $record->userId ?>" class="js-example-basic-single"><?php echo $record->name ?> </option>
+                           <?php
+                       }
+                   }
+          ?>
+      </select>
+      <label> Expliquer pourqoui voulez-vous bloquer ce membre :  </label>
+      <textarea name="why" class="form-control" ></textarea>
+      <hr>
+      <input type="submit" name="" value="Bloquer" class="btn btn-danger"> 
+    </form>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<script defer src="<?php echo base_url()?>assets/vendors/select2/select2.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+  'use strict'
+
+  if ($(".js-example-basic-single").length) {
+    $(".js-example-basic-single").select2();
+  }
+  if ($(".js-example-basic-multiple").length) {
+    $(".js-example-basic-multiple").select2();
+  }
+});
+</script>
