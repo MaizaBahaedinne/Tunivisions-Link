@@ -676,13 +676,14 @@
               <span class="link-title">Reclamation</span>
             </a>
           </li>
+          <!--
           <li class="nav-item">
             <a href="<?php echo base_url() ?>Reservation/reservationListing" class="nav-link">
                <i data-feather="alert-octagon" width ="15" ></i>
               <span class="link-title">Reservation</span>
             </a>
           </li>
-
+          -->
 
           <li class="nav-item nav-category">Club </li>
           <li class="nav-item ">
