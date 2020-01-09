@@ -1,13 +1,23 @@
-<div class="card-deck">
-    
+<style type="text/css">
+       .alligator-turtle {
+  object-fit: cover;
+  object-position: 50% 20%;
+  width: 100%;
+  height: 200px;
+}
+</style>
+  
+  <div class="row" >
    <?php if(!empty($projectRecords))
             {
               foreach($projectRecords as $record)
             {
             ?>
+            <a href="" class="card">
+            <div class="col-md-4 card" style="color: black ; height: cover;">
 
-    <div class="card"> 
-        <img src="https://www.tunivisions.link/uploads/projet/<?php echo $record->banner; ?>" class="card-img-top" alt="...">
+        <img src="https://www.tunivisions.link/uploads/projet/<?php echo $record->banner; ?>" class="card-img-top alligator-turtle " style="" alt="...">
+        
         <div class="card-body">
           <h4><a href="" class="kt-widget__title">
                                   
@@ -72,24 +82,34 @@
                                         echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
                                 </span>
 
-                                <div class="kt-widget__content">
+                               
                             
-                                    <div class="kt-widget__details">
+                                    
                                         <span class="kt-widget__subtitle"></span>
-                                        <span class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><h6>Local </h6><small><?php  echo $record->local; ?> </small> </span><span></span>
-                                    </div>
+                                        
+                                  
+
+                      
+                    </div>
+                     <div class="card-footer">
+                        <div class="row">
+                        <div class="col-md-6">
+                        <span class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><h6>Local </h6><small><?php  echo $record->local; ?> </small> </span><span></span></span>
+                        </div>       
                                 
-                                    <div class="kt-widget__details">
-                                        <span class="kt-widget__subtitle"></span>
-                                        <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp;<small> <span><h6>Prix</h6><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?> </small> 
-                                    </div>
+                                   
+                                       
+                        <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp;<small> <h6>Prix</h6><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?> </small> </span>
+                        </div>
 
-                                </div>
-
-        
+                     </div>
+                </div>
+            </a>
+    
         <?php
                         }
                     }
                     ?>
 
-  </div>
+ 
+</div>
