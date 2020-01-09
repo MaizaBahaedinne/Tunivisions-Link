@@ -14,15 +14,39 @@ class Reclamation_model extends CI_Model
      * @param number $segment : This is pagination limit
      * @return array $result : This is result
      */
-    function reclamationListing()
+    function reclamationListing($to)
     {
         $this->db->select('BaseTbl.reclamId , BaseTbl.Sujet , BaseTbl.Text ,BaseTbl.createdDate , BaseTbl.createdBy , BaseTbl.staut , Users.name as faitpar , Users.avatar , Clubs.name as clubName ');
         $this->db->from('tbl_reclamation as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.createdBy','left');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.clubId','left');
-        $this->db->where('BaseTbl.staut !=','Cloturé') ; 
+        $this->db->where('BaseTbl.reciver = ',$to) ; 
         $this->db->order_by('BaseTbl.createdDate ','DESC') ;
 
+
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
+     /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function waitReclamationListing($to)
+    {
+        $this->db->select('BaseTbl.reclamId , BaseTbl.Sujet , BaseTbl.Text ,BaseTbl.createdDate , BaseTbl.createdBy , BaseTbl.staut , Users.name as faitpar , Users.avatar , Clubs.name as clubName ');
+        $this->db->from('tbl_reclamation as BaseTbl');
+        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.createdBy','left');
+        $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.clubId','left');
+        $this->db->where('BaseTbl.staut = ','En attend') ;
+        $this->db->order_by('BaseTbl.createdDate ','DESC') ;
+        $this->db->where('BaseTbl.reciver = ',$to) ; 
 
         $query = $this->db->get();
         

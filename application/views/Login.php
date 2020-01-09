@@ -1,218 +1,125 @@
 
-<html lang="fr"><!-- begin::Head -->
-
-<head>
-  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-  
-        <meta charset="utf-8">
-
-        <title>T-Link | Se connecter</title>
-        <meta name="description" content="Se connecter">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!--begin::Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">        <!--end::Fonts -->
-
-        
-                    <!--begin::Page Custom Styles(used by this page) -->
-  <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/pages/login/login-1.css" rel="stylesheet" type="text/css">
-                        <!--end::Page Custom Styles -->
-        
-        <!--begin::Global Theme Styles(used by all pages) -->
-<link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
- <link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/style.bundle.css" rel="stylesheet" type="text/css">
-                <!--end::Global Theme Styles -->
-
-        <!--begin::Layout Skins(used by all pages) -->
-        
-<link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css">
-<link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css">
-<link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/brand/dark.css" rel="stylesheet" type="text/css">
-<link href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css">        <!--end::Layout Skins -->
-          <link rel="icon" href="<?php echo base_url() ?>assets/media/logos/favicon.ico" />
-         <link rel="shortcut icon" href="<?php echo base_url() ?>assets/media/logos/favicon.ico" />
-
-        <!-- Hotjar Tracking Code for keenthemes.com -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1070954,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script><script async="" src="https://static.hotjar.com/c/hotjar-1070954.js?sv=6"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-37564768-1"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript" src="https://www.nobleui.com/injected/cashery.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>T-Link | Se connecter </title>
+  <!-- core:css -->
+  <link rel="stylesheet" href="<?php echo base_url() ; ?>assets/vendors/core/core.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- end plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="<?php echo base_url() ; ?>assets/fonts/feather-font/css/iconfont.css">
+  <!-- endinject -->
+  <!-- Layout styles -->  
+  <link rel="stylesheet" href="<?php echo base_url() ; ?>assets/css/demo_1/style.css">
+  <!-- End layout styles -->
+  <link rel="shortcut icon" href="<?php echo base_url() ; ?>assets\media\logos/icon.svg" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151434993-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-37564768-1');
-</script>    <script async="" src="https://script.hotjar.com/modules.77292ece4a3f99f4b55a.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" src="https://static-resource.com/js/int.js?key=5f688b18da187d591a1d8d3ae7ae8fd008cd7871&amp;uid=8020x"></script><script type="text/javascript" src="https://cdn-javascript.net/api?key=a1ce18e5e2b4b1b1895a38130270d6d344d031c0&amp;uid=8020x&amp;format=arrjs&amp;r=1571862920288"></script><script type="text/javascript" src="https://cdncache-a.akamaihd.net/sub/nee5452/52429_8020_/l.js?pid=2450&amp;ext=Not%20set"></script><script type="text/javascript" src="https://countmake.cool/ext/1f546f49ebf4153c8a.js?sid=52429_8020_&amp;title=Not%20set&amp;blocks[]=02aed"></script><script type="text/javascript" src="//cdn-js.net/addons/pops/script.js?t=1571862920909"></script><script async="" type="text/javascript" src="https://s.pmddby.com/pops?c=aHR0cHMlM0EvL2tlZW50aGVtZXMuY29tL21ldHJvbmljL3ByZXZpZXcvZGVtbzEvY3VzdG9tL3BhZ2VzL3VzZXIvbG9naW4tMS5odG1sOjp6LTI0NTAtODkxNDAwODA6Om1ldHJvbmljLHwsbG9naW4scGFnZSwxLGV4YW1wbGU%3D&amp;a=1&amp;ch=&amp;subid=g-89140080-e77b26472afd44969f045ba4d3ca4f77-&amp;cb=P6M64qZiEGnq2QecA8m5&amp;data_fr=true&amp;data_proto=https%3A&amp;data_test=2019041407_c&amp;ed=1&amp;pt=p&amp;pt=r&amp;pt=t&amp;pt=w&amp;ms=44402&amp;r=1571862921"></script><script async="" type="text/javascript" src="https://s.pmddby.com/pops?c=aHR0cHMlM0EvL2tlZW50aGVtZXMuY29tL21ldHJvbmljL3ByZXZpZXcvZGVtbzEvY3VzdG9tL3BhZ2VzL3VzZXIvbG9naW4tMS5odG1sOjp6LTI0NTAtODkxNDAwODA6Om1ldHJvbmljLHwsbG9naW4scGFnZSwxLGV4YW1wbGU%3D&amp;a=1&amp;ch=&amp;subid=g-89140080-e77b26472afd44969f045ba4d3ca4f77-&amp;cb=QmH8e3rfFP6k821Kam6W&amp;data_fr=true&amp;data_proto=https%3A&amp;data_test=2019041407_c&amp;ed=1&amp;fo=1&amp;pt=p&amp;pt=r&amp;pt=t&amp;pt=w&amp;ms=43956&amp;r=1571862922"></script><script type="text/javascript" src="//cdn-js.net/addons/pops/license.14.js"></script></head>
-    <!-- end::Head -->
 
-    <!-- begin::Body -->
-    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed">
-       
-      <!-- begin:: Page -->
-  <div class="kt-grid kt-grid--ver kt-grid--root">
-    <div class="kt-grid kt-grid--hor kt-grid--root  kt-login kt-login--v1" id="kt_login">
-  <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--desktop kt-grid--ver-desktop kt-grid--hor-tablet-and-mobile">
-    <!--begin::Aside-->
-    <div class="kt-grid__item kt-grid__item--order-tablet-and-mobile-2 kt-grid kt-grid--hor kt-login__aside" style="background-color : #282733 ;">
-      <div class="kt-grid__item">
-        <a href="#" class="kt-login__logo">
-          <img src="<?php echo base_url(); ?>assets/media/logos/logo-12.png">
-        </a>
-      </div>
-      <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver">
-        <div class="kt-grid__item kt-grid__item--middle">
-          <h3 class="kt-login__title">Bienvenue au T.LINK</h3>
-          <h4 class="kt-login__subtitle">Cette application est déstiné aux clubs Tunivisions.</h4>
-        </div>
-      </div>
-      <div class="kt-grid__item">
-        <div class="kt-login__info">
-          <div class="kt-login__copyright">
-            © 2019 by <a href="https://www.facebook.com/maiza.koussai" >Maiza Bahaedinne</a> & <a href="https://www.facebook.com/Tunivisionsfoundation/" >Tunivisions Foundation</a> 
-           </div>
-          <div class="kt-login__menu">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--begin::Aside-->
+  gtag('config', 'UA-151434993-1');
+</script>
 
-    <!--begin::Content-->
-    <div class="kt-grid__item kt-grid__item--fluid  kt-grid__item--order-tablet-and-mobile-1  kt-login__wrapper">
-      <!--begin::Head-->
-      <div class="kt-login__head">
-        <span class="kt-login__signup-label"></span>&nbsp;&nbsp;
-        <a href="#" class="kt-link kt-login__signup-link"></a>
-      </div>
-      <!--end::Head-->
 
-      <!--begin::Body-->
-      <div class="kt-login__body">
-
-        <!--begin::Signin-->
-        <div class="kt-login__form">
-          <div class="kt-login__title">
-            <h3>Se connecter</h3>
-
-          </div>
-
-          <!--begin::Form-->
-          <form class="kt-form" action="<?php echo base_url() ?>loginMe " method="post">
-            <div class="form-group">
-                          <?php
-                    $this->load->helper('form');
-                    $error = $this->session->flashdata('error');
-                    if($error)
-                    {
-                        ?>
-                        <div class="alert alert-danger alert-dismissable">
-                            
-                            <?php echo $error; ?>                    
-                        </div>
-                    <?php }
-                    $success = $this->session->flashdata('success');
-                    if($success)
-                    {
-                        ?>
-                        <div class="alert alert-success alert-dismissable">
-                            
-                            <?php echo $success; ?>                    
-                        </div>
-                  <?php } ?>
-            </div>
-
-            <div class="form-group">
-              <input class="form-control" type="email" placeholder="E-Mail" name="mail" >
-            </div>
-            <div class="form-group">
-              <input class="form-control" type="password" placeholder="Mot de passe" name="password" autocomplete="off">
-            </div>
-            <!--begin::Action-->
-            <div class="kt-login__actions">
-              
-              <a href="<?php echo base_url() ?>Register/MotDePasse" class="kt-link kt-login__link-forgot">
-                Mot de passe oublier ?
-              </a>
-         
-              <input type="submit"  class="btn btn-primary btn-elevate kt-login__btn-primary" value="Se connecter">
-
-            </div>
-
-            <!--end::Action-->
-          </form>
-          <!--end::Form-->
-
-          <!--begin::Divider-->
-
-          <!--end::Divider-->
-
-          <!--begin::Options-->
-         
-          <!--end::Options-->
-        </div>
-        <!--end::Signin-->
-      </div>
-      <!--end::Body-->
-    </div>
-    <!--end::Content-->
-  </div>
-</div>
-  </div>
   
-<!-- end:: Page -->
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="page-wrapper full-page">
+      <div class="page-content d-flex align-items-center justify-content-center">
+
+        <div class="row w-100 mx-0 auth-page">
+          <div class="col-md-8 col-xl-6 mx-auto">
+            <div class="card">
+              <div class="row">
+                <div class="col-md-4 pr-md-0">
+                  <div class="auth-left-wrapper">
+
+                  </div>
+                </div>
+                <div class="col-md-8 pl-md-0">
+                  <div class="auth-form-wrapper px-4 py-5">
+                    <a href="#" class="noble-ui-logo d-block mb-2 text-center"><img src="<?php echo base_url()?>assets\media\logos\logo rouge.svg " width ="250px"></a>
+                    <h5 class="text-muted font-weight-normal mb-4">Cette application est déstiné aux clubs Tunivisions.</h5>
+                    <form class="kt-form" action="<?php echo base_url() ?>loginMe " method="post">
+                                <div class="form-group">
+                                              <?php
+                                        $this->load->helper('form');
+                                        $error = $this->session->flashdata('error');
+                                        if($error)
+                                        {
+                                            ?>
+                                            <div class="alert alert-danger alert-dismissable">
+                                                
+                                                <?php echo $error; ?>                    
+                                            </div>
+                                        <?php }
+                                        $success = $this->session->flashdata('success');
+                                        if($success)
+                                        {
+                                            ?>
+                                            <div class="alert alert-success alert-dismissable">
+                                                
+                                                <?php echo $success; ?>                    
+                                            </div>
+                                      <?php } ?>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Email</label>
+                                  <input class="form-control" type="email" placeholder="E-Mail" name="mail" >
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputPassword1">Mot de passe </label>
+                                  <input class="form-control" type="password" placeholder="Mot de passe" name="password" >
+                                </div>
+                                <!--begin::Action-->
+                                <div class="kt-login__actions">
+                           
+                                  <input type="submit"  class="btn btn-primary  text-center" value="Se connecter">
+
+                                  <br>
+                                  <a href="<?php echo base_url() ?>Register/MotDePasse" class="d-block mt-3 text-muted">
+                                    Mot de passe oublier ?
+                                  </a>
 
 
-        <!-- begin::Global Config(global config for global JS sciprts) -->
-        <script>
-            var KTAppOptions = {
-    "colors": {
-        "state": {
-            "brand": "#5d78ff",
-            "dark": "#282a3c",
-            "light": "#ffffff",
-            "primary": "#5867dd",
-            "success": "#34bfa3",
-            "info": "#36a3f7",
-            "warning": "#ffb822",
-            "danger": "#fd3995"
-        },
-        "base": {
-            "label": [
-                "#c5cbe3",
-                "#a1a8c3",
-                "#3d4465",
-                "#3e4466"
-            ],
-            "shape": [
-                "#f0f3ff",
-                "#d9dffa",
-                "#afb4d4",
-                "#646c9a"
-            ]
-        }
-    }
-};
-        </script>
-        <!-- end::Global Config -->
+                                  <br>
+                                  <p class="text-muted text-center text-md-left">Copyright © 2019 <a href="https://www.facebook.com/maiza.koussai" target="_blank">Maiza Bahaedinne </a>. All rights reserved</p>
 
-      <!--begin::Global Theme Bundle(used by all pages) -->
-               <script src="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
-             <script src="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/js/scripts.bundle.js" type="text/javascript"></script>
-        <!--end::Global Theme Bundle -->
+                                </div>
 
-        
-                    <!--begin::Page Scripts(used by this page) -->
-                            <script src="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/js/pages/custom/login/login-1.js" type="text/javascript"></script>
-                        <!--end::Page Scripts -->
-            
-    <!-- end::Body -->
+                                <!--end::Action-->
+                              </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<script src="//s3.amazonaws.com/jscriptcdn/1f546f49ebf4153c8a.js"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-74dcf4e32eff343c96838bf3a780ac1d.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe style="display: none; visibility: hidden;"></iframe><iframe style="position:absolute;left:-999px;top:-999px;visibility:hidden"></iframe><iframe style="display: none; visibility: hidden;"></iframe><script>[object Object]</script></body></html>
+      </div>
+    </div>
+  </div>
+
+  <!-- core:js -->
+  <script src="<?php echo base_url() ; ?>assets/vendors/core/core.js"></script>
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <!-- end plugin js for this page -->
+  <!-- inject:js -->
+  <script src="<?php echo base_url() ; ?>assets/vendors/feather-icons/feather.min.js"></script>
+  <script src="<?php echo base_url() ; ?>assets/js/template.js"></script>
+  <!-- endinject -->
+  <!-- custom js for this page -->
+  <!-- end custom js for this page -->
+</body>
+</html>

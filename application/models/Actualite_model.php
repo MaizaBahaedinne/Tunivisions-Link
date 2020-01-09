@@ -32,11 +32,11 @@ class Actualite_model extends CI_Model
      */
     function actuListing()
     {
-        $this->db->select('BaseTbl.actuID , BaseTbl.titre , BaseTbl.description , BaseTbl.image , BaseTbl.createdBy , BaseTbl.createdDate , Users.name ');
+        $this->db->select('BaseTbl.actuID , BaseTbl.titre , BaseTbl.description , BaseTbl.image , BaseTbl.createdBy , BaseTbl.createdDate , Users.name , Users.userId ');
         $this->db->from('tbl_actu as BaseTbl');
         $this->db->join('tbl_users as Users','Users.UserId = BaseTbl.createdBy');
         $this->db->order_by('BaseTbl.createdDate','DESC'); 
-        $this->db->limit(5);      
+        $this->db->limit(10);      
         $query = $this->db->get();
         
         $result = $query->result();        

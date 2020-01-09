@@ -1,58 +1,22 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
-<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-                                            
-<!-- begin:: Subheader -->
+            <!-- partial -->
 
-<!-- end:: Subheader -->                    
-                    <!-- begin:: Content -->
-    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-        
-
-<div class="kt-portlet kt-portlet--mobile">
-    <div class="kt-portlet__head kt-portlet__head--lg">
-        <div class="kt-portlet__head-label">
-            <span class="kt-portlet__head-icon">
-                <i class="kt-font-brand flaticon2-line-chart"></i>
-            </span>
-            <h3 class="kt-portlet__head-title">
-                  <?php echo $count ;  ?> Members
-            </h3>
-        </div>
-        <div class="kt-portlet__head-toolbar">
-          
-            <a href="<?php echo base_url() ; ?>User/userByClubListingToApprove" class="btn btn-primary" >Approuver les membres</a>
             
-            <div class="kt-portlet__head-wrapper">
-    <div class="kt-portlet__head-actions">
-        <div class="dropdown dropdown-inline">
-            
-            <div class="dropdown-menu dropdown-menu-right">
+                <nav class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Ressource humaine</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">membres</li>
+                    </ol>
+                </nav>
 
-            </div>
-        </div>
-        &nbsp;
-        
-    </div>
-    &nbsp;  &nbsp;
-</div>
-                    <div class="box-tools">
-                       
-                    </div>
-      </div>
-    </div>
+                <div class="row">
+                    <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">Gestion des membres</h6>
 
-    <div class="kt-portlet__body">
-            
-
-        <div class="row">
-    <div class="col-sm-12">
-    <div class="kt-portlet__body">
-        <!--begin: Datatable -->
-
-        <table id="example" class="display" style="width:100%" >
+                <div class="table-responsive">
+                          <table id="example" class="table dataTable no-footer"  >
                     <thead>
                     <tr>
                        
@@ -133,20 +97,13 @@
                     </tbody>
 
                   </table>
-
-    </div>
-    </div>
-                
-                <div class="box-footer clearfix">
-                    <?php echo $this->pagination->create_links(); ?>
                 </div>
-              </div><!-- /.box -->
+              </div>
             </div>
-        </div>
-    
-    </div>
-<!-- end:: Content -->  
-            </div>
+                    </div>
+                </div>
+
+          
 
              <!-- begin::Global Config(global config for global JS sciprts) -->
 
@@ -157,10 +114,11 @@
         <!--end::Page Scripts -->
 
 
-<script>
-$('table').dataTable( {
-
-  paginate: true,
-  
+            <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <script defer src="<?php echo base_url() ?>assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script defer src="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script type="text/javascript">
+      $(document).ready( function () {
+    $('table').DataTable();
 } );
-</script>
+  </script>

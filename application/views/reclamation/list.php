@@ -1,158 +1,158 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url() ; ?>assets/vendors/select2/select2.min.css">
+  <!-- plugin css for this page -->
+<link rel="stylesheet" href="<?php echo base_url() ; ?>assets/vendors/simplemde/simplemde.min.css">
+  <!-- end plugin css for this page -->
 
-<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-                                            
-<!-- begin:: Subheader -->
-
-<!-- end:: Subheader -->                    
-                    <!-- begin:: Content -->
-    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
         
+        <!-- partial -->
 
-<div class="kt-portlet kt-portlet--mobile">
-    <div class="kt-portlet__head kt-portlet__head--lg">
-        <div class="kt-portlet__head-label">
-            <span class="kt-portlet__head-icon">
-                <i class="kt-font-brand flaticon2-line-chart"></i>
-            </span>
-            <h3 class="kt-portlet__head-title">
-                Reclamations
-            </h3>
-        </div>
-        <div class="kt-portlet__head-toolbar">
-            <div class="kt-portlet__head-wrapper">
+        <div class="row inbox-wrapper">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 email-aside border-lg-right">
+                    <div class="aside-content">
+                      <div class="aside-header">
+                        <button class="navbar-toggle" data-target=".aside-nav" data-toggle="collapse" type="button">
+                          <span class="icon"><i data-feather="chevron-down"></i></span>
+                        </button>
+                        <span class="title text-muted font-weight-bold">Reclamation</span>
+                        <p class="text-muted"></p>
+                      </div>
+                      <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Reclamation/addNew">Nouvelle recclamation</a></div>
+                      <div class="aside-nav collapse">
+                        <ul class="nav">
+                          <li class="active"><a href="<?php echo base_url() ; ?>Reclamation/reclamationListing/<?php echo $MyUserId ?>"><span class="icon"><i data-feather="inbox"></i></span>Boites<span class="badge badge-danger-muted text-white font-weight-bold float-right"><?php echo $count ?></span></a></li>
+                          <li class=""><a href="#"><span class="icon"><i data-feather="mail"></i></span>Envoyées</a></li>
 
-    &nbsp;  &nbsp;
-</div>
-                    <div class="box-tools">
-                        <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
-                            <div class="input-group">
-                              
-                              <div class="input-group-btn">
-                               
-                              </div>
-                            </div>
-                        </form>
-                    </div>
-      </div>
-    </div>
-
-    <div class="kt-portlet__body">
-            
-
-        <div class="row">
-    <div class="col-sm-12">
-    <div class="kt-portlet__body">
-        <!--begin: Datatable -->
-        <table id="example" class="display" style="width:100%" >
-                    <thead>
-                    <tr>
-                      
-                        <th>Ticket</th>
-                        <th>Titre</th>
-                        <th>date de création</th>
+                        </ul>
+                        <span class="title">Labels</span>
                         
-                        <th>fait par</th>
-                        <th>statut</th>
-                        <th class="text-center">Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-9 email-content">
+                    <div class="email-inbox-header">
+                      <div class="row align-items-center">
+                        <div class="col-lg-6">
+                          <div class="email-title mb-2 mb-md-0"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg></span> Boite <span class="new-messages">(<?php echo count($reclamationRecords); ?> new messages)</span> </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="email-search">
+                            <div class="input-group input-search">
+                              <input class="form-control" type="text" placeholder="Search mail..."><span class="input-group-btn">
+                              <button class="btn btn-outline-secondary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="email-list" style="height: 650px  ; overflow: auto">
+
                     <?php
-                    if(!empty($reclamationRecords))
+                       if(!empty($reclamationRecords))
                     {
                         foreach($reclamationRecords as $record)
                         {
                     ?>
-                    <tr>
-
-                        
-                   
-                        
-                        <td><?php echo $record->reclamId ?></td>
-                        <td>  <?php echo $record->Sujet ?> </td>
-                        <td>  <?php   
-                                $d1 = new DateTime($record->createdDate);
-                                $d2 = new DateTime();
-                                $diff = $d1->diff($d2);
-
-                                $nb_jours = $diff->d;
-
-
-                         echo 'Il y a '. $nb_jours.' jours' ?> </td>
-
-                        
-                        <td> 
-                            <div class="row">
-                            <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic">
-                                        <img alt="Pic" class="kt-radius-100" src="<?php echo base_url() ?>uploads/avatar/<?php echo $record->avatar ?>">
-                                    </div>
-                                </div>  <?php echo $record->faitpar ?> <small><br> Club Tunivisions <?php echo $record->clubName ?> </small></td>
-                               
-                         <td><?php  
-                            if($record->staut == 'Cloturé') 
-                         echo'<span class="kt-badge kt-badge--brand kt-badge--inline">Cloturé</span>' ;
-                        
-                        ?>
-                        <?php  
-                            if($record->staut == 'En Attend') 
-                         echo'<span class="kt-badge kt-badge--warning kt-badge--inline">En Attend</span>' ;
-                        
-                        ?></td>       
-                        <td class="text-center">
-
-
-                        <?php if($record->staut == 'En Attend') { ?>    
-                        <a href="<?php echo base_url() ;?>Reclamation/editreclam/<?php echo $record->reclamId ; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="edit">
-                          <i class="la la-edit"></i>
+                      <div class="email-list-item email-list-item<?php if($record->staut == 'En Attend'){ echo'--unread' ;} ?>" >
+                        <div class="email-list-actions">
+                          <div class="form-check form-check-flat form-check-primary">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input">
+                            <i class="input-frame"></i></label>
+                          </div>
+                          <a class="favorite" href="#"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span></a>
+                        </div>
+                        <a href="<?php echo base_url() ;?>Reclamation/editreclam/<?php echo $record->reclamId ; ?>" class="email-list-detail">
+                          <div>
+                            <span class="from"><?php echo $record->Sujet ?></span>
+                            <p class="msg"><?php echo $record->faitpar ?> <small><br> Club Tunivisions <?php echo $record->clubName ?></p>
+                          </div>
+                          <span class="date">
+                            <span class="icon"> </span>
+                            <?php echo $record->createdDate  ?>
+                          </span>
                         </a>
-                    <?php } else  {
-                        ?>
-                         <a href="<?php echo base_url() ;?>Reclamation/reclamInfo/<?php echo $record->reclamId ; ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                          <i class="flaticon-eye"></i>
-                        
-                        <?php
-                    } ?>
-
-
-                        </td>
-                    </tr>
-                    <?php
-                        }
-                    }
-                    ?>
-                    </tbody>
-                  </table>
-    </div>
-    </div>
-                
-                <div class="box-footer clearfix">
-                    <?php echo $this->pagination->create_links(); ?>
+                      </div>
+                      <?php
+                       } } ?>
+                      
+                      
+                      
+                      
+                      
+                      </div>
+                  </div>
+            
                 </div>
-              </div><!-- /.box -->
+              </div>
             </div>
+          </div>
         </div>
+
+      
+
+
+<script src="<?php echo base_url() ; ?>assets/vendors/select2/select2.min.js"></script>
+<script src="<?php echo base_url() ; ?>assets/vendors/simplemde/simplemde.min.js"></script>
+ 
+
+  <!-- plugin js for this page -->
+  <script src="<?php echo base_url() ; ?>assets/vendors/tinymce/tinymce.min.js"></script>
+  <script src=".<?php echo base_url() ; ?>assets/vendors/simplemde/simplemde.min.js"></script>
+  <script src="<?php echo base_url() ; ?>assets/vendors/ace-builds/src-min/ace.js"></script>
+  <script src="<?php echo base_url() ; ?>assets/vendors/ace-builds/src-min/theme-chaos.js"></script>
+  <!-- end plugin js for this page -->
+
+
+
+ <script type="text/javascript" >
+   
+   $(function() {
+      'use strict'
+      if ($(".compose-multiple-select").length) {
+        $(".compose-multiple-select").select2();
+      }
+    });
+
+
+   $(function() {
+  'use strict';
+
+  //Tinymce editor
+    if ($("#tinymceExample").length) {
+      tinymce.init({
+        selector: '#tinymceExample',
+        height: 400,
+        theme: 'silver',
+        plugins: [
+          'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+          'searchreplace wordcount visualblocks visualchars code fullscreen',
+        ],
+        toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        toolbar2: 'print preview media | forecolor backcolor emoticons | codesample help',
+        image_advtab: true,
+        templates: [{
+            title: 'Test template 1',
+            content: 'Test 1'
+          },
+          {
+            title: 'Test template 2',
+            content: 'Test 2'
+          }
+        ],
+        content_css: []
+      });
+    }
     
-    </div>
-<!-- end:: Content -->  
-            </div>
-
-             <!-- begin::Global Config(global config for global JS sciprts) -->
-
-        <!-- end::Global Config -->
-        <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
-
-        <!--end::Page Scripts -->
+  });
 
 
-<script>
-$('table').dataTable( {
 
-  paginate: true,
-  
-} );
+
+
 </script>

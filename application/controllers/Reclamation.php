@@ -21,8 +21,8 @@ class Reclamation extends BaseController {
 
 		               
 		                $searchText='' ;
-		                $data['count'] = count($this->reclamation_model->reclamationListing()) ;
-		                $data['reclamationRecords'] = $this->reclamation_model->reclamationListing();
+		                $data['count'] = count($this->reclamation_model->waitReclamationListing($this->vendorId)) ;
+		                $data['reclamationRecords'] = $this->reclamation_model->reclamationListing($this->vendorId);
                         
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		           			 $this->global['active'] = 'claims';
@@ -33,6 +33,8 @@ class Reclamation extends BaseController {
 			        {
 			                $this->load->model('club_model');
 			                
+							$data['count'] = count($this->reclamation_model->waitReclamationListing($this->vendorId)) ;
+			                 $data["bureauExe"] = $this->club_model->BureauListing(0);
 			                $data['clubRecords'] = $this->club_model->clubListing();
 
 			                $this->global['pageTitle'] = '';
@@ -97,7 +99,7 @@ class Reclamation extends BaseController {
 			                $this->load->model('club_model');
 			                
 			                $data['reclamRecords'] = $this->reclamation_model->reclamInfo($reclamID);
-
+			                $data['count'] = count($this->reclamation_model->waitReclamationListing()) ;
 			                $this->global['pageTitle'] = '';
 			           		$this->global['active'] = 'claims';
 			                $this->loadViews("reclamation/edit", $this->global, $data, NULL);   

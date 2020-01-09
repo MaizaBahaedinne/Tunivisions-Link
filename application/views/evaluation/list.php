@@ -1,26 +1,44 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
-<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-                                            
-<!-- begin:: Subheader -->
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/dropify/dist/dropify.min.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/simplemde/simplemde.min.css">
+<!-- partial -->
 
-<!-- end:: Subheader -->                    
-                    <!-- begin:: Content -->
-    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-        
+        <div class="row inbox-wrapper">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 email-aside border-lg-right">
+                    <div class="aside-content">
+                      <div class="aside-header">
+                        <button class="navbar-toggle" data-target=".aside-nav" data-toggle="collapse" type="button">
+                          <span class="icon"><i data-feather="chevron-down"></i></span>
+                        </button>
+                        <span class="title text-muted font-weight-bold">Projet</span>
+                        <p class="text-muted"></p>
+                      </div>
+                      <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Reclamation/addNew">Nouveau projet</a></div>
+                      <div class="aside-nav collapse">
+                        <ul class="nav">
+                          <li><a href="<?php echo base_url() ; ?>Project/projectListingbyClub"><span class="icon"><i data-feather="inbox"></i></span>Nos projets<span class="badge badge-danger-muted text-white font-weight-bold float-right">2</span></a></li>
+                          <li c class="active"><a href="<?php echo base_url() ; ?>Evaluation/evaluationListing"><span class="icon"><i data-feather="mail"></i></span>Evaluations</a></li>
 
-<div class="kt-portlet kt-portlet--mobile">
-    
-
-    <div class="kt-portlet__body">
-            
-
-        <div class="row">
-    <div class="col-sm-12">
-    <div class="kt-portlet__body">
-        <!--begin: Datatable -->
+                        </ul>
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-9 email-content">
+                    <div class="email-head">
+                      <div class="email-head-title d-flex align-items-center">
+                        <span data-feather="edit" class="icon-md mr-2"></span>
+                        Nos evaluations
+                      </div>
+                    </div>
+                    <div class="container">
+                      <!--begin: Datatable -->
         <table id="example" class="display" style="width:100%" >
                     <thead>
                     <tr>
@@ -59,13 +77,13 @@
                             # code...
                         ?>
                         <a href="<?php echo base_url() ?>Evaluation/doEvaluation/<?php echo $record->evaluationId ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                          <i class="la la-edit"></i>
+                          <i data-feather="edit-2"></i>
                         </a>
                         <?php 
                         }else if($clubID == 0 ){
                           ?>
                             <a href="<?php echo base_url() ?>Evaluation/doEvaluationF/<?php echo $record->evaluationId ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                          <i class="la la-edit"></i>
+                          <i data-feather="edit-2"></i>
                         </a>
                           <?php  
                         }
@@ -80,33 +98,25 @@
                     ?>
                     </tbody>
                   </table>
-    </div>
-    </div>
-                
-                <div class="box-footer clearfix">
-                    <?php echo $this->pagination->create_links(); ?>
+
+                    </div>
+                  </div>
+            
                 </div>
-              </div><!-- /.box -->
+              </div>
             </div>
+          </div>
         </div>
-    
-    </div>
-<!-- end:: Content -->  
-            </div>
-
-             <!-- begin::Global Config(global config for global JS sciprts) -->
-
-        <!-- end::Global Config -->
-        <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
-
-        <!--end::Page Scripts -->
 
 
+            <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <script defer src="<?php echo base_url() ?>assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script defer src="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
 <script>
-$('table').dataTable( {
-
-  paginate: true,
-  
+     $(document).ready( function () {
+    $('table').DataTable();
 } );
-</script>
+  </script>
+
+
+

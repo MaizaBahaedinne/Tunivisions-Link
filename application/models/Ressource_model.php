@@ -52,6 +52,8 @@ class Ressource_model extends CI_Model
         $this->db->from('tbl_ressource as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userID', 'LEFT');
         $this->db->where('BaseTbl.projectID =', $projectID );
+        $this->db->order_by('BaseTbl.score DESC  ' );
+
         
         $query = $this->db->get();
         

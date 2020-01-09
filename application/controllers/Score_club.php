@@ -9,7 +9,13 @@ class Score_club extends BaseController {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('user_model');
+         $this->load->model('user_model');
+        $this->load->model('project_model');
+        $this->load->model('ressource_model');
+        $this->load->model('evaluation_model');
+        $this->load->model('scores_club_model');
+        $this->load->model('Scores_model');
+        
         $this->isLoggedIn();   
     }
     
@@ -72,4 +78,38 @@ class Score_club extends BaseController {
 			        $this->loadViews("club/roles", $this->global, $data, NULL);
 		        }
 
+
+		        public function PNoter($projectID)
+		        {
+		        	   $data["projectInfo"] = $this->project_model->getProjectInfo($projectID);
+                        $data["evaluations"] = $this->evaluation_model->evaluationInfoprojectId($projectID);
+
+                        $data['resource'] = $this->ressource_model->ressourceListingByProject($projectID);
+                        $data['BadgesRecords'] = $this->Scores_model->badgeListing();
+
+
+		        	   $this->loadViews("project/noter", $this->global, $data, NULL);
+		        }
+
+
+				public function noteProject($projectID)
+			        {
+
+
+
+			        	$data["projectInfo"] = $this->project_model->getProjectInfo($projectID);
+                        $data["evaluations"] = $this->evaluation_model->evaluationInfoprojectId($projectID);
+						$data['resource'] = $this->ressource_model->ressourceListingByProject($projectID);
+
+							$score = $this->input->post('mobile');
+			                $remarque = $this->input->post('mobile');   
+
+			                $userInfo = array(
+				                 'score' => $score ,  
+				                 'remarque'=>$remarque,
+				                 'createdDtm'=>date('Y-m-d H:i:s'),
+				                 
+				                     );        
+			               
+			        }
 }

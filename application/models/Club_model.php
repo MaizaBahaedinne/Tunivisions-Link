@@ -51,7 +51,7 @@ class Club_model extends CI_Model
      */
     function getClubInfo($clubID)
     {
-        $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email , BaseTbl.is_Actif , BaseTbl.charte ' );
+        $this->db->select('BaseTbl.clubID , BaseTbl.name , BaseTbl.birthday , BaseTbl.city ,BaseTbl.email ,BaseTbl.facebook , BaseTbl.is_Actif , BaseTbl.charte ' );
         $this->db->from('tbl_club as BaseTbl');
         $this->db->where('BaseTbl.clubID', $clubID);
         $query = $this->db->get();
@@ -66,13 +66,10 @@ class Club_model extends CI_Model
      */
     function BureauListing($clubID)
     {
-        $this->db->select('BaseTbl.clubID , Users.userId , Users.name as Tname , Users.roleId role , Users.cellule , Users.avatar  ');
-        $this->db->from('tbl_club as BaseTbl'); 
-        $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
-
-        $this->db->where('BaseTbl.clubID=',$clubID) ;
-        $this->db->where('Users.clubId !=',0) ;
-       $this->db->where('Users.roleId=1 or Users.roleId=2 or Users.roleId=3 or Users.roleId=6  ') ;
+        $this->db->select(' Users.userId , Users.name as Tname , Users.cellule , Users.avatar , Role.role , Users.cellule   ');
+            $this->db->from('tbl_users as Users'); 
+            $this->db->join('tbl_roles as Role ', 'Users.roleId = Role.roleId', 'LEFT');
+           $this->db->where('Users.roleId  IN (6,2,1,4,3) AND `ClubID` = ',$clubID) ;
        
 
         $this->db->order_by('Users.roleId', 'ASC') ;

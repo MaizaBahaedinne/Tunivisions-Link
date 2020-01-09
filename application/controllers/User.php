@@ -62,6 +62,7 @@ class User extends BaseController
         $count = $this->finance_model->financeListing($this->clubID);
         $data['bilancount'] = count($count)  ; 
          $data["TFMVALID"] = $this->Tfm_part_model->TFMValid($this->vendorId) ;
+         $data['projectRecords'] = $this->project_model->projectListing();
          
         $this->global['active'] = 'dash';
     
@@ -102,9 +103,9 @@ class User extends BaseController
             
             $this->load->library('pagination');
             
-            $count = $this->user_model->userListingApprouve($searchText);
+            $count = $this->user_model->userListingApprouve($searchText,$this->vendorId);
             $data['count'] = count($count)  ; 
-            $data['userRecords'] = $this->user_model->userListingApprouve($searchText);
+            $data['userRecords'] = $this->user_model->userListingApprouve($searchText,$this->vendorId);
             $this->global['active'] = 'members';
             $this->global['pageTitle'] = 'CodeInsect : User Listing';
             
@@ -184,6 +185,20 @@ class User extends BaseController
     }
     
 
+     function addNewLink($reciver){
+
+        $userInfo = array(
+                 'id_tunSender' => $this->vendorId ,  
+                 'id_tunReciver'=>$reciver ,
+                 'Addeddate'=>date('Y-m-d H:i:s'),
+                 'statut'=>0 
+                     );
+                
+                $result = $this->user_model->addNewLink($userInfo);
+
+                return $result ; 
+
+     }
 
 
     /**
@@ -624,6 +639,21 @@ class User extends BaseController
          $this->global['active'] = 'profile' ;
         $this->loadViews("Upassword", $this->global, $data, NULL);
     }
+
+
+            /**
+     * This function is used to show users profile
+     */
+    function ProfileShow($userId)
+    {
+        $data["userInfo"] = $this->user_model->getUserInfoWithRole($userId);
+        
+        
+        $this->global['pageTitle'] = 'CodeInsect : Change Password';
+         $this->global['active'] = 'profile' ;
+        $this->loadViews("Tunimateurs/profile", $this->global, $data, NULL);
+    }
+
 
     /**
      * This function is used to update the user details

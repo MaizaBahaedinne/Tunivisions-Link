@@ -27,6 +27,17 @@ class Project extends BaseController {
 		        }
 
 
+        public function projectListingbyClub()
+                {
+                        $searchText='' ;
+                        $data['projectRecords'] = $this->project_model->projectListingByClub($this->clubID);
+                        $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+                        $this->global['active'] = 'projects';
+                        $this->loadViews("project/ourProject", $this->global, $data, NULL);   
+                }
+
+
+
         public function oldProjectListing()
                 {
                         $titre='' ;

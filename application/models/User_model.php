@@ -34,20 +34,22 @@ class User_model extends CI_Model
      * This function is used to get the user listing count
      * @return array $result : This is result
      */
-    function userListingApprouve($searchText = '')
+    function userListingApprouve($searchText = '', $userId )
     {
-         $this->db->select('BaseTbl.userId, BaseTbl.gouvernorat , BaseTbl.delegation , BaseTbl.CLubID as club , BaseTbl.cin, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, BaseTbl.createdDtm, Role.role , Clubs.name as ClubName , Clubs.city as ClubCity ,BaseTbl.sexe ,BaseTbl.isDeleted , BaseTbl.avatar , BaseTbl.cellule  ');
+         $this->db->select('BaseTbl.userId, BaseTbl.gouvernorat , BaseTbl.delegation , BaseTbl.CLubID as club , BaseTbl.cin, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, BaseTbl.createdDtm, Role.role , Clubs.name as ClubName , Clubs.city as ClubCity ,BaseTbl.sexe ,BaseTbl.isDeleted , BaseTbl.avatar , BaseTbl.cellule , Freinds.id fId ,  Freinds.id_tunSender  , Freinds.id_tunReciver , Freinds.statut ');
         $this->db->from('tbl_users as BaseTbl');
         $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
+        $this->db->join('tbl_freinds as Freinds', 'Freinds.id_tunReciver = BaseTbl.userId and  Freinds.id_tunReciver =  '.$userId , 'LEFT');
             if(!empty($searchText)) {
             $likeCriteria = "(BaseTbl.name  LIKE '%".$searchText."%')";
             $this->db->where($likeCriteria);
         }
         
-        $this->db->where('BaseTbl.isDeleted !=', 1 );
-        $this->db->order_by('BaseTbl.ClubID  ', 'ASC');
-        $this->db->limit(50);
+        $this->db->where('BaseTbl.isDeleted =', 0 );
+        $this->db->where('BaseTbl.userId !=', $userId );
+        $this->db->order_by('BaseTbl.userId , BaseTbl.roleId ', 'ASC');
+        $this->db->limit(50); 
         $query = $this->db->get();
         
         $result = $query->result();        
@@ -269,6 +271,45 @@ class User_model extends CI_Model
         
         return $insert_id;
     }
+
+
+     /**
+     * This function is used to add new user to system
+     * @return number $insert_id : This is last inserted id
+     */
+    function addNewLink($linkInfo)
+    {
+
+        $this->db->trans_start();
+        $this->db->insert('tbl_freinds', $linkInfo);
+        
+        $insert_id = $this->db->insert_id();
+        
+        $this->db->trans_complete();
+        
+        return $insert_id;
+    }
+
+
+
+
+     /**
+     * This function is used to add new user to system
+     * @return number $insert_id : This is last inserted id
+     */
+    function linkRequest($reciver)
+    {
+         $this->db->select(' Sender.userId , Sender.name , Sender.avatar ,  BaseTbl.Addeddate , BaseTbl.statut ');
+        $this->db->from('tbl_freinds as BaseTbl');
+        $this->db->join('tbl_users as Reciver', 'Reciver.userId = BaseTbl.id_tunReciver ' ,'left');
+        $this->db->join('tbl_users as Sender', 'Sender.userId = BaseTbl.id_tunSender  '  ,'left');
+        $this->db->where('BaseTbl.id_tunReciver = '.$reciver.' AND  BaseTbl.statut = 0 ' ) ; 
+
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;  
+    }
     
     /**
      * This function used to get user information by id
@@ -439,7 +480,7 @@ class User_model extends CI_Model
      */
     function getUserInfoWithRole($userId)
     {
-        $this->db->select('BaseTbl.userId, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, BaseTbl.roleId, Roles.role, BaseTbl.birthday, BaseTbl.gouvernorat, BaseTbl.delegation, BaseTbl.facebook, BaseTbl.instagram, BaseTbl.linkedin , BaseTbl.ClubID , Clubs.name as ClubName ,   BaseTbl.avatar ,  BaseTbl.cellule , BaseTbl.cin , BaseTbl.SA ');
+        $this->db->select('BaseTbl.userId, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, BaseTbl.roleId, Roles.role, BaseTbl.birthday, BaseTbl.gouvernorat, BaseTbl.delegation, BaseTbl.facebook, BaseTbl.instagram, BaseTbl.linkedin , BaseTbl.ClubID , Clubs.name as ClubName ,   BaseTbl.avatar ,  BaseTbl.cellule , BaseTbl.cin , BaseTbl.SA , BaseTbl.createdDtm ');
         $this->db->from('tbl_users as BaseTbl');
         $this->db->join('tbl_roles as Roles','Roles.roleId = BaseTbl.roleId');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');

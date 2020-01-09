@@ -96,10 +96,38 @@ class Evaluation_model extends CI_Model
         $this->db->select('BaseTbl.evaluationId , BaseTbl.projectId , BaseTbl.titre , BaseTbl.statut , BaseTbl.doDate , Users.name   ');
         $this->db->from('tbl_evaluation as BaseTbl');
         $this->db->join('tbl_project as Projects', 'Projects.projectId = BaseTbl.projectId', 'LEFT');
+
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.doBy', 'LEFT');
          $this->db->where('Projects.endDate < NOW()  ') ; 
          $this->db->where('Projects.clubID = ', $clubId);
          $this->db->where('BaseTbl.statut = ','En Attend') ;
+
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
+
+    /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function evaluationByClubListing($clubId)
+    {
+        $this->db->select('BaseTbl.evaluationId , BaseTbl.projectId , Projects.titre ,Scores.createdDate, Scores.score , BaseTbl.statut , BaseTbl.doDate , Users.name   ');
+        $this->db->from('tbl_evaluation as BaseTbl');
+        $this->db->join('tbl_project as Projects', 'Projects.projectId = BaseTbl.projectId', 'LEFT');
+        $this->db->join('tbl_score_club as Scores', 'Scores.score_clubID = BaseTbl.projectId', 'LEFT');
+        
+        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.doBy', 'LEFT');
+         $this->db->where('Projects.endDate < NOW()  ') ; 
+         $this->db->where('Projects.clubID = ', $clubId);
+         
 
         $query = $this->db->get();
         

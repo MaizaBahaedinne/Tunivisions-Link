@@ -124,8 +124,14 @@ class BaseController extends CI_Controller {
     function loadViews($viewName = "", $headerInfo = NULL, $pageInfo = NULL, $footerInfo = NULL){
     
     	$this->load->model('notification_model');
+    	$this->load->model('user_model');
+
+    	$headerInfo['MyUserId'] = $this->vendorId ; 
+
 		$headerInfo['notifRecords'] = $this->notification_model->NotificationListing($this->vendorId) ;
         $headerInfo['notifRecordsNumber'] = count($this->notification_model->NotificationNoSeenListing($this->vendorId)) ;
+        $headerInfo['FreindRequest'] = $this->user_model->linkRequest($this->vendorId) ;
+        
         $this->load->view('includes/header', $headerInfo);
         $this->load->view($viewName, $pageInfo);
         $this->load->view('includes/footer', $footerInfo);

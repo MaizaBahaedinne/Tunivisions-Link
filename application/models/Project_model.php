@@ -60,15 +60,14 @@ class Project_model extends CI_Model
         return $result;
     }
 
-    function projectListingByClubThisWeek($clubID)
+    function projectListingByClub($clubID)
     {
-         $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description ,  BaseTbl.local ,BaseTbl.banner ');
+         $this->db->select('Users.userId , BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName , BaseTbl.description descP ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description ,  BaseTbl.local ,BaseTbl.banner , Users.name , Users.avatar ');
         $this->db->from('tbl_project as BaseTbl');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
-        $this->db->where('Clubs.clubID' , $clubID ) ;
-        $this->db->where('  DAY(startDate) - DAY(NOW()) < 7 AND MONTH(startDate) - MONTH(NOW()) = 0 ') ;
-        
-        $this->db->order_by('BaseTbl.startDate','DESC');
+        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.createBy', 'LEFT');
+        $this->db->where('Clubs.clubID' , $clubID ) ;        
+        $this->db->order_by('BaseTbl.endDate','DESC');
 
         $query = $this->db->get();
         
