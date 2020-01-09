@@ -54,12 +54,17 @@
                     <div class="d-flex justify-content-between align-items-baseline">
                       <h6 class="card-title mb-0">Tunimateurs</h6>
                       <div class="dropdown mb-2">
+                       
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-6 col-md-12 col-xl-5">
                         <h3 class="mb-2"><?php echo $tunimateursApp ;?></h3>
                       </div>
+                      <div class="col-6 col-md-12 col-xl-7">
+                          <div id="sparklinePie"></div>
+                      </div>
+                       
                     </div>
                   </div>
                 </div>
@@ -129,11 +134,11 @@
           
           var owl = $('.owl-carousel');
             owl.owlCarousel({
-                items:3,
+                items:2,
                 loop:true,
                 margin:10,
                 autoplay:true,
-                autoplayTimeout:3000,
+                autoplayTimeout:1500,
                 autoplayHoverPause:true
             });
             
@@ -264,3 +269,10 @@
         </div> <!-- row -->
 
      
+        <!-- plugin js for this page -->
+        <script src="<?php echo base_url() ?>assets/vendors/apexcharts/apexcharts.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/vendors/jquery-sparkline/jquery.sparkline.min.js"></script>
+        
+        <!-- end plugin js for this page -->
+
+ 

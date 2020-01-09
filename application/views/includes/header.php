@@ -617,7 +617,7 @@
 		<nav class="sidebar">
       <div class="sidebar-header">
         <a href="<?php echo base_url() ?>" class="sidebar-brand">
-          T<span> Link</span>
+          <img src="<?php echo base_url()?>assets\media\logos\logo rouge.svg" width="100px" >
         </a>
         <div class="sidebar-toggler not-active">
           <span></span>
