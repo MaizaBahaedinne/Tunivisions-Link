@@ -17,11 +17,13 @@
                         <span class="title text-muted font-weight-bold">Projet</span>
                         <p class="text-muted"></p>
                       </div>
+                      <?php  if ($role ==1  ||  $role == 3) { ?>
                       <div class="aside-compose"><a class="btn btn-primary btn-block" href="<?php echo base_url() ; ?>Project/addNew">Nouveau projet</a></div>
+                      <?php  } ?>
                       <div class="aside-nav collapse">
                         <ul class="nav">
                           <li class="active"><a href="<?php echo base_url() ; ?>Project/projectListingbyClub"><span class="icon"><i data-feather="inbox"></i></span>Nos projets<span class="badge badge-danger-muted text-white font-weight-bold float-right">2</span></a></li>
-                           <?php  if ($countEval>0 && ($role ==1  ||  ($role == 3  && $cellule=='Gestion des talents' )) ){ ?>
+                           <?php  if ($role ==1  ||  ($role == 3  && $cellule=='Gestion des talents' )) { ?>
                           <li class=""><a href="<?php echo base_url() ; ?>Evaluation/evaluationListing"><span class="icon"><i data-feather="mail"></i></span>Evaluations</a></li>
                           <?php  } ?>
                         </ul>
