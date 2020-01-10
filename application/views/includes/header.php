@@ -645,6 +645,12 @@
           </li>
           <li class="nav-item nav-category">Foundation</li>
           <?php if ($SA==1 || $clubID ==0  ) { ?>
+          <li class="nav-item ">
+            <a href="<?php echo base_url() ?>dashboard" class="nav-link">
+              <i data-feather="bookmark" width ="15" ></i>
+              <span class="link-title">Clubs</span>
+            </a>
+          </li>  
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
               <i data-feather="settings" width ="15" ></i>
