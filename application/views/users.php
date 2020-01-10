@@ -1,5 +1,11 @@
 
+<style type="text/css">
+    
+    .content-loader tr td {
+    white-space: nowrap;
+}
 
+</style>
 
 
 
@@ -19,7 +25,7 @@
                                 <h6 class="card-title">Feather Icons</h6>
                                    
                 <div class="container">
-                    <table id="example" class="table dataTable no-footer"  >
+                    <table id="example" class="table dataTable no-footer" style="width: 100%" >
                     <thead>
                     <tr>
                        
@@ -90,7 +96,7 @@
                         <?php echo $record->mobile ?> </td>
                         
                         <td> 
-                        <?php  
+                        <?php if ($SA==1){ 
                             if($record->isDeleted != 1) 
                          echo'<a href="'.base_url().'User/deleteUser/'.$record->userId.'"> <button class="btn btn-primary">Actif</button></a>' ;
                         
@@ -105,7 +111,7 @@
 
                     </tr>
                     <?php
-                        }
+                       } }
                     }
                     ?>
                     

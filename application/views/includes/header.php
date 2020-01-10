@@ -659,7 +659,7 @@
             </a>
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
-                <?php if ($SA==1) { ?>
+                <?php if ($SA==1 || ($clubID ==0 &&  ($cellule =='Ressource Humaine' || $cellule =='' ) )) { ?>
                 <li class="nav-item">
                   <a href="<?php echo base_url() ?>userListing" class="nav-link">Utilisateurs</a>
                 </li>
