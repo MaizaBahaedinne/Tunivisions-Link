@@ -646,7 +646,7 @@
           <li class="nav-item nav-category">Foundation</li>
           <?php if ($SA==1 || $clubID ==0  ) { ?>
           <li class="nav-item ">
-            <a href="<?php echo base_url() ?>dashboard" class="nav-link">
+            <a href="<?php echo base_url() ?>Club/clubListing" class="nav-link">
               <i data-feather="bookmark" width ="15" ></i>
               <span class="link-title">Clubs</span>
             </a>
