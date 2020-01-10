@@ -74,7 +74,7 @@
                             <div class="row">
 
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 card">
                                  <h4>VP Administration et finance </h4>
                                  <hr></hr>
                                 <?php foreach ($membres as $record ) { if ($record->cellule=='Administration et finance') { ?>  
@@ -95,7 +95,7 @@
                                 </div>
                                 
                             
-                               <div class="col-md-6">
+                               <div class="col-md-6 card">
                                  <h4>VP Marketing </h4>
                                  <hr></hr>
                                 <?php foreach ($membres as $record ) { if ($record->cellule=='Marketing') { ?>  
@@ -115,7 +115,7 @@
                                     <?php } } ?>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 card">
                                 <h4>VP Evenmentiel</h4>
                                 <hr></hr>
                                 <?php foreach ($membres as $record ) { if ($record->cellule=='Evenementiel') { ?>  
@@ -135,7 +135,7 @@
                                     <?php } } ?>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 card">
                                    <h4>VP Gestion des talents </h4>
                                    <hr></hr>
                                 <?php foreach ($membres as $record ) { if ($record->cellule=='Gestion des talents') { ?>  
