@@ -620,9 +620,18 @@
           <img src="<?php echo base_url()?>assets\media\logos\logo rouge.svg" width="100px" >
         </a>
         <div class="sidebar-toggler not-active">
-          <span></span>
-          <span></span>
-          <span></span>
+          <?php
+              function isMobile () {
+                return is_numeric(strpos(strtolower($_SERVER['HTTP_USER_AGENT']), "mobile"));
+              }
+
+              echo isMobile() ? "<img src=".base_url()."assets\media\logos/icon.svg'>" : "" ;
+              /* If you are redirecting the user to a mobile page, it is as simple as
+              if (isMobile()) {
+                header("Location: http://mobile.yoursite.com/");
+              } */
+              ?>
+
         </div>
       </div>
       <div class="sidebar-body ps">
@@ -775,9 +784,16 @@
 					
 			<!-- partial:partials/_navbar.html -->
 			<nav class="navbar">
-				<a href="#" class="sidebar-toggler">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-				</a>
+				
+          <a href="<?php echo base_url() ?>">
+					<?php
+
+              if (isMobile()){ ?> &nbsp;&nbsp; <img src="<?php echo base_url() ?>assets\media\logos/logo rouge.svg" style="width: 55px;" >  <?php } 
+
+                ?>
+            </a>
+             
+		
 				<div class="navbar-content">
 					
 					<ul class="navbar-nav">
