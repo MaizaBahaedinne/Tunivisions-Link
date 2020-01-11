@@ -14,7 +14,7 @@
                      <th>Projet </th>
                      <th>Statut </th>
                      <th>Validation </th>
-                     <th></th>
+                     <th>etat</th>
                    </thead>
                    <tbody>
                    
@@ -37,8 +37,8 @@
                     <td>
 
 
-                      <h5 class="mt-0 mb-1">
-                        <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
+                      <h6 >
+                                <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
                                   <span>
                                     <?php 
                                     $string = strip_tags( $record->titre );
@@ -57,9 +57,11 @@
                                      ?>  </span>
                                   
                                 </a>
-                      </h5>
-                      <small>
+                      </h6>
+                                
                                 <?php echo $record->type  ?>
+                               
+
                                 <?php if ($record->cible=='Publique' )
                                     { ?>
                                         <i class="flaticon-share"></i>
@@ -72,13 +74,17 @@
                                         <i class="flaticon-users"></i>
                                 <?php } ?>
 
-                                <?php  echo $record->cible ?></small>
 
-                                <span class="kt-widget__desc">
-                                 <small>  par 
-                                <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>  
-                                </small> 
-                                </span>
+                                <?php  echo $record->cible ?>
+                 
+
+                                
+                                 par 
+                                  <b>
+                                    <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>
+                                  </b>
+                                
+                                
                     
                     </td>
                     
@@ -88,17 +94,26 @@
                                     <?php 
                                         echo $record->score.' <small>points</small>' ; ?>  
                                     </p>  
-                                   <?php  }else{ ?>
+                                   <?php  }else if ($record->statut=='fini')  { ?>
                                      <p style="color: orange " >
                                     <?php 
-                                        echo ' <small>Validation en cours</small>' ; ?>  
-                                    </p>  
-                                   <?php } ?>
+                                        echo ' <small>Validation en cours par la fondation </small>' ; ?>  
+                                    </p>
+                                    <?php  }else if ($record->statut=='En attend')  { ?>  
+                                      <p style="color: blue " >
+                                      
+                                   <?php  echo ' <small>Validation en cours par le club </small>' ;  } ?>
+                                      </p>
                     
                     </td>
+
                     <td>
+                      faite par <?php  echo $record->affectedBy ; ?>  
                     </td>
+                    
                     <td>
+
+                      <div
                       
                     </td>
 
