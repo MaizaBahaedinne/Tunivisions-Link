@@ -127,7 +127,7 @@
                                 <div class="col-md-12">                                
                                     <div class="form-group">
                                         <label for="fname">Description</label>
-                                       <textarea class="form-control" name="tinymce" id="tinymceExample" rows="10"></textarea>
+                                       <textarea class="form-control" name="description" id="tinymceExample" rows="10"></textarea>
 
                                     </div>
                                     
