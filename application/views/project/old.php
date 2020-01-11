@@ -28,7 +28,8 @@
                     <td>
                                
                     <?php 
-                            echo $record->startDate ; ?>  
+                             $date = date($record->startDate) ;
+                              echo $date->format('d/m/Y');       ?>  
                     </td>
 
 
