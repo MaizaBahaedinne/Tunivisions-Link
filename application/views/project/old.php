@@ -8,38 +8,54 @@
             <div class="card">
               <div class="card-body">
                 
-                <ul class="list-unstyled">
+                 <table class="table dataTable no-footer" style="width: 100%" >
+                   <thead>
+                     <th>Date </th>
+                     <th>Projet </th>
+                     <th>Statut </th>
+                     <th>Validation </th>
+                     <th></th>
+                   </thead>
+                   <tbody>
+                   
 
+              
                   <?php foreach ($projectRecords as $record ) {
                     
                   ?>
-                  <li class="media d-block d-sm-flex" style="padding: 10px">
-                    <div 
-                                <?php if($record->valider =='Valider'){ ?> class="btn btn-sm btn-primary" 
-                                <?php } else if ($record->valider =='' && $record->statut=='fini' ){ ?>class="btn btn-sm btn-warning"  
-                                <?php } else if($record->valider =='') { ?> class="btn btn-sm btn-danger" 
-                                <?php } ?>
-                                 style="overflow: auto;"> 
-                                        <?php $date = new DateTime($record->startDate) ; 
-                                        echo '<small>'.$date->format('M').'-20'.$date->format('y').'</small><br><h2><b>'.$date->format('d').'</b></h2>' ; ?>  
-                                       
-                      </div>
-                      &nbsp; &nbsp; &nbsp;
-                    <div class="media-body">
+                  <tr>
+
+                    <td>
+                               
+                    <?php 
+                            echo $record->startDate ; ?>  
+                    </td>
+
+
+                    
+
+                    <td>
+
+
                       <h5 class="mt-0 mb-1">
                         <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
-                                  <span><?php echo $record->titre ;  ?>  </span>
-                                  <?php if ($record->valider =='Valider' && $record->statut=='fini') { ?>
-                                  <p style="color: green " >
+                                  <span>
                                     <?php 
-                                        echo $record->score.' <small>points</small>' ; ?>  
-                                    </p>  
-                                   <?php  }else{ ?>
-                                     <p style="color: orange " >
-                                    <?php 
-                                        echo ' <small>Validation en cours</small>' ; ?>  
-                                    </p>  
-                                   <?php } ?>
+                                    $string = strip_tags( $record->titre );
+                                    if (strlen($string) > 30){
+
+                                        // truncate string
+                                        $stringCut = substr($string, 0, 30);
+                                        $endPoint = strrpos($stringCut, ' ');
+
+                                        //if the string doesn't contain any space then it will cut without word basis.
+                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                        $string .= '... ';
+                                        }
+
+                                     echo $string ;
+                                     ?>  </span>
+                                  
                                 </a>
                       </h5>
                       <small>
@@ -57,18 +73,44 @@
                                 <?php } ?>
 
                                 <?php  echo $record->cible ?></small>
+
                                 <span class="kt-widget__desc">
                                  <small>  par 
                                 <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>  
                                 </small> 
                                 </span>
-                    </div>
-                  </li>
+                    
+                    </td>
+                    
+                    <td>
+                      <?php if ($record->valider =='Valider' && $record->statut=='fini') { ?>
+                                  <p style="color: green " >
+                                    <?php 
+                                        echo $record->score.' <small>points</small>' ; ?>  
+                                    </p>  
+                                   <?php  }else{ ?>
+                                     <p style="color: orange " >
+                                    <?php 
+                                        echo ' <small>Validation en cours</small>' ; ?>  
+                                    </p>  
+                                   <?php } ?>
+                    
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                      
+                    </td>
+
+                  </tr>
+                     
+                   
                   <?php } ?>
+                  </tbody>
+             
+            </table>
 
-                </ul>
-
-
+                  
               </div>
             </div>
           </div>
@@ -102,7 +144,7 @@
       $('.dropify').dropify();
     </script>
 
-    !-- plugin js for this page -->
+
   <script src="<?php echo base_url() ?>assets/vendors/tinymce/tinymce.min.js"></script>
   <script src="<?php echo base_url() ?>assets/vendors/simplemde/simplemde.min.js"></script>
   <script src="<?php echo base_url() ?>assets/vendors/ace-builds/src-min/ace.js"></script>
@@ -111,3 +153,13 @@
 
 
   <script src="<?php echo base_url() ?>assets/js/tinymce.js"></script>
+
+
+            <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <script defer src="<?php echo base_url() ?>assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script defer src="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script type="text/javascript">
+      $(document).ready( function () {
+    $('table').DataTable();
+} );
+  </script>

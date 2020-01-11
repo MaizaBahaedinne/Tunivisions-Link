@@ -39,7 +39,6 @@ class Scores_model extends CI_Model
     {
         $this->db->select('BaseTbl.userId  , BaseTbl.avatar , BaseTbl.name ,  BaseTbl.clubName , sum(scoreByMembre) as scores  ');
         $this->db->from('memberscoring as  BaseTbl');
-        
         $this->db->order_by('scores', 'DESC');
         $this->db->group_by('BaseTbl.userID');  
         $this->db->limit(10);  

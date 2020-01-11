@@ -669,6 +669,11 @@
                   <a href="<?php echo base_url() ?>Actu/addNew" class="nav-link">Actualités</a>
                 </li>
                 <?php } ?>
+                <?php if ($SA==1) { ?>
+                <li class="nav-item">
+                  <a href="<?php echo base_url() ?>Project/oldProjectListing" class="nav-link">Scoring</a>
+                </li>
+                <?php } ?>
               </ul>
             </div>
           </li>
@@ -1007,15 +1012,13 @@
                                                      ?></p>
 										</div>
 									</a>
-                  <?php  # code...
+                  <?php  
                 }
                 ?>
 
 
 								</div>
-								<div class="dropdown-footer d-flex align-items-center justify-content-center">
-									<a href="javascript:;">View all</a>
-								</div>
+
 							</div>
 						</li>
 						<li class="nav-item dropdown nav-profile">

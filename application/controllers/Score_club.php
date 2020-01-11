@@ -87,6 +87,7 @@ class Score_club extends BaseController {
                         $data['resource'] = $this->ressource_model->ressourceListingByProject($projectID);
                         $data['BadgesRecords'] = $this->Scores_model->badgeListing();
 
+                        $data['scoreClub']  =	$this->scores_club_model->scoreClubbyProjectListing($projectID);
 
 		        	   $this->loadViews("project/noter", $this->global, $data, NULL);
 		        }
