@@ -36,10 +36,10 @@ class Scores_club_model extends CI_Model
      */
     function scoreClubbyProjectListing($projectId)
     {
-        $this->db->select('BaseTbl.score_clubID , BaseTbl.clubID , BaseTbl.remarque , BaseTbl.titre , BaseTbl.score ,BaseTbl.affectedBy ');
+        $this->db->select('BaseTbl.score_clubID , BaseTbl.clubID , BaseTbl.remarque , BaseTbl.titre , BaseTbl.score , BaseTbl.affectedBy ');
         $this->db->from('tbl_score_club as BaseTbl');
         $this->db->join('tbl_evaluation as Evals', 'Evals.score_clubID = BaseTbl.score_clubID', 'LEFT');
-        $this->db->where('Evals.projectId =' ,  $projectId);
+        $this->db->where('Evals.projectId =' , $projectId);
        
       
         $query = $this->db->get();

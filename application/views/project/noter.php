@@ -118,7 +118,7 @@
                               <option value="Organisation : ">Organisation</option>
                             </select> 
                             <label> score </label>
-                            <input class="form-control" type="number" name="scoreP" value="<?php echo $scoreClub->score ?>">
+                            <input class="form-control" type="number" name="scoreP" value="<?php echo $scoreClub->sc ?>">
                             <label> Remarque </label>
                             <textarea class="form-control" type="number" name="remarque"  value="<?php echo $scoreClub->remarque ?>" ></textarea>
                             <label>Badges</label>
