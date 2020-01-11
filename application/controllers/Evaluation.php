@@ -76,45 +76,45 @@ class Evaluation extends BaseController {
               }
 		        }
 
-	public function evalutionupdate($EvalId)  {
-        $album = $this->input->post('album');
-        $afterMovie = $this->input->post('afterMovie');
-        $this->load->model('evaluation_model');
-		    $this->load->model('ressource_model');
+      	public function evalutionupdate($EvalId)  {
+              $album = $this->input->post('album');
+              $afterMovie = $this->input->post('afterMovie');
+              $this->load->model('evaluation_model');
+      		    $this->load->model('ressource_model');
 
-        $ScoreInfo = array(
-          'clubID'=>$this->clubID,
-          'titre'=>'',
-          
-        );
-        
-        $evalInfo = array(
-          'album'=>$album,
-          'afterMovie'=>$afterMovie,
-          'doDate'=> date('Y-m-d H:i:s') ,
-          'doBy'=>$this->vendorId , 
-          'statut'=>'fini',
-          'score_clubID'=>$this->scores_club_model-> addNewScoreClub($ScoreInfo),
-      	);
-
-
-        $result = $this->evaluation_model->editEvaluation($evalInfo, $EvalId);  
-        $eval = $this->evaluation_model->evaluationInfo($EvalId);
-
-        $rbp = $this->ressource_model->ressourceListingByProject($eval->projectId);		
-        foreach ( $rbp as $r ) {
-        	$score = $this->input->post($r->ressourceID);
-        	$ressource = array(
-        		'score'=>$score
-        	);
-			$this->ressource_model->editRessource($ressource, $r->ressourceID) ; 
-
-        }
+              $ScoreInfo = array(
+                'clubID'=>$this->clubID,
+                'titre'=>'',
+                
+              );
+              
+              $evalInfo = array(
+                'album'=>$album,
+                'afterMovie'=>$afterMovie,
+                'doDate'=> date('Y-m-d H:i:s') ,
+                'doBy'=>$this->vendorId , 
+                'statut'=>'fini',
+                'score_clubID'=>$this->scores_club_model-> addNewScoreClub($ScoreInfo),
+            	);
 
 
-        redirect('Evaluation/evaluationListing');
-            
-    }
+              $result = $this->evaluation_model->editEvaluation($evalInfo, $EvalId);  
+              $eval = $this->evaluation_model->evaluationInfo($EvalId);
+
+              $rbp = $this->ressource_model->ressourceListingByProject($eval->projectId);		
+              foreach ( $rbp as $r ) {
+              	$score = $this->input->post($r->ressourceID);
+              	$ressource = array(
+              		'score'=>$score
+              	);
+      			$this->ressource_model->editRessource($ressource, $r->ressourceID) ; 
+
+              }
+
+
+              redirect('Evaluation/evaluationListing');
+                  
+          }
 
 		
 }

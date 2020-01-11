@@ -62,6 +62,30 @@ class Ressource_model extends CI_Model
     }
 
 
+
+     /**
+     * This function is used to get the user listing count
+     * @return array $result : This is result
+     */
+    function ressourceListingBUser($UserId)
+    {
+         $this->db->select('BaseTbl.ressourceID , BaseTbl.userID , Users.name  , BaseTbl.score ,  Users.avatar ,  Users.userId , Project.titre , Badges.name badge , Badges.code ');
+        $this->db->from('tbl_ressource as BaseTbl');
+        $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userID', 'LEFT');
+        $this->db->join('tbl_project as Project', 'Project.projectId = BaseTbl.projectID', 'LEFT');
+        $this->db->join('tbl_badges as Badges', 'Badges.badgeId = BaseTbl.badgeId', 'LEFT');
+        $this->db->where('BaseTbl.UserId =', $UserId );
+        $this->db->where('BaseTbl.badgeId !=', 0 );
+        $this->db->order_by('BaseTbl.score DESC  ' );
+
+        
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
    
 }
 

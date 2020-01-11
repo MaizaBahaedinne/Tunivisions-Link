@@ -27,6 +27,7 @@ class User extends BaseController
         $this->load->model('notification_model');
          $this->load->model('finance_model');
          $this->load->model('Tfm_part_model');
+         $this->load->model('ressource_model');
         
         $this->isLoggedIn();   
     }
@@ -677,7 +678,7 @@ class User extends BaseController
     function ProfileShow($userId)
     {
         $data["userInfo"] = $this->user_model->getUserInfoWithRole($userId);
-        
+        $data["ressourceInfo"] = $this->ressource_model->ressourceListingBUser($userId);
         
         $this->global['pageTitle'] = 'CodeInsect : Change Password';
          $this->global['active'] = 'profile' ;
