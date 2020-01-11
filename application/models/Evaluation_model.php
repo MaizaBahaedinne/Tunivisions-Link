@@ -32,7 +32,7 @@ class Evaluation_model extends CI_Model
      */
     function evaluationInfoprojectId($projectId)
     {
-        $this->db->select('evaluationId, album , afterMovie , projectId, titre , doDate , doBy');
+        $this->db->select('evaluationId, album , afterMovie , projectId, titre , doDate , doBy ');
         $this->db->from('tbl_evaluation');
         $this->db->where('projectId', $projectId);
         $query = $this->db->get();
