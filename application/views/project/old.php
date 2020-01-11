@@ -91,7 +91,7 @@
                     </td>
                     
                     <td>
-                      <?php if ($record->valider =='Valider' && $record->statut=='fini') { ?>
+                                  <?php if ($record->valider =='Valider' && $record->statut=='fini') { ?>
                                   <p style="color: green " >
                                     <?php 
                                         echo $record->score.' <small>points</small>' ; ?>  
@@ -101,8 +101,8 @@
                                     <?php 
                                         echo ' <small>Validation en cours par la fondation </small>' ; ?>  
                                     </p>
-                                    <?php  }else if ($record->statut=='En attend')  { ?>  
-                                      <p style="color: blue " >
+                                    <?php  }else if ($record->statut=='En Attend')  { ?>  
+                                      <p style="color: red " >
                                       
                                    <?php  echo ' <small>Validation en cours par le club </small>' ;  } ?>
                                       </p>
