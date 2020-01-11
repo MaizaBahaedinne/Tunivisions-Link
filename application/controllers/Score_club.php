@@ -23,7 +23,7 @@ class Score_club extends BaseController {
 		public function scoreClubListing()
 		        {
 
-		                $this->load->model('scores_club_model');
+		               
 		                $searchText='' ;
 		                $data['clubRecords'] = $this->club_model->clubListing();
 
@@ -95,21 +95,56 @@ class Score_club extends BaseController {
 				public function noteProject($projectID)
 			        {
 
+			        	$projectInfo = $this->project_model->getProjectInfo($projectID);
+                        $evaluations = $this->evaluation_model->evaluationInfoprojectId($projectID);
+						$resource = 	$this->ressource_model->ressourceListingByProject($projectID);
+						$scoreClub  =	$this->scores_club_model->scoreClubbyProjectListing($projectID);
 
+						print_r($scoreClub); 
+						
 
-			        	$data["projectInfo"] = $this->project_model->getProjectInfo($projectID);
-                        $data["evaluations"] = $this->evaluation_model->evaluationInfoprojectId($projectID);
-						$data['resource'] = $this->ressource_model->ressourceListingByProject($projectID);
+							$score = $this->input->post('scoreP');
+			                $remarque = $this->input->post('remarque'); 
+			                $titre = $this->input->post('titre');   
 
-							$score = $this->input->post('mobile');
-			                $remarque = $this->input->post('mobile');   
-
-			                $userInfo = array(
+			                $scoreInfo = array(
+			                	 'titre' => $titre ,
 				                 'score' => $score ,  
 				                 'remarque'=>$remarque,
-				                 'createdDtm'=>date('Y-m-d H:i:s'),
-				                 
+				                 'createdDate'=>date('Y-m-d H:i:s'),				                 
 				                     );        
-			               
+
+			                $this->scores_club_model->editScoreClub($scoreInfo, $scoreClub->score_clubID) ; 
+
+			                $badge = $this->input->post('badge');
+
+			               	foreach ($resource as $res ) {
+			               		
+			               		if ($res->score>1) {
+
+				              	$ressource = array(
+				              		'badgeId'=>$badge , 
+				              		'ValidDate'=> date('Y-m-d H:i:s') ,
+				              	);
+
+				      			$this->ressource_model->editRessource($ressource, $res->ressourceID) ; 
+				      			
+				      			}
+			               	}
+
+			               	$evalInfo = array(
+						                'valider'=>'Valider',
+						                'dateValid'=> date('Y-m-d H:i:s') ,
+						                'validBy'=>$this->vendorId , 
+						            	);
+
+
+						    $result = $this->evaluation_model->editEvaluation($evalInfo, $evaluations->evaluationId);
+
+
+		
+
+
+
 			        }
 }

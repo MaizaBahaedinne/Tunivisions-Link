@@ -111,12 +111,18 @@
                         
                           <div class="row">
                             <form method="post" action="<?php echo base_url()?>Score_club/noteProject/<?php echo $projectInfo->projectId ; ?>"  >
+
+                            <label> Titre  </label>
+                            <select name="titre">
+                              <option value="Participation : ">Participation</option>
+                              <option value="Organisation : ">Organisation</option>
+                            </select> 
                             <label> score </label>
                             <input class="form-control" type="number" name="scoreP">
                             <label> Remarque </label>
                             <textarea class="form-control" type="number" name="remarque"></textarea>
                             <label>Badges</label>
-                            <select>
+                            <select name="badge">
                               <?php 
                               foreach ($BadgesRecords as $badge ) 
                               { 

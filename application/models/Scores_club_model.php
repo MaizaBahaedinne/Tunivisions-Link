@@ -27,6 +27,27 @@ class Scores_club_model extends CI_Model
     }
 
 
+        /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function scoreClubbyProjectListing($projectId)
+    {
+        $this->db->select('BaseTbl.score_clubID , BaseTbl.clubID , BaseTbl.titre , BaseTbl.score ,BaseTbl.affectedBy ');
+        $this->db->from('tbl_score_club as BaseTbl');
+        $this->db->join('tbl_evaluation as Evals', 'Evals.score_clubID = BaseTbl.score_clubID', 'LEFT');
+        $this->db->where('Evals.projectId =' ,  $projectId);
+       
+      
+        $query = $this->db->get();
+
+         return $query->row();
+    }
+
+
 
     /**
      * This function is used to add new user to system
@@ -44,6 +65,24 @@ class Scores_club_model extends CI_Model
         
         return $insert_id;
     }
+
+
+
+ /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+    */
+    function editScoreClub($scoreClubInfo, $scoreClubId)
+    {
+        $this->db->where('score_clubID', $scoreClubId);
+        $this->db->update('tbl_score_club', $scoreClubInfo);
+        
+        return TRUE;
+    }
+    
 
 
    

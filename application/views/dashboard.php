@@ -168,13 +168,15 @@
                 </style>
                 <div class="d-flex flex-column">
                   <?php $c=0 ; foreach ($RateMember as $membre ) { ?>
-                  <a href="#" class="d-flex align-items-center border-bottom pb-3">
+                  <a href="<?php echo base_url() ; ?>User/ProfileShow/<?php echo $membre->userID ?>" class="d-flex align-items-center border-bottom pb-3">
                     <div class="mr-3">
                       <img src="https://www.tunivisions.link/uploads/avatar/<?php echo $membre->avatar ?>" class="rounded-circle wd-35 pro-turtle" alt="user">
                     </div>
                     <div class="w-100">
                       <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2"><?php echo $membre->name ?></h6>
+                        
+                         <h6 class="text-body mb-2"><?php echo $membre->name ?></h6>
+                       
                         <p class="text-muted tx-12"><?php echo $membre->scores ?> Points</p>
                       </div>
                       <p class="text-muted tx-13">Club Tunivisions <?php echo $membre->clubName ?></p>

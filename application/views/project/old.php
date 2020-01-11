@@ -1,142 +1,20 @@
-<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-                                            <!-- begin:: Content Head -->
-<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-    <div class="kt-container  kt-container--fluid ">
-        <div class="kt-subheader__main">
-            
-            <h3 class="kt-subheader__title">
-                                    Projets                           
-            </h3>
 
-            <span class="kt-subheader__separator kt-subheader__separator--v"> </span> 
-            <b>Validation : &nbsp; </b>
-            <div class="btn btn-sm btn-danger">En cours (Club)</div>
-            <div class="btn btn-sm btn-warning">En cours (Fondation)</div>
-            <div class="btn btn-sm btn-primary">Validé</div>
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/dropify/dist/dropify.min.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/simplemde/simplemde.min.css">
+<!-- partial -->
 
-
-            <div class="kt-subheader__group" id="kt_subheader_search">
-                <span class="kt-subheader__desc" id="kt_subheader_total">
-                                                                                </span>
+        <div class="row inbox-wrapper">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
                 
-                                   
-                            </div>
+                <ul class="list-unstyled">
 
-                            <div class="kt-subheader__group kt-hidden" id="kt_subheader_group_actions">
-
-                    <div class="kt-subheader__desc"><span id="kt_subheader_group_selected_rows"></span> Selected:</div>
+                  <?php foreach ($projectRecords as $record ) {
                     
-                    <div class="btn-toolbar kt-margin-l-20">
-                        <div class="dropdown" id="kt_subheader_group_actions_status_change">
-                            <button type="button" class="btn btn-label-brand btn-bold btn-sm dropdown-toggle" data-toggle="dropdown">
-                                Update Status
-                            </button>
-                            <div class="dropdown-menu">
-                                <ul class="kt-nav">
-                                    <li class="kt-nav__section kt-nav__section--first">
-                                        <span class="kt-nav__section-text">Change status to:</span>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="1">
-                                            <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-success kt-badge--inline kt-badge--bold">Approved</span></span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="2">
-                                            <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-danger kt-badge--inline kt-badge--bold">Rejected</span></span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="3">
-                                            <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-warning kt-badge--inline kt-badge--bold">Pending</span></span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link" data-toggle="status-change" data-status="4">
-                                            <span class="kt-nav__link-text"><span class="kt-badge kt-badge--unified-info kt-badge--inline kt-badge--bold">On Hold</span></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <button class="btn btn-label-success btn-bold btn-sm btn-icon-h" id="kt_subheader_group_actions_fetch" data-toggle="modal" data-target="#kt_datatable_records_fetch_modal">
-                            Fetch Selected
-                        </button>                
-                        <button class="btn btn-label-danger btn-bold btn-sm btn-icon-h" id="kt_subheader_group_actions_delete_all">
-                            Delete All
-                        </button>
-                    </div>
-                </div>
-                    </div>        
-        <div class="kt-subheader__toolbar">
-<form class="kt-margin-l-20" action="<?php echo base_url() ; ?>Project/oldProjectListing" method="post" >
-                            <div class="kt-input-icon kt-input-icon--right kt-subheader__search">
-                                 <input type="text" name="titre" value="<?php echo $titre ?>" class="form-control" placeholder="Chercher..." id="generalSearch">
-                           <span class="kt-input-icon__icon kt-input-icon__icon--right">
-                                <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-                                    <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" id="Path-2" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
-                                    <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" id="Path" fill="#000000" fill-rule="nonzero"></path>
-                                </g>
-                        </svg>                                    <!--<i class="flaticon2-search-1"></i>-->
-                                </span>
-                            </span>
-                        </div>
-                       
-                    </form>
-
-
-          
-               
-          
-
-           <!--         
-            <?php if ($role ==1 || $role == 2 || $role == 3  ) {  ?>
-                                                <a href="<?php echo base_url() ?>addNewProject" class="btn btn-label-brand btn-bold">
-                        
-                        Ajouter un projet                    </a>
-             <?php } ?>                           
-            -->
-                    </div>
-    </div>
-</div>
-<!-- end:: Content Head -->                 
-
-<style type="text/css">
-       .alligator-turtle {
-  object-fit: cover;
-  object-position: 50% 50%;
-
-  width: 100%;
-  height: 150px;
-}
-</style>
-
-
-                    <!-- begin:: Content -->
-    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-        <!--Begin::Section-->
-<div class="row">
-    <?php
-        if(!empty($projectRecords))
-            {
-              foreach($projectRecords as $record)
-            {
-            ?>
-    <div class="col-md-6">
-        <!--begin:: Portlet-->
-        <div class="kt-portlet kt-portlet--height-fluid">
-        
-
-            <div class="kt-portlet__body kt-portlet__body--fit">
-                <!--begin::Widget -->
-                <div class="kt-widget kt-widget--project-1">
-                    <div class="kt-widget__head">
-                        <div class="kt-widget__label">
-                            <div class="kt-widget__media">
-                                <div 
+                  ?>
+                  <li class="media d-block d-sm-flex" style="padding: 10px">
+                    <div 
                                 <?php if($record->valider =='Valider'){ ?> class="btn btn-sm btn-primary" 
                                 <?php } else if ($record->valider =='' && $record->statut=='fini' ){ ?>class="btn btn-sm btn-warning"  
                                 <?php } else if($record->valider =='') { ?> class="btn btn-sm btn-danger" 
@@ -145,14 +23,11 @@
                                         <?php $date = new DateTime($record->startDate) ; 
                                         echo '<small>'.$date->format('M').'-20'.$date->format('y').'</small><br><h2><b>'.$date->format('d').'</b></h2>' ; ?>  
                                        
-                                </div>
-
-                             </div>
-
-                            <div class="kt-widget__info">
-                                <div class="kt-widget__media">
-                            </div>
-                                <a href="<?php echo base_url()?>Project/projectDetails/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
+                      </div>
+                      &nbsp; &nbsp; &nbsp;
+                    <div class="media-body">
+                      <h5 class="mt-0 mb-1">
+                        <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
                                   <span><?php echo $record->titre ;  ?>  </span>
                                   <?php if ($record->valider =='Valider' && $record->statut=='fini') { ?>
                                   <p style="color: green " >
@@ -166,7 +41,8 @@
                                     </p>  
                                    <?php } ?>
                                 </a>
-                                <small>
+                      </h5>
+                      <small>
                                 <?php echo $record->type  ?>
                                 <?php if ($record->cible=='Publique' )
                                     { ?>
@@ -186,44 +62,52 @@
                                 <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>  
                                 </small> 
                                 </span>
-
-                                
-                                     
-                                
-                            </div>
-                      
-
-                       
-
-                        </div>
-                         
-
                     </div>
+                  </li>
+                  <?php } ?>
 
-                    
+                </ul>
 
-                    
-                </div>
-                <!--end::Widget -->
 
+              </div>
             </div>
+          </div>
         </div>
 
-        <!--end:: Portlet-->
-    </div>
-    
-    
-    <?php
-                        }
+
+
+
+    <script>  
+                function readURL(input) {
+                  if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    
+                    reader.onload = function(e) {
+                      $('#preview-img').attr('src', e.target.result);
                     }
-                    ?>
-              
-</div>
-<!--End::Section-->
+                    
+                    reader.readAsDataURL(input.files[0]);
+                  }
+                }
+
+                $("#image_file").change(function() {
+                  readURL(this);
+                });
+    </script>
 
 
 
-<!--Begin::Section-->
+    <script src="<?php echo base_url() ?>assets/vendors/dropify/dist/dropify.min.js"></script>
+    <script type="text/javascript">
+      $('.dropify').dropify();
+    </script>
 
-<!--End::Section--> </div>
-<!-- end:: Content -->              </div>
+    !-- plugin js for this page -->
+  <script src="<?php echo base_url() ?>assets/vendors/tinymce/tinymce.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/vendors/simplemde/simplemde.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/vendors/ace-builds/src-min/ace.js"></script>
+  <script src="<?php echo base_url() ?>assets/vendors/ace-builds/src-min/theme-chaos.js"></script>
+  <!-- end plugin js for this page -->
+
+
+  <script src="<?php echo base_url() ?>assets/js/tinymce.js"></script>
