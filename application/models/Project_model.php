@@ -21,8 +21,10 @@ class Project_model extends CI_Model
         if($serchText !=''){
         $this->db->where('BaseTbl.titre Like ','%'.$serchText.'%'); 
         }
-        $this->db->where('Evaluations.statut =','fini AND Evaluations.validBy = 0 ') ;
+
         $this->db->where('NOW() > BaseTbl.endDate ') ;
+        $this->db->where('Evaluations.statut =','fini') ;
+        $this->db->where('Evaluations.validBy = 0 ') ;
         $this->db->order_by('BaseTbl.startDate','ASC');
 
         $query = $this->db->get();
