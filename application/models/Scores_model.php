@@ -15,7 +15,7 @@ class Scores_model extends CI_Model
      */
     function RaitingClub()
     {
-        $this->db->select('BaseTbl.score_clubID , max(BaseTbl.createdDate) ,  BaseTbl.clubID , Clubs.name , sum(score) as scores ');
+        $this->db->select('BaseTbl.score_clubID , max(BaseTbl.createdDate) createdDate ,  BaseTbl.clubID , Clubs.name , sum(score) as scores ');
         $this->db->from('tbl_score_club as  BaseTbl');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.clubID','left');
         $this->db->order_by('scores', 'DESC');
