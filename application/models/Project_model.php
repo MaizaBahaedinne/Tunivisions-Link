@@ -21,6 +21,7 @@ class Project_model extends CI_Model
         if($serchText !=''){
         $this->db->where('BaseTbl.titre Like ','%'.$serchText.'%'); 
         }
+        $this->db->where('BaseTbl.statut = fini AND validBy = 0 ') ;
         $this->db->where('NOW() > BaseTbl.endDate ') ;
         $this->db->order_by('BaseTbl.startDate','ASC');
 
