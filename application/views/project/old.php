@@ -12,9 +12,7 @@
                    <thead>
                      <th>Date </th>
                      <th>Projet </th>
-                     <th>Statut </th>
                      <th>Validation </th>
-                     <th>etat</th>
                    </thead>
                    <tbody>
                    
@@ -61,7 +59,7 @@
                                 </a>
                       </h6>
                                 
-                                <?php echo $record->type  ?>
+                                <?php echo $record->type  ?><br>
                                
 
                                 <?php if ($record->cible=='Publique' )
@@ -76,11 +74,12 @@
                                         <i class="flaticon-users"></i>
                                 <?php } ?>
 
+                                <br>
 
                                 <?php  echo $record->cible ?>
                  
 
-                                
+                                <br>
                                  par 
                                   <b>
                                     <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>
@@ -90,34 +89,13 @@
                     
                     </td>
                     
-                    <td>
-                                  <?php if ($record->valider =='Valider' && $record->statut=='fini') { ?>
-                                  <p style="color: green " >
-                                    <?php 
-                                        echo $record->score.' <small>points</small>' ; ?>  
-                                    </p>  
-                                   <?php  }else if ($record->statut=='fini')  { ?>
-                                     <p style="color: orange " >
-                                    <?php 
-                                        echo ' <small>Validation en cours par la fondation </small>' ; ?>  
-                                    </p>
-                                    <?php  }else if ($record->statut=='En Attend')  { ?>  
-                                      <p style="color: red " >
-                                      
-                                   <?php  echo ' <small>Validation en cours par le club </small>' ;  } ?>
-                                      </p>
-                    
-                    </td>
+
 
                     <td>
                       faite par <?php  echo $record->affectedBy ; ?>  
                     </td>
                     
-                    <td>
-
-                      <div
-                      
-                    </td>
+   
 
                   </tr>
                      
