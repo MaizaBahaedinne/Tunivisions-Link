@@ -196,9 +196,7 @@
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
                   <h6 class="card-title mb-0">Classement des clubs </h6>
                   <span class="text-muted">
-                   <?php $c=0 ; foreach ($RateClub as $club ) { ?>
-                      <?php echo max($club->createdDate) ;  ?>
-                   <?php }?>
+                  <?php echo $LastRaitingClub; ?>
                   </span>
                 </div>
                 <div class="table-responsive" style="height:600px ;overflow:auto;">
