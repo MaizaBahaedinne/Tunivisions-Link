@@ -61,7 +61,11 @@
 	<script src="<?php echo base_url() ?>assets/js/dropify.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/bootstrap-colorpicker.js"></script>
 
-
+    <script type="text/javascript">
+    	$("body").ready(function(){
+			  $("body").addClass("sidebar-folded");
+			});
+    </script>
 
 
 
@@ -69,3 +73,4 @@
 
 <!-- Mirrored from www.nobleui.com/html/template/demo_1/dashboard-one.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Dec 2019 11:42:34 GMT -->
     <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body></html>
+

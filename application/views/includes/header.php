@@ -610,7 +610,7 @@
   }
 }</style><style type="text/css">@keyframes resizeanim { from { opacity: 0; } to { opacity: 0; } } .resize-triggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }</style><style type="text/css">/* Chart.js */
 @keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
-<body>
+<body class="sidebar-folded">
 	<div class="main-wrapper">
 
 		<!-- partial:partials/_sidebar.html -->
@@ -619,7 +619,7 @@
         <a href="<?php echo base_url() ?>" class="sidebar-brand">
           <img src="<?php echo base_url()?>assets\media\logos\logo rouge.svg" width="100px" >
         </a>
-        <div class="sidebar-toggler not-active">
+        <div class="sidebar-toggler active">
           <?php
               function isMobile () {
                 return is_numeric(strpos(strtolower($_SERVER['HTTP_USER_AGENT']), "mobile"));
@@ -631,6 +631,10 @@
                 header("Location: http://mobile.yoursite.com/");
               } */
               ?>
+
+              <span></span>
+              <span></span>
+              <span></span>
 
         </div>
       </div>
@@ -805,7 +809,17 @@
             </a>
              
 		
-				<div class="navbar-content">
+				<div class="navbar-content"  >
+          <form class="search-form" action="<?php echo  base_url() ?>User/userListing2" method="post" >
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+              </div>
+              <input type="text" class="form-control" id="navbarForm" name="searchText" >
+            </div>
+          </form>
 					
 					<ul class="navbar-nav">
             <li class="nav-item dropdown nav-apps">
