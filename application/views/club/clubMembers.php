@@ -22,7 +22,7 @@
                                     <div class="cover-body d-flex justify-content-between align-items-center">
                                         <div>
                                             
-                                            <span class="profile-name"><?php if($clubInfo->name == 'Foundation') {echo "Club";} ?> Tunivisions <?php echo $clubInfo->name ?> <br> <br></span>
+                                            <span class="profile-name"><?php if($clubInfo->name != 'Foundation') {echo "Club";} ?> Tunivisions <?php echo $clubInfo->name ?> <br> <br></span>
                                             <br>
                                         </div>
                                         <div class="d-none d-md-block">

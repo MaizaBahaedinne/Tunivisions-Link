@@ -110,6 +110,9 @@
                       <div class="col-12 col-md-12 col-xl-12">
                         
                           <div class="row">
+
+
+                            <?php if ($SA == ) { ?> 
                             <form method="post" action="<?php echo base_url()?>Score_club/noteProject/<?php echo $projectInfo->projectId ; ?>"  >
 
                             <label> Titre  </label>
@@ -134,6 +137,16 @@
                             </select>
                             <input type="submit" class="btn btn-primary" >
                             </form>
+                          <?php }else { ?>
+                            <h6> score </h6>
+                            "<?php echo $scoreClub->sc ?>" 
+                            <h6> Remarque :  </h6>
+                            <?php echo $scoreClub->remarque ?>
+
+                            
+
+                          <?php  
+                          } ?>
                           </div>
                                              
                       </div>
