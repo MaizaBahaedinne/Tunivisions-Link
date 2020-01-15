@@ -61,11 +61,19 @@
 	<script src="<?php echo base_url() ?>assets/js/dropify.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/bootstrap-colorpicker.js"></script>
 
-    <script type="text/javascript">
-    	$("body").ready(function(){
-			  $("body").addClass("sidebar-folded");
-			});
-    </script>
+
+	          <?php
+              
+
+              if(!isMobile()) { 
+              ?>
+			    <script type="text/javascript">
+			    	$("body").ready(function(){
+						  $("body").addClass("sidebar-folded");
+						});
+			    </script>
+			   <?php }
+			   ?>
 
 
 
