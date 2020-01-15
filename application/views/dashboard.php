@@ -195,8 +195,8 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
                   <h6 class="card-title mb-0">Classement des clubs </h6>
-                  <span class="text-muted">
-                  <?php echo $LastRaitingClub; ?>
+                  <span class="text-muted"><b> Dernière mise à jour : </b>
+                  <?php echo $LastRaitingClub->createdDate ; ?>
                   </span>
                 </div>
                 <div class="table-responsive" style="height:600px ;overflow:auto;">

@@ -86,8 +86,7 @@ class Scores_model extends CI_Model
      
         $query = $this->db->get();
         
-        $result = $query->row();        
-        return $result;
+        return $query->row();
     }
 
 
