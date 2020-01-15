@@ -251,7 +251,15 @@
                       $date = new DateTime($projets->startDate);
                       echo $date->format('d/m/Y');
 
-                     ?> </span>
+                     ?> 
+
+                     à : <?php
+
+                      $date = new DateTime($projets->endDate);
+                      echo $date->format('d/m/Y');
+
+                     ?>
+                      </span>
                   </div>
                   <?php } ?>
                   </div>
