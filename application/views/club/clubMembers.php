@@ -37,12 +37,13 @@
                                             <a class="pt-1px d-none d-md-block" href="<?php echo base_url()?>club/clubInfo">Timeline</a>
                                         </li>
                                         <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center ">
+                                            
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-1 icon-md"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                             <a class="pt-1px d-none d-md-block" href="<?php echo base_url()?>club/about">About</a>
                                         </li>
                                         <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center active">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users mr-1 icon-md"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                            <a class="pt-1px d-none d-md-block" href="<?php echo base_url()?>Club/Members">Membres <span class="text-muted tx-12"><?php echo $membersCount ?></span></a>
+                                            <a class="pt-1px  d-md-block" href="<?php echo base_url()?>Club/Members">Membres <span class="text-muted tx-12"><?php echo $membersCount ?></span></a>
                                         </li>
                                         <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image mr-1 icon-md"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -59,7 +60,7 @@
                     </div>
                     <div class="row profile-body">
                         <!-- left wrapper start -->
-                        <div class="d-none d-md-block col-md-12 col-xl-12 left-wrapper">
+                        <div class="col-md-8 col-xl-6 middle-wrapper">
                             <div class="card rounded">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -82,7 +83,7 @@
                                               object-fit: cover;
                                               object-position: 50% 20%;
                                               width: 100%;
-                                              height: 200px;
+                                              height: 100px;
                                             }
                                             table ,tr td{
                                                 
@@ -110,7 +111,7 @@
                                                           
                                                            
                                                         <?php foreach($userRecords as $record ) { ?>
-                                                           <div class="col-md-3 card" style="padding:16px" >
+                                                           <div class="col-md-4 card" style="padding:16px" >
                                                               <img src="https://www.tunivisions.link/uploads/avatar/<?php echo $record->avatar ?>" class="card-img-top alligator-turtle" alt="...">
                                                               <div class="card-body">
                                                                  <a href="<?php echo base_url() ?>User/ProfileShow/<?php echo $record->userId ?>"> 
