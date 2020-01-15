@@ -195,7 +195,11 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
                   <h6 class="card-title mb-0">Classement des clubs </h6>
-                  
+                  <span class="text-muted">
+                   <?php $c=0 ; foreach ($RateClub as $club ) { ?>
+                      <?php echo max($club->createdDate) ;  ?>
+                   <?php }?>
+                  </span>
                 </div>
                 <div class="table-responsive" style="height:600px ;overflow:auto;">
                   <table class="table table-hover mb-0" id="dtVerticalScrollExample"  >
@@ -204,7 +208,7 @@
                         <th class="pt-0">#</th>
                         <th class="pt-0">Club</th>
                         <th class="pt-0">Score</th>
-                        <th class="pt-0">MAJ</th>
+                        
                       </tr>
                     </thead>
                     <tbody>
@@ -214,7 +218,7 @@
                         <td><?php $c++ ; echo $c ?></td>
                         <td><?php echo $club->name ?></td>
                         <td><?php echo $club->scores ?></td>
-                        <td><?php echo $club->createdDate ?></td>
+                        <td></td>
                       </tr>
                       <?php }?>
                     </tbody>

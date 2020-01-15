@@ -847,9 +847,7 @@
                     
                   </div>
                 </div>
-                <div class="dropdown-footer d-flex align-items-center justify-content-center">
-                  <a href="javascript:;">View all</a>
-                </div>
+                
               </div>
             </li>
 						<li class="nav-item dropdown nav-messages">

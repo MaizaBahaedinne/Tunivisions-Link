@@ -70,6 +70,7 @@ class Club_model extends CI_Model
             $this->db->from('tbl_users as Users'); 
             $this->db->join('tbl_roles as Role ', 'Users.roleId = Role.roleId', 'LEFT');
            $this->db->where('Users.roleId  IN (6,2,1,4,3) AND `ClubID` = ',$clubID) ;
+           $this->db->where('Users.isDeleted = ',0) ;
        
 
         $this->db->order_by('Users.roleId', 'ASC') ;
