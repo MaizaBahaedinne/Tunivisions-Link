@@ -7,8 +7,8 @@
 
                 <nav class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Systeme</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">utilisateurs</li>
+                        <li class="breadcrumb-item"><a href="#">Club</a></li>
+                        
                     </ol>
                 </nav>
 
@@ -46,13 +46,17 @@
                     <tr>
                        
                         <td>
+                          <a href="<?php echo base_url() ?>club/clubInfo/<?php echo $record->clubID ?>" target="_blank"   >
                            <?php echo $record->name ?>
+                         </a>
                         </td>
                         <td>
                             <?php echo $record->city ?>
                         </td>
                         <td>
+                          <a href="<?php echo base_url() ?>User/ProfileShow/<?php echo $record->userId ?>" target="_blank"   >
                            <?php echo $record->P ?>
+                         </a>
                         </td>
                         <td>
                             <?php echo $record->members ; ?> 

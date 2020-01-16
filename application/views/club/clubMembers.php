@@ -83,7 +83,7 @@
                                               object-fit: cover;
                                               object-position: 50% 20%;
                                               width: 100%;
-                                              height: 100px;
+                                              height: 150px;
                                             }
                                             table ,tr td{
                                                 
@@ -111,7 +111,7 @@
                                                           
                                                            
                                                         <?php foreach($userRecords as $record ) { ?>
-                                                           <div class="col-md-4 card" style="padding:16px" >
+                                                           <div class="col-md-2 card" style="padding:16px" >
                                                               <img src="https://www.tunivisions.link/uploads/avatar/<?php echo $record->avatar ?>" class="card-img-top alligator-turtle" alt="...">
                                                               <div class="card-body">
                                                                  <a href="<?php echo base_url() ?>User/ProfileShow/<?php echo $record->userId ?>"> 
