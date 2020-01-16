@@ -46,23 +46,23 @@ class Club extends BaseController {
 		                $this->loadViews("club/list", $this->global, $data, NULL);   
 		        }
 
-				public function clubInfo()
+				public function clubInfo($clubId)
 		        {
 					
 
-					$data["finance"] = $this->finance_model->financeInfostat($this->clubID);
-					$data["scoreByClub"] = $this->evaluation_model->evaluationByClubListing($this->clubID);
-			        $data["clubInfo"] = $this->club_model->getClubInfo($this->clubID);
-			        $data["bureauExe"] = $this->club_model->BureauListing($this->clubID);
-			        $data["ProjectByClub"] = $this->project_model->projectListingByClub($this->clubID);
-			        $data["members"] = $this->user_model->userListingByclubINFO($this->clubID) ;
-			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$this->clubID)) ;
+					$data["finance"] = $this->finance_model->financeInfostat($clubId);
+					$data["scoreByClub"] = $this->evaluation_model->evaluationByClubListing($clubId);
+			        $data["clubInfo"] = $this->club_model->getClubInfo($clubId);
+			        $data["bureauExe"] = $this->club_model->BureauListing($clubId);
+			        $data["ProjectByClub"] = $this->project_model->projectListingByClub($clubId);
+			        $data["members"] = $this->user_model->userListingByclubINFO($clubId) ;
+			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$clubId)) ;
 			 		$count = $this->user_model->userListing($this->vendorId);
 
-			        $data["conference"] = count($this->project_model->projectListingByType('Conférence',$this->clubID));
+			        $data["conference"] = count($this->project_model->projectListingByType('Conférence',$clubId));
 			          
-			        $data["formation"] = count($this->project_model->projectListingByType('Formation',$this->clubID));
-			        $data["evenement"] = count($this->project_model->projectListingByType('Evenement',$this->clubID));
+			        $data["formation"] = count($this->project_model->projectListingByType('Formation',$clubId));
+			        $data["evenement"] = count($this->project_model->projectListingByType('Evenement',$clubId));
 			    	$this->global['active'] = 'myClub';       
 			       $this->loadViews("club/myClub", $this->global, $data, NULL);
 		        }
@@ -81,14 +81,14 @@ class Club extends BaseController {
 
 
 
-		        public function about()
+		        public function about($clubId)
 		        {
 					$this->load->model('user_model');
-			       $data["bureauExe"] = $this->club_model->BureauListing($this->clubID);
-			       			 $data["clubInfo"] = $this->club_model->getClubInfo($this->clubID);
-            			$data['userRecords'] = $this->user_model->userListingByclub($this->vendorId,$this->clubID);
+			       $data["bureauExe"] = $this->club_model->BureauListing($clubId);
+			       			 $data["clubInfo"] = $this->club_model->getClubInfo($clubId);
+            			$data['userRecords'] = $this->user_model->userListingByclub($this->vendorId,$clubId);
 			        $data['count'] = count($data['userRecords'])  ;
-			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$this->clubID)) ;
+			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$clubId)) ;
 			        	 $this->global['active'] = 'postes';
 			       
 			        $this->loadViews("club/about", $this->global, $data, NULL);
@@ -96,14 +96,14 @@ class Club extends BaseController {
 
 
 
-		        public function Members()
+		        public function Members($clubId)
 		        {
 					$this->load->model('user_model');
-			       $data["bureauExe"] = $this->club_model->BureauListing($this->clubID);
-			       			 $data["clubInfo"] = $this->club_model->getClubInfo($this->clubID);
-            			$data['userRecords'] = $this->user_model->userListingByclub($this->vendorId,$this->clubID);
+			       $data["bureauExe"] = $this->club_model->BureauListing($clubId);
+			       			 $data["clubInfo"] = $this->club_model->getClubInfo($clubId);
+            			$data['userRecords'] = $this->user_model->userListingByclub($this->vendorId,$clubId);
 			        $data['count'] = count($data['userRecords'])  ;
-			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$this->clubID)) ;
+			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$clubId)) ;
 			        	 $this->global['active'] = 'postes';
 			       
 			        $this->loadViews("club/clubMembers", $this->global, $data, NULL);

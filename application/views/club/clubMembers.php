@@ -2,8 +2,8 @@
        .profile-turtle {
   object-fit: cover;
   object-position: 50% 50%;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
 }
  .readMore .addText {
                       display: none;
@@ -60,7 +60,7 @@
                     </div>
                     <div class="row profile-body">
                         <!-- left wrapper start -->
-                        <div class="col-md-8 col-xl-6 middle-wrapper">
+                        <div class="col-md-12 col-xl-12 middle-wrapper">
                             <div class="card rounded">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center justify-content-between mb-2">

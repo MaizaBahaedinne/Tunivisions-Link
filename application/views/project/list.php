@@ -13,7 +13,7 @@
               foreach($projectRecords as $record)
             {
             ?>
-            <a href="" class="card">
+           
             <div class="col-md-4 card" style="color: black ; height: cover;">
 
         <img src="https://www.tunivisions.link/uploads/projet/<?php echo $record->banner; ?>" class="card-img-top alligator-turtle " style="" alt="...">
@@ -104,7 +104,7 @@
 
                      </div>
                 </div>
-            </a>
+           
     
         <?php
                         }
