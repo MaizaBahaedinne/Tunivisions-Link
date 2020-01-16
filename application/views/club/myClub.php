@@ -218,6 +218,8 @@
                                                         <h6 class="ktext-uppercase"><span></span>Evenement : </h6> <?php echo $evenement ;  ?> 
                                                         <h6 class="text-uppercase"><span></span>Formation : </h6>  <?php echo $formation ; ?>
 
+                                                        <h6 class="text-uppercase"><span></span>Couverture Mediatique : </h6>  <?php echo $couver ; ?>
+
                                                         <hr>
                                                         <b>Finance</b>
 

@@ -63,6 +63,7 @@ class Club extends BaseController {
 			        $data["conference"] = count($this->project_model->projectListingByType('Conférence',$clubId));
 			        $data["formation"] = count($this->project_model->projectListingByType('Formation',$clubId));
 			        $data["evenement"] = count($this->project_model->projectListingByType('Evenement',$clubId));
+			        $data["couver"] = count($this->project_model->projectListingByType('Couverture Mediatique',$clubId));
 
 			    	$this->global['active'] = 'myClub';       
 			       $this->loadViews("club/myClub", $this->global, $data, NULL);
