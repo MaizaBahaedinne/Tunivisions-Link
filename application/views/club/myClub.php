@@ -252,12 +252,12 @@
                                                                                                      
                                                     <div class="ml-2">
                                                         <a href="<?php echo base_url() ?>Score_club/PNoter/<?php echo $scores->projectId ?>" >
-                                                        <p><?php echo $scores->titre ?></p>
+                                                        <p></p>
                                                           </a>
                                                         <p class="tx-11 text-muted"><p><?php echo $scores->createdDate ?></p></p>
                                                     </div>
                                                 </div>
-                                                <p><?php echo $scores->score ?> points</p>
+                                                <p><?php echo $scores->scores ?> points</p>
                                             </div>
                                           
                                             <?php } ?>

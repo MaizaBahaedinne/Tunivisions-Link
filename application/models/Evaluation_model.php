@@ -122,7 +122,7 @@ class Evaluation_model extends CI_Model
         $this->db->select('BaseTbl.evaluationId , BaseTbl.projectId , Projects.titre ,Scores.createdDate, Scores.score , BaseTbl.statut , BaseTbl.doDate , Users.name   ');
         $this->db->from('tbl_evaluation as BaseTbl');
         $this->db->join('tbl_project as Projects', 'Projects.projectId = BaseTbl.projectId', 'LEFT');
-        $this->db->join('tbl_score_club as Scores', 'Scores.score_clubID = BaseTbl.projectId', 'LEFT');
+        $this->db->join('tbl_score_club as Scores', 'Scores.score_clubID = Projects.projectId', 'LEFT');
         
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.doBy', 'LEFT');
          $this->db->where('Projects.endDate < NOW()  ') ; 
