@@ -19,6 +19,10 @@
         <img src="https://www.tunivisions.link/uploads/projet/<?php echo $record->banner; ?>" class="card-img-top alligator-turtle " style="" alt="...">
         
         <div class="card-body">
+                                          <b>
+                                <?php  echo $record->type ; ?>
+                                </b>
+                                <br>
           <h4><a href="" class="kt-widget__title">
                                   
 
@@ -53,7 +57,7 @@
                                         <i class="flaticon-users"></i>
                                 <?php } ?>
 
-                                <?php  echo $record->cible ?>
+                                <?php  echo $record->cible ;  ?>
                                 </p>
                                 <h6 class="kt-widget__desc">
                                                         par 
