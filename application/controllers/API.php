@@ -12,9 +12,30 @@ class API extends BaseController {
         $this->load->model('user_model');
         $this->load->model('actualite_model');
 		$this->load->model('notification_model');
+		$this->load->model('project_model');
         
       
     }
+
+
+     public function oldProjectListing()
+                {
+                        $titre='' ;
+                        $titre = $this->input->post('titre');
+                        $data['titre'] = $titre;
+                        $this->load->model('project_model');
+                        
+                        $data['projectRecords'] = $this->project_model->projectOldListing($titre);
+                        
+                        $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+                        $this->global['active'] = 'projects';
+                        
+	                      if($data['projectRecords']){
+					            echo json_encode( $data['projectRecords']); 
+					            exit;
+					        } 
+                }
+
     
 
 	
