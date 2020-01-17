@@ -28,8 +28,37 @@ class Actu extends BaseController {
 
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		            	$this->global['active'] = 'actu';
+		            	/*
 		                $this->loadViews("actualite/list", $this->global, $data, NULL);   
+		        		*/
+
 		        }
+
+
+	public function actuListingAPI()
+		        {
+						$this->load->library('pagination');
+		                $this->load->model('actualite_model');
+		                $searchText='' ;
+		                $data['evaluationRecords'] = $this->actualite_model->actuListing();
+ 					      	$count = $this->actualite_model->actuListing();
+            			$data['count'] = count($count)  ; 
+
+		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		            	$this->global['active'] = 'actu';
+		            	/*
+		                $this->loadViews("actualite/list", $this->global, $data, NULL);   
+		        		*/
+
+		        		if($data['evaluationRecords']){
+				            echo json_encode($data['evaluationRecords']); 
+				            exit;
+				        } 
+
+		        }
+
+
+		        		
 
 
 	public function addNew()

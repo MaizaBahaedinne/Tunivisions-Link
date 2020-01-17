@@ -102,6 +102,7 @@
                   <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal2-xl">Approuver des membres</button>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-xl">Bloquer un membre</button>
+                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal3-xl">Transfère</button>
                   </div>
                 </div>
               </div>
@@ -256,10 +257,102 @@
                     }
                     ?>
                     <input type="submit" class="btn btn-primary" value="Envoyer" >
-                     <input type="reset" class="btn btn-default"  >
+                    <input type="reset" class="btn btn-default"  >
+            </form>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade bd-example-modal3-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Approuver des membre</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form action="<?php echo base_url() ; ?>User/actifMember" method="post" >
+
                     
-                   
+                    <?php
+                    if(!empty($userTRecords))
+                    {
+                        foreach($userTRecords as $record)
+                        {
+                    ?>
+                    <div class="row">
+
+             
+                       
+                            <div class="col-md-4">
+                            <img class="kt-radius-100 alligator-turtle" width="45 px" src="<?php echo base_url() ; ?>uploads/avatar/<?php echo $record->avatar ; ?>" alt="image" />
+                 
+                           <b>&nbsp; &nbsp; <?php echo $record->name ?></b>
+                           
+                           </div>
+
+                            <div>
+                                <b>Date d'inscription :</b> <p style="color: blue"> <?php echo $record->createdDtm ?> </p>
+                            </div>
+
+                           <div class="col-md-2">
+                            
+                            <span class="kt-switch kt-switch--sm" >
+                                <label>
+                               
+                                <input type="checkbox" name="actifs[]" id="<?php echo $record->userId ;?>"  value="<?php echo $record->userId ;?>" >
+                                <span></span>
+                                </label>
+                            </span>
+                            </div>      
+
+                             
+                            
+                        
+                        
+                            <script type="text/javascript">
+                                $("#<?php echo $record->userId ;?>").click(function(){
+                                  $("#Cellule_<?php echo $record->userId ;?>").toggle();
+                                });
+                            </script>
+
+                            <div  style="display: none;" id="Cellule_<?php echo $record->userId ;?>">
+                                            
+                                <p>Cellule</p>
+
+                                <select class="form-control"   name="Cellule_<?php echo $record->userId ;?>">
+                                    <option></option>
+                                    <option value="Marketing" >Marketing</option>
+                                    <option value="Administration et finance" >Administration et finance</option>
+                                    <option value="Evenementiel" >Evenementiel</option>
+                                    <option value="Gestion des talents" >Gestion des talents</option>
+                                </select>
+                          
+                            </div>
+
+                            
+                        
+                       
+                        
+                      
+            
                     
+                      </div>      
+                        <hr>
+                      
+                       
+                        
+              
+                    <?php
+                        }
+                    }
+                    ?>
+                    <input type="submit" class="btn btn-primary" value="Envoyer" >
+                    <input type="reset" class="btn btn-default"  >
             </form>
     </div>
     </div>

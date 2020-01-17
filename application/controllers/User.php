@@ -128,6 +128,7 @@ class User extends BaseController
             $data['count'] = count($count)  ; 
             $data['userRecords'] = $this->user_model->userListingByclub($this->vendorId,$this->clubID);
             $data['useraRecords'] = $this->user_model->userListingByclubToApprouve($this->vendorId,$this->clubID);
+            $data['userTRecords'] = $this->user_model->userListingByclub($this->vendorId,$this->clubID);
             
             $this->global['pageTitle'] = 'CodeInsect : User Listing';
             $this->global['active'] = 'users';
