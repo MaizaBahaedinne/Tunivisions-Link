@@ -42,23 +42,9 @@ class Login extends CI_Controller
         {
 
 
-            $this->load->model('finance_model');
-
-                $finance = $this->finance_model-> maxdatefinance($this->clubID);
-        
-                if ( ( NOW() > strtotime('+15 days',$finance->last)  && ($this->role == 1 ||  $this->SA == 1 )  ) ) 
-                {
-                   redirect('Finance/addNew') ;
-                }
-                
-                if ( NOW() > strtotime('+15 days',$finance->last)   )
-                {
+            
                    redirect('/dashboard');
-                }
-                else
-                {
-                   redirect('logout') ;
-                }
+         
 
             
         }
