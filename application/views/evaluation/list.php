@@ -74,15 +74,15 @@
 
 
                         <?php if ($record->statut == 'En Attend') {
-                            # code...
+                            
                         ?>
-                        <a href="<?php echo base_url() ?>Evaluation/doEvaluation/<?php echo $record->evaluationId ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                          <i data-feather="edit-2"></i>
+                        <a href="<?php echo base_url() ?>Evaluation/doEvaluation/<?php echo $record->evaluationId ?>"  title="View">
+                           <i data-feather="star"></i>
                         </a>
                         <?php 
                         }else if($clubID == 0 ){
                           ?>
-                            <a href="<?php echo base_url() ?>Evaluation/doEvaluationF/<?php echo $record->evaluationId ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                            <a href="<?php echo base_url() ?>Evaluation/doEvaluationF/<?php echo $record->evaluationId ?>" c title="View">
                           <i data-feather="edit-2"></i>
                         </a>
                           <?php  

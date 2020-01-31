@@ -215,7 +215,7 @@ class Club extends BaseController {
                            $this->notification_model->addNewNotificaition($notifInfo) ;
                     }
                            
-			        redirect('club/clubInfo');
+			        redirect('club/clubInfo/'.$this->clubID);
 		        }
 
 }
