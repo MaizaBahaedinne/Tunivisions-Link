@@ -48,7 +48,10 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image mr-1 icon-md"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                                             <a class="pt-1px d-none d-md-block" href="<?php echo base_url()?>Club/ClassementMembers/<?php echo $clubN ?>">Classement</a>
                                         </li>
-
+                                        <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-video mr-1 icon-md"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                                            <a class="pt-1px d-none d-md-block" href="#">Badges</a>
+                                        </li>
                                     </ul>
                                 </div>
                 </div>
@@ -124,7 +127,7 @@
                         </div>
                         <!-- left wrapper end -->
                         <!-- middle wrapper start -->
-                        <div class="col-md-8 col-xl-6 middle-wrapper">
+                        <div class="col-md-12 col-xl-6 middle-wrapper">
                             <div class="row">
                                  <div class="col-md-12">
                                     <?php foreach ($ProjectByClub as $PBC) {
@@ -202,71 +205,7 @@
                         </div>
                         <!-- middle wrapper end -->
                         <!-- right wrapper start -->
-                        <div class="d-none d-xl-block col-xl-3 right-wrapper">
-                            <div class="row">
-                                <div class="col-md-12 grid-margin">
-                                    <div class="card rounded">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Statestiques </h6>
-                                            <div class="latest-photos">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6 class="text-uppercase"><span></span>Conférence :  </h6> <?php echo $conference ; ?>
-                                                        <h6 class="ktext-uppercase"><span></span>Evenement : </h6> <?php echo $evenement ;  ?> 
-                                                        <h6 class="text-uppercase"><span></span>Formation : </h6>  <?php echo $formation ; ?>
-
-                                                        <h6 class="text-uppercase"><span></span>Couverture Mediatique : </h6>  <?php echo $couver ; ?>
-
-                                                        <hr>
-                                                        <b>Finance</b>
-
-                                                        <h6 class="text-uppercase"><span></span><br>Produit : </h6>   
-                                                        <?php echo $finance->produits ?> DT<br>
-
-                                                        <h6 class="text-uppercase"><span></span><br>Charge : </h6>
-                                                        <?php echo $finance->charges ?> DT    
-
-
-                                                        <h6 class="text-uppercase"><span></span><br>Solde Actuel : </h6>
-                                                        <b><?php echo ($finance->produits - $finance->charges ) ?> DT</b>
-
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 grid-margin">
-                                    <div class="card rounded">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Historique des points</h6>
-
-                                            <?php foreach ($scoreByClub as $scores ) {
-                                                
-                                           ?>
-                                           
-                                            <div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
-                                                <div class="d-flex align-items-center hover-pointer">
-                                                                                                     
-                                                    <div class="ml-2">
-                                                        <a href="<?php echo base_url() ?>Score_club/PNoter/<?php echo $scores->projectId ?>" >
-                                                        <p></p>
-                                                          </a>
-                                                        <p class="tx-11 text-muted"><p><?php echo $scores->createdDate ?></p></p>
-                                                    </div>
-                                                </div>
-                                                <p><?php echo $scores->scores ?> points</p>
-                                            </div>
-                                          
-                                            <?php } ?>
-                                            
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <!-- right wrapper end -->
                     </div>
         </div>

@@ -102,6 +102,13 @@
                                 </div>
                             </div>
                             <div class="row"> 
+                                <div class="col-md-12">                                
+                                    <div class="form-group">
+                                        <label for="fname">Lien d'évenement facebook : </label>
+                                        <input type="url" name="facebook" class="form-control" required>
+                                    </div>
+                                    
+                                </div>
                                 <div class="col-md-4">                                
                                     <div class="form-group">
                                         <label for="fname">Type</label>
@@ -111,6 +118,8 @@
                                             <option value="Conférence">Conférence</option>
                                             <option value="Action">Action</option>
                                             <option value="Couverture Mediatique">Couverture Mediatique</option>
+                                            <option value="Compétition">Compétition</option>
+                                            <option value="Soirée">Soirée</option>
                                         </select>
                                     </div>
                                     
@@ -127,7 +136,7 @@
                                 <div class="col-md-12">                                
                                     <div class="form-group">
                                         <label for="fname">Description</label>
-                                       <textarea class="form-control" name="description" id="tinymceExample" rows="10"></textarea>
+                                       <textarea class="form-control" name="description" id="tinymceExample" rows="20" required></textarea>
 
                                     </div>
                                     
@@ -135,16 +144,16 @@
                               <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="fname">Date debut</label>
-                                        <input type="date" class="form-control "  min="<?php echo date('Y-m-d') ?>"   id="debut" name="debut"  required >
+                                        <input type="datetime-local" class="form-control "  min="<?php echo date('Y-m-d') ?>"   id="debut" name="debut"  required >
                                     </div>
                                 </div>
 
                               <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="fname">Date fin</label>
-                                        <input type="date" class="form-control" min="<?php echo date('Y-m-d') ?>"   id="fin" name="fin"  required >
+                                        <input type="datetime-local" class="form-control" min="<?php echo date('Y-m-d') ?>"   id="fin" name="fin"  required >
                                     </div>
-                                </div>
+                              </div>
                             <div class="col-md-12">                                
                                     <div class="form-group">
                                         <label for="fname">cible  &nbsp; &nbsp; </label>

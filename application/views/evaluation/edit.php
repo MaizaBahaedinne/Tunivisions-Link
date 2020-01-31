@@ -160,13 +160,13 @@
                                 <div class="col-md-12">                                
                                             <div class="form-group">
                                                 <label for="fname">Lien album photo</label>
-                                               <input type="text" name="album" class="form-control" id="album" required />
+                                               <input type="url" name="album" class="form-control" id="album" required />
                                     </div>   
                                 </div>
                                 <div class="col-md-12">                                
                                             <div class="form-group">
                                                 <label for="fname">Lien after movie</label>
-                                               <input type="text" name="afterMovie" class="form-control" id="afterMovie" />
+                                               <input type="url" name="afterMovie" class="form-control" id="afterMovie" />
                                     </div>   
                                 </div>
                                 

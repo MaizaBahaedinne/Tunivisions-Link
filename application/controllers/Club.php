@@ -50,7 +50,7 @@ class Club extends BaseController {
 				public function clubInfo($clubId)
 		        {
 					
-
+		      
 					$data["finance"] = $this->finance_model->financeInfostat($clubId);
 					$data["scoreByClub"] = $this->scores_model->ScoreClub($clubId);
 			        $data["clubInfo"] = $this->club_model->getClubInfo($clubId);
@@ -65,7 +65,11 @@ class Club extends BaseController {
 			        $data["evenement"] = count($this->project_model->projectListingByType('Evenement',$clubId));
 			        $data["couver"] = count($this->project_model->projectListingByType('Couverture Mediatique',$clubId));
 
-			    	$this->global['active'] = 'myClub';       
+			        $data["RatingMembers"] = $this->scores_model-> RaitingUsersByClubTop5($clubId) ; 
+
+
+			    	$this->global['active'] = 'myClub';   
+			    	$this->global['clubN'] = $clubId;    
 			       $this->loadViews("club/myClub", $this->global, $data, NULL);
 		        }
 
@@ -75,7 +79,7 @@ class Club extends BaseController {
 			        $data["membres"] = $this->user_model->userListingByclub($this->vendorId,$this->clubID);
 			       
 			        
-			        	 $this->global['active'] = 'postes';
+			        $this->global['active'] = 'postes';
 			       
 			        $this->loadViews("club/roles", $this->global, $data, NULL);
 		        }
@@ -92,7 +96,7 @@ class Club extends BaseController {
 			        $data['count'] = count($data['userRecords'])  ;
 			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$clubId)) ;
 			        	 $this->global['active'] = 'postes';
-			       
+			       $this->global['clubN'] = $clubId;
 			        $this->loadViews("club/about", $this->global, $data, NULL);
 		        }
 
@@ -106,8 +110,23 @@ class Club extends BaseController {
             			$data['userRecords'] = $this->user_model->userListingByclub($this->vendorId,$clubId);
 			        $data['count'] = count($data['userRecords'])  ;
 			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$clubId)) ;
-			        	 $this->global['active'] = 'postes';
+			        $this->global['active'] = 'postes';
+					$this->global['clubN'] = $clubId;
 			       
+			        $this->loadViews("club/clubMembers", $this->global, $data, NULL);
+		        }
+
+		         public function ClassementMembers($clubId)
+		        {
+					$this->load->model('user_model');
+			       $data["bureauExe"] = $this->club_model->BureauListing($clubId);
+			       			 $data["clubInfo"] = $this->club_model->getClubInfo($clubId);
+            			$data['userRecords'] = $this->user_model->userListingByclub($this->vendorId,$clubId);
+			        $data['count'] = count($data['userRecords'])  ;
+			        $data["membersCount"] =count($this->user_model->userListingByclub($this->vendorId,$clubId)) ;
+			        	 $this->global['active'] = 'postes';
+			        	 $data["RatingMembers"] = $this->scores_model-> RaitingUsersByClubTop5($clubId) ;
+			       $this->global['clubN'] = $clubId;
 			        $this->loadViews("club/clubMembers", $this->global, $data, NULL);
 		        }
 

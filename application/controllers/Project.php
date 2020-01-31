@@ -93,7 +93,8 @@ class Project extends BaseController {
                 $local = $this->input->post('local');
                 $prix = $this->input->post('prix');
                 $capacite = $this->input->post('capacite');
-               
+                $facebook = $this->input->post('facebook');
+
                 $file_name = 'Projet_'.$Titre.'_'.$_FILES['file']['name'];
                 $file_tmp = $_FILES['file']['tmp_name'];
                 $file_destination = 'uploads/projet/' . $file_name;
@@ -105,12 +106,14 @@ class Project extends BaseController {
                  'Titre' => $Titre , 
                  'description' => $Description , 
                  'startDate' => $debut , 
-                 'endDate' => $fin.' 23:59:00' , 
+                 'endDate' => $fin , 
                  'cible' => $cible ,
                  'local' => $local ,
                  'prix' => $prix ,   
                  'capacite'=>$capacite,
-                 'createBy'=>$this->vendorId,
+                 'createBy'=> $this->vendorId ,
+                 'createdDate'=> date('Y-m-d H:i:s') ,
+                 'eventFB'=>$facebook ,
                  'clubID'=>$this->clubID
                      );
                 

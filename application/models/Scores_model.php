@@ -73,6 +73,28 @@ class Scores_model extends CI_Model
     }
 
 
+        /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function RaitingUsersByClubTop5($clubId)
+    {
+        $this->db->select('BaseTbl.userId  , BaseTbl.avatar , BaseTbl.name ,  BaseTbl.clubName , sum(scoreByMembre) as scores  ');
+        $this->db->from('memberscoring as  BaseTbl');
+        $this->db->join('tbl_users as User ', 'User.userId = BaseTbl.userId and User.clubID = '.$clubId,'left');      
+        $this->db->order_by('scores', 'DESC');
+        $this->db->group_by('BaseTbl.userID');  
+        $this->db->limit(5);  
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
 
     /**
      * This function is used to get the user listing count
