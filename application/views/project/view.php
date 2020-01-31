@@ -25,10 +25,7 @@
 
                         <a href="#" class="kt-widget__title"><?php echo $projectInfo->titre; ?> <small> #<?php echo $projectInfo->projectId; ?></small></a>
 
-                        <div class="kt-widget__action">
-                            <button type="button" class="btn btn-sm btn-upper" style="background: #edeff6">Noter</button>&nbsp;
-                            <button type="button" class="btn btn-success btn-sm btn-upper">Supprimer</button>&nbsp;
-                        </div>
+
                     </div>
 
                     <i class="fas fa-map-marker-alt"></i> <?php echo $projectInfo->local ?>
@@ -37,17 +34,6 @@
 
                         <div class="kt-widget__desc">
                             <?php echo $projectInfo->description ; ?>
-                        </div>
-                        <div class="kt-widget__progress kt-hidden">
-                            <div class="kt-widget__text">
-                                Progress
-                            </div>
-                            <div class="progress" style="height: 5px;width: 100%;">
-                                <div class="progress-bar kt-bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="kt-widget__stats">
-                                78%
-                            </div>
                         </div>
 
                         <div class="kt-widget__stats d-flex align-items-center flex-fill">

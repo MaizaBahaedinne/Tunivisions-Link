@@ -39,14 +39,8 @@ class Login extends CI_Controller
             $this->load->view('Login');
         }
         else
-        {
-
-
-            
-                   redirect('/dashboard');
-         
-
-            
+        {           
+            redirect('/dashboard');
         }
     }
     

@@ -23,7 +23,7 @@
                                 <?php  echo $record->type ; ?>
                                 </b>
                                 <br>
-          <h4><a href="" class="kt-widget__title">
+          <h4><a href="<?php echo base_url () ?>Project/projectDetails/<?php echo $record->projectId ?>" class="kt-widget__title">
                                   
 
                                     <?php 
