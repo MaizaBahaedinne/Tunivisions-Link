@@ -89,7 +89,7 @@
                                
                             
                                     
-                                        <span class="kt-widget__subtitle"></span>
+                                        
                                         
                                   
 
@@ -97,13 +97,19 @@
                     </div>
                      <div class="card-footer">
                         <div class="row">
-                        <div class="col-md-6">
+                          <div class="col-md-4">
+                            <?php if($record->eventFB!='' ) { ?>
+                            <a href="<?php  echo $record->eventFB; ?>" class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><h6>Event Facebook </h6><small> </small> </span><span></span></a>
+                            <?php } ?>
+                          </div>
+                        <div class="col-md-4">
                         <span class="kt-widget__value"><i class="fas fa-map-marker-alt"></i> &nbsp; <span><h6>Local </h6><small><?php  echo $record->local; ?> </small> </span><span></span></span>
                         </div>       
                                 
                                    
-                                       
+                          <div class="col-md-4">             
                         <span class="kt-widget__value"><i class="fas fa-money-bill-wave"></i> &nbsp;<small> <h6>Prix</h6><?php if ($record->prix == 0){echo "Gratuit";}else{echo $record->prix.' DT';} ?> </small> </span>
+                        </div>
                         </div>
 
                      </div>

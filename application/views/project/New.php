@@ -102,10 +102,43 @@
                                 </div>
                             </div>
                             <div class="row"> 
+                              <div class="col-md-12">                                
+                                    <div class="form-group">
+                                        <label for="fname">Cible  &nbsp; &nbsp; <br> </label>
+                                        <label class="kt-radio">
+                                                <input type="radio" name="cible" id="Publique" value="Publique" required> Publique
+                                                <span></span>
+                                        </label>
+                                        &nbsp;&nbsp;
+                                        <label class="kt-radio">
+                                                <input type="radio" name="cible" id="prive" value="Privé"> Privé
+                                                <span></span>
+                                        </label>
+                                        &nbsp;&nbsp;
+                                        <label class="kt-radio">
+                                                <input type="radio" name="cible" id="Only" value="Only tunimateur" > Only tunimateur
+                                                <span></span>
+                                        </label>
+
+                                        <script type="text/javascript">
+                                          $( "#Publique" ).click(function() {
+                                              $("#facebook").prop("required", true);
+                                            });
+                                          $( "#Only" ).click(function() {
+                                              $("#facebook").prop("required", true);
+                                            });
+                                          $( "#prive" ).click(function() {
+                                              $("#facebook").prop("required", false);
+                                            });
+                                        </script>
+
+
+                                    </div>
+                                </div>
                                 <div class="col-md-12">                                
                                     <div class="form-group">
                                         <label for="fname">Lien d'évenement facebook : </label>
-                                        <input type="url" name="facebook" class="form-control" required>
+                                        <input type="url" name="facebook" id="facebook" class="form-control" >
                                     </div>
                                     
                                 </div>
@@ -154,27 +187,7 @@
                                         <input type="datetime-local" class="form-control" min="<?php echo date('Y-m-d') ?>"   id="fin" name="fin"  required >
                                     </div>
                               </div>
-                            <div class="col-md-12">                                
-                                    <div class="form-group">
-                                        <label for="fname">cible  &nbsp; &nbsp; </label>
-                                        <label class="kt-radio">
-                                                <input type="radio" name="cible" value="Publique" required> Publique
-                                                <span></span>
-                                        </label>
-                                        &nbsp;&nbsp;
-                                        <label class="kt-radio">
-                                                <input type="radio" name="cible" value="Privé"> Privé
-                                                <span></span>
-                                        </label>
-                                        &nbsp;&nbsp;
-                                        <label class="kt-radio">
-                                                <input type="radio" name="cible" value="Only tunimateur" required> Only tunimateur
-                                                <span></span>
-                                        </label>
-
-
-                                    </div>
-                                </div>
+                            
 
                               <div class="col-md-6">                                
                                     <div class="form-group">
