@@ -100,13 +100,16 @@
                               <span class="badge badge-warning ">En cours </span>
                       <?php }else{ ?>
                             <span class="badge badge-success ">Validé par  : <?php echo $record->dobyName ?></span>
+                            <br><a href="<?php echo $record->eventFB ?> ">Event facebook </a>
+                            <br><a href="<?php echo $record->album ?> ">Album photo </a>
+                            <br><a href="<?php echo $record->afterMovie ?> ">After movie </a>
                       <?php  } ?>
                     </td>
 
                     <td>
                        <?php  if($record->statut  == 'En Attend' ){  ?>
                       <?php  }else if($record->affectedBy  == 0 ){  ?>
-                              <span class="badge badge-danger ">En cours </span>
+                              <span class="badge badge-danger "> A Valider </span>
                       <?php }else{ ?>
                             <span class="badge badge-primary">Validé par  : <?php echo $record->validName ?></span>
                       <?php  } ?>
