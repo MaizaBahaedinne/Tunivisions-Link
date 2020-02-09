@@ -100,9 +100,9 @@
                               <span class="badge badge-warning ">En cours </span>
                       <?php }else{ ?>
                             <span class="badge badge-success ">Validé par  : <?php echo $record->dobyName ?></span>
-                            <br><a href="<?php echo $record->eventFB ?> ">Event facebook </a>
-                            <br><a href="<?php echo $record->album ?> ">Album photo </a>
-                            <br><a href="<?php echo $record->afterMovie ?> ">After movie </a>
+                            <?php if($record->eventFB != '') { ?><br><a href="<?php echo $record->eventFB ?> ">Event facebook </a><?php } ?>
+                            <?php if($record->album != '') { ?><br><a href="<?php echo $record->album ?> ">Album photo </a><?php } ?>
+                            <?php if($record->afterMovie != '') { ?><br><a href="<?php echo $record->afterMovie ?> ">After movie </a><?php } ?>
                       <?php  } ?>
                     </td>
 
