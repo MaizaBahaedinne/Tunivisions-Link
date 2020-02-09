@@ -11,7 +11,9 @@
                  <table class="table dataTable no-footer" style="width: 100%" >
                    <thead>
                      <th>Date </th>
+                     <th>Club </th>
                      <th>Projet </th>
+                     <th>Evaluation </th>
                      <th>Validation </th>
                    </thead>
                    <tbody>
@@ -35,8 +37,14 @@
                     
 
                     <td>
+                  
+                         <b>
+                                    <?php echo $record->ClubName ?>
+                                  </b>
+                      </td>
 
 
+                    <td>
                       <h6 >
                                 <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
                                   <span>
@@ -74,25 +82,34 @@
                                         <i class="flaticon-users"></i>
                                 <?php } ?>
 
-                                <br>
+                              
 
                                 <?php  echo $record->cible ?>
                  
 
                                 <br>
-                                 par 
-                                  <b>
-                                    <?php if ($record->ClubName !='Foundation') {echo 'club';} ?> Tunivisions <?php echo $record->ClubName ?>
-                                  </b>
+                                
+                                 
                                 
                                 
                     
                     </td>
                     
-
+                    <td>
+                      <?php  if($record->statut  == 'En Attend' ){  ?>
+                              <span class="badge badge-warning ">En cours </span>
+                      <?php }else{ ?>
+                            <span class="badge badge-success ">Validé par  : <?php echo $record->dobyName ?></span>
+                      <?php  } ?>
+                    </td>
 
                     <td>
-                      faite par <?php  echo $record->affectedBy ; ?>  
+                       <?php  if($record->statut  == 'En Attend' ){  ?>
+                      <?php  }else if($record->affectedBy  == 0 ){  ?>
+                              <span class="badge badge-danger ">En cours </span>
+                      <?php }else{ ?>
+                            <span class="badge badge-primary">Validé par  : <?php echo $record->validName ?></span>
+                      <?php  } ?>
                     </td>
                     
    

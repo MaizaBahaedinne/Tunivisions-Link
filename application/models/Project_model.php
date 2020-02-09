@@ -12,20 +12,22 @@ class Project_model extends CI_Model
 
     function projectOldListing($serchText)
     {
-         $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description descP ,  BaseTbl.local ,BaseTbl.banner , Evaluations.valider , Scores.score , Evaluations.statut , Scores.affectedBy ');
+         $this->db->select('BaseTbl.projectId , BaseTbl.startDate , BaseTbl.endDate , BaseTbl.titre , BaseTbl.type , BaseTbl.cible , Clubs.name as ClubName ,  BaseTbl.prix , BaseTbl.capacite , BaseTbl.description descP ,  BaseTbl.local ,BaseTbl.banner , Evaluations.valider , Evaluer.name dobyName ,  Scores.score , Evaluations.statut , Scores.affectedBy , Valider.name validName ');
         $this->db->from('tbl_project as BaseTbl');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = BaseTbl.ClubID', 'LEFT');
+        
         $this->db->join('tbl_evaluation as Evaluations', 'Evaluations.projectId = BaseTbl.projectId', 'LEFT');
         $this->db->join('tbl_score_club as Scores', 'Evaluations.score_clubID = Scores.score_clubID', 'LEFT');
 
-        if($serchText !=''){
-        $this->db->where('BaseTbl.titre Like ','%'.$serchText.'%'); 
-        }
+        $this->db->join('tbl_users as Valider ', 'Valider.userId = Scores.affectedBy', 'LEFT');
+         $this->db->join('tbl_users as Evaluer ', 'Evaluer.userId = Evaluations.doBy', 'LEFT');
+
+
 
         $this->db->where('NOW() > BaseTbl.endDate ') ;
-        $this->db->where('Evaluations.statut =','fini') ;
-        $this->db->where('Evaluations.validBy = 0 ') ;
-        $this->db->order_by('BaseTbl.startDate','ASC');
+     
+        
+  
 
         $query = $this->db->get();
         
