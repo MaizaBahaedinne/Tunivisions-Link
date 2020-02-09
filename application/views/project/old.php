@@ -111,7 +111,10 @@
                       <?php  }else if($record->affectedBy  == 0 ){  ?>
                               <span class="badge badge-danger "> A Valider </span>
                       <?php }else{ ?>
+
                             <span class="badge badge-primary">Validé par  : <?php echo $record->validName ?></span>
+                            <br>
+                            <b> <?php echo $record->score ?> points </b>
                       <?php  } ?>
                     </td>
                     
