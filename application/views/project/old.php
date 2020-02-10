@@ -109,16 +109,19 @@
                     <td>
                        <?php  if($record->statut  == 'En Attend' ){  ?>
 
-                      <?php  }else if($record->statut  == 'fini' ){  ?>
+                      <?php  }else if($record->statut  == 'fini' && $record->valider  == ''  ){  ?>
                          <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">
                               <span class="badge badge-danger "> A Valider </span>
                             </a>
-                      <?php }else{ ?>
+                      <?php }else if($record->statut  == 'fini' && $record->valider  == 'Valider'  ) { ?>
+                            
+
+                            <b> <?php echo $record->score ?> points </b><br>
                             <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">
                             <span class="badge badge-primary">Validé par  : <?php echo $record->validName ?></span>
                             </a>
-                            <br>
-                            <b> <?php echo $record->score ?> points </b>
+                            
+                            
                       <?php  } ?>
                     </td>
                     
