@@ -53,6 +53,17 @@
                         <h4 class="mb-1"><?php echo $projectInfo->capacite;  ?></h4>              
                       </div>
                     </div>
+                    <div class="d-flex justify-content-between align-items-baseline">
+                      <h6 class="card-title mb-0">Déclarer le</h6>
+                      <div class="dropdown mb-2">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-md-12 col-xl-12">
+                        <h4 class="mb-1"><?php echo $projectInfo->createdDate ;  ?></h4>              
+                      </div>
+                    </div>
+
 
                   </div>
                 </div>
@@ -91,6 +102,16 @@
                     <div class="row">
                       <div class="col-12 col-md-12 col-xl-12">
                         <h4 class="mb-1"><?php echo $projectInfo->prix  ?> DT</h4>                       
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-baseline">
+                      <h6 class="card-title mb-0">Evenement Facebook</h6>
+                      <div class="dropdown mb-2">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-md-12 col-xl-12">
+                        <h4 class="mb-1"><?php echo if($projectInfo->eventFB !='' ){?> <a href=<?php echo $projectInfo->createdDate ; ?> >Aller au facebook</a> <?php }  ?> DT</h4>                       
                       </div>
                     </div>
 
