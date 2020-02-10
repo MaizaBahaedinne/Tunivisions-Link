@@ -20,7 +20,9 @@ class Club_model extends CI_Model
         return $query->num_rows();
     }
     
-    /**
+
+
+     /**
      * This function is used to get the user listing count
      * @param string $searchText : This is optional search text
      * @param number $page : This is pagination offset
@@ -34,8 +36,59 @@ class Club_model extends CI_Model
    
        $this->db->join('tbl_users as Users', 'Users.ClubID = BaseTbl.clubID', 'LEFT');
        $this->db->join('tbl_users as Users1', 'Users1.ClubID = BaseTbl.clubID', 'LEFT') ; 
-        $this->db->where('Users.roleId = ','1') ;
+        $this->db->where('Users.roleId = 1 OR Users.roleId = ','2') ;
         $this->db->where('Users1.isDeleted = ','0') ;
+     
+
+       $this->db->group_by('BaseTbl.clubId') ;
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
+
+
+    /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function clubListingS()
+    {
+        $this->db->select('BaseTbl.clubID  ');
+        $this->db->from('tbl_club as BaseTbl');
+        $this->db->where('BaseTbl.SenJun = ','0') ;
+
+       $this->db->group_by('BaseTbl.clubId') ;
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+    }
+
+
+
+
+
+
+        /**
+     * This function is used to get the user listing count
+     * @param string $searchText : This is optional search text
+     * @param number $page : This is pagination offset
+     * @param number $segment : This is pagination limit
+     * @return array $result : This is result
+     */
+    function clubListingJ()
+    {
+        $this->db->select('BaseTbl.clubID  ');
+        $this->db->from('tbl_club as BaseTbl');
+   
+        $this->db->where('BaseTbl.SenJun = ','1') ;
+
        $this->db->group_by('BaseTbl.clubId') ;
         $query = $this->db->get();
         

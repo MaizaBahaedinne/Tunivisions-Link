@@ -9,9 +9,9 @@ class Club extends BaseController {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('user_model');
-        $this->load->model('notification_model');
-        $this->load->model('club_model');
+			        $this->load->model('user_model');
+			        $this->load->model('notification_model');
+			        $this->load->model('club_model');
 					$this->load->model('project_model');
 					$this->load->model('scores_club_model');
 					$this->load->model('finance_model');

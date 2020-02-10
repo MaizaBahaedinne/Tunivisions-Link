@@ -68,7 +68,7 @@
 											</div>
 										</div>
 									</div>
-									<p>Hi! I'm Amiah the Senior UI Designer at NobleUI. We hope you enjoy the design and quality of Social.</p>
+									<p></p>
 									<div class="mt-3">
 										<label class="tx-11 font-weight-bold mb-0 text-uppercase">Inscription:</label>
 										<p class="text-muted"><?php echo $userInfo->createdDtm ?></p>
@@ -83,20 +83,20 @@
 									</div>
 									<div class="mt-3">
 										<label class="tx-11 font-weight-bold mb-0 text-uppercase">Club:</label>
-										<p class="text-muted"><?php echo $userInfo->ClubName ?></p>
+										<p class="text-muted"><?php if ($userInfo->ClubName != 'Foundation' && $userInfo->ClubName != 'Alumni' && $userInfo->ClubName != 'Foundation Junior' ){ echo 'club' ;} echo " Tunivisions "; echo $userInfo->ClubName ?></p>
 									</div>
 									<div class="mt-3">
 										<label class="tx-11 font-weight-bold mb-0 text-uppercase">Poste:</label>
 										<p class="text-muted"><?php echo $userInfo->role ?> <?php echo $userInfo->cellule ?></p>
 									</div>
 									<div class="mt-3 d-flex social-links">
-										<a href="javascript:;" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon twitter">
+										<a href="<?php echo $userInfo->facebook ?>" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon twitter">
 											<i data-feather="facebook"></i>
 										</a>
-										<a href="javascript:;" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon instagram">
+										<a href="<?php echo $userInfo->instagram ?>" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon instagram">
 											<i data-feather="instagram"></i>
 										</a>
-										<a href="javascript:;" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon ">
+										<a href="<?php echo $userInfo->linkedin ?>" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon ">
 											<i data-feather="linkedin"></i>
 										</a>
 									</div>
@@ -169,51 +169,7 @@
 											<h6 class="card-title">latest photos</h6>
 											<div class="latest-photos">
 												<div class="row">
-													<div class="col-md-4">
-														<figure>
-															<img class="img-fluid" src="../../../assets/images/faces/face1.jpg" alt="">
-														</figure>
-													</div>
-													<div class="col-md-4">
-														<figure>
-															<img class="img-fluid" src="../../../assets/images/faces/face2.jpg" alt="">
-														</figure>
-													</div>
-													<div class="col-md-4">
-														<figure>
-															<img class="img-fluid" src="../../../assets/images/faces/face3.jpg" alt="">
-														</figure>
-													</div>
-													<div class="col-md-4">
-														<figure>
-															<img class="img-fluid" src="../../../assets/images/faces/face4.jpg" alt="">
-														</figure>
-													</div>
-													<div class="col-md-4">
-														<figure>
-															<img class="img-fluid" src="../../../assets/images/faces/face5.jpg" alt="">
-														</figure>
-													</div>
-													<div class="col-md-4">
-														<figure>
-															<img class="img-fluid" src="../../../assets/images/faces/face6.jpg" alt="">
-														</figure>
-													</div>
-													<div class="col-md-4">
-														<figure class="mb-0">
-															<img class="img-fluid" src="../../../assets/images/faces/face7.jpg" alt="">
-														</figure>
-													</div>
-													<div class="col-md-4">
-														<figure class="mb-0">
-															<img class="img-fluid" src="../../../assets/images/faces/face8.html" alt="">
-														</figure>
-													</div>
-													<div class="col-md-4">
-														<figure class="mb-0">
-															<img class="img-fluid" src="../../../assets/images/faces/face9.html" alt="">
-														</figure>
-													</div>
+
 												</div>
 											</div>
 										</div>

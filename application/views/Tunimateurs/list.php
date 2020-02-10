@@ -39,7 +39,7 @@ table {
                       <h5 class="card-title"><?php echo $record->name ?></h5>
                     </a>
                    
-                    <p class="card-text"><?php if ($record->ClubName != 'Foundation'){ echo 'club' ;} echo " Tunivisions ";    echo $record->ClubName ?></p>
+                    <p class="card-text"><?php if ($record->ClubName != 'Foundation' && $record->ClubName != 'Alumni' && $record->ClubName != 'Foundation Junior' ){ echo 'club' ;} echo " Tunivisions ";    echo $record->ClubName ?></p>
                     <p class="card-text"><small class="text-muted"><?php echo $record->role.' ' ; ?><?php echo $record->cellule ; ?></small></p>
                   </div>
                  

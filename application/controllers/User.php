@@ -49,8 +49,10 @@ class User extends BaseController
               
         $data["tunimateurs"] = count($this->user_model->userListing($this->vendorId))  ; 
         $data["tunimateursApp"] = count($this->user_model->userListingApprouveF());
-        $data["clubs"] = count($this->club_model->clubListing() ) ; 
-        $data["clubscount"] = count($this->club_model->clubListing() )  ;
+      
+        $data["clubscountS"] = count($this->club_model->clubListingS() )  ;
+        $data["clubscountJ"] = count($this->club_model->clubListingJ() )  ;
+
         $data["projets"] = count($this->project_model->projectListingT() ) ;
         $data["RateClub"] = $this->scores_model->RaitingClub()   ;
         $data["LastRaitingClub"] = $this->scores_model->LastRaitingClub()   ;
@@ -63,8 +65,8 @@ class User extends BaseController
         $data["user"] = $this->user_model->getUserInfoWithRole($this->vendorId) ;
         $count = $this->finance_model->financeListing($this->clubID);
         $data['bilancount'] = count($count)  ; 
-         $data["TFMVALID"] = $this->Tfm_part_model->TFMValid($this->vendorId) ;
-         $data['projectRecords'] = $this->project_model->projectListing();
+        $data["TFMVALID"] = $this->Tfm_part_model->TFMValid($this->vendorId) ;
+        $data['projectRecords'] = $this->project_model->projectListing();
          
         $this->global['active'] = 'dash';
     
