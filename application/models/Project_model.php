@@ -22,7 +22,7 @@ class Project_model extends CI_Model
         $this->db->join('tbl_score_club as Scores', 'Evaluations.score_clubID = Scores.score_clubID', 'LEFT');
 
         $this->db->join('tbl_users as Valider ', 'Valider.userId = Evaluations.validBy', 'LEFT');
-         $this->db->join('tbl_users as Evaluer ', 'Evaluer.userId = Evaluations.doBy', 'LEFT');
+         $this->db->join('tbl_users as Evaluer ', 'Evaluer.userId = Scores.affectedBy', 'LEFT');
 
 
 

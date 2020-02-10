@@ -108,7 +108,8 @@
 
                     <td>
                        <?php  if($record->statut  == 'En Attend' ){  ?>
-                      <?php  }else if($record->affectedBy  == 0 ){  ?>
+
+                      <?php  }else if($record->statut  == 'fini' ){  ?>
                          <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">
                               <span class="badge badge-danger "> A Valider </span>
                             </a>
