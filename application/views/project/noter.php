@@ -112,7 +112,7 @@
                     <div class="row">
                       <div class="col-12 col-md-12 col-xl-12">
                         <h4 class="mb-1">
-                          <?php echo if ( $projectInfo->eventFB !='' ) { ?>
+                          <?php  if ( $projectInfo->eventFB !='' ) { ?>
                            <a href="<?php echo $projectInfo->createdDate ; ?>" > Aller au facebook </a>
                             <?php }  ?>
                         </h4>                       
