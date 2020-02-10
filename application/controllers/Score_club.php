@@ -101,7 +101,6 @@ class Score_club extends BaseController {
 						$resource = 	$this->ressource_model->ressourceListingByProject($projectID);
 						$scoreClub  =	$this->scores_club_model->scoreClubbyProjectListing($projectID);
 
-						print_r($scoreClub); 
 						
 
 							$score = $this->input->post('scoreP');
@@ -117,6 +116,7 @@ class Score_club extends BaseController {
 
 			                $this->scores_club_model->editScoreClub($scoreInfo, $scoreClub->score_clubID) ; 
 
+			                if( $score > 0 ){
 			                $badge = $this->input->post('badge');
 
 			               	foreach ($resource as $res ) {
@@ -133,6 +133,8 @@ class Score_club extends BaseController {
 				      			}
 			               	}
 
+			               	}
+			               	
 			               	$evalInfo = array(
 						                'valider'=>'Valider',
 						                'dateValid'=> date('Y-m-d H:i:s') ,
@@ -144,7 +146,7 @@ class Score_club extends BaseController {
 
 
 		
-
+						    redirect('Score_club/PNoter/'.$projectID) ; 
 
 
 			        }
