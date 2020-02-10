@@ -46,7 +46,7 @@
 
                     <td>
                       <h6 >
-                                <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">                                  
+                                                                 
                                   <span>
                                     <?php 
                                     $string = strip_tags( $record->titre );
@@ -64,7 +64,7 @@
                                      echo $string ;
                                      ?>  </span>
                                   
-                                </a>
+                              
                       </h6>
                                 
                                 <?php echo $record->type  ?><br>
@@ -109,10 +109,13 @@
                     <td>
                        <?php  if($record->statut  == 'En Attend' ){  ?>
                       <?php  }else if($record->affectedBy  == 0 ){  ?>
+                         <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">
                               <span class="badge badge-danger "> A Valider </span>
+                            </a>
                       <?php }else{ ?>
-
+                            <a href="<?php echo base_url()?>Score_club/PNoter/<?php echo $record->projectId ;  ?>" class="kt-widget__title">
                             <span class="badge badge-primary">Validé par  : <?php echo $record->validName ?></span>
+                            </a>
                             <br>
                             <b> <?php echo $record->score ?> points </b>
                       <?php  } ?>

@@ -21,8 +21,8 @@ class Project_model extends CI_Model
         $this->db->join('tbl_evaluation as Evaluations', 'Evaluations.projectId = BaseTbl.projectId', 'LEFT');
         $this->db->join('tbl_score_club as Scores', 'Evaluations.score_clubID = Scores.score_clubID', 'LEFT');
 
-        $this->db->join('tbl_users as Valider ', 'Valider.userId = Scores.affectedBy', 'LEFT');
-         $this->db->join('tbl_users as Evaluer ', 'Evaluer.userId = Evaluations.validBy', 'LEFT');
+        $this->db->join('tbl_users as Valider ', 'Valider.userId = Evaluations.validBy', 'LEFT');
+         $this->db->join('tbl_users as Evaluer ', 'Evaluer.userId = Evaluations.doBy', 'LEFT');
 
 
 
