@@ -76,8 +76,8 @@
                         <?php if ($record->statut == 'En Attend') {
                             
                         ?>
-                        <a href="<?php echo base_url() ?>Evaluation/doEvaluation/<?php echo $record->evaluationId ?>"  title="View">
-                           <i data-feather="star"></i>
+                        <a href="<?php echo base_url() ?>Evaluation/doEvaluation/<?php echo $record->evaluationId ?>" >
+                            <i data-feather="edit" width="20px" ></i>
                         </a>
                         <?php 
                         }else if($clubID == 0 ){
