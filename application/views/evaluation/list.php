@@ -77,7 +77,7 @@
                             
                         ?>
                         <a href="<?php echo base_url() ?>Evaluation/doEvaluation/<?php echo $record->evaluationId ?>" >
-                            <i data-feather="edit" width="20px" ></i>
+                            <i data-feather="edit" width="20px" ></i>faire
                         </a>
                         <?php 
                         }else if($clubID == 0 ){
