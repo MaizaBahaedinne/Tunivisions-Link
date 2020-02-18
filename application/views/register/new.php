@@ -71,7 +71,7 @@
         </div>
               <hr>
             
-            <?php if ($var1!=Null && $var2 > 120  ) { ?> 
+            <?php if ($var1!=Null && $var2  == 2  ) { ?> 
             
             <div class="form-group">
               <input class="form-control" type="text" placeholder="CIN"  pattern="[0-9]{8}"  name="cin" required>
