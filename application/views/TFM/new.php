@@ -1,4 +1,4 @@
- <?php $this->load->helper("form"); if ($auto->charte == 1 ){ ?>
+ <?php $this->load->helper("form");  ?>
                     <form role="form" id="addproject" action="<?php echo base_url()?>TFM/partanTfm" method="post" role="form"  enctype="multipart/form-data">
 
 
@@ -543,13 +543,4 @@ Les tenues sportives ne sont pas tolérés et peuvent être une raison d’un av
 </div>
 
 </div>
-<?php } else { ?>
-
-
-                        
-                       <h4 class=""> Votre club n'est pas autorisé pour participer au TFM 2020</h4> 
-                        <li>Formation charte</li>
-                        <li>Declaration du  bilan financier </li>
-         
-
-                <?php }?>
+<?php ?>
