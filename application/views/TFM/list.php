@@ -34,7 +34,7 @@
                              </div>
                             <div class="kt-widget__info">
                                 <div class="kt-widget__media">
-                                    <h2>
+                                    <h5>
                                 <a href="" class="kt-widget__title">
                                   
 
@@ -54,7 +54,7 @@
                                      echo $string ;
                                      ?>
                                 </a>
-                                </h2>
+                                </h5>
                             </div>                                                          
                                 <br>
                                 
