@@ -34,6 +34,7 @@
                              </div>
                             <div class="kt-widget__info">
                                 <div class="kt-widget__media">
+                                    <h2>
                                 <a href="" class="kt-widget__title">
                                   
 
@@ -53,10 +54,10 @@
                                      echo $string ;
                                      ?>
                                 </a>
-                              
+                                </h2>
                             </div>                                                          
                                 <br>
-                                <i class="flaticon-users"></i> &nbsp;par  Tunivisions Foundation
+                                
                                 <br>
                                 <span class="btn btn-primary "> 
                                         <?php $date = new DateTime($record->dateDebut) ; 
