@@ -55,9 +55,7 @@
                             <?php echo $record->userId ?>
                         </td>
                       
-                        <td>
-                           
-                                                             
+                        <td>              
                                         <a class="kt-user-card-v2__name" href="#">
                                          <?php echo $record->name ?>
                                         </a>
@@ -91,6 +89,11 @@
                         
                         <td><?php echo $record->email ?><br>
                         <?php echo $record->mobile ?> </td>
+
+                        <td>
+                           parrin : <?php echo $record->parrain ?>
+                           date d'inscription : <?php echo $record->createdDtm ?>
+                        </td>
                         
                         <td> 
                         <?php if ($SA==1){ 
