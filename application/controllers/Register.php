@@ -60,7 +60,7 @@ class Register extends CI_Controller
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
             
 
-                if($this->input->get('var3') == 1  ){
+                if($this->input->get('var3') == '1'  ){
 
                     $mobile2 = $this->security->xss_clean($this->input->post('mobile2'));
 
@@ -84,8 +84,7 @@ class Register extends CI_Controller
                  'isDeleted' => 1 
                      );
                 }
-
-                if($this->input->get('var3') == Null  ){
+                else {
 
                 $userInfo = array(
                  'avatar' => basename($_FILES["fileToUpload"]["name"]).$mobile ,  
