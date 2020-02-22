@@ -45,7 +45,7 @@
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <img src="https://scontent.ftun7-1.fna.fbcdn.net/v/t1.0-9/84976489_1007937199577973_1396380488830025728_o.jpg?_nc_cat=103&_nc_eui2=AeFmLonkSKqApfpJDyEL50Log6Qt8f72vvXuLV4poya9b4ioF5MSudjimefJPdNDVfVcqRJY_iEgfq8ghTyZ3Ul76rU04XoN4AFbN0UjTqXEXw&_nc_ohc=a5G7ubZgAgkAX8phCHb&_nc_ht=scontent.ftun7-1.fna&oh=06d9816aff7d27e8dff9896c40cf3dab&oe=5EBA9C3C" class="alligator-turtle"  >
+                    <img src="https://tunivisions.link/uploads/projet/xCOVER.jpg.pagespeed.ic.atJfwZQyue.webp" class="alligator-turtle"  >
                   </div>
                 </div>
               </div>
