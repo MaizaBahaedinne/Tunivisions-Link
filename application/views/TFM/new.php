@@ -514,7 +514,7 @@ Les tenues sportives ne sont pas tolérés et peuvent être une raison d’un av
 
          <div class="col-md-12">
             <div class="form-group">
-                        <label>Comment vous allez au TFM 5.0 </label>
+                        <label>Comment vous allez au TFM 2020 </label>
                         <div class="kt-radio-inline">
                             <label class="kt-radio">
                                 <input type="radio" name="bus" value="1"> En Bus
@@ -547,7 +547,7 @@ Les tenues sportives ne sont pas tolérés et peuvent être une raison d’un av
 
 
                         
-                       <h4 class=""> Votre club n'est pas autorisé pour participer au TFM 5.0</h4> 
+                       <h4 class=""> Votre club n'est pas autorisé pour participer au TFM 2020</h4> 
                         <li>Formation charte</li>
                         <li>Declaration du  bilan financier </li>
          
