@@ -128,16 +128,16 @@
                   <option value="n"></option>
                   <option value="n">2015</option>
                   <option value="o">2016</option>
-                  <option value="n">2017</option>
+                  <option value="o">2017</option>
               </select>
             </div>
             <div class="form-group">
              <span><br>Nombre des clubs Tunivisions ?</span>
              <select class="form-control" name="clu"  required >
                   <option value="n"></option>
-                  <option value="n">+150</option>
+                  <option value="o">+150</option>
                   <option value="o">+145</option>
-                  <option value="n">+140</option>
+                  <option value="o">+140</option>
               </select>
             </div>
             
