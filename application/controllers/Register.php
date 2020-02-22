@@ -58,7 +58,34 @@ class Register extends CI_Controller
                     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]).$mobile;
                     $uploadOk = 1;
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-   
+            
+
+                if($this->input->get('var3') == 1  ){
+
+                    $mobile2 = $this->security->xss_clean($this->input->post('mobile2'));
+
+                $userInfo = array(
+                 'avatar' => basename($_FILES["fileToUpload"]["name"]).$mobile ,  
+                 'email'=>$email,
+                 'password'=>getHashedPassword($password),
+                 'roleId'=>'5',
+                 'clubID'=>$this->input->get('var2') ,
+                 'name'=> $name,
+                 'mobile'=>$mobile,
+                 'mobile2'=>$mobile2,
+                 'cin'=>$cin,
+                 'createdBy'=> $this->input->get('var1'),
+                 'createdDtm'=>date('Y-m-d H:i:s'),
+                 'sexe'=>$sexe,
+                 'gouvernorat'=>$gouvernorat,
+                 'delegation'=>$delegation,
+                 'facebook'=>$facebook, 
+                 'birthday' =>date($birth) ,
+                 'isDeleted' => 1 
+                     );
+                }
+
+                if($this->input->get('var3') != 1  ){
 
                 $userInfo = array(
                  'avatar' => basename($_FILES["fileToUpload"]["name"]).$mobile ,  
@@ -78,6 +105,9 @@ class Register extends CI_Controller
                  'birthday' =>date($birth) ,
                  'isDeleted' => 1 
                      );
+                }
+
+
 
                
                 $this->load->model('user_model');
