@@ -85,7 +85,7 @@ class Register extends CI_Controller
                      );
                 }
 
-                if($this->input->get('var3') != 1  ){
+                if($this->input->get('var3') == Null  ){
 
                 $userInfo = array(
                  'avatar' => basename($_FILES["fileToUpload"]["name"]).$mobile ,  
