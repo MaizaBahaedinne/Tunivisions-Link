@@ -33,6 +33,17 @@
         <div class="row">
           <div class="col-12 col-xl-12 stretch-card">
             <div class="row flex-grow">
+
+
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="https://tunivisions.link/uploads/projet/COVER.jpg" width="auto">
+                  </div>
+                </div>
+              </div>
+
+
               
               <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
