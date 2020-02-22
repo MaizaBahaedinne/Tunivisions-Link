@@ -102,7 +102,7 @@
                             <span class="btn btn-warning "> 
                                         <b>En cours de traitement</b> <br>
 
-                                         Paiement <b>150 DT</b>  Avant le <b>01/03/2019</b> <br>
+                                         Paiement <b>150 DT</b>  Avant le <b>01/03/2020</b> <br>
                                            
                             </span> 
                          <?php   
