@@ -60,9 +60,11 @@
             $this->load->helper('form');
              $var1 = $this->input->get('var1');
              $var2 = $this->input->get('var2');
+             $var3 = $this->input->get('var3');
             ?>
           <!--begin::Form-->
     <form  role="form" class="kt-form" runat="server" action="<?php echo base_url() ?>Register/registerNewUser?var1=<?php echo $var1 ?>&var2=<?php echo $var2 ?>"    method="post" enctype="multipart/form-data"  >
+      
       <div  class="text-center">
             <div   id="fb-root" class=""></div>
               <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
@@ -74,7 +76,8 @@
             <?php if ($var1!=Null && ($var2  == 2 || $var2 == 3 )  ) { ?> 
             
             <div class="form-group">
-              <input class="form-control" type="text" placeholder="CIN"  pattern="[0-9]{8}"  name="cin" required>
+              <input class="form-control" type="text" placeholder="CIN"  pattern="[0-9]{8}"  name="cin" 
+              <?php if  ($var3!=1){ ?>required <?php } ?>  >
             </div>
             <div class="form-group">
              
