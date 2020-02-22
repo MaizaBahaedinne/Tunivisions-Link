@@ -54,6 +54,21 @@
                                      echo $string ;
                                      ?>
                                 </a>
+                                <a <?php foreach ($tfmpartRecords as $tfmp ) {
+                            if ( $tfmp->tfmId == 7   ){ ?> style="display: none" <?php }} ?>
+                            href="<?php echo base_url() ; ?>TFM/partant/<?php echo $record->tfmId ; ?>">  
+                       
+                            <?php if ($record->tfmId == 7 ){ ?>
+                                <div class="btn btn-danger">
+                                    <span class="kt-widget__subtitle"></span>
+                                    <span class="kt-widget__value"> je veux participer </span><span></span>
+                                </div>
+                            <?php }  ?>
+                       
+                                                                    
+                   
+                                
+                            </a>
                                 </h5>
                             </div>                                                          
                                 <br>
@@ -87,8 +102,8 @@
                             <span class="btn btn-warning "> 
                                         <b>En cours de traitement</b> <br>
 
-                                        Premiére tranche <b>80 DT</b>  Avant le <b>01/12/2019</b> <br>
-                                        Deuxiéme tranche <b>70 DT</b>  Avant le <b>08/12/2019</b>      
+                                         Paiement <b>150 DT</b>  Avant le <b>01/03/2019</b> <br>
+                                           
                             </span> 
                          <?php   
                                 }
@@ -96,21 +111,7 @@
                             ?>
 
                             
-                            <a <?php foreach ($tfmpartRecords as $tfmp ) {
-                            if ( $tfmp->tfmId == 7   ){ ?> style="display: none" <?php }} ?>
-                            href="<?php echo base_url() ; ?>TFM/partant/<?php echo $record->tfmId ; ?>">  
-                        <!--
-                            <?php if ($record->tfmId == 6 ){ ?>
-                                <div class="btn btn-danger">
-                                    <span class="kt-widget__subtitle"></span>
-                                    <span class="kt-widget__value"> je veux participer </span><span></span>
-                                </div>
-                            <?php }  ?>
-                        -->
-                                                                    
-                   
-                                
-                            </a>
+                            
 
                          </span>   
                                 

@@ -112,20 +112,15 @@ class TFM extends BaseController {
 
 				$resultC = $this->club_model->editclub($clubInfo, $this->clubID) ; 
 				}
-				//user
-				$annee = $this->input->post('annee');
-				$userInfo = array(
-		          'affectedYear'=>$annee 
-		        );
-				$resultU = $this->user_model->editUser($userInfo, $this->vendorId);
-			
-				//tfm
+
+				
+	
 				$moto = $this->input->post('bus');
 				$sys = $this->input->post('sys');
 			
 
 				$partanTfm = array(
-		          'tfmId'=>'6',
+		          'tfmId'=>'7',
 		          'dateInscrip'=>date('Y-m-d H:i:s'),
 		          'userId'=>$this->vendorId ,
 		          'statut'=>2 ,
@@ -135,19 +130,7 @@ class TFM extends BaseController {
 
 		         $result = $this->tfm_model->addNewPartTFM($partanTfm) ;
 
-		        if($this->input->post('TFMS') > 0 ){
-			        foreach ($this->input->post('TFMS') as $TFM ) {
-				        $partanTfm = array(
-				          'tfmId'=>$TFM,
-				          'dateInscrip'=>date('Y-m-d H:i:s'),
-				          'userId'=>$this->vendorId ,
-				          'statut'=>1 ,
-				          'moto'=> $moto ,
-				          'sysMobile'=> $sys ,
-				        );
-					 $this->tfm_model->addNewPartTFM($partanTfm) ;
-		       	 	}
-		   		 }
+
 				
 		if ( $result){	
 		   			redirect('TFM/TFMListing') ; 		
