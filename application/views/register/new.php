@@ -128,6 +128,12 @@
             <div class="form-group">
               <input class="form-control" type="text" pattern="[0-9]{2}\d{6}" placeholder="mobile" name="mobile" required>
             </div>
+            <?php if  ($var3==1){ ?>
+              <div class="form-group">
+                  <input class="form-control" type="text" pattern="[0-9]{2}\d{6}" placeholder="Mobile de parent" name="mobile" required>
+            </div>
+            <?php } ?> 
+
             <div class="form-group">
             
               <input class="form-control" pattern="http://www\.facebook\.com\/(.+)|https://www\.facebook\.com\/(.+)" type="url"  placeholder="facebook | Format : |https://www.facebook.com/UserName " name="facebook" required>
