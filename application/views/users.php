@@ -22,7 +22,7 @@
                     <div class="col-md-12 stretch-card">
             <div class="card">
               <div class="card-body">
-                                <h6 class="card-title">Feather Icons</h6>
+                                <h6 class="card-title"></h6>
                                    
                 <div class="container">
                     <table id="example" class="table dataTable no-footer" style="width: 100%" >
@@ -91,7 +91,7 @@
                         <?php echo $record->mobile ?> </td>
 
                         <td>
-                           parrin : <?php echo $record->parrain ?>
+                           parrin : <?php echo $record->parrain ?><br>
                            date d'inscription : <?php echo $record->createdDtm ?>
                         </td>
                         
