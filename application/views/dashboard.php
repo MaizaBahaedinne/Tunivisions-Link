@@ -38,7 +38,7 @@
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <img src="https://tunivisions.link/uploads/projet/COVER.jpg" width="auto">
+                    <img src="https://tunivisions.link/uploads/projet/COVER.jpg" width="auto"class="alligator-turtle"  >
                   </div>
                 </div>
               </div>
