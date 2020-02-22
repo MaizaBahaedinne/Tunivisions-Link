@@ -33,12 +33,19 @@
         <div class="row">
           <div class="col-12 col-xl-12 stretch-card">
             <div class="row flex-grow">
+<style type="text/css">
+       .alligator-turtle {
+  object-fit: cover;
+  object-position: 50% 50%;
 
+  width: 100%;
+  height: 250px;
+}</style>
 
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <img src="https://tunivisions.link/uploads/projet/COVER.jpg" width="auto"class="alligator-turtle"  >
+                    <img src="https://tunivisions.link/uploads/projet/COVER.jpg" class="alligator-turtle"  >
                   </div>
                 </div>
               </div>
