@@ -33,15 +33,15 @@
         <div class="row">
           <div class="col-12 col-xl-12 stretch-card">
             <div class="row flex-grow">
-<style type="text/css">
-       .alligator-turtle {
-  object-fit: cover;
-  object-position: 50% 50%;
+            <style type="text/css">
+                   .alligator-turtle {
+              object-fit: cover;
+              object-position: 50% 50%;
 
-  width: 100%;
-  height: 250px;
-}</style>
-
+              width: 100%;
+              height: 250px;
+            }</style>
+<!--
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
@@ -49,7 +49,7 @@
                   </div>
                 </div>
               </div>
-
+-->
 
               
               <div class="col-md-4 grid-margin stretch-card">
