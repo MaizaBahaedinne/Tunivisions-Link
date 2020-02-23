@@ -8,7 +8,7 @@
         return $age;
 }
 
-     if (age(date($pres->birthday)) > 18  || $pres->cin != ''  ){ ?>
+     if (age($pres->birthday) > 18  || $pres->cin != ''  ){ ?>
                     <form role="form" id="addproject" action="<?php echo base_url()?>TFM/partanTfm" method="post" role="form"  enctype="multipart/form-data">
 
 
