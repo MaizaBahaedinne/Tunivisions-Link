@@ -11,7 +11,7 @@
 
             <!--begin: Datatable -->
 
-        <table id="example" class="display" style="width:100%" >
+        <table id="example" class="table dataTable no-footer" style="width:auto" >
                     <thead>
                     <tr>
                        
