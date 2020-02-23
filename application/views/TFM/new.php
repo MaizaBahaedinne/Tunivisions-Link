@@ -1,4 +1,13 @@
- <?php $this->load->helper("form");  ?>
+ <?php $this->load->helper("form"); 
+
+             function Age($date_naissance)
+            {
+            $am = explode('/', $date_naissance);
+            $an = explode('/', date('d/m/Y'));
+            if(($am[1] < $an[1]) || (($am[1] == $an[1]) && ($am[0] <= $an[0]))) return $an[2] - $am[2];
+            return $an[2] - $am[2] - 1;
+            }
+     if (Age($pres->birthday) > 18  || $pres->cin != ''  ){ ?>
                     <form role="form" id="addproject" action="<?php echo base_url()?>TFM/partanTfm" method="post" role="form"  enctype="multipart/form-data">
 
 
@@ -543,4 +552,4 @@ Les tenues sportives ne sont pas tolérés et peuvent être une raison d’un av
 </div>
 
 </div>
-<?php ?>
+<?php ? } else { echo "Inscription Intedite pour vos ! ";}>

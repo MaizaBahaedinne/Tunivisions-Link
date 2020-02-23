@@ -33,6 +33,7 @@ class TFM extends BaseController {
 		public function partant()
 		        {		
 		        	$data['auto'] =  $this->club_model->getClubInfo($this->clubID) ;
+		        	$data['pers'] =  $this->user_model->getUserInfoById($this->vendorId) ;
 		                $searchText='' ;
 		                $data['tfmRecords'] = $this->tfm_model->TFMListing();
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';

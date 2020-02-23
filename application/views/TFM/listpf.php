@@ -85,7 +85,7 @@
                                     <div class="kt-user-card-v2__details">                              
                                         <a class="kt-user-card-v2__name" href="#">
                                          <?php
-                                            if ($record->ClubName != "Foundation")
+                                            if ($record->ClubName != "Foundation"  && $record->ClubName != "Foundation Junior" && $record->ClubName != "Alumni")
                                             echo "club ";
                                             ?>   Tunivisions  <?php echo $record->ClubName ?></td>
                                         </a>                              
