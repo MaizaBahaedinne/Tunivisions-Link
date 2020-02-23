@@ -192,7 +192,7 @@ class Register extends CI_Controller
                 }
                 else
                 {
-                    $this->session->set_flashdata('error', 'Problème veuillez contacter l\'équipe  <a href="mailto:tunivisions.link@gmail.com"> tunivisions.link@gmail.com </a> ');
+                    $this->session->set_flashdata('error', 'Problème veuillez contacter l\'équipe support  <a href="mailto:tunivisions.link@gmail.com"> tunivisions.link@gmail.com </a> ');
                 }
 
                     
