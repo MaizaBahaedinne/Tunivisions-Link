@@ -19,7 +19,7 @@ class Tfm_part_model extends CI_Model
         $this->db->select('');
         $this->db->from('tbl_tfm_part as BaseTbl');
         $this->db->where('userId=',$userId);
-        $this->db->where('tfmId=',6);
+        $this->db->where('tfmId=',7);
         $this->db->where('statut=',1);
         
         $query = $this->db->get();
@@ -96,9 +96,8 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
         
-        $this->db->where('BaseTbl.tfmId =',6);
-        $this->db->where('BaseTbl.p_tranch1 =',80);
-
+        $this->db->where('BaseTbl.tfmId =',7);
+        
         $this->db->group_by('Users.clubID ');
         $this->db->order_by('BaseTbl.dateInscrip','DESC');  
         $query = $this->db->get();
@@ -120,8 +119,8 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
 
-        $this->db->where('BaseTbl.tfmId =',6);
-        $this->db->where('BaseTbl.p_tranch1 =',80);
+        $this->db->where('BaseTbl.tfmId =',7);
+       
 
          $this->db->group_by('Clubs.city');
           $this->db->order_by('countPart DESC');
@@ -148,8 +147,8 @@ class Tfm_part_model extends CI_Model
         $this->db->join('tbl_users as HOMME', 'HOMME.userId = BaseTbl.userId and HOMME.sexe = "homme" ', 'LEFT');
         $this->db->join('tbl_club as Clubs', 'Clubs.clubID = Users.ClubID', 'LEFT');
 
-        $this->db->where('BaseTbl.tfmId =',6);
-        $this->db->where('BaseTbl.p_tranch1 = 80 or BaseTbl.p_tranch1 = 40 ');
+        $this->db->where('BaseTbl.tfmId =',7);
+     
 
          $this->db->group_by('Clubs.name');
          $this->db->order_by('countPart DESC');
