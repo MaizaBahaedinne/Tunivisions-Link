@@ -7,7 +7,7 @@
             if(($am[1] < $an[1]) || (($am[1] == $an[1]) && ($am[0] <= $an[0]))) return $an[2] - $am[2];
             return $an[2] - $am[2] - 1;
             }
-     if (Age($pres->birthday) > 18  || $pres->cin != ''  ){ ?>
+     if (Age(date($pres->birthday)) > 18  || $pres->cin != ''  ){ ?>
                     <form role="form" id="addproject" action="<?php echo base_url()?>TFM/partanTfm" method="post" role="form"  enctype="multipart/form-data">
 
 
