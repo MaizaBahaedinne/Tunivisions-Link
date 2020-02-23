@@ -20,7 +20,7 @@
 
                 <div class="row">
                    
-            <div class="card">
+            <div class="card col-md-12">
               <div class="card-body">
                                 <h6 class="card-title"></h6>
                                    
