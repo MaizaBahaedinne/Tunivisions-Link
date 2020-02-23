@@ -717,6 +717,16 @@
               <span class="link-title">Mon club</span>
             </a>
           </li>
+
+          <?php if ($SA==1 || (($role ==1 || $role == 2 || $role == 3) ))  { ?>
+          <li class="nav-item ">
+            <a href="<?php echo base_url() ?>TFM/partantByClub" class="nav-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              <span class="link-title">My Team for TFM 2020</span>
+            </a>
+          </li>
+          <?php } ?>
+
           <?php if ($SA==1 || (($role ==1 || $role == 2 || $role == 3) && ($cellule =='Gestion des talents' || $cellule =='') ))  { ?>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#RH" role="button" aria-expanded="false" aria-controls="RH">
@@ -786,6 +796,7 @@
               <span class="link-title">TFM</span>
             </a>
           </li>
+
  
           
 
