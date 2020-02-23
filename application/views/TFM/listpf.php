@@ -4,7 +4,7 @@
             <div class="card-header">
         <h4><?php echo count($userRecords) ?> Participant</h4>
         <?php if($clubID == 0 ){ ?>
-            <a href="<?php echo base_url() ?>TFM/partantF">statistiques</a>
+            <a href="<?php echo base_url() ?>TFM/stats">statistiques</a>
         <?php } ?>
     </div>
         <div class="card-body">
