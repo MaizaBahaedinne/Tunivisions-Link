@@ -553,4 +553,4 @@ Les tenues sportives ne sont pas tolérés et peuvent être une raison d’un av
 </div>
 
 </div>
-<?php  } else { echo "Inscription Intedite pour vos ! ";} ?>
+<?php  } else { echo "Inscription Intedite ! ";} ?>
