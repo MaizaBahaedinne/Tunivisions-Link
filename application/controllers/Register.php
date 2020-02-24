@@ -61,7 +61,7 @@ class Register extends CI_Controller
             
                     $mobile2 = 0 ; 
 
-                if($this->input->get('var3') == '1'  ){
+                if($this->input->get('var3') == 1  ){
                         $mobile2 = $this->security->xss_clean($this->input->post('mobile2'));
                  } ;
 
