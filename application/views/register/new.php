@@ -74,7 +74,7 @@
               <hr>
             
 
-            <?php if ($var1!=Null && ($var2 == 0 || $var2 == 1 || $var2 == 2  || $var2 == 3 )  ) { ?> 
+            <?php if ($var1!=Null &&  $var3 == 1  ) { ?> 
 
             
             <div class="form-group">
