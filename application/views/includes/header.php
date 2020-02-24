@@ -1070,7 +1070,7 @@
 										<p class="name font-weight-bold mb-0"><?php echo $name ?></p>
 										<p class="email text-muted mb-3"><?php echo $role_text ?></p>
                     <?php if  ($SA ==1 || $role==1 || $role==2  ) { ?>
-            <p style="display: none" id="p1"><?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID.'&var3=1'; ?> ?></p>
+            <p style="display: none" id="p1"><?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID.'&var3=1'; ?></p>
             
               <button class="btn btn-primary" onclick="copyToClipboard('#p1')"  >Lien de parainage</button>     
               <script type="text/javascript">
