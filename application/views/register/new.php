@@ -63,7 +63,7 @@
              $var3 = $this->input->get('var3');
             ?>
           <!--begin::Form-->
-    <form  role="form" class="kt-form" runat="server" action="<?php echo base_url() ?>Register/registerNewUser?var1=<?php echo $var1 ?>&var2=<?php echo $var2 ?>&var2=<?php echo $var3 ?>"    method="post" enctype="multipart/form-data"  >
+    <form  role="form" class="kt-form" runat="server" action="<?php echo base_url() ?>Register/registerNewUser?var1=<?php echo $var1 ?>&var2=<?php echo $var2 ?>&var3=<?php echo $var3 ?>"    method="post" enctype="multipart/form-data"  >
       
       <div  class="text-center">
             <div   id="fb-root" class=""></div>
@@ -74,7 +74,7 @@
               <hr>
             
 
-            <?php if ($var1!=Null && ($var2 == 0 || $var2 == 1 || $var2 == 2  || $var2 == 3 )  ) { ?> 
+            <?php if ($var1!=Null &&   $var2 != Null  &&  $var3 == 1  ) { ?> 
 
             
             <div class="form-group">
