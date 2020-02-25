@@ -54,6 +54,7 @@
                                      echo $string ;
                                      ?>
                                 </a>
+                                <!--
                                 <a <?php foreach ($tfmpartRecords as $tfmp ) {
                             if ( $tfmp->tfmId == 7   ){ ?> style="display: none" <?php }} ?>
                             href="<?php echo base_url() ; ?>TFM/partant/<?php echo $record->tfmId ; ?>">  
@@ -64,7 +65,9 @@
                                     <span class="kt-widget__value"> je veux participer </span><span></span>
                                 </div>
                             <?php }  ?>
-                       
+                       -->
+
+                       <div class="btn btn-danger"> SOLD OUT </div>
                                                                     
                    
                                 
@@ -102,7 +105,8 @@
                             <span class="btn btn-warning "> 
                                         <b>En cours de traitement</b> <br>
 
-                                         Paiement <b>150 DT</b>  Avant le <b>01/03/2020</b> <br>
+                                         Paiement 1 <b>80 DT</b>  Avant le <b>01/03/2020</b> <br>
+                                         Paiement 2 <b>70 DT</b>  Avant le <b>05/03/2020</b>
                                            
                             </span> 
                          <?php   
