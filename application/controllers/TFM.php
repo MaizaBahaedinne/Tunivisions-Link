@@ -56,8 +56,29 @@ class TFM extends BaseController {
 		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListing();
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             	$this->global['active'] = 'TFMP';
+		                $this->loadViews("TFM/clubPaiement", $this->global, $data, NULL);   
+		        }
+
+
+		 public function partantF()
+		        {	
+
+		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
+            $data['searchText'] = $searchText;
+            
+            $this->load->library('pagination');
+
+		        	$data['count'] = count($this->Tfm_part_model->TFMClubPartListing());
+		                $searchText='' ;
+		                $data['userId'] = $this->vendorId ;
+		                $data['userRecords'] = $this->Tfm_part_model->TFMClubPartListing();
+		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
+		             	$this->global['active'] = 'TFMP';
 		                $this->loadViews("TFM/listpf", $this->global, $data, NULL);   
 		        }
+
+
+
 
 		 public function partantByClub()
 		        {	
