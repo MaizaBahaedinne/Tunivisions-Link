@@ -64,14 +64,19 @@
                                     <span class="kt-widget__subtitle"></span>
                                     <span class="kt-widget__value"> je veux participer </span><span></span>
                                 </div>
-                            <?php }  ?>
-                       -->
 
-                       <div class="btn btn-danger"> SOLD OUT </div>
+                                                            <?php }  ?>
+                   
+
+                       
                                                                     
                    
                                 
-                            </a>
+                            </a>-->
+<?php if ($record->tfmId == 7 ){ ?>
+    <div class="btn btn-danger"> SOLD OUT </div>
+
+  <?php }  ?>
                                 </h5>
                             </div>                                                          
                                 <br>
