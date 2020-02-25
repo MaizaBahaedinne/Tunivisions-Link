@@ -60,7 +60,7 @@ class TFM extends BaseController {
 		        }
 
 
-		 public function partantF()
+		 public function TFMClubPartListing()
 		        {	
 
 		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
