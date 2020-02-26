@@ -2,7 +2,7 @@
 
     <div class="card col-md-12">
             <div class="card-header">
-        <h4><?php echo count($userRecords) ?> Participant</h4>
+        <h4><?php echo $count ?> Participant</h4>
         <?php if($clubID == 0 ){ ?>
             <a href="<?php echo base_url() ?>TFM/stats">statistiques</a>
         <?php } ?>
@@ -76,7 +76,7 @@
 
                     <td> 
                          <?php if ($userID == 2 ) { ?>
-                                <a href="<?php echo base_url() ?>TFM/PaimentByClub/ ?><?php echo $record->clubID ?>" class="btn btn-warning" >Paiement</a>
+                                <a href="<?php echo base_url() ?>TFM/PaimentByClub/$record->clubID ?>" class="btn btn-warning" >Paiement</a>
                          <?php } ?>   
                     </tr>
 
