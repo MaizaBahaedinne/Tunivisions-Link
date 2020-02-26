@@ -76,7 +76,7 @@
 
                     <td> 
                          <?php if ($userID == 2 ) { ?>
-                                <a href="<?php echo base_url() ?>TFM/PaimentByClub/$record->clubID ?>" class="btn btn-warning" >Paiement</a>
+                                <a href="<?php echo base_url().'TFM/PaimentByClub/'.$record->clubID ?>" class="btn btn-warning" >Paiement</a>
                          <?php } ?>   
                     </tr>
 
