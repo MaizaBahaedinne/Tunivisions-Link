@@ -20,7 +20,7 @@
                         <th>Paiment</th>
                   
                         
-                        <th>statut</th>
+                        <th>paiement </th>
                         
                     </tr>
                     </thead>
@@ -75,17 +75,9 @@
  
 
                     <td> 
-                          <?php  if ($record->statut == 1 ) { ?> 
-                            <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">validé 
-                                <?php if ($record->p_tranch1 == 40) { ?><small> <br> (sans logement) </small> <?php } ?> </span><br> 
-                          <?php } ?>
-
-                          <?php if ($record->statut == 2 ) { ?> 
-                            <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">Non validé</span><br>
-                         <?php } ?>
-
-        
-
+                         <?php if ($userID == 2 ) { ?>
+                                <a href="<?php echo base_url() ?>TFM/PaimentByClub/ ?><?php echo $record->clubID ?>" class="btn btn-warning" >Paiement</a>
+                         <?php } ?>   
                     </tr>
 
                     <?php
