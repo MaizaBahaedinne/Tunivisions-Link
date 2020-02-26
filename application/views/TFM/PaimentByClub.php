@@ -1,7 +1,7 @@
 <div class="row">
 	
 
-	<div class="card col-md-12">
+	<div class="card col-md-4">
 		<div class="card">
 			<form action="" method="">
 			<div class="card-header">
@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	
-	<div class="card col-md-6">
+	<div class="card col-md-4">
 		<div class="card">
 			
 			<div class="card-header">
@@ -40,7 +40,7 @@
 
 	</div>	
 
-	<div class="card col-md-6">
+	<div class="card col-md-4">
 		<div class="card">
 			
 			<div class="card-header">
