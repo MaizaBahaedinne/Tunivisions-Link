@@ -47,7 +47,7 @@ class TFM extends BaseController {
 
 		        	  $searchText = $this->security->xss_clean($this->input->post('searchText'));
             $data['searchText'] = $searchText;
-            
+            $data['userID'] = $this->vendorId;
             $this->load->library('pagination');
 
 		        	$data['count'] = count($this->Tfm_part_model->TFMPartListing());
