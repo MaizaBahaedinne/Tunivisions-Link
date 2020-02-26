@@ -40,7 +40,7 @@
 
 	</div>	
 
-	div class="card col-md-4">
+	<div class="card col-md-4">
 		<div class="card">
 			
 			<div class="card-header">
