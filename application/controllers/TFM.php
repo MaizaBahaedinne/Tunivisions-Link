@@ -43,7 +43,7 @@ class TFM extends BaseController {
 
 
 
-		    public function    PaimentByClub
+		    public function PaimentByClub
 			{		
 	
 		                $data['userRecords'] = $this->tfm_part_model->TFMPartListinByclub();
