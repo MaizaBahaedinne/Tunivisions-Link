@@ -11,7 +11,7 @@
 				
 				<?php foreach ($userRecords as $record ) { ?>
 					<input type="checkbox" name=""> <?php echo ' '.$record->name ;  ?>
-				<? } ?>
+				<?php } ?>
 				
 			</div>
 			<div class="card-footer">
