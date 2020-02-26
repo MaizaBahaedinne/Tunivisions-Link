@@ -15,7 +15,7 @@
 				
 			</div>
 			<div class="card-footer">
-				
+				<input type="submit" value="Valider">
 			</div>
 			</form>
 		</div>
