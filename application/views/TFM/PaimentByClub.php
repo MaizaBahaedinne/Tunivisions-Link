@@ -9,9 +9,9 @@
 			</div>
 			<div class="card-body">
 				
-				<?php foreach ($userRecords as $record ) {
-					
-				}?>
+				<?php foreach ($userRecords as $record ) { ?>
+					<input type="checkbox" name=""> <?php echo ' '.$record->name ?>
+				<? } ?>
 				
 			</div>
 			<div class="card-footer">
