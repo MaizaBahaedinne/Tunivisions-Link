@@ -10,7 +10,7 @@
 			<div class="card-body">
 				
 				<?php foreach ($userRecords as $record ) { ?>
-					<input type="checkbox" name=""> <?php echo ' '.$record->name ?>
+					<input type="checkbox" name=""> <?php echo ' '.$record->name ;  ?>
 				<? } ?>
 				
 			</div>
@@ -60,4 +60,3 @@
 	</div>	
 		
 </div>
-
