@@ -112,6 +112,7 @@
 
                                          Paiement 1 <b>80 DT</b>  Avant le <b>01/03/2020</b> <br>
                                          Paiement 2 <b>70 DT</b>  Avant le <b>05/03/2020</b>
+                                         <br><b>système de paiement FIFO ( First IN First OUT )</b>
                                            
                             </span> 
                          <?php   
