@@ -53,7 +53,7 @@ class TFM extends BaseController {
 		        	$data['count'] = count($this->Tfm_part_model->TFMPartListing());
 		                $searchText='' ;
 		                $data['userId'] = $this->vendorId ;
-		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListing();
+		                $data['userRecords'] = $this->Tfm_part_model->TFMClubPartListing();
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             	$this->global['active'] = 'TFMP';
 		                $this->loadViews("TFM/clubPaiement", $this->global, $data, NULL);   
