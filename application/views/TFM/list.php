@@ -54,7 +54,7 @@
                                      echo $string ;
                                      ?>
                                 </a>
-                                <!--
+                                
                                 <a <?php foreach ($tfmpartRecords as $tfmp ) {
                             if ( $tfmp->tfmId == 7   ){ ?> style="display: none" <?php }} ?>
                             href="<?php echo base_url() ; ?>TFM/partant/<?php echo $record->tfmId ; ?>">  
@@ -72,11 +72,11 @@
                                                                     
                    
                                 
-                            </a>-->
+                            </a><!--
 <?php if ($record->tfmId == 7 ){ ?>
     <div class="btn btn-danger"> SOLD OUT </div>
 
-  <?php }  ?>
+  <?php }  ?>-->
                                 </h5>
                             </div>                                                          
                                 <br>
