@@ -73,26 +73,7 @@
     <div class="btn btn-danger"> SOLD OUT </div>
 
   <?php }  ?>
-                                           <br>
-                                
-                                </h5>
-                            </div>                                                          
-                                <br>
-                                
-                                <br>
-                                <span class="btn btn-primary "> 
-                                        <?php $date = new DateTime($record->dateDebut) ; 
-                                        echo '<span>'.$date->format('d').'-'.$date->format('M').'-20'.$date->format('y').'</span>' ; ?>    
-                                </span>
-                                <span class="btn btn-danger "> 
-                                        <?php $date = new DateTime($record->dateFin) ; 
-                                        echo '<span>'.$date->format('d').'-'.$date->format('M').'-20'.$date->format('y').'</span>' ; ?>    
-                                </span>
-                                <br>
-
-                            </div>
-                        </div>
-                        <span>
+                                           <span>
   
                             
                         <?php foreach ($tfmpartRecords as $tfmp ) {
@@ -122,6 +103,26 @@
                             
 
                          </span>   
+                                           <br>
+                                
+                                </h5>
+                            </div>                                                          
+                                <br>
+                                
+                                <br>
+                                <span class="btn btn-primary "> 
+                                        <?php $date = new DateTime($record->dateDebut) ; 
+                                        echo '<span>'.$date->format('d').'-'.$date->format('M').'-20'.$date->format('y').'</span>' ; ?>    
+                                </span>
+                                <span class="btn btn-danger "> 
+                                        <?php $date = new DateTime($record->dateFin) ; 
+                                        echo '<span>'.$date->format('d').'-'.$date->format('M').'-20'.$date->format('y').'</span>' ; ?>    
+                                </span>
+                                <br>
+
+                            </div>
+                        </div>
+                        
                                 
                     </div>
 
