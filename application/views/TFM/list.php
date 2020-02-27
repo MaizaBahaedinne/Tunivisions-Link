@@ -68,11 +68,28 @@
 
                                                             <?php }  ?>
                             </a> -->
-                                           
+                                   <br>        
 <?php if ($record->tfmId == 7 ){ ?>
     <div class="btn btn-danger"> SOLD OUT </div>
 
   <?php }  ?>
+                                           <br>
+                                 <?php        
+                                }
+                                else if( $tfmp->tfmId == $record->tfmId && $tfmp->statut == 2  ) {
+                                   ?>
+                            <span class="btn btn-warning "> 
+                                        <b>En cours de traitement</b> <br>
+
+                                         Paiement 1 <b>80 DT</b>  Avant le <b>01/03/2020</b> <br>
+                                         Paiement 2 <b>70 DT</b>  Avant le <b>05/03/2020</b>
+                                         <br><b>système de paiement FIFO ( First IN First OUT )</b>
+                                           
+                            </span> 
+                         <?php   
+                                }
+                            } 
+                            ?>
                                 </h5>
                             </div>                                                          
                                 <br>
@@ -99,22 +116,7 @@
                             <span class="btn btn-primary "> 
                                         TFM validé    
                             </span> 
-                         <?php        
-                                }
-                                else if( $tfmp->tfmId == $record->tfmId && $tfmp->statut == 2  ) {
-                                   ?>
-                            <span class="btn btn-warning "> 
-                                        <b>En cours de traitement</b> <br>
-
-                                         Paiement 1 <b>80 DT</b>  Avant le <b>01/03/2020</b> <br>
-                                         Paiement 2 <b>70 DT</b>  Avant le <b>05/03/2020</b>
-                                         <br><b>système de paiement FIFO ( First IN First OUT )</b>
-                                           
-                            </span> 
-                         <?php   
-                                }
-                            } 
-                            ?>
+                         
 
                             
                             
