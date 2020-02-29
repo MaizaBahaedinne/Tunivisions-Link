@@ -31,7 +31,7 @@
 	
 	<div class="card col-md-4">
 		<div class="card">
-			<?php if($userID == 2 ) ?>
+			<?php if($userID == 2 ){ ?>
 			<form action="<?php echo base_url() ?>TFM/partanTfmPaiement2" method="post">
 			<?php } ?>
 			<div class="card-header">
@@ -47,12 +47,12 @@
 				<?php } ?>
 			</div>
 			<div class="card-footer">
-				<?php if($userID == 2 ) ?>
+				<?php if($userID == 2 ){ ?>
 				<input type="submit" class="btn btn-primary" value="Valider">
 				<input type="reset" class="btn btn-danger" value="Anuler">	
 				<?php } ?>			
 			</div>
-			<?php if($userID == 2 ) ?>
+			<?php if($userID == 2 ){ ?>
 			</form>
 			<?php } ?>
 		</div>
