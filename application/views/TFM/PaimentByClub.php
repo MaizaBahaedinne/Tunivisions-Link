@@ -11,9 +11,9 @@
 				
 				<?php foreach ($userRecords as $record ) { ?>
 					<div class="form-check form-check-flat form-check-primary">
-										<label class="form-check-label">
-											<input type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" > <?php echo ' '.$record->name ;  ?><br>
-										</label>
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" > <?php echo ' '.$record->name ;  ?><br>
+						</label>
 					</div>
 				<?php } ?>
 				
