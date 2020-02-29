@@ -31,7 +31,9 @@
 	
 	<div class="card col-md-4">
 		<div class="card">
-			
+			<?php if($userID == 2 ) ?>
+			<form action="<?php echo base_url() ?>TFM/partanTfmPaiement2" method="post">
+			<?php } ?>
 			<div class="card-header">
 				<h5>Liste des membre validé TRANCHE 1 | <?php echo count($userRecordsT1) ?> </h5>				
 			</div>
@@ -45,9 +47,14 @@
 				<?php } ?>
 			</div>
 			<div class="card-footer">
-				
+				<?php if($userID == 2 ) ?>
+				<input type="submit" class="btn btn-primary" value="Valider">
+				<input type="reset" class="btn btn-danger" value="Anuler">	
+				<?php } ?>			
 			</div>
-			
+			<?php if($userID == 2 ) ?>
+			</form>
+			<?php } ?>
 		</div>
 
 	</div>	
@@ -60,7 +67,7 @@
 			</div>
 			<div class="card-body">
 				<?php foreach ($userRecordsT2 as $record ) { ?>
-					 <?php echo ' '.$record->name ;  ?>
+					 <?php echo ' '.$record->name ;  ?><br>
 				<?php } ?>
 			</div>
 			<div class="card-footer">
