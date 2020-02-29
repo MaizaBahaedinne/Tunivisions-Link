@@ -36,9 +36,13 @@
 				<h5>Liste des membre validé TRANCHE 1 </h5>				
 			</div>
 			<div class="card-body">
-				<?php foreach ($userRecordsT1 as $record ) {
-					
-				}?>
+				<?php foreach ($userRecordsT1 as $record ) { ?>
+					<div class="form-check form-check-flat form-check-primary">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" > <?php echo ' '.$record->name ;  ?>
+						</label>
+					</div>
+				<?php } ?>
 			</div>
 			<div class="card-footer">
 				
@@ -55,9 +59,13 @@
 				<h5>Liste des membre validé TRANCHE 2 </h5>				
 			</div>
 			<div class="card-body">
-				<?php foreach ($userRecordsT2 as $record ) {
-					
-				}?>
+				<?php foreach ($userRecordsT2 as $record ) { ?>
+					<div class="form-check form-check-flat form-check-primary">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" > <?php echo ' '.$record->name ;  ?>
+						</label>
+					</div>
+				<?php } ?>
 			</div>
 			<div class="card-footer">
 				
