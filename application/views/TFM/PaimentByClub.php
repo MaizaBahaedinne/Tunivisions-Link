@@ -10,7 +10,11 @@
 			<div class="card-body">
 				
 				<?php foreach ($userRecords as $record ) { ?>
-					<input type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" > <?php echo ' '.$record->name ;  ?><br>
+					<div class="form-check form-check-flat form-check-primary">
+										<label class="form-check-label">
+											<input type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" > <?php echo ' '.$record->name ;  ?><br>
+										</label>
+					</div>
 				<?php } ?>
 				
 			</div>
