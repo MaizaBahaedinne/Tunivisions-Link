@@ -3,7 +3,7 @@
 
 	<div class="card col-md-4">
 		<div class="card">
-			<form action="" method="">
+			<form action="<?php echo base_url() ?>TFM/partanTfmPaiement1" method="post">
 			<div class="card-header">
 				<h5>Liste des membre participant au TFM </h5>		
 			</div>

@@ -173,12 +173,19 @@ class TFM extends BaseController {
 		}
 
 
-		public function partanTfmPaiement1 ($tfmpartId){
-					 $partanTfm = array(  	  'p_tranch1' => '80', 
+		public function partanTfmPaiement1 (){
+
+				 foreach ( $this->input->post('participant') as $r)
+				{
+					$partanTfm = array(  	  
+											  'p_tranch1' => '80', 
 									          'dateP_tranch1'=>date('Y-m-d H:i:s'),
 									          'recepteurTranche1'=>$this->vendorId ,
 									     );
-					$result = $this->tfm_model->editTFMPart($partanTfm, $tfmpartId) ;
+					$result = $this->tfm_model->editTFMPart($partanTfm, $r) ;
+				}
+
+
 
 		
 		}
