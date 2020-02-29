@@ -46,7 +46,7 @@ class TFM extends BaseController {
 		    public function PaimentByClub($clubID)
 			{		
 	
-		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListinByclub($clubID);
+		                $data['userRecords'] = $this->Tfm_part_model->TFMPartListinByclubToP($clubID);
 		                 $data['userRecordsT1'] = $this->Tfm_part_model->TFMPartListinByclub($clubID);
 		                 $data['userRecordsT2'] = $this->Tfm_part_model->TFMPartListinByclub($clubID);
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
