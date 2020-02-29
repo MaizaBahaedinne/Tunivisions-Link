@@ -191,7 +191,7 @@ class TFM extends BaseController {
 		}
 
 
-				public function partanTfmPaiement2 ($tfmpartId){
+				public function partanTfmPaiement2 (){
 
 
 					foreach ( $this->input->post('participant') as $r)
