@@ -339,7 +339,7 @@ class Tfm_part_model extends CI_Model
         $this->db->where('BaseTbl.tfmId =7 and  BaseTbl.p_tranch1 > 0 ');
      
 
-         $this->db->group_by('HOMME.sexe');
+       
         
 
         $query = $this->db->get();
@@ -363,7 +363,7 @@ class Tfm_part_model extends CI_Model
         $this->db->where('BaseTbl.tfmId =7 and  BaseTbl.p_tranch1 > 0 ');
      
 
-         $this->db->group_by('FEMME.sexe');
+
         
 
         $query = $this->db->get();
