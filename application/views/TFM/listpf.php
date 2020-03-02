@@ -101,13 +101,14 @@
                         
                     <td> 
 
+                        <?php if ($record->statut == 1 ) { ?>
                         tranche 1 : 
                         <?php if ($record->p_tranch1 > 0 ){ ?> <span class="badge badge-success">Validé</span>  
                         <?php }else {} ?> <span class="badge badge-warning">en attente</span> <?php  ?>
                         <br>
                         tranche 2 :<?php if ($record->p_tranch2 > 0 ){ ?> <span class="badge badge-success">Validé</span>  
                         <?php }else {} ?> <span class="badge badge-warning">en attente</span> <?php  ?>
-
+                        <?php } ?>
                         
                   </td>   
                       
