@@ -331,7 +331,7 @@ class Tfm_part_model extends CI_Model
      */
     function TFMPartConfirmedBySexeHListing()
     {
-        $this->db->select('  Clubs.name , count(BaseTbl.id) as countPart , count(FEMME.userId) as femme , count(HOMME.userId) as homme ');
+        $this->db->select('  Clubs.name , count(BaseTbl.id) as countPart  , count(HOMME.userId) as homme ');
         $this->db->from('tbl_tfm_part as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
      
@@ -359,7 +359,7 @@ class Tfm_part_model extends CI_Model
      */
     function TFMPartConfirmedBySexeFListing()
     {
-        $this->db->select('  Clubs.name , count(BaseTbl.id) as countPart , count(FEMME.userId) as femme , count(HOMME.userId) as homme ');
+        $this->db->select('  Clubs.name , count(BaseTbl.id) as countPart , count(FEMME.userId) as femme  ');
         $this->db->from('tbl_tfm_part as BaseTbl');
         $this->db->join('tbl_users as Users', 'Users.userId = BaseTbl.userId', 'LEFT');
         $this->db->join('tbl_users as FEMME', 'FEMME.userId = BaseTbl.userId and FEMME.sexe = "femme" ', 'LEFT');
