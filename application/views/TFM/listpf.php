@@ -101,37 +101,15 @@
                         
                     <td> 
 
+                        tranche 1 : 
+                        <?php if ($record->p_tranch1 > 0 ){ ?> <span class="badge badge-success">Validé</span>  
+                        <?php }else {} ?> <span class="badge badge-warning">en attente</span> <?php  ?>
+                        <br>
+                        tranche 2 :<?php if ($record->p_tranch2 > 0 ){ ?> <span class="badge badge-success">Validé</span>  
+                        <?php }else {} ?> <span class="badge badge-warning">en attente</span> <?php  ?>
 
                         
-<!--
-                       
-                            
-                            
-                            <a class="btn btn-warning"   alt="<?php echo $record->id ?>"   id="<?php echo $record->id ?>" >Paiement</a>
-                            <script type="text/javascript">
-                                $("#<?php echo $record->id ?>").click(function(){
-                                    $.ajax({
-                                       url : '<?php echo base_url() ?>TFM/partanTfmPaiement2/<?php echo$record->id ?>' ,
-                                        type : 'POST',
-                                       dataType : 'html',
-                                       success : function(code_html, statut){ 
-                                            $("#<?php echo $record->id ?>").text('Validé');  
-                                            $("#<?php echo $record->id ?>").removeClass() ; 
-
-                                       },
-
-                                       error : function(resultat, statut, erreur){
-
-                                       }
-
-                                    });
-                                });
-
-                            </script>
-
-             
-     
-     -->            
+                  </td>   
                       
              
 
