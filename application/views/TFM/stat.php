@@ -84,7 +84,7 @@
             datasets: [{
               label: "Sexe (H/F)",
               backgroundColor: ["#7ee5e5","#f77eb9"],
-              data: [<?php echo $partParsexeH ;?>,<?php echo $partParsexeF ;?>]
+              data: [<?php echo $partParsexeH->homme ;?>,<?php echo $partParsexeF->femme ;?>]
             }]
           }
         });
