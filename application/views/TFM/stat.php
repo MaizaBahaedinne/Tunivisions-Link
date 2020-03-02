@@ -48,7 +48,7 @@
                   <h6 class="card-title mb-0">Classement par sexe </h6>
                 </div>
                 <div class="table-responsive" style="height:600px ;overflow:auto;">
-                            <div id="apexPie"></div>
+                            <canvas id="chartjsPie"></canvas>
                 </div>
               </div> 
             </div>
@@ -67,40 +67,28 @@
   </script>
 
 
-  <script defer src="<?php echo base_url() ?>assets/vendors/apexcharts/apexcharts.min.js"></script>
+  
 
 
-
+  <script defer src="<?php echo base_url() ?>assets/vendors/chartjs/Chart.min.js"></script>
 
   <script  >
     $(function() {
   'use strict';
 
- 
-    // Apex Pie chart end
-        var options = {
-          chart: {
-            height: 300,
-            type: "pie"
-          },
-          colors: ["#f77eb9", "#7ee5e5","#4d8af0","#fbbc06"],
-          legend: {
-            position: 'top',
-            horizontalAlign: 'center'
-          },
-          stroke: {
-            colors: ['rgba(0,0,0,0)']
-          },
-          dataLabels: {
-            enabled: false
-          },
-          series: [44, 55, 13, 33]
-        };
-        
-        var chart = new ApexCharts(document.querySelector("#apexPie"), options);
-        
-        chart.render();  
-  // Apex Pie chart end
+     if($('#chartjsPie').length) {
+        new Chart($('#chartjsPie'), {
+          type: 'pie',
+          data: {
+            labels: ["Homme", "Femme"],
+            datasets: [{
+              label: "Sexe (H/F)",
+              backgroundColor: ["#7ee5e5","#f77eb9"],
+              data: [<?php echo $partParsexeH ;?>,<?php echo $partParsexeF ;?>]
+            }]
+          }
+        });
+      }
 
     });
   </script>
