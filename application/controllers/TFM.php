@@ -220,7 +220,7 @@ class TFM extends BaseController {
 						$data['partParsexeH'] = $this->Tfm_part_model->TFMPartConfirmedBySexeHListing();
 						$data['partParsexeF'] = $this->Tfm_part_model->TFMPartConfirmedBySexeHListing();
 
-						print_r($data['partParsexeH'].'  <br> '.$data['partParsexeF']) ;
+						print_r($data['partParsexeH']) ;
 						$data['countTotal'] = count($this->Tfm_part_model->TFMPartListing());
 		                $this->global['pageTitle'] = 'CodeInsect : club  Listing';
 		             	$this->global['active'] = 'TFMC';
