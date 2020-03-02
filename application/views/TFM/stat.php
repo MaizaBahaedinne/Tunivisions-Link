@@ -129,7 +129,7 @@
                   <h6 class="card-title mb-0">Taux de paiement </h6>
                 </div>
                 <div class="table-responsive" style="height:600px ;overflow:auto;">
-                            <canvas id="chartjsGroupedBar"></canvas>
+                            <canvas id="chartjsPie2"></canvas>
                 </div>
               </div> 
             </div>
@@ -181,6 +181,20 @@
         });
       }
 
+
+     if($('#chartjsPie2').length) {
+        new Chart($('#chartjsPie2'), {
+          type: 'pie',
+          data: {
+            labels: ["Non payée", "payée "],
+            datasets: [{
+              label: "Paiement (O/N)",
+              backgroundColor: ["#f77eb9","#7ee5e5"],
+              data: [<?php echo (count($countINS) - ($partParsexeF->femmec + $partParsexeH->hommec) ) ;?>,<?php echo ($partParsexeF->femmec + $partParsexeH->hommec) ;?>]
+            }]
+          }
+        });
+      }
 
 
 

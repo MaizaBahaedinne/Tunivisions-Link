@@ -221,6 +221,8 @@ class TFM extends BaseController {
 						$data['partParsexeH'] = $this->Tfm_part_model->TFMPartConfirmedBySexeHListing();
 						$data['partParsexeF'] = $this->Tfm_part_model->TFMPartConfirmedBySexeFListing();
 
+						$data['countINS'] = count($this->Tfm_part_model->TFMPartListing());
+
 					
 
 		
