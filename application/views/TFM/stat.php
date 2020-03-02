@@ -47,7 +47,12 @@
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
                   <h6 class="card-title mb-0">Classement par sexe </h6>
                 </div>
-                <div class="table-responsive" style="height:600px ;overflow:auto;">
+                  <div class="table-responsive">
+                            <canvas id="chartjsPie"></canvas>
+                            
+                </div>
+                 <div class="table-responsive">
+                          
                             <canvas id="chartjsPie"></canvas>
                 </div>
               </div> 
