@@ -79,4 +79,4 @@
   <script defer src="<?php echo base_url() ?>assets/vendors/apexcharts/apexcharts.min.js"></script>
 
 
-  <script src="../../../assets/js/apexcharts.js"></script>
+  <script defer src="<?php echo base_url() ?>assets/js/apexcharts.js"></script>
