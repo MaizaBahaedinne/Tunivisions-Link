@@ -45,19 +45,10 @@
             <div class="card">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
-                  <h6 class="card-title mb-0">Classement des clubs </h6>
+                  <h6 class="card-title mb-0">Classement par sexe </h6>
                 </div>
                 <div class="table-responsive" style="height:600px ;overflow:auto;">
-
-
-                   
-                     
-                          <h6 class="card-title">Donut chart</h6>
-                          <div id="apexDonut"></div>
-                     
-    
-
-
+                            <div id="apexPie"></div>
                 </div>
               </div> 
             </div>
@@ -79,4 +70,37 @@
   <script defer src="<?php echo base_url() ?>assets/vendors/apexcharts/apexcharts.min.js"></script>
 
 
-  <script defer src="<?php echo base_url() ?>assets/js/apexcharts.js"></script>
+
+
+  <script  >
+    $(function() {
+  'use strict';
+
+ 
+    // Apex Pie chart end
+        var options = {
+          chart: {
+            height: 300,
+            type: "pie"
+          },
+          colors: ["#f77eb9", "#7ee5e5","#4d8af0","#fbbc06"],
+          legend: {
+            position: 'top',
+            horizontalAlign: 'center'
+          },
+          stroke: {
+            colors: ['rgba(0,0,0,0)']
+          },
+          dataLabels: {
+            enabled: false
+          },
+          series: [44, 55, 13, 33]
+        };
+        
+        var chart = new ApexCharts(document.querySelector("#apexPie"), options);
+        
+        chart.render();  
+  // Apex Pie chart end
+
+    });
+  </script>
