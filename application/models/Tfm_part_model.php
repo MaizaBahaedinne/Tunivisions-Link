@@ -343,7 +343,7 @@ class Tfm_part_model extends CI_Model
         
 
         $query = $this->db->get();
-        $result = $query->result();        
+        $result = $query->row();        
         return $result;
     }
 
@@ -367,7 +367,7 @@ class Tfm_part_model extends CI_Model
         
 
         $query = $this->db->get();
-        $result = $query->result();        
+        $result = $query->row();        
         return $result;
     }
 
