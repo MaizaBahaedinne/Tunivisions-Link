@@ -46,9 +46,6 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
                   <h6 class="card-title mb-0">Classement des clubs </h6>
-                  <span class="text-muted"><b> Dernière mise à jour : </b>
-                  <?php echo $LastRaitingClub->createdDate ; ?>
-                  </span>
                 </div>
                 <div class="table-responsive" style="height:600px ;overflow:auto;">
 
@@ -57,3 +54,14 @@
             </div>
           </div>
         </div> <!-- row -->
+
+
+
+                    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <script defer src="<?php echo base_url() ?>assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script defer src="<?php echo base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script type="text/javascript">
+      $(document).ready( function () {
+    $('table').DataTable();
+} );
+  </script>
