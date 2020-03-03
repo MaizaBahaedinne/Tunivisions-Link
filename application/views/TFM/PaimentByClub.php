@@ -44,7 +44,7 @@
 							<input class="form-check-input" type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" > <?php echo ' '.$record->name ;  ?>
 						</label>
 					</div>
-				<br><small><small> <?php echo ' '.$record->recp1 ;  ?> le  <?php echo ' '.$record->dateTranche1 ;  ?>  </small></small>
+				<small><small> <?php echo ' '.$record->recp1 ;  ?> le  <?php echo ' '.$record->dateTranche1 ;  ?>  </small></small>
 				<?php } ?>
 			</div>
 			<div class="card-footer">
