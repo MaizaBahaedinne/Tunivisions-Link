@@ -17,7 +17,7 @@
                        
                         <th>ID</th>
                         <th>Nom et prénom</th>
-                        <th>Club</th>
+                        
                        
                         <th>Paiment</th>
                   
@@ -75,30 +75,7 @@
                           
 
                         </td>
-                        <td>
-
-                            <span style="width: 145px;">
-                                <div class="kt-user-card-v2">
-                                    <div class="kt-user-card-v2__pic">
-                                        
-                                    </div>                          
-                                    <div class="kt-user-card-v2__details">                              
-                                        <a class="kt-user-card-v2__name" href="#">
-                                         <?php
-                                            if ($record->ClubName != "Foundation"  && $record->ClubName != "Foundation Junior" && $record->ClubName != "Alumni")
-                                            echo "club ";
-                                            ?>   Tunivisions  <?php echo $record->ClubName ?></td>
-                                        </a>                              
-                                    </div>                      
-                                </div>
-                            </span>
-
-
-                        </td>
-                        
-                     
-                    
-                        
+ 
                     <td> 
 
                         <?php if ($record->statut == 2 ) { ?>
