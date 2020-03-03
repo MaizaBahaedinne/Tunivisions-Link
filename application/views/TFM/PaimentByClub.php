@@ -69,6 +69,8 @@
 			<div class="card-body">
 				<?php foreach ($userRecordsT2 as $record ) { ?>
 					 <?php echo ' '.$record->name ;  ?><br>
+				<small><small> <?php echo ' '.$record->recp2 ;  ?> le  <?php echo ' '.$record->dateTranche2 ;  ?>  </small></small>
+				<br>
 				<?php } ?>
 			</div>
 			<div class="card-footer">
