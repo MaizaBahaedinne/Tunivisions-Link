@@ -106,6 +106,31 @@
                          echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-danger">Inactif</button></a >' ;
                         
                         ?>
+                           
+<?php if ($SA==0){ 
+                            <?php
+                            if($record->isDeleted != 1) {
+                         ?>
+                            <span class="btn btn-success" > Approuvé </span>
+                         <?php
+                            }   ?>
+                            <?php
+                            if($record->isDeleted != 1) {
+                         ?>
+                            <span class="btn btn-warning" > non approuvé </span>
+                         <?php
+                            }   ?>
+
+                            <?php
+                            if($record->isDeleted != 1) {
+                         ?>
+                            <span class="btn btn-danger" > bloqué </span>
+                         <?php
+                            }   ?>
+                         <?php
+                            }   ?>
+
+
                         </td>
                        
 
