@@ -107,7 +107,7 @@
                         
                         ?>
                            
-<?php if ($SA==0){ 
+<?php if ($SA==0){ ?>
                             <?php
                             if($record->isDeleted != 1) {
                          ?>
