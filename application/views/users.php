@@ -96,40 +96,20 @@
                         </td>
                         
                         <td> 
-                            <!--
-                        <?php if ($SA==1){ 
-                            if($record->isDeleted != 1) 
-                         echo'<a href="'.base_url().'User/deleteUser/'.$record->userId.'"> <button class="btn btn-primary">Actif</button></a>' ;
-                        
-                        ?>
-                        <?php  
-                            if($record->isDeleted == 1) 
-                         echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-danger">Inactif</button></a >' ;
-                        
-                        ?>
-                           -->
-              
-                            <?php
-                            if($record->isDeleted == 0) {
-                         ?>
+
+                <!--
+                        <?php if($record->isDeleted == 0) { ?>
                             <span class="btn btn-success" > Approuvé </span>
-                         <?php
-                            }   ?>
-                            <?php
-                            if($record->isDeleted == 1) {
-                         ?>
+                        <?php }   ?>
+                        <?php if($record->isDeleted == 1) { ?>
                             <span class="btn btn-warning" > non approuvé </span>
-                         <?php
-                            }   ?>
+                        <?php } ?>
 
-                            <?php
-                            if($record->isDeleted == 2) {
-                         ?>
+                        <?php  if($record->isDeleted == 2) {  ?>
                             <span class="btn btn-danger" > bloqué </span>
-                         <?php
-                            }   ?>
+                        <?php } ?>
      
-
+                -->
 
                         </td>
                        
