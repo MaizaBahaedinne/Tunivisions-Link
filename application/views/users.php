@@ -96,6 +96,7 @@
                         </td>
                         
                         <td> 
+                            <!--
                         <?php if ($SA==1){ 
                             if($record->isDeleted != 1) 
                          echo'<a href="'.base_url().'User/deleteUser/'.$record->userId.'"> <button class="btn btn-primary">Actif</button></a>' ;
@@ -106,8 +107,8 @@
                          echo'<a href="'.base_url().'User/actifUser/'.$record->userId.'"> <button class="btn btn-danger">Inactif</button></a >' ;
                         
                         ?>
-                           
-                <?php if ($SA==0){ ?>
+                           -->
+              
                             <?php
                             if($record->isDeleted == 0) {
                          ?>
@@ -127,8 +128,7 @@
                             <span class="btn btn-danger" > bloqué </span>
                          <?php
                             }   ?>
-                         <?php
-                            }   ?>
+     
 
 
                         </td>
