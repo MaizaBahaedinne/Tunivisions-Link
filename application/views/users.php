@@ -107,22 +107,22 @@
                         
                         ?>
                            
-<?php if ($SA==0){ ?>
+                <?php if ($SA==0){ ?>
                             <?php
-                            if($record->isDeleted != 1) {
+                            if($record->isDeleted == 0) {
                          ?>
                             <span class="btn btn-success" > Approuvé </span>
                          <?php
                             }   ?>
                             <?php
-                            if($record->isDeleted != 1) {
+                            if($record->isDeleted == 1) {
                          ?>
                             <span class="btn btn-warning" > non approuvé </span>
                          <?php
                             }   ?>
 
                             <?php
-                            if($record->isDeleted != 1) {
+                            if($record->isDeleted == 2) {
                          ?>
                             <span class="btn btn-danger" > bloqué </span>
                          <?php
