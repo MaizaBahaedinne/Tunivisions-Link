@@ -3,6 +3,7 @@
 
 	<div class="card col-md-4">
 		<div class="card">
+
 			<form action="<?php echo base_url() ?>TFM/partanTfmPaiement1" method="post">
 			<div class="card-header">
 				<h5>Liste des membre participant au TFM | <?php echo count($userRecords) ?> </h5>		
@@ -12,7 +13,9 @@
 				<?php foreach ($userRecords as $record ) { ?>
 					<div class="form-check form-check-flat form-check-primary">
 						<label class="form-check-label">
-							<input class="form-check-input" type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" > <?php echo ' '.$record->name ;  ?>
+							<?php if($userId == 2 || $userId == 164 ){ ?>
+							<input class="form-check-input" type="checkbox" name="participant[]" value="<?php echo $record->id ; ?>" >
+							<?php } ?> <?php echo ' '.$record->name ;  ?>
 						</label>
 					</div>
 				<?php } ?>
@@ -31,7 +34,7 @@
 	
 	<div class="card col-md-4">
 		<div class="card">
-			<?php if($userId == 2 || $userId == 164 ){ ?>
+			<?php if($userId == 2 || $userId == 164  || $userId == 162 ){ ?>
 			<form action="<?php echo base_url() ?>TFM/partanTfmPaiement2" method="post">
 			<?php } ?>
 			<div class="card-header">
@@ -48,12 +51,12 @@
 				<?php } ?>
 			</div>
 			<div class="card-footer">
-				<?php if($userId == 2 || $userId == 164 ){ ?>
+				<?php if($userId == 2 || $userId == 164 || $userId == 162   ){ ?>
 				<input type="submit" class="btn btn-primary" value="Valider">
 				<input type="reset" class="btn btn-danger" value="Anuler">	
 				<?php } ?>			
 			</div>
-			<?php if($userId == 2 || $userId == 164  ){ ?>
+			<?php if($userId == 2 || $userId == 164 || $userId == 162   ){ ?>
 			</form>
 			<?php } ?>
 		</div>
