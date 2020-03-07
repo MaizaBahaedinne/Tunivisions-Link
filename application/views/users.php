@@ -97,7 +97,6 @@
                         
                         <td> 
 
-                <!--
                         <?php if($record->isDeleted == 0) { ?>
                             <span class="btn btn-success" > Approuvé </span>
                         <?php }   ?>
@@ -109,14 +108,13 @@
                             <span class="btn btn-danger" > bloqué </span>
                         <?php } ?>
      
-                -->
-
+            
                         </td>
                        
 
                     </tr>
                     <?php
-                       } }
+                        }
                     }
                     ?>
                     
