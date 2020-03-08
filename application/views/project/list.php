@@ -81,8 +81,12 @@
                                                          echo $string ;
                                                          ?>
                               </p>
-                              <span class="btn btn-danger "> 
+                              <span class="btn btn-primary "> 
                                         <?php $date = new DateTime($record->startDate) ; 
+                                        echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
+                                </span>
+                              <span class="btn btn-danger "> 
+                                        <?php $date = new DateTime($record->endDate) ; 
                                         echo $date->format('d').'-'.$date->format('M').'-20'.$date->format('y') ; ?>    
                                 </span>
 
