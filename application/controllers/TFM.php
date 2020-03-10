@@ -63,8 +63,8 @@ class TFM extends BaseController {
             $this->load->library('pagination');
 
 		        	$data['count'] = count($this->Tfm_part_model->TFMPartListing());
-			 	$data['count1'] = $this->Tfm_part_model->TFMPartConfirmedBySexeHListing()  ;
-				$data['count2'] = $this->Tfm_part_model->TFMPartConfirmedBySexeFListing() ;
+			 	$data['partParsexeH'] = $this->Tfm_part_model->TFMPartConfirmedBySexeHListing();
+				$data['partParsexeF'] = $this->Tfm_part_model->TFMPartConfirmedBySexeFListing();
 		                $searchText='' ;
 		                $data['userId'] = $this->vendorId ;
 		                $data['userRecords'] = $this->Tfm_part_model->TFMClubPartListing();
