@@ -77,7 +77,7 @@
  
 
                     <td> 
-                          <?php if ($SA==1 || $clubID ==0  ) { ?>
+                          <?php if ( $clubID ==0  ) { ?>
                                 <a href="<?php echo base_url().'TFM/PaimentByClub/'.$record->clubID ?>" class="btn btn-warning" >Paiement</a>
                          <?php } ?>   
                     </tr>
