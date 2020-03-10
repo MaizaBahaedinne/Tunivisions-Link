@@ -2,7 +2,7 @@
 
     <div class="card col-md-12">
             <div class="card-header">
-        <h4><?php echo $count ?> Participant</h4>
+        <h4> Tranche 1 :  <?php echo $count ?> | Tranche 2 : <?php echo $count2 ?> </h4>
         <?php if($clubID == 0 ){ ?>
             <a href="<?php echo base_url() ?>TFM/stats">statistiques</a>
         <?php } ?>
