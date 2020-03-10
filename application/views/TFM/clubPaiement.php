@@ -3,7 +3,7 @@
     <div class="card col-md-12">
             <div class="card-header">
          
-        <h5> Tranche 1 :  <?php echo $partParsexeH + $partParsexeF ?> | Tranche 2 : <?php echo $partParsexeH + $partParsexeF ?> </h5>
+        <h5> Tranche 1 :  <?php $t = $partParsexeH + $partParsexeF ; echo $t ?> | Tranche 2 : <?php  ?> </h5>
         <label> inscription  :  <?php echo $count ?>  </label>
         <?php if($clubID == 0 ){ ?>
             <a href="<?php echo base_url() ?>TFM/stats">statistiques</a>
