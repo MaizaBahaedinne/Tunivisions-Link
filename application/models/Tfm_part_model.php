@@ -74,7 +74,7 @@ class Tfm_part_model extends CI_Model
 
         $this->db->group_by('Clubs.clubID');
 
-        $this->db->where('BaseTbl.tfmId = 7  and (BaseTbl.p_tranch1 > 0 and  BaseTbl.p_tranch2 >= 0)  ' );
+        $this->db->where('BaseTbl.tfmId = 7  and statut = 1   ' );
  
         $query = $this->db->get();
         $result = $query->result();        
