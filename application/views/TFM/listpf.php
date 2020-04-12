@@ -100,12 +100,11 @@
 
                     <td> 
                           <?php  if ($record->statut == 1 ) { ?> 
-                            <span class="kt-badge kt-badge--success kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-success">validé 
-                                <?php if ($record->p_tranch1 == 40) { ?><small> <br> (sans logement) </small> <?php } ?> </span><br> 
+                                <span class="btn btn-success"> validée </span>
                           <?php } ?>
 
-                          <?php if ($record->statut == 2 ) { ?> 
-                            <span class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-danger">Non validé</span><br>
+                          <?php if ($record->statut == 1 && $record->p_tranch2 == 0 ) { ?> 
+                                <span class="btn btn-warning"> sans logement </span>
                          <?php } ?>
 
         
