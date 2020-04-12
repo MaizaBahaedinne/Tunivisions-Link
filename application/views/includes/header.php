@@ -1,47 +1,20 @@
-<html lang="en"><!-- Mirrored from www.nobleui.com/html/template/demo_1/dashboard-one.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Dec 2019 11:42:07 GMT --><head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>T-Link</title>
-
-      <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.carousel.min.css">  
-      <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.default.min.css">
-
-      <!-- javascript -->
-    <script src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/owl.carousel.js"></script>
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/sweetalert2/sweetalert2.min.css">
-	<!-- core:css -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/core/core.css">
-	<!-- endinject -->
-  <!-- plugin css for this page -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
-	<!-- end plugin css for this page -->
-	<!-- inject:css -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/fonts/feather-font/css/iconfont.css">
-	<!-- endinject -->
-  <!-- Layout styles -->  
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/demo_1/style.css">
-  <!-- End layout styles -->
-  <link rel="shortcut icon" href="<?php echo base_url() ; ?>assets\media\logos/icon.svg" />
-  <!-- Global site tag (gtag.js) - Google Analytics start -->
-  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151434993-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-151434993-1');
-</script>
-
-<script data-ad-client="ca-pub-7206359963136106" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-
-  <!-- Google Analytics end -->
-<style type="text/css">.apexcharts-canvas {
+<html lang="en"><head><link href="https://daibusee.com/wp-content/simple-line-icons/2.03.32/simple-line-icons.min.css" rel="stylesheet" type="text/css" crossorigin="anonymous"><script type="text/javascript" src="https://iqonic.design/injected/cashery.js"></script>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Tunivisions Link </title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="<?php echo base_url() ;  ?>images/favicon.ico">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="<?php echo base_url() ;  ?>assets/css/bootstrap.min.css">
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="<?php echo base_url() ;  ?>assets/css/typography.css">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="<?php echo base_url() ;  ?>assets/css/style.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="<?php echo base_url() ;  ?>assets/css/responsive.css">
+   <style type="text/css">
+    .apexcharts-canvas {
   position: relative;
   user-select: none;
   /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
@@ -143,7 +116,7 @@
   display: none;
 }
 
-.apexcharts-tooltip-text-value, 
+.apexcharts-tooltip-text-value,
 .apexcharts-tooltip-text-z-value {
   font-weight: 600;
 }
@@ -215,7 +188,7 @@
   border-radius: 2px;
   position: absolute;
   z-index: 10;
-	background: #ECEFF1;
+  background: #ECEFF1;
   border: 1px solid #90A4AE;
   transition: 0.15s ease all;
 }
@@ -227,24 +200,24 @@
 }
 
 .apexcharts-xaxistooltip:after, .apexcharts-xaxistooltip:before {
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
 }
 
 .apexcharts-xaxistooltip:after {
-	border-color: rgba(236, 239, 241, 0);
-	border-width: 6px;
-	margin-left: -6px;
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
 }
 .apexcharts-xaxistooltip:before {
-	border-color: rgba(144, 164, 174, 0);
-	border-width: 7px;
-	margin-left: -7px;
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
 }
 
 .apexcharts-xaxistooltip-bottom:after, .apexcharts-xaxistooltip-bottom:before {
@@ -298,7 +271,7 @@
   border-radius: 2px;
   position: absolute;
   z-index: 10;
-	background: #ECEFF1;
+  background: #ECEFF1;
   border: 1px solid #90A4AE;
 }
 
@@ -309,23 +282,23 @@
 }
 
 .apexcharts-yaxistooltip:after, .apexcharts-yaxistooltip:before {
-	top: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
 }
 .apexcharts-yaxistooltip:after {
-	border-color: rgba(236, 239, 241, 0);
-	border-width: 6px;
-	margin-top: -6px;
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
 }
 .apexcharts-yaxistooltip:before {
-	border-color: rgba(144, 164, 174, 0);
-	border-width: 7px;
-	margin-top: -7px;
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
 }
 
 .apexcharts-yaxistooltip-left:after, .apexcharts-yaxistooltip-left:before {
@@ -413,13 +386,13 @@
   pointer-events: none;
 }
 
-.apexcharts-zoom-icon, 
+.apexcharts-zoom-icon,
 .apexcharts-zoom-in-icon,
 .apexcharts-zoom-out-icon,
-.apexcharts-reset-zoom-icon, 
-.apexcharts-pan-icon, 
+.apexcharts-reset-zoom-icon,
+.apexcharts-pan-icon,
 .apexcharts-selection-icon,
-.apexcharts-menu-icon, 
+.apexcharts-menu-icon,
 .apexcharts-toolbar-custom-icon {
   cursor: pointer;
   width: 20px;
@@ -430,7 +403,7 @@
 }
 
 
-.apexcharts-zoom-icon svg, 
+.apexcharts-zoom-icon svg,
 .apexcharts-zoom-in-icon svg,
 .apexcharts-zoom-out-icon svg,
 .apexcharts-reset-zoom-icon svg,
@@ -442,27 +415,27 @@
   transform: scale(0.76)
 }
 
-.dark .apexcharts-zoom-icon svg, 
+.dark .apexcharts-zoom-icon svg,
 .dark .apexcharts-zoom-in-icon svg,
 .dark .apexcharts-zoom-out-icon svg,
-.dark .apexcharts-reset-zoom-icon svg, 
-.dark .apexcharts-pan-icon svg, 
+.dark .apexcharts-reset-zoom-icon svg,
+.dark .apexcharts-pan-icon svg,
 .dark .apexcharts-selection-icon svg,
-.dark .apexcharts-menu-icon svg, 
+.dark .apexcharts-menu-icon svg,
 .dark .apexcharts-toolbar-custom-icon svg{
   fill: #f3f4f5;
 }
 
-.apexcharts-canvas .apexcharts-zoom-icon.selected svg, 
-.apexcharts-canvas .apexcharts-selection-icon.selected svg, 
+.apexcharts-canvas .apexcharts-zoom-icon.selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.selected svg,
 .apexcharts-canvas .apexcharts-reset-zoom-icon.selected svg {
   fill: #008FFB;
 }
 .light .apexcharts-selection-icon:not(.selected):hover svg,
-.light .apexcharts-zoom-icon:not(.selected):hover svg, 
-.light .apexcharts-zoom-in-icon:hover svg, 
-.light .apexcharts-zoom-out-icon:hover svg, 
-.light .apexcharts-reset-zoom-icon:hover svg, 
+.light .apexcharts-zoom-icon:not(.selected):hover svg,
+.light .apexcharts-zoom-in-icon:hover svg,
+.light .apexcharts-zoom-out-icon:hover svg,
+.light .apexcharts-reset-zoom-icon:hover svg,
 .light .apexcharts-menu-icon:hover svg {
   fill: #333;
 }
@@ -514,7 +487,7 @@
   padding: 0px 6px 2px 6px;
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 
 .apexcharts-toolbar svg {
@@ -561,7 +534,7 @@
 
   .apexcharts-canvas:hover .apexcharts-toolbar {
     opacity: 1;
-  } 
+  }
 }
 
 .apexcharts-datalabel.hidden {
@@ -608,520 +581,306 @@
   100% {
     opacity: 1;
   }
-}</style><style type="text/css">@keyframes resizeanim { from { opacity: 0; } to { opacity: 0; } } .resize-triggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }</style><style type="text/css">/* Chart.js */
-@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
-<body class="sidebar-folded">
-	<div class="main-wrapper">
+}
 
-		<!-- partial:partials/_sidebar.html -->
-		<nav class="sidebar">
-      <div class="sidebar-header">
-        <a href="<?php echo base_url() ?>" class="sidebar-brand">
-          <img src="<?php echo base_url()?>assets\media\logos\logo rouge.svg" width="100px" >
-        </a>
-        <div class="sidebar-toggler ">
-          <?php
-              function isMobile () {
-                return is_numeric(strpos(strtolower($_SERVER['HTTP_USER_AGENT']), "mobile"));
-              }
+/* Resize generated styles */
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
-              echo isMobile() ? 
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
 
-                "<img src=".base_url()."assets\media\logos/icon.svg>" 
-              : "<img width=20 src=".base_url()."assets\media\logos/icon.svg>" ;
+.resize-triggers, .resize-triggers > div, .contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 
+.resize-triggers > div {
+  background: #eee;
+  overflow: auto;
+}
 
-              ?>
-              
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}
+</style><style id="smooth-scrollbar-style">
+[data-scrollbar] {
+  display: block;
+  position: relative;
+}
 
+.scroll-content {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
 
-      
+.scrollbar-track {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  background: rgba(222, 222, 222, .75);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+          transition: opacity 0.5s 0.5s ease-out;
+}
+.scrollbar-track.show,
+.scrollbar-track:hover {
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
 
-        </div>
+.scrollbar-track-x {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+.scrollbar-track-y {
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+}
+.scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 4px;
+}
+</style></head>
+   <body class="sidebar-main-active right-column-fixed">
+      <!-- loader Start -->
+      <div id="loading" style="display: none;">
+         <div id="loading-center">
+         </div>
       </div>
-      <div class="sidebar-body ps">
-        <ul class="nav">
-          <li class="nav-item nav-category">Main</li>
-          <li class="nav-item ">
-            <a href="<?php echo base_url() ?>dashboard" class="nav-link">
-              <i data-feather="bookmark" width ="15" ></i>
-              <span class="link-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item nav-category">Foundation</li>
-          <?php if ($SA==1 || $clubID ==0  ) { ?>
-          <li class="nav-item ">
-            <a href="<?php echo base_url() ?>Club/clubListing" class="nav-link">
-              <i data-feather="bookmark" width ="15" ></i>
-              <span class="link-title">Clubs</span>
-            </a>
-          </li>  
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
-              <i data-feather="settings" width ="15" ></i>
-              <span class="link-title">Système</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down link-arrow"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </a>
-            <div class="collapse" id="emails">
-              <ul class="nav sub-menu">
-                <?php if ($SA==1 || ($clubID ==0 &&  ($cellule =='Ressource Humaine' || $cellule =='' ) )) { ?>
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>userListing" class="nav-link">Utilisateurs</a>
-                </li>
-                <?php } ?>
-                <?php if ($clubID ==0 && ($SA==1 || (($role ==1 || $role == 2 || $role == 3) && ($cellule =='Marketing' || $cellule =='') )) ) { ?>
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>Actu/addNew" class="nav-link">Actualités</a>
-                </li>
-                <?php } ?>
-                <?php if ($SA==1) { ?>
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>Project/oldProjectListing" class="nav-link">Scoring</a>
-                </li>
-                <?php } ?>
-              </ul>
-            </div>
-          </li>
-          <?php } ?>
-          <li class="nav-item">
-            <a href="<?php echo base_url() ?>users" class="nav-link">
-              <i data-feather="users" width ="15" ></i>
-              <span class="link-title">Members</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url() ?>Project/projectListing" class="nav-link">
-               <i data-feather="calendar" width ="15" ></i>
-              <span class="link-title">Projets</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url() ?>Reclamation/addNew" class="nav-link">
-              <i data-feather="calendar" width ="15" ></i>
-              <span class="link-title">Reclamation</span>
-            </a>
-          </li>
-          <!--
-          <li class="nav-item">
-            <a href="<?php echo base_url() ?>Reservation/reservationListing" class="nav-link">
-               <i data-feather="alert-octagon" width ="15" ></i>
-              <span class="link-title">Reservation</span>
-            </a>
-          </li>
-          -->
-
-          <li class="nav-item nav-category">Club </li>
-          <li class="nav-item ">
-            <a href="<?php echo base_url() ?>club/clubInfo/<?php echo $clubID ?>" class="nav-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-              <span class="link-title">Mon club</span>
-            </a>
-          </li>
-
-          <?php if ($SA==1 || (($role ==1 || $role == 2 || $role == 3) ))  { ?>
-          <li class="nav-item ">
-            <a href="<?php echo base_url() ?>TFM/partantByClub" class="nav-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-              <span class="link-title">My Team for TFM 2020</span>
-            </a>
-          </li>
-          <?php } ?>
-
-          <?php if ($SA==1 || (($role ==1 || $role == 2 || $role == 3) && ($cellule =='Gestion des talents' || $cellule =='') ))  { ?>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#RH" role="button" aria-expanded="false" aria-controls="RH">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail link-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span class="link-title">Ressource Humaine</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down link-arrow"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </a>
-            <div class="collapse" id="RH">
-              <ul class="nav sub-menu">
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>User/userByClubListing" class="nav-link">Membres</a>
-                </li>
-                <?php if ($SA==1 || $role ==1)  { ?>
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>club/Postes" class="nav-link">Postes</a>
-                </li>
-              <?php } ?>
-              </ul>
-            </div>
-          </li>
-          <?php } ?>
-
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="admin">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail link-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span class="link-title">Administration et finance</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down link-arrow"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </a>
-            <div class="collapse" id="admin">
-              <ul class="nav sub-menu">
-                <?php if ($SA==1 || (($role ==1 || $role == 2 || $role == 3) && ($cellule =='Administration et finance' || $cellule =='') ))  { ?>
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>Finance/financeListing" class="nav-link">Ressource financier</a>
-                </li>
-                <?php } ?>
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>Reunion/ReunionListing" class="nav-link">Réunion</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#events" role="button" aria-expanded="false" aria-controls="events">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail link-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span class="link-title">Evenementiel</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down link-arrow"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </a>
-            <div class="collapse" id="events">
-              <ul class="nav sub-menu">
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>addNewProject" class="nav-link">Gestion des projets</a>
-                </li>
-                <?php if ($SA==1 || (($role ==1 || $role == 2 || $role == 3)))  { ?>
-                <li class="nav-item">
-                  <a href="<?php echo base_url() ?>Tasks/tasksListing" class="nav-link">Gestion des taches</a>
-                </li>
-               <?php }?>
-              </ul>
-            </div>
-          </li>
-
-         
-          <li class="nav-item nav-category">TFM </li>
-          <li class="nav-item ">
-            <a href="<?php echo base_url() ?>TFM/TFMListing" class="nav-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-              <span class="link-title">TFM</span>
-            </a>
-          </li>
-          <?php if ($clubID == 0 )  { ?>
-          <li class="nav-item ">
-            <a href="<?php echo base_url() ?>TFM/partantF" class="nav-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-              <span class="link-title">Participant</span>
-            </a>
-          </li>
-        <?php } ?>
-
- 
-          
-
-
-        </ul>
-      <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
-    </nav>
-   
-		<!-- partial -->
-	
-		<div class="page-wrapper">
-					
-			<!-- partial:partials/_navbar.html -->
-			<nav class="navbar">
-				
-          <a href="<?php echo base_url() ?>">
-					<?php
-
-              if (isMobile()){ ?> 
-
-                &nbsp;&nbsp; <img src="<?php echo base_url() ?>assets\media\logos/logo rouge.svg" style="width: 55px;" >  <?php } 
-
-                ?>
-            </a>
-             
-		
-				<div class="navbar-content"  >
-          <form class="search-form" action="<?php echo  base_url() ?>User/userListing2" method="post" >
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <div class="input-group-text">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </div>
-              </div>
-              <input type="text" class="form-control" id="navbarForm" name="searchText" >
-            </div>
-          </form>
-					
-					<ul class="navbar-nav">
-            <li class="nav-item dropdown nav-apps">
-              <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="appsDropdown">
-                <div class="dropdown-header d-flex align-items-center justify-content-between">
-                  <p class="mb-0 font-weight-medium">Foundation</p>
-                  
-                </div>
-                <div class="dropdown-body">
-                  <div class="d-flex align-items-center apps">
-
-                    <a href="<?php echo base_url() ?>users" ><svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><p>Membres</p></a>
-                    
-                    <a href="<?php echo base_url() ?>Project/projectListing"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar icon-lg"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><p>Projet</p></a>
-
-                    <a href="<?php echo base_url() ?>TFM/TFMListing"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar icon-lg"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><p>TFM 2020</p></a>
-
-                    <a href="<?php echo base_url() ?>TFM/partantByClub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar icon-lg"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><p>My Team for TFM 2020</p></a>
-                    
-       
-                </div>
-                <div class="dropdown-header d-flex align-items-center justify-content-between">
-                  <p class="mb-0 font-weight-medium">Club</p>
-                  
-                </div>
-                <div class="dropdown-body">
-                  <div class="d-flex align-items-center apps">
-                    <a href="<?php echo base_url() ?>club/clubInfo/<?php echo $clubID ?>" >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg><p>Mon club</p></a>
-
-                      <a href="<?php echo base_url() ?>Project/projectListingbyClub" >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar icon-lg"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><p>Nos projets</p></a>
-
-
-                      <a href="<?php echo base_url() ?>Club/Members/<?php echo $clubID ?>" >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><p>Membres</p></a>
-
-
-                      
-                    
+      <!-- loader END -->
+      <!-- Wrapper Start -->
+      <div class="wrapper">
+         <!-- Sidebar  -->
+         <div class="iq-sidebar">
+            <div id="sidebar-scrollbar" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: none;"><div class="scroll-content">
+               <nav class="iq-sidebar-menu">
+                  <ul id="iq-sidebar-toggle" class="iq-menu">
+                     <li>
+                        <a href="<?php echo base_url() ?>/Posts/Acceuil" class="iq-waves-effect"><i class="las la-newspaper"></i><span>Acceuil</span></a>
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url() ?>/dashboard" class="iq-waves-effect"><i class="las la-newspaper"></i><span>Dashboard</span></a>
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url() ?>club/clubInfo/<?php echo $clubID ?>" class="iq-waves-effect"><i class="las la-users"></i><span>Mon club</span></a>
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url() ?>Project/projectListing" class="iq-waves-effect"><i class="las la-users"></i><span>Evenement</span></a>
+                     </li>
+                     <li>
+                       <a href="<?php echo base_url() ?>Club/clubListing" class="iq-waves-effect"><i class="ri-list-check"></i><span>Clubs</span></a>
+                     </li>
+                     
+                  </ul>
+               </nav>
+               <div class="p-3"></div>
+            </div><div class="scrollbar-track scrollbar-track-x" style="display: none;"><div class="scrollbar-thumb scrollbar-thumb-x" style="width: 250px; transform: translate3d(0px, 0px, 0px);"></div></div><div class="scrollbar-track scrollbar-track-y" style="display: block;"><div class="scrollbar-thumb scrollbar-thumb-y" style="height: 83.0078px; transform: translate3d(0px, 0px, 0px);"></div></div></div>
+         </div>
+         <!-- TOP Nav Bar -->
+         <div class="iq-top-navbar">
+            <div class="iq-navbar-custom">
+               <nav class="navbar navbar-expand-lg navbar-light p-0">
+                  <div class="iq-navbar-logo d-flex justify-content-between">
+                     <a href="<?php echo base_url() ?>">
+                     <img src="<?php echo base_url()?>images/logo rouge.svg" class="img-fluid" alt="">
+                     <span> </span>
+                     </a>
+                     <div class="iq-menu-bt align-self-center">
+                     <div class="wrapper-menu">
+                        <div class="main-circle"><i class="ri-menu-line"></i></div>
+                     </div>
                   </div>
-                </div>
-                
-              </div>
-            </li>
-						<li class="nav-item dropdown nav-messages">
-              <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i data-feather="user-plus"></i>
-                 <?php if (count($FreindRequest) > 0 ) {?>
-                <div class="indicator">
-                  <div class="circle"></div>
-                </div>
-                <?php 
-                  }?>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="messageDropdown">
-                <div class="dropdown-header d-flex align-items-center justify-content-between">
-                  <p class="mb-0 font-weight-medium"> invitation</p>
-                  <a href="javascript:;" class="text-muted"></a>
-                </div>
-                <div class="dropdown-body">
-                  <?php foreach ($FreindRequest as $req) {?>
-                  
-                  <a  href="<?php echo base_url() ?>User/ProfileShow/<?php echo $req->userId ?>" class="dropdown-item">
-                    <div class="figure">
-                      <img src="<?php echo base_url() ?>Uploads/avatar/<?php echo $req->avatar ?>" alt="userr">
-                    </div>
-                    <div class="content">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <p><?php echo $req->name ?></p>
-                        <p class="sub-text text-muted">
-                          <button type="button" class="btn btn-primary btn-icon">
-                            <i data-feather="check-square" style="color:white;"></i>
-                          </button>
-                          <button type="button" class="btn btn-danger btn-icon">
-                            <i data-feather="minus" style="color:white;"></i>
-                          </button>
-                        </p>
-                      </div>
-                      <p class="sub-text text-muted">New record</p>
-                    </div>
-                  </a>
-                  <?php 
-                  }?>
-                </div>
-                <div class="dropdown-footer d-flex align-items-center justify-content-center">
-                  <a href="javascript:;">Afficher tout</a>
-                </div>
-              </div>
-            </li>
-            <!--
-						<li class="nav-item dropdown nav-messages">
-							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="messageDropdown">
-								<div class="dropdown-header d-flex align-items-center justify-content-between">
-									<p class="mb-0 font-weight-medium">9 New Messages</p>
-									<a href="javascript:;" class="text-muted">Clear all</a>
-								</div>
-								<div class="dropdown-body">
-									<a href="javascript:;" class="dropdown-item">
-										<div class="figure">
-											<img src="<?php echo base_url() ?>assets/images/faces/face2.jpg" alt="userr">
-										</div>
-										<div class="content">
-											<div class="d-flex justify-content-between align-items-center">
-												<p>Leonardo Payne</p>
-												<p class="sub-text text-muted">2 min ago</p>
-											</div>	
-											<p class="sub-text text-muted">Project status</p>
-										</div>
-									</a>
-									<a href="javascript:;" class="dropdown-item">
-										<div class="figure">
-											<img src="<?php echo base_url() ?>assets/images/faces/face3.jpg" alt="userr">
-										</div>
-										<div class="content">
-											<div class="d-flex justify-content-between align-items-center">
-												<p>Carl Henson</p>
-												<p class="sub-text text-muted">30 min ago</p>
-											</div>	
-											<p class="sub-text text-muted">Client meeting</p>
-										</div>
-									</a>
-									<a href="javascript:;" class="dropdown-item">
-										<div class="figure">
-											<img src="<?php echo base_url() ?>assets/images/faces/face4.jpg" alt="userr">
-										</div>
-										<div class="content">
-											<div class="d-flex justify-content-between align-items-center">
-												<p>Jensen Combs</p>												
-												<p class="sub-text text-muted">1 hrs ago</p>
-											</div>	
-											<p class="sub-text text-muted">Project updates</p>
-										</div>
-									</a>
-									<a href="javascript:;" class="dropdown-item">
-										<div class="figure">
-											<img src="<?php echo base_url() ?>assets/images/faces/face5.jpg" alt="userr">
-										</div>
-										<div class="content">
-											<div class="d-flex justify-content-between align-items-center">
-												<p>Amiah Burton</p>
-												<p class="sub-text text-muted">2 hrs ago</p>
-											</div>
-											<p class="sub-text text-muted">Project deadline</p>
-										</div>
-									</a>
-									<a href="javascript:;" class="dropdown-item">
-										<div class="figure">
-											<img src="<?php echo base_url() ?>assets/images/faces/face6.jpg" alt="userr">
-										</div>
-										<div class="content">
-											<div class="d-flex justify-content-between align-items-center">
-												<p>Yaretzi Mayo</p>
-												<p class="sub-text text-muted">5 hr ago</p>
-											</div>
-											<p class="sub-text text-muted">New record</p>
-										</div>
-									</a>
-								</div>
-								<div class="dropdown-footer d-flex align-items-center justify-content-center">
-									<a href="javascript:;">View all</a>
-								</div>
-							</div>
-						</li>
-            -->
-						<li class="nav-item dropdown nav-notifications">
-							<a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-                
-  								<?php if(count($notifRecords)>0 ){ ?>
-                  <div class="indicator">
-  									<div class="circle"></div>
-  								</div>
-                <?php  }  ?>
+                  </div>
+                  <div class="iq-search-bar">
+                     <form action="#" class="searchbox">
+                        <input type="text" class="text search-input" placeholder="Chercher">
+                        
+                     </form>
+                  </div>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                  <i class="ri-menu-3-line"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav ml-auto navbar-list">
+                        <li>
+                           <a href="<?php echo base_url() ; ?>User/ProfileShow/<?php echo $MyUserId ; ?>" class="iq-waves-effect d-flex align-items-center">
+                              <img src="https://tunivisions.link/uploads/avatar/<?php echo $avatar ?>" class="img-fluid rounded-circle mr-3 avatar" alt="<?php echo $name ?>">
+                              <div class="caption">
+                                 <p class="mb-0 line-height"><?php echo $name ?></p>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="<?php echo base_url() ?>" class="iq-waves-effect d-flex align-items-center">
+                           <i class="ri-home-line"></i>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="search-toggle iq-waves-effect" href="#"><i class="ri-group-line"></i></a>
+                           <div class="iq-sub-dropdown iq-sub-dropdown-large">
+                              <div class="iq-card shadow-none m-0">
+                                 <div class="iq-card-body p-0 ">
+                                    <div class="bg-primary p-3">
+                                       <h5 class="mb-0 text-white">Messages<small class="badge  badge-light float-right pt-1"></small></h5>
+                                    </div>
+                                    
+                                    <!--
+                                    <div class="iq-friend-request">
+                                       <div class="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <div class="">
+                                                <img class="avatar-40 rounded" src="images/user/04.jpg" alt="">
+                                             </div>
+                                             <div class="media-body ml-3">
+                                                <h6 class="mb-0 ">Marsha Mello</h6>
+                                                <p class="mb-0">15  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex align-items-center">
+                                             <a href="javascript:void();" class="mr-3 btn btn-primary rounded">Confirm</a>
+                                             <a href="javascript:void();" class="mr-3 btn btn-secondary rounded">Delete Request</a>                                    
+                                          </div>
+                                       </div>
+                                    </div>
+                                      --> 
 
-							</a>
-							<div class="dropdown-menu" aria-labelledby="notificationDropdown" >
-								<div class="dropdown-header d-flex align-items-center justify-content-between">
-									<p class="mb-0 font-weight-medium"><?php echo $notifRecordsNumber ; ?> Notifications</p>
-									<a href="javascript:;" class="text-muted"></a>
-								</div>
-								<div class="dropdown-body" style="  height: 500px; overflow: auto;">
-									
-									<?php foreach ($notifRecords as $notif ) {?>
-									<a href="<?php echo base_url() ?>Notification/notifSeen/<?php echo $notif->notifId ?>" class="dropdown-item" style="<?php if($notif->seen=="no"){echo 'background-color:   #d8ffff;' ;} ?>">
-										<div class="icon">
-											<?php if( $notif->type=='Notification' ){  ?>  <i data-feather="pocket"></i>   <?php } ?>
-                      <?php if( $notif->type=='Actualite' ){  ?>  <i data-feather="rss"></i>   <?php } ?>
-                      <?php if( $notif->type=='Reclamation' ){  ?>  <i data-feather="alert-octagon"></i>   <?php } ?>
+                                    <div class="text-center">
+                                       <a href="#" class="mr-3 btn text-primary">Voir plus</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        
+                     </ul>
+                      <ul class="navbar-list">
+                        <li>
+                           <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
+                           <i class="ri-arrow-down-s-fill"></i>
+                           </a>
+                           <div class="iq-sub-dropdown iq-user-dropdown">
+                              <div class="iq-card shadow-none m-0">
+                                 <div class="iq-card-body p-0 ">
+                                    <div class="bg-primary p-3 line-height">
+                                       <h5 class="mb-0 text-white line-height">Salut ! <?php echo $name ?></h5>
+                                       <span class="text-white font-size-12">En ligne</span>
+                                    </div>
+                                    <a href="<?php echo base_url() ; ?>User/ProfileShow/<?php echo $MyUserId ; ?>" class="iq-sub-card iq-bg-primary-hover">
+                                       <div class="media align-items-center">
+                                          <div class="rounded iq-card-icon iq-bg-primary">
+                                             <i class="ri-file-user-line"></i>
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Mon profile</h6>
+                                             <p class="mb-0 font-size-12">mes données personelle.</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="<?php echo base_url() ; ?>User/editOld/<?php echo $MyUserId ; ?>" class="iq-sub-card iq-bg-warning-hover">
+                                       <div class="media align-items-center">
+                                          <div class="rounded iq-card-icon iq-bg-warning">
+                                             <i class="ri-profile-line"></i>
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Mise à jour mon profile</h6>
+                                             <p class="mb-0 font-size-12">Modifier mes informations personelle.</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a href="account-setting.html" class="iq-sub-card iq-bg-info-hover">
+                                       <div class="media align-items-center">
+                                          <div class="rounded iq-card-icon iq-bg-info">
+                                             <i class="ri-account-box-line"></i>
+                                          </div>
+                                          <div class="media-body ml-3">
+                                             <h6 class="mb-0 ">Gestionaire de compte </h6>
+                                             <p class="mb-0 font-size-12">gerer mon compte .</p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    
+                                    <div class="d-inline-block w-100 text-center p-3">
+                                       <a class="bg-primary iq-sign-btn" href="<?php echo base_url() ?>logout" role="button">Déconnection<i class="ri-login-box-line ml-2"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+         </div>
+         <!-- TOP Nav Bar END -->
+         <!-- Right Sidebar Panel Start-->
+         <div class="right-sidebar-mini">
+            <div class="right-sidebar-panel p-0">
+               <div class="iq-card shadow-none">
+                  <div class="iq-card-body p-0">
 
-										</div>
-										<div class="content">
-											<p> <?php echo $notif->text ; ?></p>
-											<p class="sub-text text-muted"><?php
-                                                            $d1 = new DateTime($notif->dateNotif);
-                                                            $d2 = new DateTime();
-                                                            $diff = $d1->diff($d2);
-                                                            $nb_jours = $diff->d;
-                                                     echo 'Il y a '. $nb_jours.' jours'
-                                                     ?></p>
-										</div>
-									</a>
-                  <?php  
-                }
-                ?>
+                     <div class="media-height p-3">
+                      <h5>En ligne</h5>
+                       <!--
+                        <div class="media align-items-center mb-4">
+                           <div class="iq-profile-avatar status-online">
+                              <img class="rounded-circle avatar-50" src="images/user/01.jpg" alt="">
+                           </div>
+                           <div class="media-body ml-3">
+                              <h6 class="mb-0"><a href="#">Anna Sthesia</a></h6>
+                              <p class="mb-0">Admin</p>
+                           </div>
+                        </div>
+                        
+                        
+                        <div class="media align-items-center">
+                           <div class="iq-profile-avatar">
+                              <img class="rounded-circle avatar-50" src="images/user/02.jpg" alt="">
+                           </div>
+                           <div class="media-body ml-3">
+                              <h6 class="mb-0"><a href="#">Monty Carlo</a></h6>
+                              <p class="mb-0">Admin</p>
+                           </div>
+                        </div>
 
-
-								</div>
-
-							</div>
-						</li>
-						<li class="nav-item dropdown nav-profile">
-							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<img src="<?php echo base_url() ?>uploads/avatar/<?php echo $avatar ?>" alt="profile">
-							</a>
-							<div class="dropdown-menu" aria-labelledby="profileDropdown">
-								<div class="dropdown-header d-flex flex-column align-items-center">
-									<div class="figure mb-3">
-										<img src="<?php echo base_url() ?>uploads/avatar/<?php echo $avatar ?>" alt="">
-									</div>
-									<div class="info text-center">
-										<p class="name font-weight-bold mb-0"><?php echo $name ?></p>
-										<p class="email text-muted mb-3"><?php echo $role_text ?></p>
-                    <?php if  ($SA ==1 || $role==1 || $role==2  ) { ?>
-            <p style="display: none" id="p1"><?php echo base_url(); ?>Register?var1=<?php echo $uid ?>&var2=<?php echo $clubID.'&var3=1'; ?></p>
-            
-              <button class="btn btn-primary" onclick="copyToClipboard('#p1')"  >Lien de parainage</button>     
-              <script type="text/javascript">
-                function copyToClipboard(element) {
-              var $temp = $("<input>");
-              $("body").append($temp);
-              $temp.val($(element).text()).select();
-              document.execCommand("copy");
-              $temp.remove();
-              Swal.fire(
-                    'Bravo !',
-                    'votre lien a été copié avec succès',
-                    'success'
-                  )
-            }
-            </script>
-      <?php } ?>
-									</div>
-								</div>
-								<div class="dropdown-body">
-									<ul class="profile-nav p-0 pt-3">
-										<li class="nav-item">
-											<a href="<?php echo base_url() ; ?>User/ProfileShow/<?php echo $MyUserId ; ?>" class="nav-link">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-												<span>Profile</span>
-											</a>
-										</li>
-										<li class="nav-item">
-											<a href="javascript:;" class="nav-link">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-												<span>Modifier profile</span>
-											</a>
-										</li>
-										<li class="nav-item">
-											<a href="<?php echo base_url() ; ?>logout" class="nav-link">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-												<span>Deconnecter</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</nav>
-			<!-- partial -->
-
-			<div class="page-content">
-			
-			
-			
+                        -->
+                     </div>
+                     <div class="right-sidebar-toggle bg-primary mt-3">
+                        <i class="ri-arrow-left-line side-left-icon"></i>
+                        <i class="ri-arrow-right-line side-right-icon"><span class="ml-3 d-inline-block">Close Menu</span></i> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Right Sidebar Panel End-->
+         <!-- Page Content  -->

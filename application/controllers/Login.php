@@ -40,7 +40,7 @@ class Login extends CI_Controller
         }
         else
         {           
-            redirect('/dashboard');
+            redirect('Posts/Acceuil');
         }
     }
     
@@ -92,7 +92,7 @@ class Login extends CI_Controller
 
                 $this->login_model->lastLogin($loginInfo);
                 
-                redirect('/dashboard');
+                redirect('Posts/Acceuil');
             }
             else
             {

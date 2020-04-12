@@ -311,16 +311,16 @@ class User extends BaseController
      * This function is used load user edit information
      * @param number $userId : Optional : This is user id
      */
-    function editOld($userId = NULL)
+    function editOld($userId)
     {
 
-            if($userId == null)
+            if($this->SA != 1 || $this->vendorId != $userId  )
             {
                 redirect('userListing');
             }
             
             $data['roles'] = $this->user_model->getUserRoles();
-            $data['userInfo'] = $this->user_model->getUserInfo($userId);
+            $data['userInfo'] = $this->user_model->getUserInfoWithRole($userId);
             
             $this->global['pageTitle'] = 'CodeInsect : Edit User';
             

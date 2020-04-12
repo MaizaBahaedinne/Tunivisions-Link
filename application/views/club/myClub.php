@@ -1,274 +1,808 @@
+
 <style type="text/css">
        .profile-turtle {
   object-fit: cover;
   object-position: 50% 50%;
-  width: 40px;
-  height: 40px;
+  width: 150px;
+  height: 150px;
 }
- .readMore .addText {
-                      display: none;
-                    }
- </style>
 
-        <div class="profile-page tx-13">
-          <div class="row">
-            <div class="col-12 grid-margin">
-                            <div class="profile-header">
-                                <div class="cover">
-                                    <div class="gray-shade"></div>
-                                    <figure>
-                                        <img src="https://scontent.ftun3-1.fna.fbcdn.net/v/t1.0-9/69821656_880672415637786_7990683763971457024_o.png?_nc_cat=106&_nc_ohc=ZSbbBML7_bAAQn-smaSlN-7t5GFYkdOiVFaQqa5aQ8JLumCn4LjJ4d5jA&_nc_ht=scontent.ftun3-1.fna&oh=c89735e9bf57c3d076d757071ff04e65&oe=5EAB140C" class="img-fluid" alt="">
-                                    </figure>
-                                    <div class="cover-body d-flex justify-content-between align-items-center">
-                                        <div>
-                                            
-                                            <span class="profile-name"><?php if($clubInfo->name != 'Foundation') {echo "Club";} ?> Tunivisions <?php echo $clubInfo->name ?> <br> <br></span>
-                                            <br>
-                                        </div>
-                                        <div class="d-none d-md-block">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="header-links">
-                                    <ul class="links d-flex align-items-center mt-3 mt-md-0">
-                                        <li class="header-link-item d-flex align-items-center active">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-columns mr-1 icon-md"><path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18"></path></svg>
-                                            <a class="pt-1px d-none d-md-block" href="<?php echo base_url()?>club/clubInfo/<?php echo $clubN ?>">Timeline</a>
-                                        </li>
-                                        <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-1 icon-md"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                            <a class="pt-1px d-none d-md-block" href="<?php echo base_url()?>club/about/<?php echo $clubN ?>">About</a>
-                                        </li>
-                                        <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users mr-1 icon-md"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                            <a class="pt-1px d-none d-md-block" href="<?php echo base_url()?>Club/Members/<?php echo $clubN ?>">Membres <span class="text-muted tx-12"><?php echo $membersCount ?></span></a>
-                                        </li>
-                                        <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image mr-1 icon-md"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                                            <a class="pt-1px d-none d-md-block" href="<?php echo base_url()?>Club/ClassementMembers/<?php echo $clubN ?>">Classement</a>
-                                        </li>
 
-                                    </ul>
-                                </div>
-                </div>
-            </div>
-                    </div>
-                    <div class="row profile-body">
-                        <!-- left wrapper start -->
-                        <div class="d-none d-md-block col-md-4 col-xl-3 left-wrapper">
-                            <div class="card rounded">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <h6 class="card-title mb-0">Bureau</h6>
-                                        <div class="dropdown">
-                                            <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal icon-lg text-muted pb-3px"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item d-flex align-items-center" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 icon-sm mr-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg> <span class="">Edit</span></a>
-                                                <a class="dropdown-item d-flex align-items-center" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-branch icon-sm mr-2"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg> <span class="">Update</span></a>
-                                                <a class="dropdown-item d-flex align-items-center" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye icon-sm mr-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> <span class="">View all</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
+       .profile-turtle2 {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 75px;
+  height: 75px;
+}
 
+       .profile-turtle3 {
+  object-fit: cover;
+  object-position: 50% 20%;
+  width: 100px;
+  height: 100px;
+}
+
+       .profile-turtle4 {
+  object-fit: cover;
+  object-position: 50% 20%;
+  width: 75px;
+  height: 75px;
+}
+
+
+.avatar {
+  vertical-align: middle;
+   object-fit: cover;
+  object-position: 50% 50%;
+  width: 70px;
+  height: 50px;
+  border-radius: 50%;
+}
+</style>
+
+                  <div id="content-page" class="content-page">
+<div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="iq-card">
+                        <div class="iq-card-body profile-page p-0">
+                           <div class="profile-header">
+                              <div class="cover-container">
+                                 <img src="https://scontent.ftun3-1.fna.fbcdn.net/v/t1.0-9/69821656_880672415637786_7990683763971457024_o.png?_nc_cat=106&_nc_ohc=ZSbbBML7_bAAQn-smaSlN-7t5GFYkdOiVFaQqa5aQ8JLumCn4LjJ4d5jA&_nc_ht=scontent.ftun3-1.fna&oh=c89735e9bf57c3d076d757071ff04e65&oe=5EAB140C" alt="profile-bg" class="rounded img-fluid">
+                                 <ul class="header-nav d-flex flex-wrap justify-end p-0 m-0">
+                                    <li><a href="javascript:void();"><i class="ri-pencil-line"></i></a></li>
+                                    <li><a href="javascript:void();"><i class="ri-settings-4-line"></i></a></li>
+                                 </ul>
+                              </div>
+                              <div class="user-detail text-center mb-3">
+                                 <div class="" >
                                     
+                                 </div>
+                                 <div class="profile-detail">
+                                    <h3 class=""><?php if($clubInfo->name != 'Foundation') {echo "Club";} ?> Tunivisions <?php echo $clubInfo->name ?></h3>
+                                 </div>
+                              </div>
+                              <div class="profile-info p-4 d-flex align-items-center justify-content-between position-relative">
+                                 <div class="social-links">
+                                    <ul class="social-data-block d-flex align-items-center justify-content-between list-inline p-0 m-0">
+                                       <li class="text-center pr-3">
+                                          <a href="<?php echo $clubInfo->email ?>"><img src="<?php echo base_url() ;  ?>images/icon/08.png" class="img-fluid rounded" alt="facebook"></a>
+                                       </li>
 
-
-
-
-                                    <div class="row">
-                                    <?php foreach ($bureauExe as $b ) {
-                                    ?>
-                                       <a href="<?php echo base_url() ?>User/ProfileShow/<?php echo  $b->userId ?>">
-                                        <div class="card-header">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center">
-                                                   <img class="img-xs profile-turtle rounded-circle"  src="https://www.tunivisions.link/uploads/avatar/<?php echo $b->avatar ?>" alt="<?php echo $b->Tname ?> ">                                                 
-                                                    <div class="ml-2">
-                                                        <p><?php  if($b->cellule==''){echo '<b>'.$b->Tname.'</b>' ;} else{ echo $b->Tname ;} ?> </p>
-                                                        <p class="tx-11 text-muted"><small><?php echo $b->role ?> <?php echo $b->cellule ?><br> </small></p>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                       </a> 
-                                       
-                             
-                                        
-                                   
-                                    <?php
-                                    } ?>
-                                     </div>
-                                    <div class="mt-3">
-                                        <label class="tx-11 font-weight-bold mb-0 text-uppercase">Fondé le:</label>
-                                        <p class="text-muted"><?php echo $clubInfo->birthday ?></p>
-                                    </div>
-                                    <div class="mt-3">
-                                        <label class="tx-11 font-weight-bold mb-0 text-uppercase">Region:</label>
-                                        <p class="text-muted"><?php echo $clubInfo->city ?></p>
-                                    </div>
-                                    <div class="mt-3">
-                                        <label class="tx-11 font-weight-bold mb-0 text-uppercase">Email:</label>
-                                        <p class="text-muted"><?php echo $clubInfo->facebook ?></p>
-                                    </div>
-                                    <div class="mt-3">
-                                        <label class="tx-11 font-weight-bold mb-0 text-uppercase">Facebook:</label>
-                                        <p class="text-muted"><a href="<?php echo $clubInfo->email ?>">Club Tunivisions <?php echo $clubInfo->name ?></a></p>
-                                    </div>
-                                
-                                </div>
-                            </div>
+       
+                                    </ul>
+                                 </div>
+                                 <div class="social-info">
+                                    <ul class="social-data-block d-flex align-items-center justify-content-between list-inline p-0 m-0">
+                                       <li class="text-center pl-3">
+                                          <h6>Projet</h6>
+                                          <p class="mb-0"><?php echo count($ProjectByClub) ?></p>
+                                       </li>
+                                       <li class="text-center pl-3">
+                                          <h6>Membres</h6>
+                                          <p class="mb-0"><?php echo $membersCount ?></p>
+                                       </li>
+                                       <li class="text-center pl-3">
+                                          <h6>Points</h6>
+                                          <p class="mb-0"><?php
+                                          $s = 0 ;
+                                           foreach ($scoreByClub as $scores ) {
+                                               $s = $s + $scores->scores ;
+                                                }
+                                                echo $s ;
+                                           ?></p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <!-- left wrapper end -->
-                        <!-- middle wrapper start -->
-                        <div class="col-md-8 col-xl-6 middle-wrapper">
-                            <div class="row">
-                                 <div class="col-md-12">
-                                    <?php foreach ($ProjectByClub as $PBC) {
+                     </div>
+                     <div class="iq-card">
+                        <div class="iq-card-body p-0">
+                           <div class="user-tabing">
+                              <ul class="nav nav-pills d-flex align-items-center justify-content-center profile-feed-items p-0 m-0">
+                                 <li class="col-sm-3 p-0">
+                                    <a class="nav-link active" data-toggle="pill" href="#timeline">Timeline</a>
+                                 </li>
+                                 <li class="col-sm-3 p-0">
+                                    <a class="nav-link" data-toggle="pill" href="#about">A Propos</a>
+                                 </li>
+                                 <li class="col-sm-3 p-0">
+                                    <a class="nav-link" data-toggle="pill" href="#friends">Membres</a>
+                                 </li>
+                                 <li class="col-sm-3 p-0">
+                                    <a class="nav-link" data-toggle="pill" href="#photos">Classement</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="tab-content">
+                        <div class="tab-pane fade active show" id="timeline" role="tabpanel">
+                           <div class="iq-card-body p-0">
+                              <div class="row">
+                                 <div class="col-lg-4">
+                                    <div class="iq-card">
+                                       <div class="iq-card-body">
+                                          <a href="#"><span class="badge badge-pill badge-primary font-weight-normal ml-auto mr-1"><i class="ri-star-line"></i></span> 27 Items for yoou</a>
+                                       </div>
+                                    </div>
+                                    <div class="iq-card">
+                                       <div class="iq-card-header d-flex justify-content-between">
+                                          <div class="iq-header-title">
+                                             <h4 class="card-title">Life Event</h4>
+                                          </div>
+                                          <div class="iq-card-header-toolbar d-flex align-items-center">
+                                             <p class="m-0"><a href="javacsript:void();"> Create </a></p>
+                                          </div>
+                                       </div>
+                                       <div class="iq-card-body">
+                                          <div class="row">
+                                             <div class="col-sm-12">
+                                                <div class="event-post position-relative">
+                                                   <a href="javascript:void();"><img src="<?php echo base_url() ;  ?>images/page-img/07.jpg" alt="gallary-image" class="img-fluid rounded"></a>
+                                                   <div class="job-icon-position">
+                                                      <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><i class="ri-briefcase-line"></i></div>
+                                                   </div>
+                                                   <div class="iq-card-body text-center p-2">
+                                                      <h5>Started New Job at Apple</h5>
+                                                      <p>January 24, 2019</p>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-sm-12">
+                                                <div class="event-post position-relative">
+                                                   <a href="javascript:void();"><img src="<?php echo base_url() ;  ?>images/page-img/06.jpg" alt="gallary-image" class="img-fluid rounded"></a>
+                                                   <div class="job-icon-position">
+                                                      <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><i class="ri-briefcase-line"></i></div>
+                                                   </div>
+                                                   <div class="iq-card-body text-center p-2">
+                                                      <h5>Freelance Photographer</h5>
+                                                      <p>January 24, 2019</p>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="iq-card">
+                                       <div class="iq-card-header d-flex justify-content-between">
+                                          <div class="iq-header-title">
+                                             <h4 class="card-title">Photos</h4>
+                                          </div>
+                                          <div class="iq-card-header-toolbar d-flex align-items-center">
+                                             <p class="m-0"><a href="javacsript:void();">Add Photo </a></p>
+                                          </div>
+                                       </div>
+                                       <div class="iq-card-body">
+                                          <ul class="profile-img-gallary d-flex flex-wrap p-0 m-0">
+                                             
+                                             <li class="col-md-4 col-6 pl-2 pr-0 pb-3"><a href="javascript:void();"><img src="<?php echo base_url() ;  ?>images/page-img/g1.jpg" alt="gallary-image" class="img-fluid"></a></li>
+                                            
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div class="iq-card">
+                                       <div class="iq-card-header d-flex justify-content-between">
+                                          <div class="iq-header-title">
+                                             <h4 class="card-title">Membres</h4>
+                                          </div>
+                                          <div class="iq-card-header-toolbar d-flex align-items-center">
+                                             <p class="m-0"><a href="javacsript:void();">Lien de parrainage</a></p>
+                                          </div>
+                                       </div>
+                                       <div class="iq-card-body">
+                                          <ul class="profile-img-gallary d-flex flex-wrap p-0 m-0">
+                                             
+                                                <?php 
+
+                                                $i = 0;
+                                                foreach($userRecords as $record ) { 
+                                                    ?>
+                                             <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
+                                                <a href="javascript:void();">
+                                                <img src="https://www.tunivisions.link/uploads/avatar/<?php echo $record->avatar ?>" alt="gallary-image" class="profile-turtle4"></a>
+                                                <h6 class="mt-2"><?php echo $record->name ?></h6>
+                                             </li>
+                                                <?php  if(++$i > 8) break; }
+                                                    ?>
+                                          
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-8">
+                                   <?php foreach ($ProjectByClub as $PBC) {
                                         # code...
                                     ?>
-                                    <div class="card rounded">
-                                        <div class="card-header">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <a href="<?php echo base_url() ?>User/ProfileShow/<?php echo  $PBC->userId ?>">
-                                                <div class="d-flex align-items-center">
-                                                    <img class="img-xs rounded-circle" src="https://www.tunivisions.link/uploads/avatar/<?php echo $PBC->avatar ?>" alt="">                                                 
-                                                    <div class="ml-2">
-                                                        <p><?php echo $PBC->name ?></p>
-                                                        <p class="tx-11 text-muted"><?php echo $PBC->endDate ?></p>
-                                                    </div>
+                                    <div class="iq-card">
+                                       <div class="iq-card-body">
+                                          <div class="post-item">
+                                             <div class="user-post-data p-3">
+                                                <div class="d-flex flex-wrap">
+                                                   <div class="media-support-user-img mr-3">
+                                                      <img class="avatar" src="https://www.tunivisions.link/uploads/avatar/<?php echo $PBC->avatar ?>"  alt="">
+                                                   </div>
+                                                   <div class="media-support-info mt-2">
+                                                      <h5 class="mb-0 d-inline-block"><a href="#" class=""><?php echo $PBC->name ?></a></h5>
+                                                      <p class="ml-1 mb-0 d-inline-block">a ajouté un projet</p>
+                                                      <p class="mb-0"><?php echo $PBC->endDate ?></p>
+                                                   </div>
+                                                   <div class="iq-card-post-toolbar">
+                                                      <div class="dropdown">
+                                                         <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                                         <i class="ri-more-fill"></i>
+                                                         </span>
+                                                         <div class="dropdown-menu m-0 p-0">
+                                                            <a class="dropdown-item p-3" href="#">
+                                                               <div class="d-flex align-items-top">
+                                                                  <div class="icon font-size-20"><i class="ri-save-line"></i></div>
+                                                                  <div class="data ml-2">
+                                                                     <h6>Save Post</h6>
+                                                                     <p class="mb-0">Add this to your saved items</p>
+                                                                  </div>
+                                                               </div>
+                                                            </a>
+                                                            <a class="dropdown-item p-3" href="#">
+                                                               <div class="d-flex align-items-top">
+                                                                  <div class="icon font-size-20"><i class="ri-pencil-line"></i></div>
+                                                                  <div class="data ml-2">
+                                                                     <h6>Edit Post</h6>
+                                                                     <p class="mb-0">Update your post and saved items</p>
+                                                                  </div>
+                                                               </div>
+                                                            </a>
+                                                            <a class="dropdown-item p-3" href="#">
+                                                               <div class="d-flex align-items-top">
+                                                                  <div class="icon font-size-20"><i class="ri-close-circle-line"></i></div>
+                                                                  <div class="data ml-2">
+                                                                     <h6>Hide From Timeline</h6>
+                                                                     <p class="mb-0">See fewer posts like this.</p>
+                                                                  </div>
+                                                               </div>
+                                                            </a>
+                                                            <a class="dropdown-item p-3" href="#">
+                                                               <div class="d-flex align-items-top">
+                                                                  <div class="icon font-size-20"><i class="ri-delete-bin-7-line"></i></div>
+                                                                  <div class="data ml-2">
+                                                                     <h6>Delete</h6>
+                                                                     <p class="mb-0">Remove thids Post on Timeline</p>
+                                                                  </div>
+                                                               </div>
+                                                            </a>
+                                                            <a class="dropdown-item p-3" href="#">
+                                                               <div class="d-flex align-items-top">
+                                                                  <div class="icon font-size-20"><i class="ri-notification-line"></i></div>
+                                                                  <div class="data ml-2">
+                                                                     <h6>Notifications</h6>
+                                                                     <p class="mb-0">Turn on notifications for this post</p>
+                                                                  </div>
+                                                               </div>
+                                                            </a>
+                                                         </div>
+                                                      </div>
+                                                   </div>
                                                 </div>
-                                                </a>
-                                                <div class="dropdown">
-                                                    <button class="btn p-0" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal icon-lg pb-3px"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                                        <a class="dropdown-item d-flex align-items-center" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-meh icon-sm mr-2"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg> <span class="">Unfollow</span></a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-right-up icon-sm mr-2"><polyline points="10 9 15 4 20 9"></polyline><path d="M4 20h7a4 4 0 0 0 4-4V4"></path></svg> <span class="">Go to post</span></a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2 icon-sm mr-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg> <span class="">Partager</span></a>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy icon-sm mr-2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> <span class="">Copy link</span></a>
-                                                    </div>
+                                             </div>
+                                             <div class="user-post">
+                                                <p class="comment-text">
+                                                 <?php echo $PBC->description ?>
+                                                </p>
+                                                <a href="javascript:void();"><img src="https://www.tunivisions.link/uploads/projet/<?php echo $PBC->banner ?>" alt="post-image" class="img-fluid w-100"></a>
+                                             </div>
+                                             <div class="comment-area mt-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                   <div class="like-block position-relative d-flex align-items-center">
+                                                      <div class="d-flex align-items-center">
+                                                         <div class="like-data">
+                                                            <div class="dropdown">
+                                                               <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                                               <img src="images/icon/01.png" class="img-fluid" alt="">
+                                                               </span>
+                                                               <div class="dropdown-menu">
+                                                                  <a class="ml-2 mr-2" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Like"><img src="images/icon/01.png" class="img-fluid" alt=""></a>
+                                                                  <a class="mr-2" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Love"><img src="images/icon/02.png" class="img-fluid" alt=""></a>
+                                                                  <a class="mr-2" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Happy"><img src="images/icon/03.png" class="img-fluid" alt=""></a>
+                                                                  <a class="mr-2" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="HaHa"><img src="images/icon/04.png" class="img-fluid" alt=""></a>
+                                                                  <a class="mr-2" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Think"><img src="images/icon/05.png" class="img-fluid" alt=""></a>
+                                                                  <a class="mr-2" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sade"><img src="images/icon/06.png" class="img-fluid" alt=""></a>
+                                                                  <a class="mr-2" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lovely"><img src="images/icon/07.png" class="img-fluid" alt=""></a>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                         <div class="total-like-block ml-2 mr-3">
+                                                            <div class="dropdown">
+                                                               <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                                               140 Likes
+                                                               </span>
+                                                               <div class="dropdown-menu">
+                                                                  <a class="dropdown-item" href="#">Max Emum</a>
+                                                                  <a class="dropdown-item" href="#">Bill Yerds</a>
+                                                                  <a class="dropdown-item" href="#">Hap E. Birthday</a>
+                                                                  <a class="dropdown-item" href="#">Tara Misu</a>
+                                                                  <a class="dropdown-item" href="#">Midge Itz</a>
+                                                                  <a class="dropdown-item" href="#">Sal Vidge</a>
+                                                                  <a class="dropdown-item" href="#">Other</a>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                      <div class="total-comment-block">
+                                                         <div class="dropdown">
+                                                            <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                                            20 Comment
+                                                            </span>
+                                                            <div class="dropdown-menu">
+                                                               <a class="dropdown-item" href="#">Max Emum</a>
+                                                               <a class="dropdown-item" href="#">Bill Yerds</a>
+                                                               <a class="dropdown-item" href="#">Hap E. Birthday</a>
+                                                               <a class="dropdown-item" href="#">Tara Misu</a>
+                                                               <a class="dropdown-item" href="#">Midge Itz</a>
+                                                               <a class="dropdown-item" href="#">Sal Vidge</a>
+                                                               <a class="dropdown-item" href="#">Other</a>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="share-block d-flex align-items-center feather-icon mr-3">
+                                                      <a href="javascript:void();"><i class="ri-share-line"></i>
+                                                      <span class="ml-1">99 Share</span></a>
+                                                   </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="readMore mb-3 tx-14"><?php echo $PBC->description ?></p>
-                                            <img class="img-fluid" src="https://www.tunivisions.link/uploads/projet/<?php echo $PBC->banner ?>" width="100%" alt="">
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="d-flex post-actions">
-                                                <a href="javascript:;" class="d-flex align-items-center text-muted mr-4">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart icon-md"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                                                    <p class="d-none d-md-block ml-2">Like</p>
-                                                </a>
-                                                <a href="javascript:;" class="d-flex align-items-center text-muted mr-4">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square icon-md"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                                                    <p class="d-none d-md-block ml-2">Comment</p>
-                                                </a>
-                                                <a href="javascript:;" class="d-flex align-items-center text-muted">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share icon-md"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
-                                                    <p class="d-none d-md-block ml-2">Share</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <?php  } ?>
-                                     <script type="text/javascript">
-                                         $(document).ready(function() {
-                                            var max = 50;
-                                            $(".readMore").each(function() {
-                                                var str = $(this).text();
-                                                if ($.trim(str).length > max) {
-                                                    var subStr = str.substring(0, max);
-                                                    var hiddenStr = str.substring(max, $.trim(str).length);
-                                                    $(this).empty().html(subStr);
-                                                    $(this).append(' <a href="javascript:void(0);" class="lire-plus">lire plus</a>');
-                                                    $(this).append('<span class="addText">' + hiddenStr + '</span>');
-                                                }
-                                            });
-                                            $(".lire-plus").click(function() {
-                                                $(this).siblings(".addText").contents().unwrap();
-                                                $(this).remove();
-                                            });
-
-                                     </script>
-                                     
-                                </div>
-                            </div>
-                        </div>
-                        <!-- middle wrapper end -->
-                        <!-- right wrapper start -->
-                        <div class="d-none d-xl-block col-xl-3 right-wrapper">
-                            <div class="row">
-                                <div class="col-md-12 grid-margin">
-                                    <div class="card rounded">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Statestiques </h6>
-                                            <div class="latest-photos">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h6 class="text-uppercase"><span></span>Conférence :  </h6> <?php echo $conference ; ?>
-                                                        <h6 class="ktext-uppercase"><span></span>Evenement : </h6> <?php echo $evenement ;  ?> 
-                                                        <h6 class="text-uppercase"><span></span>Formation : </h6>  <?php echo $formation ; ?>
-
-                                                        <h6 class="text-uppercase"><span></span>Couverture Mediatique : </h6>  <?php echo $couver ; ?>
-
-                                                        <hr>
-                                                        <b>Finance</b>
-
-                                                        <h6 class="text-uppercase"><span></span><br>Produit : </h6>   
-                                                        <?php echo $finance->produits ?> DT<br>
-
-                                                        <h6 class="text-uppercase"><span></span><br>Charge : </h6>
-                                                        <?php echo $finance->charges ?> DT    
-
-
-                                                        <h6 class="text-uppercase"><span></span><br>Solde Actuel : </h6>
-                                                        <b><?php echo ($finance->produits - $finance->charges ) ?> DT</b>
-
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 grid-margin">
-                                    <div class="card rounded">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Historique des points</h6>
-
-                                            <?php foreach ($scoreByClub as $scores ) {
-                                                
-                                           ?>
-                                           
-                                            <div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
-                                                <div class="d-flex align-items-center hover-pointer">
-                                                                                                     
-                                                    <div class="ml-2">
-                                                        <a href="<?php echo base_url() ?>Score_club/PNoter/<?php echo $scores->projectId ?>" >
-                                                        <p></p>
-                                                          </a>
-                                                        <p class="tx-11 text-muted"><p><?php echo $scores->createdDate ?></p></p>
-                                                    </div>
-                                                </div>
-                                                <p><?php echo $scores->scores ?> points</p>
-                                            </div>
+                                                <hr>
+                                                <ul class="post-comments p-0 m-0">
+                                                   <li class="mb-2">
+                                                      <div class="d-flex flex-wrap">
+                                                         <div class="user-img">
+                                                            <img src="images/user/02.jpg" alt="userimg" class="avatar-35 rounded-circle img-fluid">
+                                                         </div>
+                                                         <div class="comment-data-block ml-3">
+                                                            <h6>Monty Carlo</h6>
+                                                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                                                            <div class="d-flex flex-wrap align-items-center comment-activity">
+                                                               <a href="javascript:void();">like</a>
+                                                               <a href="javascript:void();">reply</a>
+                                                               <a href="javascript:void();">translate</a>
+                                                               <span> 5 min </span>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </li>
+                                                   <li>
+                                                      <div class="d-flex flex-wrap">
+                                                         <div class="user-img">
+                                                            <img src="images/user/03.jpg" alt="userimg" class="avatar-35 rounded-circle img-fluid">
+                                                         </div>
+                                                         <div class="comment-data-block ml-3">
+                                                            <h6>Paul Molive</h6>
+                                                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
+                                                            <div class="d-flex flex-wrap align-items-center comment-activity">
+                                                               <a href="javascript:void();">like</a>
+                                                               <a href="javascript:void();">reply</a>
+                                                               <a href="javascript:void();">translate</a>
+                                                               <span> 5 min </span>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </li>
+                                                </ul>
+                                                <form class="comment-text d-flex align-items-center mt-3" action="javascript:void(0);">
+                                                   <input type="text" class="form-control rounded">
+                                                   <div class="comment-attagement d-flex">
+                                                      <a href="javascript:void();"><i class="ri-link mr-3"></i></a>
+                                                      <a href="javascript:void();"><i class="ri-user-smile-line mr-3"></i></a>
+                                                      <a href="javascript:void();"><i class="ri-camera-line mr-3"></i></a>
+                                                   </div>
+                                                </form>
+                                             </div>
+                                          </div>
                                           
-                                            <?php } ?>
-                                            
-
-                                        </div>
+                                          
+                                          
+                                       </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- right wrapper end -->
-                    </div>
-        </div>
 
-           
+                                  <?php  } ?>  
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="about" role="tabpanel">
+                           <div class="iq-card">
+                              <div class="iq-card-body">
+                                 <div class="row">
+                                    <div class="col-md-3">
+                                       <ul class="nav nav-pills basic-info-items list-inline d-block p-0 m-0">
+                                          <li>
+                                             <a class="nav-link active" data-toggle="pill" href="#basicinfo">Information Basic</a>
+                                          </li>
+                                          <li>
+                                             <a class="nav-link" data-toggle="pill" href="#family">Bureau Executif</a>
+                                          </li>
+                                          <li>
+                                             <a class="nav-link" data-toggle="pill" href="#work">Work and Education</a>
+                                          </li>
+                                          <li>
+                                             <a class="nav-link" data-toggle="pill" href="#lived">Places You've Lived</a>
+                                          </li>
+                                          <li>
+                                             <a class="nav-link" data-toggle="pill" href="#details">Details About You</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="col-md-9 pl-4">
+                                       <div class="tab-content">
+                                          <div class="tab-pane fade active show" id="basicinfo" role="tabpanel">
+                                             <h4>Contact Information</h4>
+                                             <hr>
+                                             <div class="row">
+                                                
+                                                <div class="col-3">
+                                                   <h6>Region</h6>
+                                                </div>
+                                                <div class="col-9">
+                                                   <p class="mb-0"><?php echo $clubInfo->city ?></p>
+                                                </div>
+                                                
+                                             </div>
+                                             <h4 class="mt-3">Social</h4>
+                                             <hr>
+                                             <div class="row">
+                                                <div class="col-3">
+                                                   <h6>Page Facebook</h6>
+                                                </div>
+                                                <div class="col-9">
+                                                   <p class="mb-0"><a href="<?php echo $clubInfo->email ?>">Club Tunivisions <?php echo $clubInfo->name ?></a></p>
+                                                </div>
+                                                <div class="col-3">
+                                                   <h6>Email</h6>
+                                                </div>
+                                                <div class="col-9">
+                                                   <p class="mb-0"><?php echo $clubInfo->facebook ?></p>
+                                                </div>
+                                                
+                                             </div>
+                                             <h4 class="mt-3">Basic Information</h4>
+                                             <hr>
+                                             <div class="row">
+                                                <div class="col-3">
+                                                   <h6>Fondé le</h6>
+                                                </div>
+                                                <div class="col-9">
+                                                   <p class="mb-0"><?php echo $clubInfo->birthday ?></p>
+                                                </div>
+                                                <div class="col-3">
+                                                   <h6>Genre</h6>
+                                                </div>
+                                                <div class="col-9">
+                                                   <p class="mb-0"><?php echo $clubInfo->senJen ?></p>
+                                                </div>
+                                                
+                                             </div>
+                                          </div>
+                                          <div class="tab-pane fade" id="family" role="tabpanel">
+                                             <h4 class="mb-3">Président</h4>
+                                             <ul class="suggestions-lists m-0 p-0">
+                                                                                                <?php foreach ($bureauExe as $b ) {
+                                          if($b->role == 'Président'){
+                                    ?>
+
+
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><img src="https://www.tunivisions.link/uploads/avatar/<?php echo $b->avatar ?>" alt="story-img" class="rounded-circle profile-turtle2"></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6><?php echo $b->Tname ?></h6>
+                                                      <p class="mb-0"><?php echo $b->cellule ?></p>
+                                                   </div>
+                                                   <div class="edit-relation"><a href="javascript:void();"><i class="ri-edit-line mr-2"></i>Edit</a></div>
+                                                </li>
+                                          
+                                           <?php
+                                    } } ?>      
+                                             </ul>
+                                             <h4 class="mt-3 mb-3">Vice Président</h4>
+                                             <ul class="suggestions-lists m-0 p-0">
+                                                
+                                                <?php foreach ($bureauExe as $b ) {
+                                                      if($b->role != 'Président'){
+                                                ?>
+
+
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><img src="https://www.tunivisions.link/uploads/avatar/<?php echo $b->avatar ?>" alt="story-img" class="rounded-circle profile-turtle2"></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6><?php echo $b->Tname ?></h6>
+                                                      <p class="mb-0"><?php echo $b->cellule ?></p>
+                                                   </div>
+                                                   <div class="edit-relation"><a href="javascript:void();"><i class="ri-edit-line mr-2"></i>Edit</a></div>
+                                                </li>
+                                          
+                                           <?php
+                                    } } ?>      
+                                             </ul>
+                                          </div>
+                                          <div class="tab-pane fade" id="work" role="tabpanel">
+                                             <h4 class="mb-3">Work</h4>
+                                             <ul class="suggestions-lists m-0 p-0">
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>Add Work Place</h6>
+                                                   </div>
+                                                </li>
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><img src="<?php echo base_url() ;  ?>images/user/01.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>Themeforest</h6>
+                                                      <p class="mb-0">Web Designer</p>
+                                                   </div>
+                                                   <div class="edit-relation"><a href="javascript:void();"><i class="ri-edit-line mr-2"></i>Edit</a></div>
+                                                </li>
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><img src="<?php echo base_url() ;  ?>images/user/02.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>iqonicdesign</h6>
+                                                      <p class="mb-0">Web Developer</p>
+                                                   </div>
+                                                   <div class="edit-relation"><a href="javascript:void();"><i class="ri-edit-line mr-2"></i>Edit</a></div>
+                                                </li>
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><img src="<?php echo base_url() ;  ?>images/user/03.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>W3school</h6>
+                                                      <p class="mb-0">Designer</p>
+                                                   </div>
+                                                   <div class="edit-relation"><a href="javascript:void();"><i class="ri-edit-line mr-2"></i>Edit</a></div>
+                                                </li>
+                                             </ul>
+                                             <h4 class="mb-3">Professional Skills</h4>
+                                             <ul class="suggestions-lists m-0 p-0">
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>Add Professional Skills</h6>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                             <h4 class="mt-3 mb-3">College</h4>
+                                             <ul class="suggestions-lists m-0 p-0">
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>Add College</h6>
+                                                   </div>
+                                                </li>
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><img src="<?php echo base_url() ;  ?>images/user/01.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>Lorem ipsum</h6>
+                                                      <p class="mb-0">USA</p>
+                                                   </div>
+                                                   <div class="edit-relation"><a href="javascript:void();"><i class="ri-edit-line mr-2"></i>Edit</a></div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <div class="tab-pane fade" id="lived" role="tabpanel">
+                                             <h4 class="mb-3">Current City and Hometown</h4>
+                                             <ul class="suggestions-lists m-0 p-0">
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><img src="<?php echo base_url() ;  ?>images/user/01.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>Georgia</h6>
+                                                      <p class="mb-0">Georgia State</p>
+                                                   </div>
+                                                   <div class="edit-relation"><a href="javascript:void();"><i class="ri-edit-line mr-2"></i>Edit</a></div>
+                                                </li>
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><img src="<?php echo base_url() ;  ?>images/user/02.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>Atlanta</h6>
+                                                      <p class="mb-0">Atlanta City</p>
+                                                   </div>
+                                                   <div class="edit-relation"><a href="javascript:void();"><i class="ri-edit-line mr-2"></i>Edit</a></div>
+                                                </li>
+                                             </ul>
+                                             <h4 class="mt-3 mb-3">Other Places Lived</h4>
+                                             <ul class="suggestions-lists m-0 p-0">
+                                                <li class="d-flex mb-4 align-items-center">
+                                                   <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                                   <div class="media-support-info ml-3">
+                                                      <h6>Add Place</h6>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <div class="tab-pane fade" id="details" role="tabpanel">
+                                             <h4 class="mb-3">About You</h4>
+                                             <p>Hi, I’m Bni, I’m 26 and I work as a Web Designer for the iqonicdesign.</p>
+                                             <h4 class="mt-3 mb-3">Other Name</h4>
+                                             <p>Bini Rock</p>
+                                             <h4 class="mt-3 mb-3">Favorite Quotes</h4>
+                                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+
+
+                        <div class="tab-pane fade" id="friends" role="tabpanel">
+                           <div class="iq-card">
+                              <div class="iq-card-body">
+                                 <h2>Membres</h2>
+                                 <div class="friend-list-tab mt-2">
+                                    <ul class="nav nav-pills d-flex align-items-center justify-content-left friend-list-items p-0 mb-2">
+                                       <li>
+                                          <a class="nav-link active" data-toggle="pill" href="#all-friends">Tous</a>
+                                       </li>
+                                       <li>
+                                          <a class="nav-link " data-toggle="pill" href="#Events">Evenementiel</a>
+                                       </li>
+                                       <li>
+                                          <a class="nav-link " data-toggle="pill" href="#AF">Administration et finance</a>
+                                       </li>
+                                       <li>
+                                          <a class="nav-link " data-toggle="pill" href="#GT">Gestion des talents</a>
+                                       </li>
+
+                                    </ul>
+                                    <div class="tab-content">
+                                       <div class="tab-pane fade active show" id="all-friends" role="tabpanel">
+                                          <div class="iq-card-body p-0">
+                                             <div class="row">
+                                                <?php foreach($userRecords as $record ) { 
+                                                    ?>
+                                                <div class="col-md-6 col-lg-6 mb-3">
+                                                   <div class="iq-friendlist-block">
+                                                      <div class="d-flex align-items-center justify-content-between">
+                                                         <div class="d-flex align-items-center">
+                                                            <a href="#">
+                                                            <img src="https://www.tunivisions.link/uploads/avatar/<?php echo $record->avatar ?>" alt="<?php echo $record->name ?>" class="profile-turtle3 ">
+                                                            </a>
+                                                            <div class="friend-info ml-3">
+                                                               <h5><?php echo $record->name ?> </h5>
+                                                               <p class="mb-0"><?php echo $record->cellule?></p>
+                                                            </div>
+                                                         </div>
+                                                         <div class="iq-card-header-toolbar d-flex align-items-center">
+                                                            <div class="dropdown">
+                                                               <span class="dropdown-toggle btn btn-secondary mr-2" id="dropdownMenuButton01" data-toggle="dropdown" aria-expanded="true" role="button">
+                                                               <i class="ri-check-line mr-1 text-white font-size-16"></i> <?php echo $record->role?>
+                                                               </span>
+                                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton01">
+                                                                  <a class="dropdown-item" href="#">Designer comme un VP</a>
+                                                                  <a class="dropdown-item" href="#">Blocker</a>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                 </div>
+                                                 <?php   } ?>
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                          <iv class="tab-pane fade show" id="Events" role="tabpanel">
+                                          <div class="iq-card-body p-0">
+                                             <div class="row">
+                                                
+                                                <div class="col-md-6 col-lg-6 mb-3">
+                                                   <div class="iq-friendlist-block">
+                                                      <div class="d-flex align-items-center justify-content-between">
+                                                         <div class="d-flex align-items-center">
+                                                            <a href="#">
+                                                            <img src="https://www.tunivisions.link/uploads/avatar/<?php echo $record->avatar ?>" alt="profile-img" class="profile-turtle3 ">
+                                                            </a>
+                                                            <div class="friend-info ml-3">
+                                                               <h5><?php echo $record->name ?> </h5>
+                                                               <p class="mb-0"></p>
+                                                            </div>
+                                                         </div>
+                                                         <div class="iq-card-header-toolbar d-flex align-items-center">
+                                                            <div class="dropdown">
+                                                               <span class="dropdown-toggle btn btn-secondary mr-2" id="dropdownMenuButton01" data-toggle="dropdown" aria-expanded="true" role="button">
+                                                               <i class="ri-check-line mr-1 text-white font-size-16"></i> <?php echo $record->role?>
+                                                               </span>
+                                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton01">
+                                                                  <a class="dropdown-item" href="#">Get Notification</a>
+                                                                  <a class="dropdown-item" href="#">Block</a>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                 </div>
+
+
+                                              
+                                                </div>
+                                             </div>
+                                          </div>
+
+                                         
+
+
+
+
+
+
+
+
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           
+
+
+
+
+
+
+
+                        <div class="tab-pane fade" id="photos" role="tabpanel">
+                           <div class="iq-card">
+                              <div class="iq-card-body">
+                                 <h2>Classement</h2>
+                                 <div class="friend-list-tab mt-2">
+                                    <ul class="nav nav-pills d-flex align-items-center justify-content-left friend-list-items p-0 mb-2">
+                                       <li>
+                                          <a class="nav-link active" data-toggle="pill" href="#photosofyou">Clasement des membres interClub</a>
+                                       </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                       <div class="tab-pane fade active show" id="photosofyou" role="tabpanel">
+                                          <div class="iq-card-body p-0">
+                                             <div class="row">
+                                                
+                                      <?php
+                                       $i = 1 ;
+                                       foreach($RatingMembers as $record ) { ?>  
+
+                                                <div class="col-md-6 col-lg-3 mb-3">
+                                                   <div class="user-images position-relative overflow-hidden">
+                                                      <a href="#">
+                                                      <img src="https://www.tunivisions.link/uploads/avatar/<?php echo $record->avatar ?>"  class="img-fluid rounded" alt="Responsive image">
+                                                      </a>
+                                                      <div class="image-hover-data">
+                                                         <div class="product-elements-icon">
+                                                            <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                               <li><a href="#" class="pr-3 text-white"> <?php echo $i ?> <i class="ri-thumb-up-line"></i> </a></li>
+                                                               <li><a href="#" class="pr-3 text-white"> <?php echo $record->scores ?> <i class="ri-chat-3-line"></i> </a></li>
+                                                               <li><a href="#" class="pr-3 text-white">  <i class="ri-share-forward-line"></i> </a></li>
+                                                            </ul>
+                                                         </div>
+                                                      </div>
+                                                      <a href="#" class="image-edit-btn" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                                   </div>
+                                                </div>
+                                          <?php
+                                                   }  ?>        
+                                                
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-12 text-center">
+                     <img src="<?php echo base_url() ;  ?>images/page-img/page-load-loader.gif" alt="loader" style="height: 100px;">
+                  </div>
+               </div>
+            </div>
+          </div>
